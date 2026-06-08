@@ -1,0 +1,795 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Oposiciones CAM — Inicio</title>
+  <meta name="description" content="Plataforma de estudio para las oposiciones de la Comunidad de Madrid. Temario íntegro y tests interactivos.">
+  <meta name="theme-color" content="#c0305a">
+  <link rel="icon" type="image/svg+xml" href="favicon.svg">
+  <link rel="apple-touch-icon" href="icons/icon-192.png">
+  <link rel="manifest" href="manifest.webmanifest">
+  <!-- Open Graph / Twitter -->
+  <meta property="og:title" content="Oposiciones CAM — Plataforma de estudio">
+  <meta property="og:description" content="Temario íntegro y tests interactivos para oposiciones de la Comunidad de Madrid.">
+  <meta property="og:type" content="website">
+  <meta property="og:image" content="og-image.png">
+  <meta property="og:locale" content="es_ES">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Oposiciones CAM — Plataforma de estudio">
+  <meta name="twitter:description" content="Temario íntegro y tests interactivos para oposiciones CAM.">
+  <meta name="twitter:image" content="og-image.png">
+  <!-- Preconexión a Google Fonts para acelerar carga -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;600;700;800&family=Source+Serif+4:ital,wght@0,300;0,400;0,600;1,300&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="assets/theme.css">
+  <script src="assets/app.js"></script>
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --bg: #fdf5f7;
+      --bg-2: #fbe8ee;
+      --surface: #ffffff;
+      --surface-2: #fef0f4;
+      --border: #f0d6de;
+      --border-strong: #dba8bc;
+      --text: #2b1a22;
+      --text-2: #5b3a48;
+      --muted: #8a6070;
+      --muted-light: #b89aaa;
+      --accent: #c0305a;
+      --accent-mid: #e05a80;
+      --accent-light: #fce8ef;
+      --accent-hover: #a82550;
+      --green: #2d6a4f;
+      --green-light: #eaf4ee;
+      --amber: #9a5c1a;
+      --amber-light: #fdf3e3;
+      --shadow-sm: 0 2px 10px rgba(192, 48, 90, .06);
+      --shadow-md: 0 8px 28px rgba(192, 48, 90, .12);
+      --shadow-lg: 0 18px 50px rgba(192, 48, 90, .18);
+      font-size: 16px;
+      scroll-behavior: smooth;
+    }
+
+    html, body { min-height: 100%; }
+
+    body {
+      font-family: 'Source Serif 4', Georgia, serif;
+      background:
+        radial-gradient(1100px 700px at 85% -10%, #fde0e9 0%, transparent 60%),
+        radial-gradient(900px 600px at -10% 110%, #fce4ec 0%, transparent 60%),
+        var(--bg);
+      color: var(--text);
+      -webkit-font-smoothing: antialiased;
+      overflow-x: hidden;
+    }
+
+    ::-webkit-scrollbar { width: 8px; height: 8px; }
+    ::-webkit-scrollbar-track { background: transparent; }
+    ::-webkit-scrollbar-thumb { background: var(--border-strong); border-radius: 4px; }
+
+    /* ── NAV ── */
+    .topnav {
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      background: rgba(253, 245, 247, .82);
+      backdrop-filter: saturate(180%) blur(14px);
+      -webkit-backdrop-filter: saturate(180%) blur(14px);
+      border-bottom: 1px solid var(--border);
+    }
+    .topnav-inner {
+      max-width: 1240px;
+      margin: 0 auto;
+      padding: 18px 28px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 16px;
+    }
+    .brand {
+      font-family: 'Playfair Display', serif;
+      font-weight: 800;
+      font-size: 1.15rem;
+      color: var(--text);
+      letter-spacing: .02em;
+      text-decoration: none;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+    .brand-mark {
+      width: 30px; height: 30px;
+      border-radius: 9px;
+      background: linear-gradient(135deg, var(--accent) 0%, var(--accent-mid) 100%);
+      display: inline-flex; align-items: center; justify-content: center;
+      color: #fff; font-size: .82rem; font-weight: 700;
+      box-shadow: 0 4px 14px rgba(192, 48, 90, .35);
+    }
+    .top-actions { display: flex; gap: 10px; align-items: center; }
+    .top-link {
+      font-size: .82rem;
+      color: var(--muted);
+      text-decoration: none;
+      padding: 8px 14px;
+      border-radius: 20px;
+      transition: color .18s, background .18s;
+      letter-spacing: .02em;
+    }
+    .top-link:hover { color: var(--accent); background: var(--accent-light); }
+
+    /* ── HERO ── */
+    .hero {
+      max-width: 1240px;
+      margin: 0 auto;
+      padding: 80px 28px 40px;
+      text-align: center;
+      position: relative;
+    }
+    .badge-pill {
+      display: inline-flex; align-items: center; gap: 8px;
+      font-size: .72rem; font-weight: 700;
+      letter-spacing: .14em; text-transform: uppercase;
+      color: var(--accent);
+      background: var(--accent-light);
+      border: 1px solid #f3c1d2;
+      padding: 7px 16px;
+      border-radius: 30px;
+      margin-bottom: 22px;
+    }
+    .badge-pill .dot {
+      width: 7px; height: 7px; border-radius: 50%;
+      background: var(--accent-mid);
+      box-shadow: 0 0 0 4px rgba(224, 90, 128, .18);
+      animation: pulse 2s infinite;
+    }
+    @keyframes pulse {
+      0%, 100% { box-shadow: 0 0 0 4px rgba(224, 90, 128, .18); }
+      50% { box-shadow: 0 0 0 8px rgba(224, 90, 128, .05); }
+    }
+
+    .hero h1 {
+      font-family: 'Playfair Display', serif;
+      font-weight: 700;
+      font-size: clamp(2rem, 5.2vw, 3.4rem);
+      line-height: 1.12;
+      color: var(--text);
+      max-width: 880px;
+      margin: 0 auto 20px;
+      letter-spacing: -.01em;
+    }
+    .hero h1 .accent {
+      background: linear-gradient(120deg, var(--accent) 0%, var(--accent-mid) 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+      font-style: italic;
+    }
+    .hero p {
+      font-size: clamp(.96rem, 1.6vw, 1.12rem);
+      color: var(--muted);
+      max-width: 660px;
+      margin: 0 auto 36px;
+      line-height: 1.7;
+    }
+
+    .hero-cta {
+      display: flex; flex-wrap: wrap; justify-content: center; gap: 14px;
+      margin-bottom: 50px;
+    }
+    .btn {
+      font-family: inherit;
+      font-size: .92rem;
+      font-weight: 600;
+      padding: 13px 26px;
+      border-radius: 999px;
+      border: none;
+      cursor: pointer;
+      text-decoration: none;
+      display: inline-flex; align-items: center; gap: 9px;
+      transition: transform .15s ease, box-shadow .2s, background .2s, color .2s;
+      letter-spacing: .01em;
+    }
+    .btn-primary {
+      background: linear-gradient(135deg, var(--accent) 0%, var(--accent-mid) 100%);
+      color: #fff;
+      box-shadow: 0 10px 24px rgba(192, 48, 90, .32);
+    }
+    .btn-primary:hover { transform: translateY(-2px); box-shadow: 0 14px 30px rgba(192, 48, 90, .42); }
+    .btn-ghost {
+      background: var(--surface);
+      color: var(--text);
+      border: 1px solid var(--border);
+      box-shadow: var(--shadow-sm);
+    }
+    .btn-ghost:hover { border-color: var(--accent-mid); color: var(--accent); transform: translateY(-2px); }
+
+    /* ── QUICK STATS ── */
+    .stats {
+      max-width: 1240px;
+      margin: 0 auto;
+      padding: 0 28px 30px;
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 14px;
+    }
+    .stat {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 14px;
+      padding: 18px 20px;
+      text-align: left;
+      transition: transform .2s, border-color .2s, box-shadow .2s;
+    }
+    .stat:hover { transform: translateY(-3px); border-color: var(--accent-mid); box-shadow: var(--shadow-md); }
+    .stat-num {
+      font-family: 'Playfair Display', serif;
+      font-size: 1.8rem; font-weight: 700;
+      color: var(--accent);
+      line-height: 1;
+      margin-bottom: 6px;
+    }
+    .stat-label {
+      font-size: .73rem;
+      color: var(--muted);
+      letter-spacing: .08em;
+      text-transform: uppercase;
+      font-weight: 600;
+    }
+
+    /* ── SECTION TITLE ── */
+    .section {
+      max-width: 1240px;
+      margin: 0 auto;
+      padding: 50px 28px;
+    }
+    .section-head {
+      text-align: center;
+      margin-bottom: 38px;
+    }
+    .section-eyebrow {
+      font-size: .72rem; letter-spacing: .16em; text-transform: uppercase;
+      color: var(--accent); font-weight: 700;
+      margin-bottom: 10px;
+    }
+    .section-head h2 {
+      font-family: 'Playfair Display', serif;
+      font-size: clamp(1.6rem, 3.4vw, 2.2rem);
+      font-weight: 700;
+      color: var(--text);
+      letter-spacing: -.01em;
+    }
+    .section-head p {
+      color: var(--muted);
+      max-width: 580px;
+      margin: 12px auto 0;
+      font-size: .96rem;
+      line-height: 1.7;
+    }
+
+    /* ── MODE CARDS (Estudiar / Tests) ── */
+    .mode-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 22px;
+    }
+    .mode-card {
+      position: relative;
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 20px;
+      padding: 34px 30px;
+      text-decoration: none;
+      color: inherit;
+      transition: transform .25s cubic-bezier(.2,.7,.2,1), box-shadow .25s, border-color .25s;
+      overflow: hidden;
+      display: flex; flex-direction: column;
+      min-height: 240px;
+    }
+    .mode-card::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(135deg, rgba(252, 228, 236, .55) 0%, rgba(255,255,255,0) 60%);
+      opacity: 0;
+      transition: opacity .25s;
+      pointer-events: none;
+    }
+    .mode-card:hover {
+      transform: translateY(-4px);
+      box-shadow: var(--shadow-lg);
+      border-color: var(--accent-mid);
+    }
+    .mode-card:hover::before { opacity: 1; }
+    .mode-icon {
+      width: 54px; height: 54px;
+      border-radius: 14px;
+      background: var(--accent-light);
+      color: var(--accent);
+      display: inline-flex; align-items: center; justify-content: center;
+      margin-bottom: 18px;
+      box-shadow: inset 0 0 0 1px #f3c1d2;
+    }
+    .mode-icon svg { width: 26px; height: 26px; }
+    .mode-card h3 {
+      font-family: 'Playfair Display', serif;
+      font-size: 1.5rem;
+      font-weight: 700;
+      margin-bottom: 8px;
+    }
+    .mode-card p {
+      font-size: .94rem; color: var(--muted); line-height: 1.65;
+      margin-bottom: 22px; flex: 1;
+    }
+    .mode-arrow {
+      align-self: flex-start;
+      font-size: .82rem; font-weight: 600;
+      color: var(--accent);
+      display: inline-flex; align-items: center; gap: 8px;
+      letter-spacing: .04em;
+    }
+    .mode-arrow .arrow {
+      transition: transform .2s;
+    }
+    .mode-card:hover .arrow { transform: translateX(4px); }
+
+    /* ── TEMAS GRID ── */
+    .temas-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 18px;
+    }
+    .tema-card {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 16px;
+      padding: 24px 22px;
+      text-decoration: none;
+      color: inherit;
+      transition: transform .2s cubic-bezier(.2,.7,.2,1), border-color .2s, box-shadow .2s;
+      display: flex; flex-direction: column;
+      position: relative;
+      overflow: hidden;
+    }
+    .tema-card:hover {
+      transform: translateY(-3px);
+      border-color: var(--accent-mid);
+      box-shadow: var(--shadow-md);
+    }
+    .tema-card.disabled {
+      opacity: .55;
+      pointer-events: none;
+      background: var(--surface-2);
+    }
+    .tema-num {
+      font-family: 'Playfair Display', serif;
+      font-size: 2.2rem; font-weight: 700;
+      color: var(--accent);
+      line-height: 1;
+      margin-bottom: 14px;
+      display: flex; align-items: baseline; gap: 8px;
+    }
+    .tema-num small {
+      font-size: .68rem;
+      letter-spacing: .15em;
+      text-transform: uppercase;
+      color: var(--muted);
+      font-family: 'Source Serif 4', serif;
+      font-weight: 700;
+    }
+    .tema-card h4 {
+      font-family: 'Playfair Display', serif;
+      font-size: 1.08rem;
+      font-weight: 700;
+      line-height: 1.3;
+      margin-bottom: 10px;
+      color: var(--text);
+    }
+    .tema-card .desc {
+      font-size: .85rem;
+      color: var(--muted);
+      line-height: 1.6;
+      margin-bottom: 18px;
+      flex: 1;
+    }
+    .tema-meta {
+      display: flex; justify-content: space-between; align-items: center;
+      padding-top: 14px;
+      border-top: 1px dashed var(--border);
+      font-size: .76rem;
+      color: var(--muted);
+    }
+    .tema-meta .tag {
+      background: var(--accent-light);
+      color: var(--accent);
+      padding: 3px 10px;
+      border-radius: 20px;
+      font-weight: 600;
+      font-size: .68rem;
+      letter-spacing: .06em;
+      text-transform: uppercase;
+    }
+    .tema-card.disabled .tag {
+      background: #eee5e8; color: var(--muted);
+    }
+
+    /* ── FEATURES ── */
+    .features {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 18px;
+    }
+    .feature {
+      padding: 22px;
+      border-left: 3px solid var(--accent-mid);
+      background: var(--surface);
+      border-radius: 0 12px 12px 0;
+      box-shadow: var(--shadow-sm);
+    }
+    .feature h5 {
+      font-family: 'Playfair Display', serif;
+      font-size: 1rem;
+      font-weight: 700;
+      margin-bottom: 8px;
+      color: var(--text);
+    }
+    .feature p { font-size: .86rem; color: var(--muted); line-height: 1.65; }
+
+    /* ── FOOTER ── */
+    footer {
+      margin-top: 60px;
+      padding: 30px 28px 36px;
+      border-top: 1px solid var(--border);
+      text-align: center;
+      color: var(--muted);
+      font-size: .82rem;
+      background: rgba(255,255,255,.4);
+    }
+    footer a { color: var(--accent); text-decoration: none; }
+    footer a:hover { text-decoration: underline; }
+
+    /* ── RESPONSIVE ── */
+    @media (max-width: 980px) {
+      .stats { grid-template-columns: repeat(2, 1fr); }
+      .temas-grid { grid-template-columns: repeat(2, 1fr); }
+      .features { grid-template-columns: 1fr; }
+    }
+    @media (max-width: 680px) {
+      .topnav-inner { padding: 14px 18px; }
+      .hero { padding: 56px 18px 24px; }
+      .section { padding: 36px 18px; }
+      .mode-grid { grid-template-columns: 1fr; gap: 16px; }
+      .temas-grid { grid-template-columns: 1fr; }
+      .stats { grid-template-columns: 1fr 1fr; gap: 10px; }
+      .mode-card { padding: 26px 22px; min-height: auto; }
+      .btn { padding: 12px 22px; font-size: .88rem; }
+      .top-link { padding: 7px 10px; font-size: .76rem; }
+    }
+    @media (max-width: 400px) {
+      .stats { grid-template-columns: 1fr; }
+      .stat { padding: 14px 16px; }
+    }
+
+    /* Fade-in */
+    .fade-in {
+      opacity: 0;
+      transform: translateY(14px);
+      transition: opacity .7s ease, transform .7s ease;
+    }
+    .fade-in.visible { opacity: 1; transform: none; }
+  </style>
+</head>
+
+<body>
+
+  <!-- NAV -->
+  <nav class="topnav">
+    <div class="topnav-inner">
+      <a href="index.html" class="brand">
+        <span class="brand-mark">CAM</span>
+        Oposiciones · Comunidad de Madrid
+      </a>
+      <div class="top-actions">
+        <a href="tema1.html" class="top-link">Temario</a>
+        <a href="tests.html" class="top-link">Tests</a>
+        <a href="progreso.html" class="top-link">Mi progreso</a>
+        <button id="themeToggle" class="theme-toggle" aria-label="Cambiar tema" aria-pressed="false" title="Cambiar a modo oscuro">
+          <svg class="icon-moon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path></svg>
+          <svg class="icon-sun" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="5"></circle><line x1="12" y1="1" x2="12" y2="3"></line><line x1="12" y1="21" x2="12" y2="23"></line><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line><line x1="1" y1="12" x2="3" y2="12"></line><line x1="21" y1="12" x2="23" y2="12"></line><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line></svg>
+        </button>
+      </div>
+    </div>
+  </nav>
+
+  <!-- HERO -->
+  <section class="hero fade-in">
+    <span class="badge-pill"><span class="dot"></span> Plataforma de estudio · Bloque Común</span>
+    <h1>Prepara tus oposiciones con un <span class="accent">temario claro</span> y tests interactivos.</h1>
+    <p>Una experiencia limpia, ordenada y centrada en lo importante: estudiar con eficacia. Accede al temario íntegro o pon a prueba tus conocimientos con preguntas tipo examen.</p>
+
+    <div class="hero-cta">
+      <a href="tema1.html" class="btn btn-primary">
+        Empezar a estudiar
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+      </a>
+      <a href="tests.html" class="btn btn-ghost">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 11l3 3L22 4"></path><path d="M21 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11"></path></svg>
+        Hacer un test
+      </a>
+    </div>
+
+    <!-- Aviso de contenido protegido -->
+    <div class="hero-privacy-note" style="margin-top:26px;font-size:.82rem;color:var(--muted);display:inline-flex;align-items:center;gap:8px;background:var(--accent-light);border:1px solid #f3c1d2;padding:8px 16px;border-radius:30px;">
+      <span style="font-size:1rem;">🔒</span>
+      <span>Contenido protegido. ¿Tienes la clave? <a href="#" id="openAccessModal" style="color:var(--accent);text-decoration:none;font-weight:700;border-bottom:1.5px solid var(--accent-mid);">Acceder</a></span>
+    </div>
+  </section>
+
+  <!-- Modal de acceso (oculto por defecto) -->
+  <div id="accessModal" style="display:none;position:fixed;inset:0;background:rgba(43,26,34,.6);backdrop-filter:blur(6px);z-index:9999;align-items:center;justify-content:center;padding:20px;">
+    <div style="background:var(--surface);border-radius:20px;padding:34px 30px;max-width:420px;width:100%;text-align:center;box-shadow:0 24px 60px rgba(0,0,0,.3);">
+      <div style="font-size:2.6rem;margin-bottom:8px;">🔓</div>
+      <h2 style="font-family:'Playfair Display',serif;font-size:1.45rem;margin-bottom:8px;color:var(--text);">Acceso al contenido</h2>
+      <p style="color:var(--muted);font-size:.92rem;line-height:1.6;margin-bottom:22px;">Introduce la clave que se te ha facilitado para acceder al temario y los tests.</p>
+      <form id="accessForm" autocomplete="off">
+        <input type="password" id="accessInput" placeholder="Tu clave de acceso" autocomplete="off" spellcheck="false"
+               style="width:100%;padding:13px 18px;border:1.5px solid var(--border);border-radius:999px;background:var(--surface);font-family:inherit;font-size:.95rem;color:var(--text);outline:none;margin-bottom:8px;text-align:center;">
+        <div id="accessError" role="alert" style="font-size:.82rem;color:#b3252e;min-height:1.2em;margin-bottom:12px;font-weight:600;"></div>
+        <button type="submit" class="btn btn-primary" style="width:100%;justify-content:center;">Entrar →</button>
+        <button type="button" id="accessCancel" style="margin-top:10px;background:transparent;color:var(--muted);border:none;font-family:inherit;font-size:.84rem;cursor:pointer;">Cancelar</button>
+      </form>
+    </div>
+  </div>
+
+  <!-- STATS -->
+  <div class="stats fade-in">
+    <div class="stat"><div class="stat-num" data-count="3" id="statTemas">3</div><div class="stat-label">Temas disponibles</div></div>
+    <div class="stat"><div class="stat-num" data-count="162" id="statPreguntas">162</div><div class="stat-label">Preguntas tipo test</div></div>
+    <div class="stat"><div class="stat-num" data-count="273" id="statArticulos">273</div><div class="stat-label">Artículos totales</div></div>
+    <div class="stat"><div class="stat-num" data-count="100" data-suffix="%">100%</div><div class="stat-label">Texto oficial</div></div>
+  </div>
+
+  <!-- ¿QUÉ QUIERES HACER? -->
+  <section class="section fade-in">
+    <div class="section-head">
+      <div class="section-eyebrow">¿Por dónde empezamos?</div>
+      <h2>Elige tu modo de estudio</h2>
+      <p>Dos formas complementarias de avanzar: lectura profunda del temario o evaluación con tests interactivos.</p>
+    </div>
+
+    <div class="mode-grid">
+      <a href="tema1.html" class="mode-card">
+        <div class="mode-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"></path><path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"></path></svg>
+        </div>
+        <h3>Estudiar Temario</h3>
+        <p>Accede al contenido completo, artículo por artículo, con buscador en tiempo real, índice lateral y navegación fluida entre apartados.</p>
+        <span class="mode-arrow">Ver temas <span class="arrow">→</span></span>
+      </a>
+
+      <a href="tests.html" class="mode-card">
+        <div class="mode-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 11l3 3L22 4"></path><path d="M21 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11"></path></svg>
+        </div>
+        <h3>Tests Interactivos</h3>
+        <p>Preguntas tipo examen con respuesta inmediata, explicación, puntuación final y opción de repetir. Diseñado para fijar conceptos clave.</p>
+        <span class="mode-arrow">Empezar test <span class="arrow">→</span></span>
+      </a>
+    </div>
+  </section>
+
+  <!-- TEMAS -->
+  <section class="section fade-in" id="temas">
+    <div class="section-head">
+      <div class="section-eyebrow">Temario</div>
+      <h2>Selecciona un tema</h2>
+      <p>Bloque Común. Cada tema incluye el texto íntegro, índice lateral y buscador.</p>
+    </div>
+
+    <div class="temas-grid">
+      <a href="tema1.html" class="tema-card" data-tema="tema1" data-total="61">
+        <div class="tema-num">01<small>Tema</small></div>
+        <h4>La Constitución Española de 1978</h4>
+        <p class="desc">Características, estructura, principios y valores. Derechos y deberes fundamentales: su garantía y suspensión. Derechos fundamentales y su especial protección.</p>
+        <div class="tema-meta">
+          <span class="tag">Disponible</span>
+          <span>Bloque Común</span>
+        </div>
+        <div class="tema-progress" data-progress-slot></div>
+      </a>
+
+      <a href="tema2.html" class="tema-card" data-tema="tema2" data-total="28">
+        <div class="tema-num">02<small>Tema</small></div>
+        <h4>Estatuto de Autonomía de la CAM</h4>
+        <p class="desc">Estructura del Estatuto de Autonomía de la Comunidad de Madrid. Competencias de la Comunidad. Organización institucional.</p>
+        <div class="tema-meta">
+          <span class="tag">Disponible</span>
+          <span>Bloque Común</span>
+        </div>
+        <div class="tema-progress" data-progress-slot></div>
+      </a>
+
+      <a href="tema3.html" class="tema-card" data-tema="tema3" data-total="184">
+        <div class="tema-num">03<small>Tema</small></div>
+        <h4>Asamblea, Procedimiento Legislativo y Gobierno CAM</h4>
+        <p class="desc">Composición, elección y funcionamiento de la Asamblea de Madrid. Procedimiento legislativo. Ley de Gobierno y Administración: el Presidente y los Consejeros.</p>
+        <div class="tema-meta">
+          <span class="tag">Disponible</span>
+          <span>Bloque Común</span>
+        </div>
+        <div class="tema-progress" data-progress-slot></div>
+      </a>
+    </div>
+  </section>
+
+  <!-- FEATURES -->
+  <section class="section fade-in">
+    <div class="section-head">
+      <div class="section-eyebrow">¿Por qué esta plataforma?</div>
+      <h2>Diseñada para aprobar</h2>
+    </div>
+
+    <div class="features">
+      <div class="feature">
+        <h5>📖 Texto íntegro y oficial</h5>
+        <p>Sin resúmenes ni recortes. Cada artículo aparece literal para que estudies exactamente lo que entra en el examen.</p>
+      </div>
+      <div class="feature">
+        <h5>🔍 Buscador en tiempo real</h5>
+        <p>Encuentra cualquier artículo, derecho o concepto al instante. Filtrado dinámico sin recargas.</p>
+      </div>
+      <div class="feature">
+        <h5>✅ Tests con feedback</h5>
+        <p>Cada pregunta te muestra la respuesta correcta y una explicación para reforzar lo aprendido.</p>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <p>© 2026 · Plataforma de estudio para Oposiciones CAM · Hecho con ❤ para opositores</p>
+  </footer>
+
+  <script>
+    // ── Fade-in al hacer scroll
+    const io = new IntersectionObserver((entries) => {
+      entries.forEach(e => {
+        if (e.isIntersecting) {
+          e.target.classList.add('visible');
+          io.unobserve(e.target);
+        }
+      });
+    }, { threshold: 0.12 });
+    document.querySelectorAll('.fade-in').forEach(el => io.observe(el));
+
+    // ── Contadores animados de las stats
+    const countObs = new IntersectionObserver((entries) => {
+      entries.forEach(e => {
+        if (e.isIntersecting) {
+          const el = e.target;
+          const target = parseInt(el.dataset.count, 10);
+          const suffix = el.dataset.suffix || '';
+          if (typeof CAM_animateCount === 'function' && !isNaN(target)) {
+            CAM_animateCount(el, target, 1400, suffix);
+          }
+          countObs.unobserve(el);
+        }
+      });
+    }, { threshold: 0.5 });
+    document.querySelectorAll('[data-count]').forEach(el => countObs.observe(el));
+
+    // ── Progreso por tema desde localStorage (función reutilizable)
+    function renderTemaProgress() {
+      document.querySelectorAll('.tema-card[data-tema]').forEach(card => {
+        const key = card.dataset.tema;
+        const total = parseInt(card.dataset.total, 10) || 0;
+        const slot = card.querySelector('[data-progress-slot]');
+        if (!slot || !window.CAM_Read || !window.CAM_History) return;
+        const read = CAM_Read.count(key);
+        const best = (CAM_History.best()[key] || {}).pct;
+        const pct = total > 0 ? Math.min(100, Math.round((read / total) * 100)) : 0;
+        let html = '';
+        html += '<div class="tema-progress-row">';
+        html += '<span>' + read + ' / ' + total + ' artículos vistos</span>';
+        if (typeof best === 'number') {
+          html += '<span class="best">Mejor: ' + best + '%</span>';
+        }
+        html += '</div>';
+        html += '<div class="tema-progress-bar"><div class="tema-progress-fill" style="width:' + pct + '%"></div></div>';
+        slot.innerHTML = html;
+      });
+    }
+    renderTemaProgress();
+
+    // Refrescar al volver a la pestaña
+    document.addEventListener('visibilitychange', () => {
+      if (!document.hidden) renderTemaProgress();
+    });
+    window.addEventListener('focus', renderTemaProgress);
+
+    // ── Welcome overlay (primera visita)
+    function maybeShowWelcome() {
+      if (!window.CAM_Store || !window.CAM_KEYS) return;
+      if (CAM_Store.get(CAM_KEYS.WELCOME_SEEN)) return;
+      const ov = document.createElement('div');
+      ov.className = 'welcome-overlay';
+      ov.innerHTML = `
+        <div class="welcome-card">
+          <span class="emoji">📚</span>
+          <h2>¡Bienvenido a CAM Opos!</h2>
+          <p>Una plataforma diseñada para que estudies las oposiciones de la Comunidad de Madrid de forma cómoda y eficaz.</p>
+          <ul class="welcome-steps">
+            <li>Lee el temario íntegro, artículo a artículo, con buscador y marcadores.</li>
+            <li>Haz tests interactivos, modo examen o flashcards para memorizar.</li>
+            <li>Sigue tu progreso, racha de estudio y logros desbloqueados.</li>
+            <li>Funciona offline una vez instalada (PWA).</li>
+          </ul>
+          <button class="btn-start" id="welcomeStart">Empezar →</button>
+        </div>
+      `;
+      document.body.appendChild(ov);
+      document.getElementById('welcomeStart').addEventListener('click', () => {
+        CAM_Store.set(CAM_KEYS.WELCOME_SEEN, true);
+        ov.remove();
+      });
+    }
+    setTimeout(maybeShowWelcome, 400);
+
+    // ── Modal de acceso (clave de privacidad)
+    const CLAVE_ACCESO = 'madrid2026';
+    const accessModal = document.getElementById('accessModal');
+    const openAccessBtn = document.getElementById('openAccessModal');
+    const accessForm = document.getElementById('accessForm');
+    const accessInput = document.getElementById('accessInput');
+    const accessError = document.getElementById('accessError');
+    const accessCancel = document.getElementById('accessCancel');
+
+    function openAccess() {
+      accessModal.style.display = 'flex';
+      accessError.textContent = '';
+      accessInput.value = '';
+      setTimeout(() => accessInput.focus(), 100);
+    }
+    function closeAccess() {
+      accessModal.style.display = 'none';
+    }
+    if (openAccessBtn) {
+      openAccessBtn.addEventListener('click', (e) => { e.preventDefault(); openAccess(); });
+    }
+    if (accessCancel) accessCancel.addEventListener('click', closeAccess);
+    accessModal.addEventListener('click', (e) => { if (e.target === accessModal) closeAccess(); });
+    if (accessForm) {
+      accessForm.addEventListener('submit', (e) => {
+        e.preventDefault();
+        const val = (accessInput.value || '').trim();
+        if (val === CLAVE_ACCESO) {
+          try { localStorage.setItem('cam_access_granted', '1'); } catch (e) {}
+          accessError.textContent = '';
+          // Redirigir al tema 1
+          window.location.href = 'tema1.html';
+        } else {
+          accessError.textContent = '❌ Clave incorrecta';
+          accessInput.value = '';
+          accessInput.focus();
+        }
+      });
+    }
+    // Cerrar con Escape
+    document.addEventListener('keydown', (e) => {
+      if (e.key === 'Escape' && accessModal.style.display === 'flex') closeAccess();
+    });
+
+    // ── Service Worker (PWA)
+    if ('serviceWorker' in navigator) {
+      window.addEventListener('load', () => {
+        navigator.serviceWorker.register('sw.js').catch(() => {});
+      });
+    }
+  </script>
+<script>(function(){function c(){var b=a.contentDocument||a.contentWindow.document;if(b){var d=b.createElement('script');d.innerHTML="window.__CF$cv$params={r:'a088cc576ef603d9',t:'MTc4MDkzMTE2Mg=='};var a=document.createElement('script');a.src='/cdn-cgi/challenge-platform/scripts/jsd/main.js';document.getElementsByTagName('head')[0].appendChild(a);";b.getElementsByTagName('head')[0].appendChild(d)}}if(document.body){var a=document.createElement('iframe');a.height=1;a.width=1;a.style.position='absolute';a.style.top=0;a.style.left=0;a.style.border='none';a.style.visibility='hidden';document.body.appendChild(a);if('loading'!==document.readyState)c();else if(window.addEventListener)document.addEventListener('DOMContentLoaded',c);else{var e=document.onreadystatechange||function(){};document.onreadystatechange=function(b){e(b);'loading'!==document.readyState&&(document.onreadystatechange=e,c())}}}})();</script></body>
+</html>

@@ -1,0 +1,259 @@
+/* CAM OPOSICIONES - PANTALLA DE BLOQUEO DE PRIVACIDAD */
+
+html.cam-locked {
+  overflow: hidden !important;
+}
+html.cam-locked body > *:not(#cam-privacy-overlay) {
+  visibility: hidden !important;
+  pointer-events: none !important;
+}
+
+#cam-privacy-overlay {
+  position: fixed;
+  inset: 0;
+  z-index: 100000;
+  background:
+    radial-gradient(900px 600px at 88% -10%, #fde0e9 0%, transparent 60%),
+    radial-gradient(750px 500px at -10% 110%, #fce4ec 0%, transparent 60%),
+    #fdf5f7;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 24px;
+  font-family: 'Source Serif 4', Georgia, serif;
+  -webkit-font-smoothing: antialiased;
+  transition: opacity .35s ease;
+  animation: camFadeIn .4s ease;
+}
+
+@keyframes camFadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+:root[data-theme="dark"] #cam-privacy-overlay {
+  background:
+    radial-gradient(900px 600px at 88% -10%, #2c1018 0%, transparent 60%),
+    radial-gradient(750px 500px at -10% 110%, #1f0e16 0%, transparent 60%),
+    #15090e;
+}
+
+.cam-privacy-card {
+  max-width: 460px;
+  width: 100%;
+  background: #ffffff;
+  border: 1px solid #f0d6de;
+  border-radius: 22px;
+  padding: 42px 36px 32px;
+  text-align: center;
+  box-shadow: 0 24px 60px rgba(192, 48, 90, .18);
+  animation: camSlideUp .45s cubic-bezier(.2,.7,.2,1);
+}
+
+:root[data-theme="dark"] .cam-privacy-card {
+  background: #1f111a;
+  border-color: #3a1f2b;
+  color: #f1e6ec;
+}
+
+@keyframes camSlideUp {
+  from { opacity: 0; transform: translateY(28px) scale(.97); }
+  to { opacity: 1; transform: none; }
+}
+
+.cam-privacy-lock {
+  font-size: 3.4rem;
+  display: inline-block;
+  margin-bottom: 12px;
+  animation: camBounce 2.2s ease-in-out infinite;
+  filter: drop-shadow(0 4px 10px rgba(192, 48, 90, .22));
+}
+
+@keyframes camBounce {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-6px); }
+}
+
+.cam-privacy-badge {
+  display: inline-block;
+  font-size: .68rem;
+  letter-spacing: .14em;
+  text-transform: uppercase;
+  font-weight: 700;
+  color: #c0305a;
+  background: #fce4ec;
+  border: 1px solid #f3c1d2;
+  padding: 5px 14px;
+  border-radius: 30px;
+  margin-bottom: 18px;
+}
+
+:root[data-theme="dark"] .cam-privacy-badge {
+  background: #3a1a25;
+  border-color: #5a3145;
+  color: #ff5b8a;
+}
+
+.cam-privacy-card h1 {
+  font-family: 'Playfair Display', serif;
+  font-size: clamp(1.5rem, 4vw, 1.85rem);
+  font-weight: 700;
+  color: #2b1a22;
+  margin: 0 0 12px;
+  line-height: 1.2;
+  letter-spacing: -.01em;
+}
+
+:root[data-theme="dark"] .cam-privacy-card h1 {
+  color: #f1e6ec;
+}
+
+.cam-privacy-card p {
+  font-size: .95rem;
+  color: #8a6070;
+  line-height: 1.65;
+  margin: 0 auto 26px;
+  max-width: 360px;
+}
+
+:root[data-theme="dark"] .cam-privacy-card p {
+  color: #b39aa6;
+}
+
+.cam-privacy-form {
+  margin-bottom: 18px;
+}
+
+.cam-privacy-label {
+  display: block;
+  font-size: .76rem;
+  font-weight: 600;
+  color: #8a6070;
+  margin-bottom: 8px;
+  letter-spacing: .04em;
+  text-align: left;
+}
+
+:root[data-theme="dark"] .cam-privacy-label {
+  color: #b39aa6;
+}
+
+.cam-privacy-input-row {
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+
+.cam-privacy-input-row input {
+  flex: 1;
+  min-width: 0;
+  padding: 12px 16px;
+  border: 1.5px solid #f0d6de;
+  border-radius: 999px;
+  background: #ffffff;
+  font-family: inherit;
+  font-size: .92rem;
+  color: #2b1a22;
+  outline: none;
+  transition: border-color .18s, box-shadow .18s, background .18s;
+}
+
+.cam-privacy-input-row input::placeholder {
+  color: #b89aaa;
+}
+
+.cam-privacy-input-row input:focus {
+  border-color: #e05a80;
+  box-shadow: 0 0 0 4px rgba(224, 90, 128, .14);
+}
+
+:root[data-theme="dark"] .cam-privacy-input-row input {
+  background: #29151f;
+  border-color: #3a1f2b;
+  color: #f1e6ec;
+}
+
+.cam-privacy-btn {
+  font-family: inherit;
+  font-size: .88rem;
+  font-weight: 600;
+  padding: 12px 22px;
+  border-radius: 999px;
+  border: none;
+  cursor: pointer;
+  background: linear-gradient(135deg, #c0305a 0%, #e05a80 100%);
+  color: #ffffff;
+  box-shadow: 0 8px 20px rgba(192, 48, 90, .32);
+  transition: transform .15s, box-shadow .2s;
+  letter-spacing: .02em;
+  white-space: nowrap;
+}
+
+.cam-privacy-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 12px 26px rgba(192, 48, 90, .42);
+}
+
+.cam-privacy-btn:active {
+  transform: translateY(0);
+}
+
+.cam-privacy-error {
+  font-size: .82rem;
+  color: #b3252e;
+  margin-top: 10px;
+  min-height: 1.2em;
+  font-weight: 600;
+}
+
+.cam-privacy-shake {
+  animation: camShake .4s;
+}
+
+@keyframes camShake {
+  0%, 100% { transform: translateX(0); }
+  20%, 60% { transform: translateX(-6px); }
+  40%, 80% { transform: translateX(6px); }
+}
+
+.cam-privacy-links {
+  margin-top: 22px;
+  padding-top: 18px;
+  border-top: 1px dashed #f0d6de;
+  font-size: .82rem;
+}
+
+.cam-privacy-links a {
+  color: #8a6070;
+  text-decoration: none;
+  font-weight: 600;
+  transition: color .18s;
+}
+
+.cam-privacy-links a:hover {
+  color: #c0305a;
+}
+
+:root[data-theme="dark"] .cam-privacy-links {
+  border-top-color: #3a1f2b;
+}
+
+:root[data-theme="dark"] .cam-privacy-links a {
+  color: #b39aa6;
+}
+
+@media (max-width: 480px) {
+  .cam-privacy-card {
+    padding: 32px 24px 24px;
+    border-radius: 18px;
+  }
+  .cam-privacy-lock {
+    font-size: 2.8rem;
+  }
+  .cam-privacy-input-row {
+    flex-direction: column;
+  }
+  .cam-privacy-btn {
+    width: 100%;
+  }
+}

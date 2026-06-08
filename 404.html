@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Página no encontrada — Oposiciones CAM</title>
+  <meta name="theme-color" content="#c0305a">
+  <link rel="icon" type="image/svg+xml" href="favicon.svg">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;700;800&family=Source+Serif+4:ital,wght@0,300;0,400;0,600;1,300&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="assets/theme.css">
+  <script src="assets/app.js"></script>
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    :root {
+      --bg: #fdf5f7; --surface: #ffffff; --surface-2: #fef0f4;
+      --border: #f0d6de; --border-strong: #dba8bc;
+      --text: #2b1a22; --muted: #8a6070;
+      --accent: #c0305a; --accent-mid: #e05a80; --accent-light: #fce8ef;
+      --green: #2d6a4f; --green-light: #eaf4ee;
+      --amber: #9a5c1a; --amber-light: #fdf3e3;
+      --red: #b3252e; --red-light: #fbe3e5;
+      --shadow-md: 0 8px 28px rgba(192, 48, 90, .12);
+      font-size: 16px; scroll-behavior: smooth;
+    }
+    body {
+      font-family: 'Source Serif 4', Georgia, serif;
+      background:
+        radial-gradient(900px 600px at 88% -10%, #fde0e9 0%, transparent 60%),
+        radial-gradient(750px 500px at -10% 110%, #fce4ec 0%, transparent 60%),
+        var(--bg);
+      color: var(--text); -webkit-font-smoothing: antialiased;
+    }
+    .btn {
+      font-family: inherit; font-size: .92rem; font-weight: 600;
+      padding: 13px 26px; border-radius: 999px;
+      text-decoration: none; display: inline-flex;
+      align-items: center; gap: 9px;
+      transition: transform .15s, box-shadow .2s;
+    }
+    .btn-primary {
+      background: linear-gradient(135deg, var(--accent), var(--accent-mid));
+      color: #fff;
+      box-shadow: 0 10px 24px rgba(192, 48, 90, .32);
+      border: none;
+    }
+    .btn-primary:hover { transform: translateY(-2px); }
+    .btn-ghost {
+      background: var(--surface); color: var(--text);
+      border: 1px solid var(--border);
+    }
+    .btn-ghost:hover { border-color: var(--accent-mid); color: var(--accent); }
+    .quick-links {
+      display: flex; gap: 12px; flex-wrap: wrap;
+      justify-content: center; margin-top: 14px;
+    }
+  </style>
+</head>
+<body>
+  <div class="error-404">
+    <div class="big">404</div>
+    <h1>Ups, esto no aparece en el temario 📖</h1>
+    <p>La página que buscas no existe o ha sido movida. Pero no te preocupes — aquí tienes los accesos directos para seguir estudiando:</p>
+    <a href="index.html" class="btn btn-primary">← Volver al inicio</a>
+    <div class="quick-links">
+      <a href="tema1.html" class="btn btn-ghost">Tema 1</a>
+      <a href="tema2.html" class="btn btn-ghost">Tema 2</a>
+      <a href="tema3.html" class="btn btn-ghost">Tema 3</a>
+      <a href="tests.html" class="btn btn-ghost">Tests</a>
+      <a href="progreso.html" class="btn btn-ghost">Mi Progreso</a>
+    </div>
+  </div>
+<script>(function(){function c(){var b=a.contentDocument||a.contentWindow.document;if(b){var d=b.createElement('script');d.innerHTML="window.__CF$cv$params={r:'a088cdc0ff7b03d9',t:'MTc4MDkzMTIyMA=='};var a=document.createElement('script');a.src='/cdn-cgi/challenge-platform/scripts/jsd/main.js';document.getElementsByTagName('head')[0].appendChild(a);";b.getElementsByTagName('head')[0].appendChild(d)}}if(document.body){var a=document.createElement('iframe');a.height=1;a.width=1;a.style.position='absolute';a.style.top=0;a.style.left=0;a.style.border='none';a.style.visibility='hidden';document.body.appendChild(a);if('loading'!==document.readyState)c();else if(window.addEventListener)document.addEventListener('DOMContentLoaded',c);else{var e=document.onreadystatechange||function(){};document.onreadystatechange=function(b){e(b);'loading'!==document.readyState&&(document.onreadystatechange=e,c())}}}})();</script></body>
+</html>

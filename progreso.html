@@ -1,0 +1,665 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mi Progreso — Oposiciones CAM</title>
+  <meta name="theme-color" content="#c0305a">
+  <link rel="icon" type="image/svg+xml" href="favicon.svg">
+  <link rel="apple-touch-icon" href="icons/icon-192.png">
+  <link rel="manifest" href="manifest.webmanifest">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;700&family=Source+Serif+4:ital,wght@0,300;0,400;0,600;1,300&display=swap"
+    rel="stylesheet">
+    <link rel="stylesheet" href="assets/privacy.css">
+  <link rel="stylesheet" href="assets/theme.css">
+    <script src="assets/privacy.js"></script>
+  <script src="assets/app.js"></script>
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    :root {
+      --bg: #fdf5f7; --bg-2: #fbe8ee; --surface: #ffffff; --surface-2: #fef0f4;
+      --border: #f0d6de; --border-strong: #dba8bc;
+      --text: #2b1a22; --text-2: #5b3a48; --muted: #8a6070; --muted-light: #b89aaa;
+      --accent: #c0305a; --accent-mid: #e05a80; --accent-light: #fce8ef; --accent-hover: #a82550;
+      --green: #2d6a4f; --green-light: #eaf4ee;
+      --amber: #9a5c1a; --amber-light: #fdf3e3;
+      --red: #b3252e; --red-light: #fbe3e5;
+      --shadow-sm: 0 2px 10px rgba(192, 48, 90, .06);
+      --shadow-md: 0 8px 28px rgba(192, 48, 90, .12);
+      --nav-h: 64px;
+      font-size: 16px; scroll-behavior: smooth;
+    }
+    body {
+      font-family: 'Source Serif 4', Georgia, serif;
+      background:
+        radial-gradient(900px 600px at 88% -10%, #fde0e9 0%, transparent 60%),
+        radial-gradient(750px 500px at -10% 110%, #fce4ec 0%, transparent 60%),
+        var(--bg);
+      color: var(--text); min-height: 100vh; -webkit-font-smoothing: antialiased;
+    }
+    ::-webkit-scrollbar { width: 8px; }
+    ::-webkit-scrollbar-thumb { background: var(--border-strong); border-radius: 4px; }
+
+    /* NAV (igual que tests) */
+    .topnav {
+      position: fixed; top: 0; left: 0; right: 0;
+      height: var(--nav-h);
+      background: linear-gradient(180deg, #2b1a22 0%, #1f1219 100%);
+      display: flex; align-items: center; z-index: 200;
+      border-bottom: 2px solid var(--accent);
+      box-shadow: 0 4px 22px rgba(43,26,34,.22);
+    }
+    .brand {
+      font-family: 'Playfair Display', serif; color: #fff;
+      font-size: 1rem; font-weight: 700; letter-spacing: .03em;
+      padding: 0 22px; white-space: nowrap;
+      border-right: 1px solid rgba(255,255,255,.12);
+      height: 100%; display: flex; align-items: center;
+      min-width: 180px; flex-shrink: 0; text-decoration: none;
+      transition: color .18s, background .18s;
+    }
+    .brand:hover { color: var(--accent-light); background: rgba(255,255,255,.04); }
+    .nav-tabs { display: flex; align-items: center; height: 100%; flex: 1; overflow-x: auto; scrollbar-width: none; }
+    .nav-tabs::-webkit-scrollbar { display: none; }
+    .nav-tab {
+      height: 100%; padding: 0 20px;
+      color: rgba(255,255,255,.55);
+      font-size: .78rem; font-family: 'Source Serif 4', serif;
+      font-weight: 500; letter-spacing: .06em; text-transform: uppercase;
+      cursor: pointer; border: none; background: none;
+      border-right: 1px solid rgba(255,255,255,.06);
+      white-space: nowrap; transition: all .18s;
+      display: flex; align-items: center; gap: 9px; text-decoration: none;
+      position: relative;
+    }
+    .nav-tab:hover { color: rgba(255,255,255,.9); background: rgba(255,255,255,.05); }
+    .nav-tab.active { color: #fff; background: linear-gradient(180deg, rgba(192,48,90,.18) 0%, rgba(192,48,90,.28) 100%); }
+    .nav-tab.active::after { content: ''; position: absolute; bottom: 0; left: 0; right: 0; height: 3px; background: linear-gradient(90deg, var(--accent) 0%, var(--accent-mid) 100%); }
+    .nav-tab .dot { width: 7px; height: 7px; border-radius: 50%; background: rgba(255,255,255,.2); flex-shrink: 0; }
+    .nav-tab.active .dot { background: var(--accent-mid); box-shadow: 0 0 0 4px rgba(224,90,128,.25); }
+
+    .container {
+      max-width: 1080px; margin: 0 auto;
+      padding: calc(var(--nav-h) + 40px) 24px 80px;
+    }
+
+    .page-header { text-align: center; margin-bottom: 38px; }
+    .badge {
+      display: inline-block; font-size: .68rem; letter-spacing: .12em;
+      text-transform: uppercase; font-weight: 700; color: var(--accent);
+      background: var(--accent-light); border: 1px solid #e8b0c0;
+      padding: 4px 14px; border-radius: 20px; margin-bottom: 14px;
+    }
+    .page-header h1 {
+      font-family: 'Playfair Display', serif;
+      font-size: clamp(1.7rem, 4vw, 2.4rem); font-weight: 700;
+      line-height: 1.2; margin-bottom: 10px;
+    }
+    .page-header p { color: var(--muted); max-width: 560px; margin: 0 auto; font-size: .96rem; line-height: 1.65; }
+
+    .section-title {
+      font-family: 'Playfair Display', serif;
+      font-size: 1.2rem; font-weight: 700; margin: 32px 0 16px;
+      display: flex; align-items: center; gap: 10px;
+      padding-bottom: 10px; border-bottom: 1.5px solid var(--border);
+    }
+    .section-title .count {
+      font-size: .68rem; background: var(--accent); color: #fff;
+      padding: 3px 10px; border-radius: 999px; font-family: 'Source Serif 4', serif;
+      letter-spacing: .06em;
+    }
+
+    .empty-state {
+      background: var(--surface);
+      border: 1px dashed var(--border-strong);
+      border-radius: 14px;
+      padding: 40px 24px;
+      text-align: center;
+      color: var(--muted);
+      font-size: .9rem;
+    }
+    .empty-state .emoji { font-size: 2rem; display: block; margin-bottom: 10px; }
+    .empty-state a {
+      color: var(--accent); font-weight: 600;
+      text-decoration: none;
+      border-bottom: 1.5px solid var(--accent-mid);
+    }
+
+    .danger-zone {
+      margin-top: 40px;
+      padding: 22px 24px;
+      background: var(--red-light);
+      border: 1px solid #f1c1c5;
+      border-radius: 14px;
+    }
+    .danger-zone h3 {
+      font-family: 'Playfair Display', serif;
+      font-size: 1rem; color: var(--red); margin-bottom: 8px;
+    }
+    .danger-zone p { font-size: .82rem; color: var(--muted); margin-bottom: 14px; }
+    .danger-zone button {
+      background: var(--red); color: #fff;
+      border: none; padding: 9px 18px; border-radius: 999px;
+      cursor: pointer; font-family: inherit; font-size: .82rem; font-weight: 600;
+      transition: transform .15s, opacity .2s;
+    }
+    .danger-zone button:hover { transform: translateY(-1px); opacity: .92; }
+
+    .btn-secondary {
+      display: inline-block;
+      background: var(--surface); color: var(--text);
+      border: 1px solid var(--border);
+      padding: 9px 18px; border-radius: 999px;
+      font-family: inherit; font-size: .85rem; font-weight: 600;
+      cursor: pointer; text-decoration: none;
+      transition: all .18s;
+      margin-right: 8px;
+    }
+    .btn-secondary:hover { border-color: var(--accent-mid); color: var(--accent); }
+    .btn-primary {
+      display: inline-block;
+      background: linear-gradient(135deg, var(--accent) 0%, var(--accent-mid) 100%);
+      color: #fff; border: none;
+      padding: 10px 20px; border-radius: 999px;
+      font-family: inherit; font-size: .85rem; font-weight: 600;
+      cursor: pointer; text-decoration: none;
+      box-shadow: 0 8px 18px rgba(192,48,90,.25);
+      transition: transform .15s, box-shadow .2s;
+    }
+    .btn-primary:hover { transform: translateY(-2px); box-shadow: 0 12px 24px rgba(192,48,90,.35); }
+
+    .actions-bar {
+      display: flex; flex-wrap: wrap; gap: 8px;
+      margin: 16px 0 24px;
+      align-items: center;
+    }
+
+    @media (max-width: 600px) {
+      .container { padding: calc(var(--nav-h) + 24px) 14px 60px; }
+      .brand { font-size: .85rem; padding: 0 14px; min-width: 130px; }
+      .nav-tab { font-size: .7rem; padding: 0 12px; }
+    }
+  </style>
+</head>
+
+<body>
+  <nav class="topnav">
+    <a class="brand" href="index.html">← CAM Oposiciones</a>
+    <div class="nav-tabs">
+      <a class="nav-tab" href="tema1.html"><span class="dot"></span>Tema 1</a>
+      <a class="nav-tab" href="tema2.html"><span class="dot"></span>Tema 2</a>
+      <a class="nav-tab" href="tema3.html"><span class="dot"></span>Tema 3</a>
+      <a class="nav-tab" href="tests.html"><span class="dot"></span>Tests</a>
+      <a class="nav-tab active" href="progreso.html"><span class="dot"></span>Mi Progreso</a>
+      <button id="themeToggle" class="theme-toggle" aria-label="Cambiar tema" title="Cambiar tema" style="margin-left:auto;">
+        <svg class="icon-moon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path></svg>
+        <svg class="icon-sun" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="5"></circle><line x1="12" y1="1" x2="12" y2="3"></line><line x1="12" y1="21" x2="12" y2="23"></line><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line><line x1="1" y1="12" x2="3" y2="12"></line><line x1="21" y1="12" x2="23" y2="12"></line><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line></svg>
+      </button>
+    </div>
+  </nav>
+
+  <div class="container">
+    <div class="page-header">
+      <span class="badge">Mi progreso</span>
+      <h1>Tu evolución, en un vistazo</h1>
+      <p>Estadísticas de estudio, mejores puntuaciones y artículos marcados. Todo se guarda localmente en tu navegador.</p>
+    </div>
+
+    <!-- Racha de estudio -->
+    <div id="streakContainer"></div>
+
+    <!-- Logros -->
+    <div class="section-title">🏆 Logros <span class="count" id="achCount">0</span></div>
+    <div id="achievementsContainer"></div>
+
+    <!-- Gráfico evolución -->
+    <div id="evolutionContainer"></div>
+
+    <!-- Progreso por tema -->
+    <div class="section-title">📚 Progreso por tema</div>
+    <div id="temaStats" class="progress-grid"></div>
+
+    <!-- Mejores puntuaciones -->
+    <div class="section-title">🏆 Mis mejores puntuaciones</div>
+    <div id="bestScores"></div>
+
+    <!-- Histórico de tests -->
+    <div class="section-title">📊 Historial de tests <span class="count" id="histCount">0</span></div>
+    <div id="historyContainer"></div>
+
+    <!-- Artículos marcados -->
+    <div class="section-title">🔖 Artículos marcados</div>
+    <div id="flaggedContainer"></div>
+
+    <!-- Diagnóstico -->
+    <div style="background:var(--surface-2);border:1px dashed var(--border-strong);border-radius:14px;padding:18px 22px;margin-top:32px;">
+      <h3 style="font-family:'Playfair Display',serif;font-size:1rem;color:var(--accent);margin-bottom:8px;">🔍 Diagnóstico de datos</h3>
+      <p style="font-size:.84rem;color:var(--muted);margin-bottom:12px;">Si algo no aparece, comprueba aquí qué hay guardado en tu navegador.</p>
+      <div id="diagBox" style="font-family:'SF Mono',Consolas,monospace;font-size:.78rem;background:var(--surface);padding:14px;border-radius:8px;color:var(--text);line-height:1.7;border:1px solid var(--border);"></div>
+      <button class="btn-secondary" id="refreshBtn" style="margin-top:12px;">🔄 Recargar datos</button>
+    </div>
+
+    <!-- Zona peligrosa -->
+    <div class="danger-zone">
+      <h3>⚠️ Zona de gestión</h3>
+      <p>Tus datos se guardan únicamente en este navegador. Puedes exportarlos para hacer copia de seguridad o borrarlos por completo.</p>
+      <button class="btn-secondary" id="exportBtn">📥 Exportar mis datos</button>
+      <button class="btn-secondary" id="importBtn">📤 Importar datos</button>
+      <button id="clearHistory">🗑 Borrar historial de tests</button>
+      <button id="clearAll" style="background:#7a1a25;margin-left:8px;">⚠️ Borrar TODO</button>
+      <input type="file" id="importFile" accept=".json" style="display:none">
+    </div>
+  </div>
+
+  <script>
+    const TEMAS = {
+      tema1: { name: 'Tema 1 — Constitución Española', total: 61, href: 'tema1.html' },
+      tema2: { name: 'Tema 2 — Estatuto CAM', total: 28, href: 'tema2.html' },
+      tema3: { name: 'Tema 3 — Asamblea y Gobierno', total: 184, href: 'tema3.html' },
+      mixto: { name: 'Test Mixto', total: 0, href: 'tests.html' }
+    };
+
+    /* Cargar totales reales de los temas en segundo plano (no bloqueante) */
+    async function loadRealTotals() {
+      const keys = ['tema1', 'tema2', 'tema3'];
+      let changed = false;
+      for (const k of keys) {
+        try {
+          const resp = await fetch(TEMAS[k].href, { cache: 'force-cache' });
+          if (!resp.ok) continue;
+          const txt = await resp.text();
+          const matches = txt.match(/class="article(?:\s+[^"]*)?"/g);
+          if (matches && matches.length > 0 && matches.length !== TEMAS[k].total) {
+            TEMAS[k].total = matches.length;
+            changed = true;
+          }
+        } catch (e) { /* offline o error, mantener default */ }
+      }
+      if (changed) render();
+    }
+
+    function render() {
+      const safe = (fn, name) => {
+        try { fn(); } catch (e) { console.error('[progreso] Error en ' + name + ':', e); }
+      };
+      safe(renderStreak, 'renderStreak');
+      safe(renderAchievements, 'renderAchievements');
+      safe(renderEvolution, 'renderEvolution');
+      safe(renderTemaStats, 'renderTemaStats');
+      safe(renderBestScores, 'renderBestScores');
+      safe(renderHistory, 'renderHistory');
+      safe(renderFlagged, 'renderFlagged');
+      safe(renderDiagnostic, 'renderDiagnostic');
+      // Comprobar logros nuevos cada vez que renderiza
+      try { if (window.CAM_Achievements) CAM_Achievements.check(); }
+      catch (e) { console.error('[progreso] Achievements.check error:', e); }
+    }
+
+    /* ── Racha ── */
+    function renderStreak() {
+      const cont = document.getElementById('streakContainer');
+      const s = CAM_Streak.get();
+      const isActive = CAM_Streak.isActiveToday();
+      const cold = s.current === 0 ? 'cold' : '';
+      let calendar = '';
+      // Últimos 30 días
+      for (let i = 29; i >= 0; i--) {
+        const d = new Date(); d.setDate(d.getDate() - i);
+        const key = d.getFullYear() + '-' + String(d.getMonth() + 1).padStart(2, '0') + '-' + String(d.getDate()).padStart(2, '0');
+        const active = s.days && s.days.includes(key) ? 'active' : '';
+        calendar += `<div class="streak-day ${active}" title="${key}"></div>`;
+      }
+      cont.innerHTML = `
+        <div class="streak-card ${cold}">
+          <div class="streak-flame">🔥</div>
+          <div class="streak-info">
+            <div class="streak-num">${s.current}<small>${s.current === 1 ? 'día' : 'días'}</small></div>
+            <div class="streak-label">${isActive ? 'Racha activa hoy' : 'Estudia hoy para no perderla'}</div>
+            <div class="streak-best">Mejor racha: <b>${s.best}</b> días</div>
+            <div class="streak-calendar">${calendar}</div>
+          </div>
+        </div>
+      `;
+    }
+
+    /* ── Logros ── */
+    function renderAchievements() {
+      const cont = document.getElementById('achievementsContainer');
+      const list = CAM_Achievements.list;
+      const unlocked = CAM_Achievements.unlocked();
+      const total = list.length;
+      const done = Object.keys(unlocked).length;
+      document.getElementById('achCount').textContent = done + ' / ' + total;
+      let html = '<div class="achievements-grid">';
+      list.forEach(a => {
+        const isUnlocked = !!unlocked[a.id];
+        html += `
+          <div class="achievement ${isUnlocked ? 'unlocked' : 'locked'}" title="${a.desc}">
+            <span class="achievement-icon">${a.icon}</span>
+            <div class="achievement-name">${a.name}</div>
+            <div class="achievement-desc">${a.desc}</div>
+          </div>`;
+      });
+      html += '</div>';
+      cont.innerHTML = html;
+    }
+
+    /* ── Gráfico evolución (SVG) ── */
+    function renderEvolution() {
+      const cont = document.getElementById('evolutionContainer');
+      const history = CAM_History.all().slice(0, 15).reverse(); // los últimos 15 en orden cronológico
+      if (history.length < 2) {
+        cont.innerHTML = '';
+        return;
+      }
+      const W = 600, H = 180;
+      const padL = 40, padR = 16, padT = 16, padB = 28;
+      const innerW = W - padL - padR;
+      const innerH = H - padT - padB;
+      const points = history.map((entry, i) => {
+        const pct = entry.total > 0 ? Math.round((entry.score / entry.total) * 100) : 0;
+        const x = padL + (history.length === 1 ? innerW / 2 : (i / (history.length - 1)) * innerW);
+        const y = padT + innerH - (pct / 100) * innerH;
+        return { x, y, pct, ts: entry.ts };
+      });
+      // Líneas grid
+      let grid = '';
+      [0, 25, 50, 75, 100].forEach(v => {
+        const y = padT + innerH - (v / 100) * innerH;
+        grid += `<line class="evo-grid-line" x1="${padL}" y1="${y}" x2="${W - padR}" y2="${y}"/>`;
+        grid += `<text class="evo-label" x="${padL - 6}" y="${y + 3}" text-anchor="end">${v}%</text>`;
+      });
+      const linePath = points.map((p, i) => (i === 0 ? 'M' : 'L') + p.x + ',' + p.y).join(' ');
+      const baselineY = padT + innerH;
+      const areaPath = linePath + ` L ${points[points.length-1].x},${baselineY} L ${points[0].x},${baselineY} Z`;
+      let dots = '';
+      points.forEach(p => {
+        dots += `<circle class="evo-dot" cx="${p.x}" cy="${p.y}" r="4"><title>${p.pct}% — ${new Date(p.ts).toLocaleDateString('es-ES')}</title></circle>`;
+      });
+      cont.innerHTML = `
+        <div class="evolution-chart">
+          <h4>📈 Evolución de mis últimos ${history.length} tests</h4>
+          <svg viewBox="0 0 ${W} ${H}" preserveAspectRatio="none">
+            ${grid}
+            <path class="evo-area" d="${areaPath}"/>
+            <path class="evo-line" d="${linePath}"/>
+            ${dots}
+          </svg>
+        </div>
+      `;
+    }
+
+    function renderDiagnostic() {
+      const box = document.getElementById('diagBox');
+      if (!box) return;
+      const visited = CAM_Store.get(CAM_KEYS.VISITED_ARTICLES, {});
+      const flags = CAM_Store.get(CAM_KEYS.ARTICLE_FLAGS, {});
+      const history = CAM_History.all();
+      const wrong = CAM_Store.get(CAM_KEYS.WRONG_QUESTIONS, {});
+
+      let html = '';
+      html += `<b>📚 Artículos visitados por tema:</b><br>`;
+      let totalVis = 0;
+      ['tema1','tema2','tema3'].forEach(k => {
+        const cnt = visited[k] ? Object.keys(visited[k]).length : 0;
+        totalVis += cnt;
+        html += `&nbsp;&nbsp;${k}: <b style="color:${cnt>0?'var(--green)':'var(--muted)'}">${cnt}</b> artículos<br>`;
+      });
+      if (totalVis === 0) {
+        html += `<br><span style="color:var(--red);">⚠️ Aún no se ha registrado ningún artículo. <a href="tema1.html" style="color:var(--accent);">Abre un tema y haz scroll</a> — se marcan al estar visibles 1,5 s.</span><br>`;
+      }
+
+      html += `<br><b>🏷️ Marcadores guardados:</b><br>`;
+      let totalFlags = 0;
+      Object.keys(flags).forEach(tema => {
+        const n = Object.keys(flags[tema]).length;
+        totalFlags += n;
+        html += `&nbsp;&nbsp;${tema}: <b style="color:${n>0?'var(--green)':'var(--muted)'}">${n}</b> marcadas<br>`;
+      });
+      if (totalFlags === 0) {
+        html += `<br><span style="color:var(--red);">⚠️ Sin marcadores. En un tema, despliega un artículo y pulsa 🤔 o ⭐ en su cabecera. En tests, usa los botones bajo cada pregunta.</span><br>`;
+      }
+
+      html += `<br><b>🎯 Tests realizados:</b> <b style="color:${history.length>0?'var(--green)':'var(--muted)'}">${history.length}</b><br>`;
+      let totalWrong = 0;
+      Object.values(wrong).forEach(t => totalWrong += Object.keys(t).length);
+      html += `<b>❌ Preguntas falladas guardadas:</b> <b style="color:${totalWrong>0?'var(--accent)':'var(--muted)'}">${totalWrong}</b><br>`;
+
+      box.innerHTML = html;
+    }
+
+    function renderTemaStats() {
+      const cont = document.getElementById('temaStats');
+      let html = '';
+      Object.keys(TEMAS).filter(k => k !== 'mixto').forEach(key => {
+        const t = TEMAS[key];
+        const read = CAM_Read.count(key);
+        const pct = t.total > 0 ? Math.min(100, Math.round((read / t.total) * 100)) : 0;
+        html += `
+          <div class="progress-tema-card">
+            <h4>${t.name}</h4>
+            <div style="display:flex;justify-content:space-between;align-items:flex-end;margin-bottom:10px;">
+              <div>
+                <div class="progress-num">${pct}<small style="font-size:1rem;color:var(--muted);">%</small></div>
+                <div class="progress-label">Vistos: ${read} / ${t.total}</div>
+              </div>
+              <a href="${t.href}" class="btn-secondary" style="margin:0;font-size:.74rem;padding:6px 12px;">Ir →</a>
+            </div>
+            <div class="tema-progress-bar"><div class="tema-progress-fill" style="width:${pct}%"></div></div>
+          </div>`;
+      });
+      cont.innerHTML = html;
+    }
+
+    function renderBestScores() {
+      const cont = document.getElementById('bestScores');
+      // Reconstruir best desde history como fallback (backward compat)
+      const history = CAM_History.all();
+      const computed = {};
+      history.forEach(h => {
+        if (!h || typeof h.score === 'undefined' || !h.total) return;
+        const pct = Math.round((h.score / h.total) * 100);
+        if (!computed[h.key] || computed[h.key].pct < pct) {
+          computed[h.key] = { pct, ts: h.ts, count: 0 };
+        }
+      });
+      // Mezclar con el best oficial
+      const officialBest = CAM_History.best();
+      Object.keys(officialBest).forEach(k => {
+        if (!computed[k] || computed[k].pct < officialBest[k].pct) {
+          computed[k] = { ...officialBest[k], count: computed[k]?.count || 0 };
+        }
+      });
+      // Contar nº de tests por tema
+      history.forEach(h => { if (computed[h.key]) computed[h.key].count = (computed[h.key].count || 0) + 1; });
+
+      const keys = Object.keys(computed);
+      if (keys.length === 0) {
+        cont.innerHTML = '<div class="empty-state"><span class="emoji">🎯</span>Aún no has hecho ningún test.<br><a href="tests.html">Haz tu primer test →</a></div>';
+        return;
+      }
+      let html = '<div class="progress-grid">';
+      keys.forEach(k => {
+        const info = computed[k];
+        const t = TEMAS[k] || { name: k };
+        const color = info.pct >= 75 ? 'var(--green)' : info.pct >= 50 ? 'var(--accent)' : 'var(--red)';
+        html += `
+          <div class="progress-tema-card">
+            <h4>${t.name}</h4>
+            <div class="progress-num" style="color:${color};">${info.pct}<small style="font-size:1rem;">%</small></div>
+            <div class="progress-label" style="margin-top:8px;">${info.count} test${info.count === 1 ? '' : 's'} realizado${info.count === 1 ? '' : 's'} · ${CAM_timeAgo(info.ts)}</div>
+          </div>`;
+      });
+      html += '</div>';
+      cont.innerHTML = html;
+    }
+
+    function renderHistory() {
+      const cont = document.getElementById('historyContainer');
+      const list = CAM_History.all();
+      document.getElementById('histCount').textContent = list.length;
+      if (list.length === 0) {
+        cont.innerHTML = '<div class="empty-state"><span class="emoji">📊</span>Sin historial todavía.<br>Cada test que hagas aparecerá aquí.</div>';
+        return;
+      }
+      let html = '<table class="history-table"><thead><tr><th>Fecha</th><th>Test</th><th>Modo</th><th>Resultado</th><th>%</th></tr></thead><tbody>';
+      list.forEach(h => {
+        const pct = Math.round((h.score / h.total) * 100);
+        const cls = pct >= 75 ? 'good' : pct >= 50 ? 'mid' : 'bad';
+        const t = TEMAS[h.key] || { name: h.key };
+        html += `<tr>
+          <td style="color:var(--muted);font-size:.78rem;">${CAM_timeAgo(h.ts)}</td>
+          <td><b>${t.name}</b></td>
+          <td style="font-size:.78rem;color:var(--muted);">${h.mode || 'Estudio'}</td>
+          <td>${h.score} / ${h.total}</td>
+          <td><span class="pct ${cls}">${pct}%</span></td>
+        </tr>`;
+      });
+      html += '</tbody></table>';
+      cont.innerHTML = html;
+    }
+
+    function renderFlagged() {
+      const cont = document.getElementById('flaggedContainer');
+      const flags = CAM_Flags.all();
+      const articleItems = [];
+      const questionItems = [];
+      Object.keys(flags).forEach(tema => {
+        Object.keys(flags[tema]).forEach(id => {
+          const item = { tema, id, flags: flags[tema][id] };
+          if (id.startsWith('q:')) questionItems.push(item);
+          else articleItems.push(item);
+        });
+      });
+
+      if (articleItems.length === 0 && questionItems.length === 0) {
+        cont.innerHTML = '<div class="empty-state"><span class="emoji">🔖</span>Aún no has marcado nada.<br>En los temas, pulsa 🤔 o ⭐ en cualquier artículo.<br>En los tests, usa los botones de marcar o las teclas <b>D</b> e <b>I</b>.</div>';
+        return;
+      }
+
+      let html = '';
+
+      /* ── ARTÍCULOS ── */
+      if (articleItems.length > 0) {
+        const byTema = {};
+        articleItems.forEach(it => {
+          if (!byTema[it.tema]) byTema[it.tema] = [];
+          byTema[it.tema].push(it);
+        });
+        html += '<h5 style="font-family:\'Playfair Display\',serif;font-size:.95rem;margin:8px 0 12px;color:var(--text-2);">📚 Artículos marcados</h5>';
+        Object.keys(byTema).forEach(tema => {
+          const t = TEMAS[tema] || { name: tema, href: tema + '.html' };
+          html += `<div class="progress-tema-card" style="margin-bottom:12px;">
+            <h4>${t.name}</h4>
+            <div style="display:flex;flex-wrap:wrap;gap:8px;margin-top:10px;">`;
+          byTema[tema].forEach(it => {
+            const icons = (it.flags.dudoso ? '🤔 ' : '') + (it.flags.importante ? '⭐ ' : '');
+            html += `<a href="${t.href}#${it.id}" style="text-decoration:none;background:var(--surface-2);padding:5px 12px;border-radius:999px;font-size:.78rem;color:var(--text);border:1px solid var(--border);">${icons}${it.id.replace(/^art/, 'Art. ')}</a>`;
+          });
+          html += '</div></div>';
+        });
+      }
+
+      /* ── PREGUNTAS ── */
+      if (questionItems.length > 0) {
+        const byTema = {};
+        questionItems.forEach(it => {
+          if (!byTema[it.tema]) byTema[it.tema] = [];
+          byTema[it.tema].push(it);
+        });
+        html += '<h5 style="font-family:\'Playfair Display\',serif;font-size:.95rem;margin:24px 0 12px;color:var(--text-2);">❓ Preguntas marcadas</h5>';
+        Object.keys(byTema).forEach(tema => {
+          const t = TEMAS[tema] || { name: 'Test: ' + tema, href: 'tests.html' };
+          html += `<div class="progress-tema-card" style="margin-bottom:12px;">
+            <h4>${t.name}</h4>
+            <div style="display:flex;flex-direction:column;gap:8px;margin-top:10px;">`;
+          byTema[tema].forEach(it => {
+            const icons = (it.flags.dudoso ? '🤔 ' : '') + (it.flags.importante ? '⭐ ' : '');
+            // Reconstruir el enunciado desde el ID (q:...)
+            const text = it.id.slice(2).replace(/_/g, ' ');
+            html += `<div style="background:var(--surface-2);padding:10px 14px;border-radius:10px;font-size:.84rem;color:var(--text);border:1px solid var(--border);line-height:1.4;">
+              <span style="font-size:.75rem;color:var(--accent);font-weight:700;letter-spacing:.04em;">${icons}</span>
+              <span style="font-style:italic;">"${text}..."</span>
+            </div>`;
+          });
+          html += '</div></div>';
+        });
+      }
+
+      cont.innerHTML = html;
+    }
+
+    /* ── ACCIONES ── */
+    document.getElementById('refreshBtn').addEventListener('click', () => {
+      render();
+      CAM_Toast.show('🔄 Datos recargados');
+    });
+    document.getElementById('clearHistory').addEventListener('click', () => {
+      if (confirm('¿Borrar todo el historial de tests y mejores puntuaciones?')) {
+        CAM_History.clear();
+        CAM_Toast.show('Historial borrado');
+        render();
+      }
+    });
+    document.getElementById('clearAll').addEventListener('click', () => {
+      if (confirm('⚠️ Esto borrará TODOS tus datos: tests, marcadores, progreso de lectura y notas. ¿Continuar?')) {
+        Object.values(CAM_KEYS).forEach(k => CAM_Store.remove(k));
+        CAM_Toast.show('Todos los datos borrados');
+        setTimeout(render, 300);
+      }
+    });
+    document.getElementById('exportBtn').addEventListener('click', () => {
+      const data = {};
+      Object.entries(CAM_KEYS).forEach(([k, v]) => {
+        const stored = localStorage.getItem(v);
+        if (stored) data[v] = stored;
+      });
+      const blob = new Blob([JSON.stringify(data, null, 2)], { type: 'application/json' });
+      const url = URL.createObjectURL(blob);
+      const a = document.createElement('a');
+      a.href = url; a.download = 'cam-opos-backup-' + new Date().toISOString().slice(0,10) + '.json';
+      a.click(); URL.revokeObjectURL(url);
+      CAM_Toast.show('📥 Datos exportados');
+    });
+    document.getElementById('importBtn').addEventListener('click', () => {
+      document.getElementById('importFile').click();
+    });
+    document.getElementById('importFile').addEventListener('change', (e) => {
+      const file = e.target.files[0];
+      if (!file) return;
+      const reader = new FileReader();
+      reader.onload = (ev) => {
+        try {
+          const data = JSON.parse(ev.target.result);
+          Object.entries(data).forEach(([k, v]) => localStorage.setItem(k, v));
+          CAM_Toast.show('📤 Datos importados correctamente');
+          setTimeout(render, 300);
+        } catch (err) {
+          alert('Error al importar: ' + err.message);
+        }
+      };
+      reader.readAsText(file);
+    });
+
+    // Renderizar inmediatamente con los totales por defecto
+    render();
+    // Cargar totales reales en segundo plano y re-renderizar si cambian
+    loadRealTotals();
+
+    // Refrescar al volver a la pestaña (por si se ha hecho un test en otra)
+    document.addEventListener('visibilitychange', () => {
+      if (!document.hidden) render();
+    });
+    window.addEventListener('focus', render);
+
+    // Service Worker
+    if ('serviceWorker' in navigator) {
+      navigator.serviceWorker.register('sw.js').catch(()=>{});
+    }
+  </script>
+</body>
+</html>
