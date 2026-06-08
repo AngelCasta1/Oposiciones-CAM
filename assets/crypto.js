@@ -1,13 +1,3 @@
-/* ─────────────────────────────────────────────────────────
-   CAM OPOSICIONES — MÓDULO DE CIFRADO AES
-   Usa Web Crypto API nativa del navegador (sin dependencias).
-   Cifra/descifra contenido con AES-GCM 256 bits derivado de
-   la clave del usuario mediante PBKDF2 (100.000 iteraciones).
-
-   Funciones principales:
-     CAM_Crypto.encrypt(plaintext, password) -> string base64
-     CAM_Crypto.decrypt(ciphertext, password) -> string plaintext
-───────────────────────────────────────────────────────── */
 (function () {
   'use strict';
 
@@ -16,17 +6,17 @@
   const ITERATIONS = 100000;
   const KEY_LENGTH = 256;
 
-  /* Convertir string -> Uint8Array */
+
   function strToBytes(str) {
     return new TextEncoder().encode(str);
   }
 
-  /* Convertir Uint8Array -> string */
+
   function bytesToStr(bytes) {
     return new TextDecoder().decode(bytes);
   }
 
-  /* Convertir Uint8Array -> base64 */
+ 
   function bytesToBase64(bytes) {
     let binary = '';
     const len = bytes.byteLength;
@@ -47,7 +37,6 @@
     return bytes;
   }
 
-  /* Derivar clave AES desde contraseña usando PBKDF2 */
   async function deriveKey(password, salt) {
     const passwordKey = await crypto.subtle.importKey(
       'raw',
