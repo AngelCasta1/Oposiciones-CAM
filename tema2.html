@@ -16,6 +16,7 @@
   <meta property="og:locale" content="es_ES">
     <link rel="stylesheet" href="assets/privacy.css">
   <link rel="stylesheet" href="assets/theme.css">
+    <script src="assets/crypto.js"></script>
     <script src="assets/privacy.js"></script>
   <script src="assets/app.js"></script>
   <script src="assets/tema-extras.js"></script>
@@ -744,7 +745,7 @@
     <a class="nav-tab" href="tema1.html"><span class="dot"></span>Tema 1</a>
     <a class="nav-tab active" href="tema2.html"><span class="dot"></span>Tema 2</a>
     <a class="nav-tab" href="tema3.html"><span class="dot"></span>Tema 3</a>
-    <button class="nav-tab disabled" title="Próximamente"><span class="dot"></span>Tema 4<span class="pill">Próx.</span></button>
+    <a class="nav-tab" href="tema4.html"><span class="dot"></span>Tema 4</a>
     <a class="nav-tab" href="tests.html" style="color:rgba(255,255,255,.85);"><span class="dot" style="background:#e05a80;"></span>Tests</a>
       <a class="nav-tab" href="progreso.html"><span class="dot"></span>Mi Progreso</a>
       <button id="themeToggle" class="theme-toggle" aria-label="Cambiar tema" title="Cambiar tema">
@@ -1118,8 +1119,11 @@
   <script>
     (function () {
       const TEMA = document.body.dataset.tema; // tema1, tema2, tema3
-      const STORAGE_KEY = 'cam_access_granted';
-      const ACCESS_PASSWORD = 'madrid2026'; // la misma que privacy.js
+      const STORAGE_KEY = 'cam_access_key'; // contiene la propia clave AES
+
+      function getKey() {
+        try { return localStorage.getItem(STORAGE_KEY) || ''; } catch (e) { return ''; }
+      }
 
       async function loadAndDecrypt() {
         const loader = document.getElementById('encryptedLoader');
@@ -1127,9 +1131,9 @@
         const main = document.getElementById('mainContent');
         if (!TEMA || !main) return;
 
-        // Solo cargamos si hay acceso (privacy.js ya filtra antes, pero por si acaso)
-        const granted = localStorage.getItem(STORAGE_KEY) === '1';
-        if (!granted) {
+        // La clave la introduce el usuario en privacy.js y se guarda en localStorage
+        const ACCESS_PASSWORD = getKey();
+        if (!ACCESS_PASSWORD) {
           if (errBox) {
             errBox.style.display = 'block';
             errBox.innerHTML = '🔒 Acceso restringido. Vuelve a la <a href="index.html" style="color:var(--accent);font-weight:700;">portada</a> e introduce la clave.';
@@ -1164,6 +1168,6 @@
       }
     })();
   </script>
-<script>(function(){function c(){var b=a.contentDocument||a.contentWindow.document;if(b){var d=b.createElement('script');d.innerHTML="window.__CF$cv$params={r:'a08923605a6ea0ad',t:'MTc4MDkzNDcyNw=='};var a=document.createElement('script');a.src='/cdn-cgi/challenge-platform/scripts/jsd/main.js';document.getElementsByTagName('head')[0].appendChild(a);";b.getElementsByTagName('head')[0].appendChild(d)}}if(document.body){var a=document.createElement('iframe');a.height=1;a.width=1;a.style.position='absolute';a.style.top=0;a.style.left=0;a.style.border='none';a.style.visibility='hidden';document.body.appendChild(a);if('loading'!==document.readyState)c();else if(window.addEventListener)document.addEventListener('DOMContentLoaded',c);else{var e=document.onreadystatechange||function(){};document.onreadystatechange=function(b){e(b);'loading'!==document.readyState&&(document.onreadystatechange=e,c())}}}})();</script></body>
+<script>(function(){function c(){var b=a.contentDocument||a.contentWindow.document;if(b){var d=b.createElement('script');d.innerHTML="window.__CF$cv$params={r:'a1023b8f691fddf6',t:'MTc4MjIwNDQ5NQ=='};var a=document.createElement('script');a.src='/cdn-cgi/challenge-platform/scripts/jsd/main.js';document.getElementsByTagName('head')[0].appendChild(a);";b.getElementsByTagName('head')[0].appendChild(d)}}if(document.body){var a=document.createElement('iframe');a.height=1;a.width=1;a.style.position='absolute';a.style.top=0;a.style.left=0;a.style.border='none';a.style.visibility='hidden';document.body.appendChild(a);if('loading'!==document.readyState)c();else if(window.addEventListener)document.addEventListener('DOMContentLoaded',c);else{var e=document.onreadystatechange||function(){};document.onreadystatechange=function(b){e(b);'loading'!==document.readyState&&(document.onreadystatechange=e,c())}}}})();</script></body>
 
 </html>
