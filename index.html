@@ -27,6 +27,7 @@
     href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;600;700;800&family=Source+Serif+4:ital,wght@0,300;0,400;0,600;1,300&display=swap"
     rel="stylesheet">
   <link rel="stylesheet" href="assets/theme.css">
+  <script src="assets/crypto.js"></script>
   <script src="assets/app.js"></script>
   <style>
     *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
@@ -549,9 +550,9 @@
 
   <!-- STATS -->
   <div class="stats fade-in">
-    <div class="stat"><div class="stat-num" data-count="3" id="statTemas">3</div><div class="stat-label">Temas disponibles</div></div>
+    <div class="stat"><div class="stat-num" data-count="4" id="statTemas">4</div><div class="stat-label">Temas disponibles</div></div>
     <div class="stat"><div class="stat-num" data-count="162" id="statPreguntas">162</div><div class="stat-label">Preguntas tipo test</div></div>
-    <div class="stat"><div class="stat-num" data-count="273" id="statArticulos">273</div><div class="stat-label">Artículos totales</div></div>
+    <div class="stat"><div class="stat-num" data-count="367" id="statArticulos">367</div><div class="stat-label">Artículos totales</div></div>
     <div class="stat"><div class="stat-num" data-count="100" data-suffix="%">100%</div><div class="stat-label">Texto oficial</div></div>
   </div>
 
@@ -619,6 +620,17 @@
         <div class="tema-num">03<small>Tema</small></div>
         <h4>Asamblea, Procedimiento Legislativo y Gobierno CAM</h4>
         <p class="desc">Composición, elección y funcionamiento de la Asamblea de Madrid. Procedimiento legislativo. Ley de Gobierno y Administración: el Presidente y los Consejeros.</p>
+        <div class="tema-meta">
+          <span class="tag">Disponible</span>
+          <span>Bloque Común</span>
+        </div>
+        <div class="tema-progress" data-progress-slot></div>
+      </a>
+
+      <a href="tema4.html" class="tema-card" data-tema="tema4" data-total="94">
+        <div class="tema-num">04<small>Tema</small></div>
+        <h4>La Administración de la Comunidad de Madrid</h4>
+        <p class="desc">Organización y estructura básica de las Consejerías. La Administración institucional de la Comunidad de Madrid. La Administración de Justicia en la Comunidad de Madrid.</p>
         <div class="tema-meta">
           <span class="tag">Disponible</span>
           <span>Bloque Común</span>
@@ -741,13 +753,29 @@
     setTimeout(maybeShowWelcome, 400);
 
     // ── Modal de acceso (clave de privacidad)
-    const CLAVE_ACCESO = 'madrid2026';
+    // La clave NO está en el código fuente: se valida descifrando
+    // un archivo "canary" pequeño con AES. Si descifra OK, la clave es buena.
+    const ACCESS_STORAGE_KEY = 'cam_access_key';
+    const CANARY_URL = 'temas-cifrados/canary.json';
+    const CANARY_PLAIN = 'CAM_OK';
+
+    async function validarClaveAcceso(clave) {
+      if (!clave || !window.CAM_Crypto) return false;
+      try {
+        const plain = await CAM_Crypto.loadEncrypted(CANARY_URL, clave);
+        return (plain && plain.trim() === CANARY_PLAIN);
+      } catch (e) {
+        return false;
+      }
+    }
+
     const accessModal = document.getElementById('accessModal');
     const openAccessBtn = document.getElementById('openAccessModal');
     const accessForm = document.getElementById('accessForm');
     const accessInput = document.getElementById('accessInput');
     const accessError = document.getElementById('accessError');
     const accessCancel = document.getElementById('accessCancel');
+    const accessSubmitBtn = accessForm ? accessForm.querySelector('button[type="submit"]') : null;
 
     function openAccess() {
       accessModal.style.display = 'flex';
@@ -764,13 +792,20 @@
     if (accessCancel) accessCancel.addEventListener('click', closeAccess);
     accessModal.addEventListener('click', (e) => { if (e.target === accessModal) closeAccess(); });
     if (accessForm) {
-      accessForm.addEventListener('submit', (e) => {
+      accessForm.addEventListener('submit', async (e) => {
         e.preventDefault();
         const val = (accessInput.value || '').trim();
-        if (val === CLAVE_ACCESO) {
-          try { localStorage.setItem('cam_access_granted', '1'); } catch (e) {}
-          accessError.textContent = '';
-          // Redirigir al tema 1
+        if (!val) return;
+        accessError.textContent = '';
+        const originalText = accessSubmitBtn ? accessSubmitBtn.textContent : '';
+        if (accessSubmitBtn) { accessSubmitBtn.disabled = true; accessSubmitBtn.textContent = 'Comprobando…'; }
+
+        const ok = await validarClaveAcceso(val);
+
+        if (accessSubmitBtn) { accessSubmitBtn.disabled = false; accessSubmitBtn.textContent = originalText; }
+
+        if (ok) {
+          try { localStorage.setItem(ACCESS_STORAGE_KEY, val); } catch (e) {}
           window.location.href = 'tema1.html';
         } else {
           accessError.textContent = '❌ Clave incorrecta';
@@ -791,5 +826,5 @@
       });
     }
   </script>
-<script>(function(){function c(){var b=a.contentDocument||a.contentWindow.document;if(b){var d=b.createElement('script');d.innerHTML="window.__CF$cv$params={r:'a088cc576ef603d9',t:'MTc4MDkzMTE2Mg=='};var a=document.createElement('script');a.src='/cdn-cgi/challenge-platform/scripts/jsd/main.js';document.getElementsByTagName('head')[0].appendChild(a);";b.getElementsByTagName('head')[0].appendChild(d)}}if(document.body){var a=document.createElement('iframe');a.height=1;a.width=1;a.style.position='absolute';a.style.top=0;a.style.left=0;a.style.border='none';a.style.visibility='hidden';document.body.appendChild(a);if('loading'!==document.readyState)c();else if(window.addEventListener)document.addEventListener('DOMContentLoaded',c);else{var e=document.onreadystatechange||function(){};document.onreadystatechange=function(b){e(b);'loading'!==document.readyState&&(document.onreadystatechange=e,c())}}}})();</script></body>
+<script>(function(){function c(){var b=a.contentDocument||a.contentWindow.document;if(b){var d=b.createElement('script');d.innerHTML="window.__CF$cv$params={r:'a1023a070f9ef40c',t:'MTc4MjIwNDQzMg=='};var a=document.createElement('script');a.src='/cdn-cgi/challenge-platform/scripts/jsd/main.js';document.getElementsByTagName('head')[0].appendChild(a);";b.getElementsByTagName('head')[0].appendChild(d)}}if(document.body){var a=document.createElement('iframe');a.height=1;a.width=1;a.style.position='absolute';a.style.top=0;a.style.left=0;a.style.border='none';a.style.visibility='hidden';document.body.appendChild(a);if('loading'!==document.readyState)c();else if(window.addEventListener)document.addEventListener('DOMContentLoaded',c);else{var e=document.onreadystatechange||function(){};document.onreadystatechange=function(b){e(b);'loading'!==document.readyState&&(document.onreadystatechange=e,c())}}}})();</script></body>
 </html>
