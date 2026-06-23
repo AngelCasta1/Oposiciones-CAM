@@ -1,0 +1,3250 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Oposiciones CAM — Tests Interactivos</title>
+  <meta name="theme-color" content="#c0305a">
+  <link rel="icon" type="image/svg+xml" href="favicon.svg">
+  <link rel="apple-touch-icon" href="icons/icon-192.png">
+  <link rel="manifest" href="manifest.webmanifest">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;700&family=Source+Serif+4:ital,wght@0,300;0,400;0,600;1,300&display=swap"
+    rel="stylesheet">
+    <link rel="stylesheet" href="assets/privacy.css">
+  <link rel="stylesheet" href="assets/theme.css">
+    <script src="assets/crypto.js"></script>
+    <script src="assets/privacy.js"></script>
+  <script src="assets/app.js"></script>
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    :root {
+      --bg: #fdf5f7;
+      --surface: #ffffff;
+      --surface-2: #fef0f4;
+      --border: #f0d6de;
+      --border-strong: #dba8bc;
+      --text: #2b1a22;
+      --muted: #8a6070;
+      --muted-light: #b89aaa;
+      --accent: #c0305a;
+      --accent-mid: #e05a80;
+      --accent-light: #fce8ef;
+      --accent-hover: #a82550;
+      --green: #2d6a4f;
+      --green-light: #d6f0e2;
+      --red: #b3252e;
+      --red-light: #fbe3e5;
+      --amber: #9a5c1a;
+      --amber-light: #fdf3e3;
+      --nav-h: 62px;
+      font-size: 16px;
+      scroll-behavior: smooth;
+    }
+
+    body {
+      font-family: 'Source Serif 4', Georgia, serif;
+      background:
+        radial-gradient(900px 600px at 90% -10%, #fde0e9 0%, transparent 60%),
+        var(--bg);
+      color: var(--text);
+      min-height: 100vh;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    ::-webkit-scrollbar { width: 8px; }
+    ::-webkit-scrollbar-thumb { background: var(--border-strong); border-radius: 4px; }
+
+    /* NAV */
+    .topnav {
+      position: fixed; top: 0; left: 0; right: 0;
+      height: var(--nav-h);
+      background: var(--text);
+      display: flex; align-items: center;
+      z-index: 200;
+      border-bottom: 2px solid var(--accent);
+      box-shadow: 0 2px 16px rgba(43,26,34,.18);
+    }
+    .brand {
+      font-family: 'Playfair Display', serif;
+      color: #fff; font-size: 1rem; font-weight: 700;
+      letter-spacing: .04em;
+      padding: 0 22px;
+      white-space: nowrap;
+      border-right: 1px solid rgba(255,255,255,.12);
+      height: 100%;
+      display: flex; align-items: center;
+      min-width: 155px; flex-shrink: 0;
+      text-decoration: none;
+    }
+    .nav-tabs {
+      display: flex; align-items: center;
+      height: 100%; flex: 1;
+      overflow-x: auto;
+      scrollbar-width: none;
+    }
+    .nav-tabs::-webkit-scrollbar { display: none; }
+    .nav-tab {
+      height: 100%;
+      padding: 0 18px;
+      color: rgba(255,255,255,.55);
+      font-size: .78rem;
+      font-family: 'Source Serif 4', serif;
+      letter-spacing: .06em;
+      text-transform: uppercase;
+      cursor: pointer;
+      border: none; background: none;
+      border-right: 1px solid rgba(255,255,255,.07);
+      white-space: nowrap;
+      transition: color .15s, background .15s;
+      display: flex; align-items: center; gap: 8px;
+      position: relative;
+      text-decoration: none;
+    }
+    .nav-tab:hover { color: rgba(255,255,255,.9); background: rgba(255,255,255,.06); }
+    .nav-tab.active { color: #fff; background: rgba(192,48,90,.22); }
+    .nav-tab.active::after {
+      content: ''; position: absolute; bottom: 0; left: 0; right: 0;
+      height: 3px; background: var(--accent-mid);
+      border-radius: 2px 2px 0 0;
+    }
+    .nav-tab .dot {
+      width: 7px; height: 7px; border-radius: 50%;
+      background: rgba(255,255,255,.18); flex-shrink: 0;
+    }
+    .nav-tab.active .dot { background: var(--accent-mid); }
+    .nav-tab.disabled { opacity: .28; cursor: not-allowed; pointer-events: none; }
+    .nav-tab .pill {
+      font-size: .62rem;
+      padding: 1px 7px;
+      border-radius: 20px;
+      background: rgba(255,255,255,.1);
+      color: rgba(255,255,255,.45);
+    }
+
+    /* MAIN */
+    .container {
+      max-width: 880px;
+      margin: 0 auto;
+      padding: calc(var(--nav-h) + 40px) 24px 80px;
+    }
+
+    /* HEADER */
+    .page-header {
+      text-align: center;
+      margin-bottom: 36px;
+    }
+    .badge {
+      display: inline-block;
+      font-size: .68rem;
+      letter-spacing: .12em;
+      text-transform: uppercase;
+      font-weight: 700;
+      color: var(--accent);
+      background: var(--accent-light);
+      border: 1px solid #e8b0c0;
+      padding: 4px 14px;
+      border-radius: 20px;
+      margin-bottom: 14px;
+    }
+    .page-header h1 {
+      font-family: 'Playfair Display', serif;
+      font-size: clamp(1.7rem, 4vw, 2.4rem);
+      font-weight: 700;
+      line-height: 1.2;
+      margin-bottom: 10px;
+    }
+    .page-header p {
+      color: var(--muted);
+      max-width: 560px;
+      margin: 0 auto;
+      font-size: .96rem;
+      line-height: 1.65;
+    }
+
+    /* SELECTOR DE TESTS */
+    .test-selector {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 16px;
+      margin-bottom: 30px;
+    }
+    .test-card {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 14px;
+      padding: 22px 20px;
+      cursor: pointer;
+      transition: transform .2s, border-color .2s, box-shadow .2s;
+      text-align: left;
+      font-family: inherit;
+    }
+    .test-card:hover:not(.disabled) {
+      transform: translateY(-3px);
+      border-color: var(--accent-mid);
+      box-shadow: 0 10px 26px rgba(192,48,90,.14);
+    }
+    .test-card.disabled { opacity: .55; cursor: not-allowed; background: var(--surface-2); }
+    .test-card-icon {
+      font-size: 1.4rem;
+      width: 44px; height: 44px;
+      border-radius: 12px;
+      background: var(--accent-light);
+      color: var(--accent);
+      display: inline-flex; align-items: center; justify-content: center;
+      margin-bottom: 14px;
+      font-weight: 700;
+      font-family: 'Playfair Display', serif;
+    }
+    .test-card h3 {
+      font-family: 'Playfair Display', serif;
+      font-size: 1.1rem;
+      margin-bottom: 6px;
+      color: var(--text);
+    }
+    .test-card p {
+      font-size: .84rem;
+      color: var(--muted);
+      line-height: 1.5;
+      margin-bottom: 12px;
+    }
+    .test-card .meta {
+      font-size: .72rem;
+      color: var(--accent);
+      font-weight: 600;
+      letter-spacing: .06em;
+      text-transform: uppercase;
+    }
+
+    /* QUIZ */
+    .quiz-panel {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 16px;
+      padding: 28px;
+      box-shadow: 0 4px 18px rgba(192,48,90,.06);
+      margin-bottom: 24px;
+    }
+    .quiz-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 18px;
+      flex-wrap: wrap;
+      gap: 10px;
+    }
+    .quiz-title {
+      font-family: 'Playfair Display', serif;
+      font-size: 1.15rem;
+      font-weight: 700;
+      color: var(--text);
+    }
+    .progress-info {
+      font-size: .82rem;
+      color: var(--muted);
+      letter-spacing: .04em;
+    }
+    .progress-info b { color: var(--accent); font-weight: 700; }
+
+    .progress-bar {
+      height: 6px;
+      background: var(--accent-light);
+      border-radius: 999px;
+      overflow: hidden;
+      margin-bottom: 24px;
+    }
+    .progress-fill {
+      height: 100%;
+      background: linear-gradient(90deg, var(--accent) 0%, var(--accent-mid) 100%);
+      border-radius: 999px;
+      transition: width .35s ease;
+      width: 0%;
+    }
+
+    .question {
+      font-family: 'Playfair Display', serif;
+      font-size: 1.18rem;
+      line-height: 1.45;
+      color: var(--text);
+      margin-bottom: 22px;
+      font-weight: 600;
+    }
+    .question .qnum {
+      display: inline-block;
+      font-family: 'Source Serif 4', serif;
+      font-size: .7rem;
+      font-weight: 700;
+      letter-spacing: .08em;
+      color: #fff;
+      background: var(--accent);
+      padding: 3px 10px;
+      border-radius: 20px;
+      vertical-align: middle;
+      margin-right: 10px;
+    }
+
+    .options {
+      display: flex; flex-direction: column;
+      gap: 10px;
+    }
+    .option {
+      display: flex;
+      align-items: flex-start;
+      gap: 12px;
+      padding: 14px 16px;
+      border: 1.5px solid var(--border);
+      border-radius: 12px;
+      background: var(--surface);
+      cursor: pointer;
+      transition: all .2s;
+      font-family: inherit;
+      font-size: .92rem;
+      line-height: 1.5;
+      color: var(--text);
+      text-align: left;
+      width: 100%;
+    }
+    .option:hover:not(:disabled) {
+      border-color: var(--accent-mid);
+      background: var(--accent-light);
+    }
+    .option:disabled { cursor: default; }
+    .option .letter {
+      flex-shrink: 0;
+      width: 26px; height: 26px;
+      border-radius: 50%;
+      border: 1.5px solid var(--border-strong);
+      display: inline-flex; align-items: center; justify-content: center;
+      font-weight: 700;
+      font-size: .78rem;
+      color: var(--muted);
+      background: var(--surface);
+      transition: all .2s;
+    }
+    .option:hover:not(:disabled) .letter {
+      border-color: var(--accent);
+      color: var(--accent);
+    }
+    .option.correct {
+      border-color: var(--green);
+      background: var(--green-light);
+      color: var(--green);
+    }
+    .option.correct .letter {
+      background: var(--green);
+      color: #fff;
+      border-color: var(--green);
+    }
+    .option.wrong {
+      border-color: var(--red);
+      background: var(--red-light);
+      color: var(--red);
+    }
+    .option.wrong .letter {
+      background: var(--red);
+      color: #fff;
+      border-color: var(--red);
+    }
+    .option.dim { opacity: .6; }
+
+    .explanation {
+      margin-top: 18px;
+      padding: 14px 16px;
+      background: var(--surface-2);
+      border-left: 3px solid var(--accent-mid);
+      border-radius: 0 10px 10px 0;
+      font-size: .88rem;
+      line-height: 1.6;
+      color: var(--text);
+    }
+    .explanation b { color: var(--accent); }
+
+    .quiz-actions {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-top: 22px;
+      flex-wrap: wrap;
+      gap: 12px;
+    }
+
+    .btn {
+      font-family: inherit;
+      font-size: .88rem;
+      font-weight: 600;
+      padding: 11px 22px;
+      border-radius: 999px;
+      border: none;
+      cursor: pointer;
+      transition: transform .15s, box-shadow .2s, background .2s;
+      letter-spacing: .02em;
+      text-decoration: none;
+      display: inline-flex; align-items: center; gap: 8px;
+    }
+    .btn-primary {
+      background: linear-gradient(135deg, var(--accent) 0%, var(--accent-mid) 100%);
+      color: #fff;
+      box-shadow: 0 8px 18px rgba(192,48,90,.28);
+    }
+    .btn-primary:hover { transform: translateY(-2px); box-shadow: 0 12px 24px rgba(192,48,90,.38); }
+    .btn-primary:disabled { opacity: .4; cursor: not-allowed; transform: none; box-shadow: none; }
+    .btn-ghost {
+      background: var(--surface);
+      color: var(--text);
+      border: 1px solid var(--border);
+    }
+    .btn-ghost:hover { border-color: var(--accent-mid); color: var(--accent); }
+
+    /* RESULTADO */
+    .result-card {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 18px;
+      padding: 40px 30px;
+      text-align: center;
+      box-shadow: 0 8px 26px rgba(192,48,90,.1);
+    }
+    .score-circle {
+      width: 140px; height: 140px;
+      border-radius: 50%;
+      background: conic-gradient(var(--accent) 0deg, var(--accent-light) 0deg);
+      display: inline-flex;
+      align-items: center; justify-content: center;
+      margin: 0 auto 24px;
+      position: relative;
+      transition: background 1s ease;
+    }
+    .score-circle::before {
+      content: '';
+      position: absolute;
+      inset: 12px;
+      background: var(--surface);
+      border-radius: 50%;
+    }
+    .score-text {
+      position: relative;
+      font-family: 'Playfair Display', serif;
+      font-size: 2.2rem;
+      font-weight: 700;
+      color: var(--accent);
+      line-height: 1;
+    }
+    .score-text small {
+      display: block;
+      font-size: .75rem;
+      font-family: 'Source Serif 4', serif;
+      color: var(--muted);
+      letter-spacing: .12em;
+      text-transform: uppercase;
+      font-weight: 600;
+      margin-top: 4px;
+    }
+    .result-card h2 {
+      font-family: 'Playfair Display', serif;
+      font-size: 1.6rem;
+      margin-bottom: 8px;
+    }
+    .result-card p {
+      color: var(--muted);
+      max-width: 420px;
+      margin: 0 auto 22px;
+      line-height: 1.6;
+    }
+    .result-stats {
+      display: flex;
+      justify-content: center;
+      gap: 32px;
+      margin-bottom: 26px;
+      flex-wrap: wrap;
+    }
+    .rstat {
+      display: flex; flex-direction: column; align-items: center;
+    }
+    .rstat-num {
+      font-family: 'Playfair Display', serif;
+      font-size: 1.4rem;
+      font-weight: 700;
+    }
+    .rstat-label {
+      font-size: .72rem;
+      color: var(--muted);
+      letter-spacing: .08em;
+      text-transform: uppercase;
+      margin-top: 4px;
+    }
+    .rstat.ok .rstat-num { color: var(--green); }
+    .rstat.ko .rstat-num { color: var(--red); }
+    .result-actions {
+      display: flex; justify-content: center; gap: 12px; flex-wrap: wrap;
+    }
+
+    /* REVIEW */
+    .review-toolbar {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 14px;
+      margin-bottom: 22px;
+      padding: 14px 18px;
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      box-shadow: 0 2px 10px rgba(192,48,90,.06);
+      position: sticky;
+      top: calc(var(--nav-h) + 10px);
+      z-index: 10;
+    }
+    .review-summary {
+      font-size: .88rem;
+      color: var(--muted);
+    }
+    .review-summary b { color: var(--text); }
+    .review-summary .ok { color: var(--green); font-weight: 700; }
+    .review-summary .ko { color: var(--red); font-weight: 700; }
+    .review-filters { display: flex; gap: 8px; flex-wrap: wrap; }
+    .filter-btn {
+      font-family: inherit;
+      font-size: .76rem;
+      font-weight: 600;
+      padding: 7px 14px;
+      border-radius: 999px;
+      border: 1px solid var(--border);
+      background: var(--surface);
+      color: var(--muted);
+      cursor: pointer;
+      transition: all .18s;
+      letter-spacing: .02em;
+    }
+    .filter-btn:hover { border-color: var(--accent-mid); color: var(--accent); }
+    .filter-btn.active {
+      background: var(--accent);
+      color: #fff;
+      border-color: var(--accent);
+    }
+
+    .review-item {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-left-width: 4px;
+      border-radius: 12px;
+      padding: 20px 22px;
+      margin-bottom: 14px;
+      box-shadow: 0 2px 10px rgba(192,48,90,.04);
+      transition: box-shadow .2s;
+    }
+    .review-item:hover { box-shadow: 0 6px 18px rgba(192,48,90,.1); }
+    .review-item.ok { border-left-color: var(--green); }
+    .review-item.ko { border-left-color: var(--red); }
+    .review-item.hidden-filter { display: none; }
+
+    .review-head {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+      gap: 12px;
+      margin-bottom: 12px;
+    }
+    .review-qnum {
+      font-family: 'Source Serif 4', serif;
+      font-size: .7rem;
+      font-weight: 700;
+      letter-spacing: .08em;
+      color: var(--muted);
+      text-transform: uppercase;
+      flex-shrink: 0;
+    }
+    .review-status {
+      flex-shrink: 0;
+      font-size: .72rem;
+      font-weight: 700;
+      letter-spacing: .08em;
+      text-transform: uppercase;
+      padding: 4px 12px;
+      border-radius: 20px;
+    }
+    .review-status.ok { background: var(--green-light); color: var(--green); }
+    .review-status.ko { background: var(--red-light); color: var(--red); }
+
+    .review-question {
+      font-family: 'Playfair Display', serif;
+      font-size: 1.02rem;
+      font-weight: 600;
+      line-height: 1.45;
+      color: var(--text);
+      margin-bottom: 14px;
+    }
+    .review-options {
+      display: flex; flex-direction: column;
+      gap: 7px;
+      margin-bottom: 12px;
+    }
+    .review-opt {
+      display: flex; align-items: flex-start; gap: 10px;
+      padding: 9px 12px;
+      border-radius: 8px;
+      border: 1px solid var(--border);
+      font-size: .86rem;
+      line-height: 1.45;
+      background: var(--surface);
+      color: var(--muted);
+    }
+    .review-opt .letter {
+      flex-shrink: 0;
+      width: 22px; height: 22px;
+      border-radius: 50%;
+      border: 1.5px solid var(--border-strong);
+      display: inline-flex; align-items: center; justify-content: center;
+      font-weight: 700;
+      font-size: .7rem;
+      color: var(--muted);
+    }
+    .review-opt.correct {
+      background: var(--green-light);
+      border-color: var(--green);
+      color: var(--green);
+    }
+    .review-opt.correct .letter {
+      background: var(--green); color: #fff; border-color: var(--green);
+    }
+    .review-opt.wrong-chosen {
+      background: var(--red-light);
+      border-color: var(--red);
+      color: var(--red);
+      text-decoration: line-through;
+    }
+    .review-opt.wrong-chosen .letter {
+      background: var(--red); color: #fff; border-color: var(--red);
+    }
+    .review-tag {
+      display: inline-block;
+      font-size: .65rem;
+      font-weight: 700;
+      letter-spacing: .06em;
+      text-transform: uppercase;
+      padding: 2px 8px;
+      border-radius: 12px;
+      margin-left: 8px;
+      vertical-align: middle;
+    }
+    .review-tag.t-correct { background: var(--green); color: #fff; }
+    .review-tag.t-yours { background: var(--red); color: #fff; }
+
+    .review-exp {
+      background: var(--surface-2);
+      border-left: 3px solid var(--accent-mid);
+      border-radius: 0 8px 8px 0;
+      padding: 11px 14px;
+      font-size: .84rem;
+      line-height: 1.6;
+      color: var(--text);
+    }
+    .review-exp b { color: var(--accent); }
+
+    /* Botón flotante "ir arriba" en revisión */
+    .to-top {
+      position: fixed;
+      bottom: 24px; right: 24px;
+      width: 46px; height: 46px;
+      border-radius: 50%;
+      background: linear-gradient(135deg, var(--accent) 0%, var(--accent-mid) 100%);
+      color: #fff;
+      border: none;
+      cursor: pointer;
+      box-shadow: 0 8px 22px rgba(192,48,90,.35);
+      display: none;
+      align-items: center; justify-content: center;
+      font-size: 1.2rem;
+      z-index: 50;
+      transition: transform .2s;
+    }
+    .to-top:hover { transform: translateY(-3px); }
+    .to-top.visible { display: inline-flex; }
+
+    /* HIDDEN */
+    .hidden { display: none !important; }
+
+    /* RESPONSIVE */
+    @media (max-width: 600px) {
+      .container { padding: calc(var(--nav-h) + 24px) 14px 60px; }
+      .quiz-panel { padding: 20px 18px; }
+      .question { font-size: 1.05rem; }
+      .option { padding: 12px 14px; font-size: .88rem; }
+      .brand { font-size: .82rem; padding: 0 14px; min-width: 110px; }
+      .nav-tab { font-size: .7rem; padding: 0 12px; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- NAV -->
+  <nav class="topnav">
+    <a class="brand" href="index.html">← CAM Oposiciones</a>
+    <div class="nav-tabs">
+      <a class="nav-tab" href="tema1.html"><span class="dot"></span>Tema 1</a>
+      <a class="nav-tab" href="tema2.html"><span class="dot"></span>Tema 2</a>
+      <a class="nav-tab" href="tema3.html"><span class="dot"></span>Tema 3</a>
+      <a class="nav-tab" href="tema4.html"><span class="dot"></span>Tema 4</a>
+      <a class="nav-tab active" href="tests.html"><span class="dot"></span>Tests</a>
+      <a class="nav-tab" href="progreso.html"><span class="dot"></span>Mi Progreso</a>
+      <button id="themeToggle" class="theme-toggle" aria-label="Cambiar tema" title="Cambiar tema" style="margin-left:auto;">
+        <svg class="icon-moon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path></svg>
+        <svg class="icon-sun" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="5"></circle><line x1="12" y1="1" x2="12" y2="3"></line><line x1="12" y1="21" x2="12" y2="23"></line><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line><line x1="1" y1="12" x2="3" y2="12"></line><line x1="21" y1="12" x2="23" y2="12"></line><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line></svg>
+      </button>
+    </div>
+  </nav>
+
+  <div class="container">
+
+    <!-- SELECTOR DE TEST -->
+    <div id="selectorView">
+      <div class="page-header">
+        <span class="badge">Tests interactivos</span>
+        <h1>Pon a prueba lo aprendido</h1>
+        <p>Elige un test para comenzar. Cada respuesta muestra la solución correcta y una breve explicación. Al final verás tu puntuación y podrás repetirlo.</p>
+      </div>
+
+      <!-- Banner test inacabado -->
+      <div id="resumeBanner"></div>
+
+      <!-- Selector de modo -->
+      <div style="background:var(--surface);border:1px solid var(--border);border-radius:14px;padding:18px 22px;margin-bottom:24px;box-shadow:var(--shadow-sm);">
+        <div style="font-size:.7rem;letter-spacing:.12em;text-transform:uppercase;color:var(--accent);font-weight:700;margin-bottom:10px;">⚙️ Configuración del test</div>
+        <div class="test-mode-pick">
+          <input type="radio" name="testMode" id="mode-estudio" value="estudio" checked>
+          <label for="mode-estudio">📖 Modo estudio<br><small style="font-weight:400;color:var(--muted);">Feedback inmediato</small></label>
+          <input type="radio" name="testMode" id="mode-examen" value="examen">
+          <label for="mode-examen">⏱ Modo examen<br><small style="font-weight:400;color:var(--muted);">Cronómetro · sin feedback</small></label>
+          <input type="radio" name="testMode" id="mode-flash" value="flash">
+          <label for="mode-flash">🎴 Flashcards<br><small style="font-weight:400;color:var(--muted);">Memoriza enunciados</small></label>
+        </div>
+        <div id="examenConfig" style="display:none;margin-top:12px;padding-top:12px;border-top:1px dashed var(--border);font-size:.84rem;color:var(--muted);">
+          ⏰ Tiempo: <select id="examTime" style="font-family:inherit;padding:4px 10px;border-radius:8px;border:1px solid var(--border);background:var(--surface);color:var(--text);">
+            <option value="15">15 min</option>
+            <option value="30" selected>30 min</option>
+            <option value="45">45 min</option>
+            <option value="60">60 min</option>
+          </select>
+        </div>
+      </div>
+
+      <div class="test-selector">
+        <button class="test-card" data-test="tema1">
+          <div class="test-card-icon">1</div>
+          <h3>Tema 1 — Constitución Española</h3>
+          <p>Características, estructura, derechos fundamentales y su garantía. Preguntas variadas tipo examen.</p>
+          <span class="meta">15 preguntas aleatorias</span>
+        </button>
+
+        <button class="test-card" data-test="tema2">
+          <div class="test-card-icon">2</div>
+          <h3>Tema 2 — Estatuto de Autonomía CAM</h3>
+          <p>Estructura, competencias (exclusivas, desarrollo legislativo y ejecución), economía, hacienda y reforma del Estatuto.</p>
+          <span class="meta">15 preguntas aleatorias</span>
+        </button>
+
+        <button class="test-card" data-test="tema3">
+          <div class="test-card-icon">3</div>
+          <h3>Tema 3 — Asamblea y Gobierno CAM</h3>
+          <p>Asamblea de Madrid: composición, funcionamiento, órganos y Estatuto del Diputado. Procedimiento legislativo. Presidente, Consejo de Gobierno y Consejeros.</p>
+          <span class="meta">15 preguntas aleatorias</span>
+        </button>
+
+        <button class="test-card" data-test="mixto">
+          <div class="test-card-icon">★</div>
+          <h3>Test Mixto</h3>
+          <p>Preguntas combinadas y aleatorias de todos los temas disponibles. Ideal para repasar.</p>
+          <span class="meta">20 preguntas aleatorias</span>
+        </button>
+
+        <button class="test-card" data-test="falladas" id="falladasCard">
+          <div class="test-card-icon" style="background:var(--red-light);color:var(--red);">↻</div>
+          <h3>Mis falladas</h3>
+          <p>Repaso inteligente con las preguntas que más has fallado en tests anteriores.</p>
+          <span class="meta" id="falladasMeta">0 preguntas guardadas</span>
+        </button>
+      </div>
+
+      <!-- Hints de atajos de teclado -->
+      <div class="kbd-hints" style="margin-top:24px;">
+        <strong style="color:var(--text);font-size:.78rem;width:100%;margin-bottom:4px;">⌨️ Atajos de teclado en tests:</strong>
+        <span><span class="kbd">A</span><span class="kbd">B</span><span class="kbd">C</span><span class="kbd">D</span> seleccionar opción</span>
+        <span><span class="kbd">↵</span> siguiente</span>
+        <span><span class="kbd">Esc</span> volver</span>
+        <span><span class="kbd">D</span> marcar dudosa</span>
+        <span><span class="kbd">I</span> marcar importante</span>
+      </div>
+    </div>
+
+    <!-- QUIZ EN CURSO -->
+    <div id="quizView" class="hidden">
+      <div class="quiz-panel">
+        <div class="quiz-header">
+          <div class="quiz-title" id="quizTitle">Test</div>
+          <div style="display:flex;align-items:center;gap:12px;flex-wrap:wrap;">
+            <div class="quiz-timer" id="quizTimer" style="display:none;">⏱ <span id="timerDisplay">30:00</span></div>
+            <div class="progress-info">Pregunta <b id="qCurrent">1</b> de <b id="qTotal">15</b></div>
+          </div>
+        </div>
+        <div class="progress-bar"><div class="progress-fill" id="progressFill"></div></div>
+
+        <!-- Mini-mapa de preguntas (solo modo examen) -->
+        <div class="quiz-minimap hidden" id="quizMinimap"></div>
+
+        <div class="question" id="questionText"></div>
+        <div class="options" id="optionsList"></div>
+        <div class="explanation hidden" id="explanationBox"></div>
+
+        <div class="quiz-actions">
+          <button class="btn btn-ghost" id="quitBtn">← Salir</button>
+          <div style="display:flex;gap:8px;align-items:center;">
+            <button class="btn btn-ghost hidden" id="prevBtn">← Anterior</button>
+            <button class="art-flag flag-doubt" id="flagDoubt" title="Marcar como dudosa (D)" aria-pressed="false">🤔</button>
+            <button class="art-flag flag-imp" id="flagImp" title="Marcar como importante (I)" aria-pressed="false">⭐</button>
+            <button class="btn btn-primary" id="nextBtn" disabled>Siguiente →</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- RESULTADO -->
+    <div id="resultView" class="hidden">
+      <div class="result-card">
+        <div class="score-circle" id="scoreCircle">
+          <div class="score-text">
+            <span id="scorePct">0%</span>
+            <small>Puntuación</small>
+          </div>
+        </div>
+        <h2 id="resultTitle">¡Buen trabajo!</h2>
+        <p id="resultMsg">Has completado el test.</p>
+
+        <div class="result-stats">
+          <div class="rstat ok">
+            <div class="rstat-num" id="okCount">0</div>
+            <div class="rstat-label">Aciertos</div>
+          </div>
+          <div class="rstat ko">
+            <div class="rstat-num" id="koCount">0</div>
+            <div class="rstat-label">Fallos</div>
+          </div>
+          <div class="rstat">
+            <div class="rstat-num" id="totalCount">0</div>
+            <div class="rstat-label">Total</div>
+          </div>
+        </div>
+
+        <div class="result-actions">
+          <button class="btn btn-primary" id="reviewBtn">📋 Revisar respuestas</button>
+          <button class="btn btn-ghost" id="retryBtn">↻ Repetir test</button>
+          <button class="btn btn-ghost" id="backBtn">Elegir otro</button>
+        </div>
+      </div>
+    </div>
+
+    <!-- REVISIÓN DE RESPUESTAS -->
+    <div id="reviewView" class="hidden">
+      <div class="page-header" style="margin-bottom:24px;">
+        <span class="badge">Revisión detallada</span>
+        <h1 style="font-size:1.7rem;">Tus respuestas</h1>
+        <p>Revisa cada pregunta: verde = correcta, rojo = incorrecta. Verás la opción que marcaste, la correcta y la explicación.</p>
+      </div>
+
+      <!-- Mini barra de resumen + filtros -->
+      <div class="review-toolbar">
+        <div class="review-summary" id="reviewSummary"></div>
+        <div class="review-filters">
+          <button class="filter-btn active" data-filter="all">Todas</button>
+          <button class="filter-btn" data-filter="wrong">Solo falladas</button>
+          <button class="filter-btn" data-filter="right">Solo acertadas</button>
+        </div>
+      </div>
+
+      <div id="reviewList"></div>
+
+      <div class="quiz-actions" style="justify-content:center;margin-top:32px;">
+        <button class="btn btn-ghost" id="reviewBackBtn">← Volver al resultado</button>
+        <button class="btn btn-primary" id="reviewRetryBtn">↻ Repetir test</button>
+      </div>
+    </div>
+
+    <!-- FLASHCARDS -->
+    <div id="flashView" class="hidden">
+      <div class="page-header" style="margin-bottom:18px;">
+        <span class="badge">Modo Flashcards</span>
+        <h1 style="font-size:1.5rem;">Memoriza enunciados</h1>
+        <p>Mira el enunciado. Pulsa la tarjeta o <span class="kbd">Espacio</span> para ver la respuesta. Marca si la sabías o no para enfocarte en las que más fallas.</p>
+      </div>
+      <div class="flashcard-progress" id="flashProgress">Tarjeta 1 de 10</div>
+      <div class="flashcard-stage">
+        <div class="flashcard" id="flashcard">
+          <div class="flashcard-face front">
+            <div class="flashcard-tag">Pregunta</div>
+            <div class="flashcard-q" id="flashQ"></div>
+            <div class="flashcard-hint">Pulsa la tarjeta para girarla</div>
+          </div>
+          <div class="flashcard-face back">
+            <div class="flashcard-tag" style="color:var(--green);">Respuesta correcta</div>
+            <div class="flashcard-q" id="flashA" style="font-size:1.05rem;font-weight:600;line-height:1.5;"></div>
+            <div style="margin-top:18px;font-size:.86rem;color:var(--muted);line-height:1.55;font-style:italic;" id="flashExp"></div>
+          </div>
+        </div>
+      </div>
+      <div class="flashcard-actions">
+        <button class="fc-doubt" id="flashKo">😕 No la sabía</button>
+        <button id="flashSkip">Siguiente →</button>
+        <button class="fc-known" id="flashOk">✓ Me la sabía</button>
+      </div>
+      <div style="text-align:center;margin-top:18px;">
+        <button class="btn btn-ghost" id="flashQuit">← Salir</button>
+      </div>
+    </div>
+
+  </div>
+
+  <script>
+    /* ─────────────────────────────────────────
+       BANCO DE PREGUNTAS
+    ───────────────────────────────────────── */
+    const TESTS = {
+      tema1: {
+        title: "Tema 1 — Constitución Española de 1978",
+        questions: [
+          {
+            q: "¿En qué Título de la CE se desarrolla el Poder Judicial?",
+            options: ["Título IV", "Título VI", "Título III", "Título IX"],
+            a: 1,
+            exp: "El Poder Judicial se regula en el Título VI de la Constitución Española (arts. 117 a 127). El Título III regula las Cortes Generales, el IV el Gobierno y la Administración, y el IX el Tribunal Constitucional."
+          },
+          {
+            q: "A tenor del artículo 11 de la Constitución, los españoles de origen podrán ser privados de su nacionalidad:",
+            options: [
+              "Cuando así lo determinen las leyes.",
+              "Cuando entren al servicio de las armas de un país extranjero.",
+              "Cuando así lo apruebe el Consejo de Ministros.",
+              "En ningún caso."
+            ],
+            a: 3,
+            exp: "Art. 11.2 CE: «Ningún español de origen podrá ser privado de su nacionalidad». La privación solo puede afectar a quienes adquirieron la nacionalidad de forma derivativa, no a los españoles de origen."
+          },
+          {
+            q: "Los principios que debe inspirar el sistema tributario, según el artículo 31 CE, son:",
+            options: [
+              "Suficiencia, igualdad y no tener alcance confiscatorio.",
+              "Progresividad, igualdad y no tener alcance confiscatorio.",
+              "Igualdad, proporcionalidad y no tener alcance confiscatorio.",
+              "Proporcionalidad, progresividad y no tener alcance confiscatorio."
+            ],
+            a: 1,
+            exp: "Art. 31.1 CE: el sistema tributario se inspira en los principios de igualdad y progresividad y en ningún caso tendrá alcance confiscatorio."
+          },
+          {
+            q: "¿En cuál de los siguientes casos sería posible entrar en un domicilio privado?",
+            options: [
+              "Si el titular lo autoriza.",
+              "Mediante autorización judicial.",
+              "En caso de flagrante delito.",
+              "Todas las anteriores son correctas."
+            ],
+            a: 3,
+            exp: "Art. 18.2 CE: ninguna entrada o registro podrá hacerse en el domicilio sin consentimiento del titular o resolución judicial, salvo en caso de flagrante delito. Las tres vías son válidas."
+          },
+          {
+            q: "Para cumplir sus cometidos, el Defensor del Pueblo podrá supervisar la actividad:",
+            options: [
+              "Del Gobierno.",
+              "De las Cortes Generales.",
+              "De la Administración.",
+              "Del Poder Judicial."
+            ],
+            a: 2,
+            exp: "Art. 54 CE: el Defensor del Pueblo es alto comisionado de las Cortes Generales para la defensa de los derechos del Título I, supervisando para ello la actividad de la Administración."
+          },
+          {
+            q: "La soberanía nacional, conforme a la CE:",
+            options: [
+              "Reside en los ciudadanos mayores de edad.",
+              "Reside en el Rey.",
+              "Reside en los ciudadanos a través del Parlamento.",
+              "Reside en el pueblo español."
+            ],
+            a: 3,
+            exp: "Art. 1.2 CE: la soberanía nacional reside en el pueblo español, del que emanan los poderes del Estado."
+          },
+          {
+            q: "Indique cuál es la afirmación incorrecta a tenor de lo dispuesto en nuestra Norma Fundamental:",
+            options: [
+              "La extradición solo se concederá en cumplimiento de un Tratado o de la Ley, atendiendo al principio de reciprocidad.",
+              "Quedan excluidos de la extradición los delitos políticos, considerándose como tales los actos de terrorismo.",
+              "Ningún español de origen podrá ser privado de su nacionalidad.",
+              "La ley establecerá los términos en que los ciudadanos de otros países y los apátridas podrán gozar del derecho de asilo en España."
+            ],
+            a: 1,
+            exp: "Art. 13.3 CE: quedan excluidos de la extradición los delitos políticos, pero NO se consideran como tales los actos de terrorismo. La opción b) es la incorrecta."
+          },
+          {
+            q: "¿Qué dispone la CE, en su artículo 15, respecto a la pena de muerte?",
+            options: [
+              "Que queda abolida, salvo lo que pueda disponer el Código Penal para delitos de terrorismo.",
+              "Que queda abolida, salvo lo que dispongan las leyes penales militares para tiempos de guerra o de vigencia del estado de alarma, excepción o sitio.",
+              "Que queda abolida, salvo lo que dispongan las leyes penales militares para tiempos de guerra.",
+              "Que queda abolida."
+            ],
+            a: 2,
+            exp: "Art. 15 CE: queda abolida la pena de muerte, salvo lo que puedan disponer las leyes penales militares para tiempos de guerra (no incluye los estados de alarma, excepción o sitio)."
+          },
+          {
+            q: "El derecho a contraer matrimonio se regula en el artículo:",
+            options: ["Art. 14 CE", "Art. 32 CE", "Art. 16 CE", "Art. 39 CE"],
+            a: 1,
+            exp: "Art. 32 CE: el hombre y la mujer tienen derecho a contraer matrimonio con plena igualdad jurídica. La ley regulará las formas de matrimonio, edad y capacidad, derechos y deberes, separación y disolución."
+          },
+          {
+            q: "De acuerdo con lo dispuesto en la CE, el Tribunal Constitucional se compone de:",
+            options: [
+              "10 miembros nombrados por el Rey.",
+              "12 miembros nombrados por el Rey.",
+              "15 miembros nombrados por el Rey.",
+              "20 miembros nombrados por el Rey."
+            ],
+            a: 1,
+            exp: "Art. 159.1 CE: el Tribunal Constitucional se compone de 12 miembros nombrados por el Rey (4 a propuesta del Congreso por 3/5, 4 del Senado por 3/5, 2 del Gobierno y 2 del Consejo General del Poder Judicial)."
+          },
+          {
+            q: "La Constitución Española fue ratificada por el pueblo español en referéndum celebrado el:",
+            options: [
+              "31 de octubre de 1978.",
+              "6 de diciembre de 1978.",
+              "27 de diciembre de 1978.",
+              "29 de diciembre de 1978."
+            ],
+            a: 1,
+            exp: "6 de diciembre de 1978: ratificación en referéndum. El 31 de octubre fue aprobada en Cortes, el 27 de diciembre sancionada por el Rey y el 29 de diciembre publicada en el BOE."
+          },
+          {
+            q: "La Constitución Española consta de:",
+            options: [
+              "Un Título Preliminar y 10 Títulos, con un total de 169 artículos.",
+              "Un Título Preliminar y 9 Títulos, con un total de 165 artículos.",
+              "11 Títulos numerados, con un total de 169 artículos.",
+              "Un Título Preliminar y 10 Títulos, con un total de 175 artículos."
+            ],
+            a: 0,
+            exp: "La CE se estructura en un Título Preliminar y 10 Títulos numerados (del I al X), con 169 artículos, 4 disposiciones adicionales, 9 transitorias, 1 derogatoria y 1 final."
+          },
+          {
+            q: "Los valores superiores del ordenamiento jurídico, según el artículo 1.1 CE, son:",
+            options: [
+              "La libertad, la justicia, la solidaridad y la igualdad.",
+              "La libertad, la justicia, la igualdad y el pluralismo político.",
+              "La justicia, la solidaridad, la paz y la libertad.",
+              "La dignidad, la libertad, la igualdad y la justicia."
+            ],
+            a: 1,
+            exp: "Art. 1.1 CE: España se constituye en un Estado social y democrático de Derecho que propugna como valores superiores de su ordenamiento jurídico la libertad, la justicia, la igualdad y el pluralismo político."
+          },
+          {
+            q: "La forma política del Estado español es:",
+            options: [
+              "República parlamentaria.",
+              "Monarquía constitucional.",
+              "Monarquía parlamentaria.",
+              "Monarquía hereditaria."
+            ],
+            a: 2,
+            exp: "Art. 1.3 CE: la forma política del Estado español es la Monarquía parlamentaria."
+          },
+          {
+            q: "Conforme al artículo 3 CE, ¿qué afirmación es correcta sobre el castellano?",
+            options: [
+              "Es la única lengua oficial del Estado.",
+              "Es la lengua española oficial del Estado, y todos los españoles tienen el deber de conocerla y el derecho a usarla.",
+              "Es lengua cooficial junto al resto de lenguas españolas.",
+              "Su uso es opcional para los españoles."
+            ],
+            a: 1,
+            exp: "Art. 3.1 CE: el castellano es la lengua española oficial del Estado. Todos los españoles tienen el deber de conocerla y el derecho a usarla."
+          },
+          {
+            q: "Indique la afirmación INCORRECTA respecto a la bandera de España (art. 4 CE):",
+            options: [
+              "Está formada por tres franjas horizontales: roja, amarilla y roja.",
+              "La franja amarilla es de doble anchura que cada una de las rojas.",
+              "Los Estatutos podrán reconocer banderas y enseñas propias de las Comunidades Autónomas.",
+              "Las banderas autonómicas se utilizarán en sustitución de la bandera de España en los edificios oficiales."
+            ],
+            a: 3,
+            exp: "Art. 4.2 CE: las banderas autonómicas se utilizarán JUNTO a la bandera de España, no en sustitución. La opción d) es la incorrecta."
+          },
+          {
+            q: "La capital del Estado, según el artículo 5 CE, es:",
+            options: [
+              "Madrid.",
+              "La Villa de Madrid.",
+              "La que determinen las Cortes Generales.",
+              "La que designe el Rey."
+            ],
+            a: 1,
+            exp: "Art. 5 CE: la capital del Estado es la villa de Madrid."
+          },
+          {
+            q: "Conforme al artículo 6 CE, los partidos políticos:",
+            options: [
+              "Son órganos del Estado.",
+              "Expresan el pluralismo político y son instrumento fundamental para la participación política.",
+              "Su creación requiere autorización del Ministerio del Interior.",
+              "Deben someter su estructura interna al control gubernamental."
+            ],
+            a: 1,
+            exp: "Art. 6 CE: los partidos políticos expresan el pluralismo político, concurren a la formación y manifestación de la voluntad popular y son instrumento fundamental para la participación política. Su creación es libre dentro del respeto a la Constitución y a la ley."
+          },
+          {
+            q: "Los sindicatos de trabajadores y las asociaciones empresariales se regulan en el artículo:",
+            options: ["Art. 6 CE", "Art. 7 CE", "Art. 28 CE", "Art. 37 CE"],
+            a: 1,
+            exp: "Art. 7 CE: los sindicatos de trabajadores y las asociaciones empresariales contribuyen a la defensa y promoción de los intereses económicos y sociales que les son propios. Su creación y actividad son libres dentro del respeto a la Constitución y a la ley."
+          },
+          {
+            q: "Las Fuerzas Armadas se regulan en el artículo:",
+            options: ["Art. 7 CE", "Art. 8 CE", "Art. 9 CE", "Art. 104 CE"],
+            a: 1,
+            exp: "Art. 8 CE: las Fuerzas Armadas, constituidas por el Ejército de Tierra, la Armada y el Ejército del Aire, tienen como misión garantizar la soberanía e independencia de España, defender su integridad territorial y el ordenamiento constitucional."
+          },
+          {
+            q: "El artículo 9.3 CE NO garantiza expresamente el principio de:",
+            options: [
+              "Legalidad.",
+              "Jerarquía normativa.",
+              "Igualdad ante la ley.",
+              "Seguridad jurídica."
+            ],
+            a: 2,
+            exp: "Art. 9.3 CE garantiza: legalidad, jerarquía normativa, publicidad de las normas, irretroactividad de las disposiciones sancionadoras no favorables, seguridad jurídica, responsabilidad e interdicción de la arbitrariedad. La igualdad ante la ley está en el art. 14, no en el 9.3."
+          },
+          {
+            q: "El fundamento del orden político y de la paz social, según el artículo 10 CE, es:",
+            options: [
+              "La unidad de la Nación española.",
+              "La dignidad de la persona, los derechos inviolables que le son inherentes, el libre desarrollo de la personalidad, el respeto a la ley y a los derechos de los demás.",
+              "La soberanía nacional y la separación de poderes.",
+              "La justicia, la libertad y la igualdad."
+            ],
+            a: 1,
+            exp: "Art. 10.1 CE: la dignidad de la persona, los derechos inviolables que le son inherentes, el libre desarrollo de la personalidad, el respeto a la ley y a los derechos de los demás son fundamento del orden político y de la paz social."
+          },
+          {
+            q: "Las normas relativas a los derechos fundamentales que la CE reconoce se interpretarán:",
+            options: [
+              "De conformidad con la legislación interna española.",
+              "De conformidad con la Declaración Universal de Derechos Humanos y los tratados y acuerdos internacionales ratificados por España.",
+              "Exclusivamente conforme a la jurisprudencia del Tribunal Supremo.",
+              "Conforme a lo que dispongan las leyes orgánicas."
+            ],
+            a: 1,
+            exp: "Art. 10.2 CE: las normas relativas a los derechos fundamentales se interpretarán de conformidad con la Declaración Universal de Derechos Humanos y los tratados y acuerdos internacionales sobre las mismas materias ratificados por España."
+          },
+          {
+            q: "Los españoles son mayores de edad, conforme a la CE, a los:",
+            options: ["16 años", "18 años", "21 años", "Edad que determine la ley orgánica"],
+            a: 1,
+            exp: "Art. 12 CE: los españoles son mayores de edad a los dieciocho años."
+          },
+          {
+            q: "El derecho de asilo de ciudadanos de otros países y apátridas se reconoce en el artículo:",
+            options: ["Art. 11 CE", "Art. 13 CE", "Art. 14 CE", "Art. 19 CE"],
+            a: 1,
+            exp: "Art. 13.4 CE: la ley establecerá los términos en que los ciudadanos de otros países y los apátridas podrán gozar del derecho de asilo en España."
+          },
+          {
+            q: "El principio de igualdad ante la ley sin que pueda prevalecer discriminación alguna se recoge en el artículo:",
+            options: ["Art. 9 CE", "Art. 10 CE", "Art. 14 CE", "Art. 23 CE"],
+            a: 2,
+            exp: "Art. 14 CE: los españoles son iguales ante la ley, sin que pueda prevalecer discriminación alguna por razón de nacimiento, raza, sexo, religión, opinión o cualquier otra condición o circunstancia personal o social."
+          },
+          {
+            q: "La detención preventiva no podrá durar más de:",
+            options: ["24 horas", "48 horas", "72 horas", "96 horas"],
+            a: 2,
+            exp: "Art. 17.2 CE: la detención preventiva no podrá durar más del tiempo estrictamente necesario para las averiguaciones tendentes al esclarecimiento de los hechos, y, en todo caso, en el plazo máximo de setenta y dos horas el detenido deberá ser puesto en libertad o a disposición de la autoridad judicial."
+          },
+          {
+            q: "El procedimiento de \"habeas corpus\" se regula en el artículo:",
+            options: ["Art. 17 CE", "Art. 18 CE", "Art. 24 CE", "Art. 25 CE"],
+            a: 0,
+            exp: "Art. 17.4 CE: la ley regulará un procedimiento de «habeas corpus» para producir la inmediata puesta a disposición judicial de toda persona detenida ilegalmente."
+          },
+          {
+            q: "El derecho a la libertad ideológica, religiosa y de culto se reconoce en el artículo:",
+            options: ["Art. 14 CE", "Art. 16 CE", "Art. 18 CE", "Art. 20 CE"],
+            a: 1,
+            exp: "Art. 16 CE: se garantiza la libertad ideológica, religiosa y de culto de los individuos y las comunidades sin más limitación, en sus manifestaciones, que la necesaria para el mantenimiento del orden público protegido por la ley."
+          },
+          {
+            q: "Conforme al artículo 16.2 CE:",
+            options: [
+              "Nadie podrá ser obligado a declarar sobre su ideología, religión o creencias.",
+              "Toda persona debe declarar su religión al Estado.",
+              "La religión católica es la oficial del Estado.",
+              "Las creencias religiosas se inscribirán en un registro público."
+            ],
+            a: 0,
+            exp: "Art. 16.2 CE: nadie podrá ser obligado a declarar sobre su ideología, religión o creencias."
+          },
+          {
+            q: "Indique la afirmación INCORRECTA respecto al artículo 18 CE:",
+            options: [
+              "Se garantiza el derecho al honor, a la intimidad personal y familiar y a la propia imagen.",
+              "El domicilio es inviolable.",
+              "Se garantiza el secreto de las comunicaciones y, en especial, de las postales, telegráficas y telefónicas, salvo resolución judicial.",
+              "La ley NO podrá limitar el uso de la informática para garantizar el honor y la intimidad."
+            ],
+            a: 3,
+            exp: "Art. 18.4 CE: la ley LIMITARÁ el uso de la informática para garantizar el honor y la intimidad personal y familiar de los ciudadanos y el pleno ejercicio de sus derechos. La opción d) es la incorrecta."
+          },
+          {
+            q: "Conforme al artículo 19 CE, los españoles tienen derecho a:",
+            options: [
+              "Elegir libremente su residencia y a circular por el territorio nacional.",
+              "Únicamente residir en su Comunidad Autónoma de origen.",
+              "Residir en el extranjero solo con autorización gubernativa.",
+              "Circular libremente solo por la provincia de empadronamiento."
+            ],
+            a: 0,
+            exp: "Art. 19 CE: los españoles tienen derecho a elegir libremente su residencia y a circular por el territorio nacional. Asimismo, tienen derecho a entrar y salir libremente de España en los términos que la ley establezca."
+          },
+          {
+            q: "El derecho a la cláusula de conciencia y al secreto profesional en el ejercicio de las libertades del artículo 20 CE:",
+            options: [
+              "No está reconocido constitucionalmente.",
+              "Se regulará por ley.",
+              "Solo afecta a los periodistas oficiales.",
+              "Requiere autorización judicial previa."
+            ],
+            a: 1,
+            exp: "Art. 20.1.d) CE: la ley regulará el derecho a la cláusula de conciencia y al secreto profesional en el ejercicio de estas libertades."
+          },
+          {
+            q: "El derecho de reunión pacífica y sin armas se ejercita:",
+            options: [
+              "Siempre con autorización previa.",
+              "Sin necesidad de autorización previa.",
+              "Solo en lugares cerrados.",
+              "Previo pago de tasa administrativa."
+            ],
+            a: 1,
+            exp: "Art. 21.1 CE: se reconoce el derecho de reunión pacífica y sin armas. El ejercicio de este derecho no necesitará autorización previa. En el caso de reuniones en lugares de tránsito público y manifestaciones, se dará comunicación previa a la autoridad."
+          },
+          {
+            q: "Los ciudadanos tienen derecho a participar en los asuntos públicos:",
+            options: [
+              "Solo a través de los partidos políticos.",
+              "Directamente o por medio de representantes, libremente elegidos en elecciones periódicas por sufragio universal.",
+              "Únicamente mediante referéndum.",
+              "Solo en el ámbito municipal."
+            ],
+            a: 1,
+            exp: "Art. 23.1 CE: los ciudadanos tienen el derecho a participar en los asuntos públicos, directamente o por medio de representantes, libremente elegidos en elecciones periódicas por sufragio universal."
+          },
+          {
+            q: "El derecho a la tutela judicial efectiva se reconoce en el artículo:",
+            options: ["Art. 17 CE", "Art. 24 CE", "Art. 25 CE", "Art. 117 CE"],
+            a: 1,
+            exp: "Art. 24.1 CE: todas las personas tienen derecho a obtener la tutela efectiva de los jueces y tribunales en el ejercicio de sus derechos e intereses legítimos, sin que, en ningún caso, pueda producirse indefensión."
+          },
+          {
+            q: "Indique la afirmación CORRECTA respecto a la enseñanza (art. 27 CE):",
+            options: [
+              "La enseñanza superior es obligatoria y gratuita.",
+              "La enseñanza básica es obligatoria y gratuita.",
+              "Toda enseñanza es gratuita en cualquier nivel.",
+              "La enseñanza es siempre privada."
+            ],
+            a: 1,
+            exp: "Art. 27.4 CE: la enseñanza básica es obligatoria y gratuita."
+          },
+          {
+            q: "El derecho a sindicarse libremente y el derecho a la huelga se reconocen en el artículo:",
+            options: ["Art. 7 CE", "Art. 28 CE", "Art. 35 CE", "Art. 37 CE"],
+            a: 1,
+            exp: "Art. 28 CE: 1) Todos tienen derecho a sindicarse libremente. 2) Se reconoce el derecho a la huelga de los trabajadores para la defensa de sus intereses."
+          },
+          {
+            q: "El derecho de petición individual y colectiva, por escrito, lo tienen:",
+            options: [
+              "Todos los españoles.",
+              "Solo los mayores de edad.",
+              "Solo los electores inscritos en el censo.",
+              "Únicamente los partidos políticos."
+            ],
+            a: 0,
+            exp: "Art. 29.1 CE: todos los españoles tendrán el derecho de petición individual y colectiva, por escrito, en la forma y con los efectos que determine la ley."
+          },
+          {
+            q: "El servicio militar y la objeción de conciencia se regulan en el artículo:",
+            options: ["Art. 28 CE", "Art. 29 CE", "Art. 30 CE", "Art. 32 CE"],
+            a: 2,
+            exp: "Art. 30 CE: los españoles tienen el derecho y el deber de defender a España. La ley fijará las obligaciones militares y regulará, con las debidas garantías, la objeción de conciencia."
+          },
+          {
+            q: "El derecho a la propiedad privada y a la herencia se reconoce en el artículo:",
+            options: ["Art. 31 CE", "Art. 33 CE", "Art. 35 CE", "Art. 38 CE"],
+            a: 1,
+            exp: "Art. 33 CE: se reconoce el derecho a la propiedad privada y a la herencia. La función social de estos derechos delimitará su contenido, de acuerdo con las leyes."
+          },
+          {
+            q: "La libertad de empresa en el marco de la economía de mercado se reconoce en el artículo:",
+            options: ["Art. 33 CE", "Art. 35 CE", "Art. 38 CE", "Art. 128 CE"],
+            a: 2,
+            exp: "Art. 38 CE: se reconoce la libertad de empresa en el marco de la economía de mercado. Los poderes públicos garantizan y protegen su ejercicio."
+          },
+          {
+            q: "Los derechos reconocidos en el Capítulo III del Título I (principios rectores) podrán ser alegados ante la jurisdicción ordinaria:",
+            options: [
+              "Directamente, sin necesidad de desarrollo legal.",
+              "De acuerdo con lo que dispongan las leyes que los desarrollen.",
+              "Solo mediante recurso de amparo.",
+              "Nunca, son meramente programáticos."
+            ],
+            a: 1,
+            exp: "Art. 53.3 CE: los principios del Capítulo III informarán la legislación positiva, la práctica judicial y la actuación de los poderes públicos. Solo podrán ser alegados ante la jurisdicción ordinaria de acuerdo con lo que dispongan las leyes que los desarrollen."
+          },
+          {
+            q: "El recurso de amparo ante el Tribunal Constitucional protege los derechos reconocidos en:",
+            options: [
+              "Todo el Título I.",
+              "El artículo 14 y la Sección 1ª del Capítulo II, así como la objeción de conciencia del art. 30.",
+              "Solo los principios rectores del Capítulo III.",
+              "Únicamente los del artículo 14."
+            ],
+            a: 1,
+            exp: "Art. 53.2 CE: cualquier ciudadano podrá recabar la tutela de las libertades y derechos reconocidos en el art. 14 y la Sección 1ª del Capítulo II ante los Tribunales por procedimiento preferente y sumario y, en su caso, mediante el recurso de amparo ante el TC. Este recurso también será aplicable a la objeción de conciencia del art. 30."
+          },
+          {
+            q: "El Defensor del Pueblo es designado por:",
+            options: [
+              "El Rey, a propuesta del Presidente del Gobierno.",
+              "Las Cortes Generales.",
+              "El Consejo General del Poder Judicial.",
+              "El Tribunal Constitucional."
+            ],
+            a: 1,
+            exp: "Art. 54 CE: el Defensor del Pueblo es alto comisionado de las Cortes Generales, designado por éstas para la defensa de los derechos comprendidos en el Título I."
+          },
+          {
+            q: "¿Cuál de los siguientes derechos NO puede ser suspendido durante el estado de excepción o sitio (art. 55.1 CE)?",
+            options: [
+              "El derecho a la libertad y seguridad (art. 17).",
+              "La inviolabilidad del domicilio (art. 18.2).",
+              "El derecho a la vida y a la integridad física (art. 15).",
+              "El derecho de reunión (art. 21)."
+            ],
+            a: 2,
+            exp: "El derecho a la vida y a la integridad física y moral (art. 15) NO es susceptible de suspensión. El art. 55.1 enumera taxativamente los derechos que pueden suspenderse: 17, 18.2 y 3, 19, 20.1.a y d y 5, 21, 28.2 y 37.2."
+          },
+          {
+            q: "Las leyes orgánicas se aprueban, modifican o derogan mediante:",
+            options: [
+              "Mayoría simple del Congreso.",
+              "Mayoría absoluta del Congreso, en una votación final sobre el conjunto del proyecto.",
+              "Mayoría de 3/5 de cada Cámara.",
+              "Mayoría de 2/3 del Congreso y del Senado."
+            ],
+            a: 1,
+            exp: "Art. 81.2 CE: la aprobación, modificación o derogación de las leyes orgánicas exigirá mayoría absoluta del Congreso, en una votación final sobre el conjunto del proyecto."
+          },
+          {
+            q: "El estado de alarma será declarado por:",
+            options: [
+              "El Gobierno, mediante decreto acordado en Consejo de Ministros, por un plazo máximo de quince días.",
+              "El Congreso, por mayoría absoluta.",
+              "El Rey, a propuesta del Presidente del Gobierno.",
+              "El Senado, por mayoría simple."
+            ],
+            a: 0,
+            exp: "Art. 116.2 CE: el estado de alarma será declarado por el Gobierno mediante decreto acordado en Consejo de Ministros por un plazo máximo de quince días, dando cuenta al Congreso de los Diputados, sin cuya autorización no podrá ser prorrogado."
+          },
+          {
+            q: "El estado de sitio será declarado por:",
+            options: [
+              "El Gobierno, mediante decreto.",
+              "El Rey, oído el Consejo de Estado.",
+              "La mayoría absoluta del Congreso de los Diputados, a propuesta exclusiva del Gobierno.",
+              "Las Cortes Generales reunidas en sesión conjunta."
+            ],
+            a: 2,
+            exp: "Art. 116.4 CE: el estado de sitio será declarado por la mayoría absoluta del Congreso de los Diputados, a propuesta exclusiva del Gobierno. El Congreso determinará su ámbito territorial, duración y condiciones."
+          },
+          {
+            q: "La iniciativa de reforma constitucional corresponde a:",
+            options: [
+              "Los previstos en los apartados 1 y 2 del art. 87 (Gobierno, Congreso, Senado y Asambleas autonómicas), sin iniciativa popular.",
+              "Únicamente al Gobierno.",
+              "A 500.000 ciudadanos mediante iniciativa popular.",
+              "Solo al Rey."
+            ],
+            a: 0,
+            exp: "Art. 166 CE: la iniciativa de reforma constitucional se ejercerá en los términos previstos en los apartados 1 y 2 del art. 87. Queda EXCLUIDA la iniciativa popular del art. 87.3 para la reforma constitucional."
+          },
+          {
+            q: "El procedimiento ordinario de reforma constitucional del art. 167 CE exige:",
+            options: [
+              "Mayoría absoluta de ambas Cámaras.",
+              "Mayoría de tres quintos (3/5) de cada una de las Cámaras.",
+              "Mayoría de dos tercios (2/3) de cada Cámara.",
+              "Solo referéndum vinculante."
+            ],
+            a: 1,
+            exp: "Art. 167.1 CE: los proyectos de reforma constitucional deberán ser aprobados por una mayoría de tres quintos de cada una de las Cámaras."
+          },
+          {
+            q: "La reforma agravada del art. 168 CE (Título Preliminar, Sección 1ª del Cap. II del Título I, o Título II) exige:",
+            options: [
+              "Mayoría de 3/5 de cada Cámara y referéndum facultativo.",
+              "Aprobación por 2/3 de cada Cámara, disolución inmediata de las Cortes, ratificación de las nuevas Cortes por 2/3 y referéndum obligatorio.",
+              "Mayoría absoluta del Congreso y dictamen del Consejo de Estado.",
+              "Únicamente referéndum vinculante del cuerpo electoral."
+            ],
+            a: 1,
+            exp: "Art. 168 CE: aprobación del principio por 2/3 de cada Cámara, disolución inmediata de las Cortes, elección de nuevas Cortes, ratificación de la decisión y estudio del nuevo texto por 2/3 de ambas Cámaras y, finalmente, referéndum obligatorio para su ratificación."
+          },
+          {
+            q: "No podrá iniciarse la reforma constitucional:",
+            options: [
+              "Durante la celebración de elecciones generales.",
+              "En tiempo de guerra o de vigencia de alguno de los estados previstos en el art. 116 (alarma, excepción o sitio).",
+              "Cuando el Gobierno esté en funciones.",
+              "Durante el mes de agosto."
+            ],
+            a: 1,
+            exp: "Art. 169 CE: no podrá iniciarse la reforma constitucional en tiempo de guerra o de vigencia de alguno de los estados previstos en el artículo 116."
+          }
+        ]
+      },
+
+      tema2: {
+        title: "Tema 2 — Estatuto de Autonomía de la CAM",
+        questions: [
+          {
+            q: "¿Por qué Ley Orgánica se aprobó el Estatuto de Autonomía de la Comunidad de Madrid?",
+            options: [
+              "Ley Orgánica 3/1983, de 25 de febrero.",
+              "Ley Orgánica 6/1985, de 1 de julio.",
+              "Ley Orgánica 2/1979, de 3 de octubre.",
+              "Ley Orgánica 5/1982, de 1 de julio."
+            ],
+            a: 0,
+            exp: "El Estatuto de Autonomía de la Comunidad de Madrid se aprobó por la Ley Orgánica 3/1983, de 25 de febrero."
+          },
+          {
+            q: "¿De cuántos artículos consta el Estatuto de Autonomía de la Comunidad de Madrid?",
+            options: ["54 artículos", "60 artículos", "64 artículos", "72 artículos"],
+            a: 2,
+            exp: "El Estatuto consta de 64 artículos, además de 2 disposiciones adicionales, 7 transitorias y 1 disposición final. No tiene Exposición de motivos."
+          },
+          {
+            q: "El Estatuto de Autonomía de la Comunidad de Madrid se estructura en:",
+            options: [
+              "Un Título Preliminar y 5 Títulos numerados.",
+              "Un Título Preliminar y 6 Títulos numerados (I a VI).",
+              "Un Título Preliminar y 7 Títulos numerados.",
+              "10 Títulos numerados sin Preliminar."
+            ],
+            a: 1,
+            exp: "Estructura: Título Preliminar + Título I (Organización Institucional) + Título II (Competencias) + Título III (Régimen Jurídico) + Título IV (Organización Judicial) + Título V (Economía y Hacienda) + Título VI (Reforma)."
+          },
+          {
+            q: "¿Cuántas Disposiciones Adicionales tiene el Estatuto de Autonomía de la CAM?",
+            options: ["1", "2", "5", "7"],
+            a: 1,
+            exp: "El Estatuto cuenta con 2 disposiciones adicionales, 7 disposiciones transitorias y 1 disposición final."
+          },
+          {
+            q: "¿Cuántas Disposiciones Transitorias tiene el Estatuto de Autonomía de la CAM?",
+            options: ["2", "5", "7", "9"],
+            a: 2,
+            exp: "El Estatuto cuenta con 7 disposiciones transitorias."
+          },
+          {
+            q: "Según el artículo 1, la norma institucional básica de la Comunidad de Madrid es:",
+            options: [
+              "La Constitución Española.",
+              "El presente Estatuto de Autonomía.",
+              "La Ley de Gobierno de la Comunidad.",
+              "El Reglamento de la Asamblea."
+            ],
+            a: 1,
+            exp: "Art. 1.1 del Estatuto: la Comunidad de Madrid organiza su autogobierno de conformidad con la Constitución y con el presente Estatuto, que es su norma institucional básica."
+          },
+          {
+            q: "El territorio de la Comunidad de Madrid es:",
+            options: [
+              "El comprendido dentro de los límites de la provincia de Madrid.",
+              "Madrid capital y su área metropolitana.",
+              "El que determine la Ley de la Asamblea de Madrid.",
+              "El que históricamente perteneció a Castilla la Nueva."
+            ],
+            a: 0,
+            exp: "Art. 2 del Estatuto: el territorio de la Comunidad de Madrid es el comprendido dentro de los límites de la provincia de Madrid."
+          },
+          {
+            q: "Según el artículo 3 del Estatuto, la Comunidad de Madrid se organiza territorialmente en:",
+            options: [
+              "Provincias y comarcas.",
+              "Municipios, que gozan de plena personalidad jurídica y autonomía.",
+              "Partidos judiciales.",
+              "Mancomunidades obligatorias."
+            ],
+            a: 1,
+            exp: "Art. 3.1 del Estatuto: la Comunidad de Madrid se organiza territorialmente en Municipios, que gozan de plena personalidad jurídica y autonomía para la gestión de los intereses que les son propios."
+          },
+          {
+            q: "La Bandera de la Comunidad de Madrid es:",
+            options: [
+              "Blanca con siete estrellas rojas.",
+              "Roja carmesí, con siete estrellas en blanco, de cinco puntas, colocadas cuatro y tres en el centro del lienzo.",
+              "Roja con dos franjas blancas.",
+              "Verde con el escudo de la Villa de Madrid."
+            ],
+            a: 1,
+            exp: "Art. 4.1 del Estatuto: la Bandera de la CAM es roja carmesí, con siete estrellas en blanco, de cinco puntas, colocadas cuatro y tres en el centro del lienzo."
+          },
+          {
+            q: "¿Qué día se declara Fiesta de la Comunidad de Madrid?",
+            options: ["1 de mayo", "2 de mayo", "12 de octubre", "15 de mayo"],
+            a: 1,
+            exp: "Art. 4.4 del Estatuto: se declara Fiesta de la Comunidad de Madrid el día dos de mayo (regulado por la Ley 8/1984, de 25 de abril)."
+          },
+          {
+            q: "La capital de la Comunidad de Madrid, sede de sus instituciones, es:",
+            options: [
+              "Alcalá de Henares.",
+              "La villa de Madrid.",
+              "La que designe el Gobierno autonómico cada legislatura.",
+              "Móstoles, por motivos históricos."
+            ],
+            a: 1,
+            exp: "Art. 5 del Estatuto: la capital de la Comunidad, sede de sus instituciones, es la villa de Madrid, pudiendo sus organismos, servicios y dependencias localizarse en otros municipios."
+          },
+          {
+            q: "Según el artículo 6 del Estatuto, la villa de Madrid, por su condición de capital del Estado:",
+            options: [
+              "No tendrá régimen especial alguno.",
+              "Tendrá un régimen especial regulado por Ley votada en Cortes.",
+              "Será regulada por Decreto del Consejo de Ministros.",
+              "Su régimen lo determinará exclusivamente la Asamblea de Madrid."
+            ],
+            a: 1,
+            exp: "Art. 6 del Estatuto: la villa de Madrid, por su condición de capital del Estado y sede de las Instituciones generales, tendrá un régimen especial, regulado por Ley votada en Cortes."
+          },
+          {
+            q: "A efectos del Estatuto, gozan de la condición política de ciudadanos de la Comunidad de Madrid:",
+            options: [
+              "Únicamente los nacidos en Madrid.",
+              "Los españoles que tengan vecindad administrativa en cualquiera de los municipios de la CAM.",
+              "Toda persona empadronada al menos 5 años.",
+              "Los residentes con tarjeta sanitaria de la CAM."
+            ],
+            a: 1,
+            exp: "Art. 7.2 del Estatuto: gozan de la condición política de ciudadanos de la Comunidad los españoles que, de acuerdo con las leyes generales del Estado, tengan vecindad administrativa en cualquiera de sus municipios."
+          },
+          {
+            q: "El Título Primero del Estatuto se refiere a:",
+            options: [
+              "Las competencias de la Comunidad.",
+              "La Organización Institucional de la Comunidad de Madrid.",
+              "El régimen jurídico.",
+              "Economía y Hacienda."
+            ],
+            a: 1,
+            exp: "Título I: De la Organización Institucional de la Comunidad de Madrid (Asamblea, Presidente y Gobierno)."
+          },
+          {
+            q: "Las instituciones de autogobierno de la Comunidad de Madrid son:",
+            options: [
+              "Asamblea, Tribunal Superior y Alcalde de Madrid.",
+              "La Asamblea de Madrid, el Presidente y el Gobierno.",
+              "Cortes de Madrid, Diputación y Consejo Económico.",
+              "Parlamento, Consejo de Estado y Defensor del Pueblo de Madrid."
+            ],
+            a: 1,
+            exp: "El Título I del Estatuto regula tres instituciones en sus tres capítulos: Capítulo I (Asamblea de Madrid), Capítulo II (Presidente) y Capítulo III (Gobierno)."
+          },
+          {
+            q: "El Título II del Estatuto trata sobre:",
+            options: [
+              "El régimen jurídico.",
+              "Las competencias de la Comunidad.",
+              "La organización judicial.",
+              "La reforma del Estatuto."
+            ],
+            a: 1,
+            exp: "Título II: De las competencias de la Comunidad (artículos 26 y siguientes)."
+          },
+          {
+            q: "¿En qué Título se regula la Economía y Hacienda de la Comunidad de Madrid?",
+            options: ["Título III", "Título IV", "Título V", "Título VI"],
+            a: 2,
+            exp: "Título V: Economía y Hacienda (artículos 51 a 63)."
+          },
+          {
+            q: "La reforma del Estatuto se regula en:",
+            options: ["Título III", "Título IV", "Título V", "Título VI"],
+            a: 3,
+            exp: "Título VI: Reforma del Estatuto (artículo 64)."
+          },
+          {
+            q: "La organización judicial se contempla en:",
+            options: ["Título II", "Título III", "Título IV", "Título V"],
+            a: 2,
+            exp: "Título IV: De la organización judicial."
+          },
+          {
+            q: "El régimen jurídico (disposiciones generales, administración y control) se regula en:",
+            options: ["Título Preliminar", "Título II", "Título III", "Título IV"],
+            a: 2,
+            exp: "Título III: Del régimen jurídico, que incluye Capítulo I (Disposiciones generales), Capítulo II (De la administración) y Capítulo III (Del control de la CAM)."
+          },
+          {
+            q: "Las competencias EXCLUSIVAS de la Comunidad de Madrid se regulan principalmente en el artículo:",
+            options: ["Artículo 25", "Artículo 26", "Artículo 27", "Artículo 28"],
+            a: 1,
+            exp: "Artículo 26: enumera las materias en las que la CAM tiene competencia exclusiva (potestad legislativa, reglamentaria y función ejecutiva)."
+          },
+          {
+            q: "¿En qué artículo del Estatuto se regulan las competencias de DESARROLLO LEGISLATIVO y ejecución?",
+            options: ["Artículo 26", "Artículo 27", "Artículo 28", "Artículo 29"],
+            a: 1,
+            exp: "Artículo 27: en el marco de la legislación básica del Estado, corresponde a la CAM el desarrollo legislativo, la potestad reglamentaria y la ejecución de las materias allí enumeradas."
+          },
+          {
+            q: "Las competencias de mera EJECUCIÓN de la legislación del Estado por parte de la CAM se regulan en el artículo:",
+            options: ["Artículo 26", "Artículo 27", "Artículo 28", "Artículo 30"],
+            a: 2,
+            exp: "Artículo 28: corresponde a la CAM la ejecución de la legislación del Estado en las materias enumeradas (asistencia sanitaria SS, IMSERSO, productos farmacéuticos, laboral, etc.)."
+          },
+          {
+            q: "La competencia de desarrollo legislativo y ejecución de la ENSEÑANZA en toda su extensión se regula en el artículo:",
+            options: ["Artículo 26", "Artículo 27", "Artículo 29", "Artículo 31"],
+            a: 2,
+            exp: "Art. 29 del Estatuto: corresponde a la CAM el desarrollo legislativo y ejecución de la enseñanza en toda su extensión, niveles y grados, modalidades y especialidades, de acuerdo con el art. 27 CE."
+          },
+          {
+            q: "Indique cuál de las siguientes NO es competencia EXCLUSIVA de la Comunidad de Madrid (art. 26):",
+            options: [
+              "Ordenación del territorio, urbanismo y vivienda.",
+              "Organización, régimen y funcionamiento de sus instituciones de autogobierno.",
+              "Legislación laboral.",
+              "Casinos, juegos y apuestas (con exclusión de las apuestas mutuas deportivo-benéficas)."
+            ],
+            a: 2,
+            exp: "La legislación laboral es competencia EXCLUSIVA del Estado (art. 149.1.7ª CE). A la CAM solo le corresponde la EJECUCIÓN de la legislación laboral del Estado (art. 28.1.12 del Estatuto)."
+          },
+          {
+            q: "¿Cuál de las siguientes materias NO es competencia exclusiva de la CAM según el artículo 26?",
+            options: [
+              "Artesanía.",
+              "Ferias y mercados interiores.",
+              "Sanidad e higiene.",
+              "Servicio meteorológico de la Comunidad de Madrid."
+            ],
+            a: 2,
+            exp: "Sanidad e higiene es competencia de DESARROLLO LEGISLATIVO Y EJECUCIÓN del art. 27.4, no exclusiva del art. 26."
+          },
+          {
+            q: "La competencia sobre Régimen Local en la CAM es:",
+            options: [
+              "Exclusiva de la CAM.",
+              "De desarrollo legislativo y ejecución, en el marco de la legislación básica del Estado.",
+              "De mera ejecución de la legislación estatal.",
+              "Exclusiva del Estado."
+            ],
+            a: 1,
+            exp: "Art. 27.1 del Estatuto: corresponde a la CAM el desarrollo legislativo, la potestad reglamentaria y la ejecución del Régimen Local, en el marco de la legislación básica del Estado."
+          },
+          {
+            q: "La gestión de la asistencia sanitaria de la Seguridad Social corresponde a la CAM como competencia de:",
+            options: [
+              "Exclusiva.",
+              "Desarrollo legislativo y ejecución.",
+              "Mera ejecución de la legislación del Estado.",
+              "Compartida con la Administración Local."
+            ],
+            a: 2,
+            exp: "Art. 28.1.1 del Estatuto: corresponde a la CAM la EJECUCIÓN de la legislación del Estado en materia de gestión de la asistencia sanitaria de la Seguridad Social, reservándose el Estado la alta inspección."
+          },
+          {
+            q: "La protección del medio ambiente es competencia de la CAM:",
+            options: [
+              "Exclusiva, sin límites.",
+              "De desarrollo legislativo y ejecución, pudiendo establecer normas adicionales de protección.",
+              "De mera ejecución de la normativa estatal.",
+              "Exclusivamente del Estado."
+            ],
+            a: 1,
+            exp: "Art. 27.7 del Estatuto: desarrollo legislativo y ejecución de la protección del medio ambiente, sin perjuicio de la facultad de la CAM de establecer normas adicionales de protección."
+          },
+          {
+            q: "En el ejercicio de sus competencias EXCLUSIVAS, corresponde a la CAM (art. 26.2):",
+            options: [
+              "Solo la potestad reglamentaria.",
+              "La potestad legislativa, la reglamentaria y la función ejecutiva.",
+              "Únicamente la función ejecutiva.",
+              "Solo la potestad legislativa, sin función ejecutiva."
+            ],
+            a: 1,
+            exp: "Art. 26.2 del Estatuto: en el ejercicio de las competencias exclusivas corresponderá a la CAM la potestad legislativa, la reglamentaria y la función ejecutiva, que se ejercerán respetando la Constitución."
+          },
+          {
+            q: "El Derecho propio de la Comunidad de Madrid, según el artículo 33 del Estatuto:",
+            options: [
+              "Es supletorio del Derecho estatal en todo caso.",
+              "Es aplicable con preferencia a cualquier otro en el territorio de Madrid, y el Derecho estatal tiene carácter supletorio del Derecho propio de Madrid.",
+              "Solo se aplica en materia tributaria.",
+              "Únicamente regula el Derecho civil madrileño."
+            ],
+            a: 1,
+            exp: "Art. 33 del Estatuto: el Derecho propio de la CAM es aplicable con preferencia a cualquier otro en el territorio de Madrid. En todo caso, el Derecho estatal tiene carácter supletorio del Derecho propio de Madrid."
+          },
+          {
+            q: "La CAM podrá celebrar convenios de cooperación con otras Comunidades Autónomas (art. 31):",
+            options: [
+              "Sin necesidad de comunicación alguna.",
+              "Comunicando previamente a las Cortes Generales, especialmente con las CC.AA. limítrofes.",
+              "Solo previa autorización del Tribunal Constitucional.",
+              "Solo con autorización del Consejo de Estado."
+            ],
+            a: 1,
+            exp: "Art. 31.1 del Estatuto: la CAM podrá celebrar convenios de cooperación con otras CC.AA., en especial con las limítrofes. La celebración deberá ser comunicada a las Cortes Generales antes de su entrada en vigor."
+          },
+          {
+            q: "Los acuerdos de cooperación con otras CC.AA. (distintos de los convenios) requieren:",
+            options: [
+              "Solo comunicación al Senado.",
+              "Previa autorización de las Cortes Generales.",
+              "Aprobación del Consejo de Ministros.",
+              "Únicamente acuerdo de la Asamblea de Madrid."
+            ],
+            a: 1,
+            exp: "Art. 31.2 del Estatuto: la CAM podrá establecer acuerdos de cooperación con otras Comunidades Autónomas, previa autorización de las Cortes Generales."
+          },
+          {
+            q: "Según el artículo 32, en relación con los tratados internacionales:",
+            options: [
+              "La CAM puede firmar tratados internacionales directamente.",
+              "La CAM podrá solicitar del Gobierno de la Nación la celebración de tratados o convenios internacionales en materias de interés para Madrid.",
+              "Solo puede ratificar los tratados ya firmados por España.",
+              "No tiene ninguna intervención en materia internacional."
+            ],
+            a: 1,
+            exp: "Art. 32.1 del Estatuto: la CAM podrá solicitar del Gobierno de la Nación la celebración de tratados o convenios internacionales en materias de interés para Madrid."
+          },
+          {
+            q: "La CAM podrá asumir competencias sobre materias no previstas en el Estatuto (art. 30):",
+            options: [
+              "Mediante simple acuerdo del Gobierno de la Comunidad.",
+              "Mediante la reforma del Estatuto o por decisión de las Cortes Generales adoptada conforme a la Constitución.",
+              "Por delegación del Tribunal Constitucional.",
+              "No puede asumir nuevas competencias en ningún caso."
+            ],
+            a: 1,
+            exp: "Art. 30.1 del Estatuto: la CAM podrá asumir competencias sobre materias no previstas en el presente Estatuto mediante la reforma del mismo o por decisión de las Cortes Generales, adoptada a través de los procedimientos previstos en la Constitución."
+          },
+          {
+            q: "La Hacienda de la Comunidad de Madrid se regula a partir del artículo:",
+            options: ["Artículo 26", "Artículo 51", "Artículo 53", "Artículo 60"],
+            a: 2,
+            exp: "Art. 53 del Estatuto: enumera las fuentes con las que se constituye la Hacienda de la Comunidad de Madrid (impuestos propios, recargos, asignaciones, participaciones, etc.)."
+          },
+          {
+            q: "Según el artículo 51, la Comunidad de Madrid, dentro de los principios de coordinación con las Haciendas estatal y local:",
+            options: [
+              "Carece de autonomía financiera.",
+              "Goza de autonomía financiera, es titular de bienes de dominio público y de patrimonio y hacienda propios.",
+              "Depende íntegramente de la Hacienda estatal.",
+              "Comparte su patrimonio con los Ayuntamientos de la CAM."
+            ],
+            a: 1,
+            exp: "Art. 51 del Estatuto: la CAM goza de autonomía financiera, es titular de bienes de dominio público y de patrimonio y hacienda propios, de acuerdo con la Constitución, el Estatuto, la LOFCA y demás normas."
+          },
+          {
+            q: "¿Cuál de los siguientes NO forma parte de la Hacienda de la Comunidad de Madrid según el artículo 53?",
+            options: [
+              "Los rendimientos de sus propios impuestos, tasas y contribuciones especiales.",
+              "Las participaciones en los impuestos estatales no cedidos.",
+              "Las cotizaciones a la Seguridad Social recaudadas en su territorio.",
+              "Los rendimientos derivados del patrimonio de la CAM."
+            ],
+            a: 2,
+            exp: "Las cotizaciones a la Seguridad Social no figuran entre los recursos del art. 53. Sí figuran: impuestos propios, recargos, asignaciones presupuestarias, participaciones en impuestos no cedidos, impuestos cedidos, Fondo de Compensación Interterritorial, rendimientos patrimoniales, multas, operaciones de crédito, etc."
+          },
+          {
+            q: "El Gobierno presentará el proyecto de presupuesto a la Asamblea con una antelación mínima de (art. 61):",
+            options: [
+              "Un mes a la fecha de inicio del ejercicio.",
+              "Dos meses a la fecha de inicio del ejercicio.",
+              "Tres meses a la fecha de inicio del ejercicio.",
+              "Seis meses a la fecha de inicio del ejercicio."
+            ],
+            a: 1,
+            exp: "Art. 61.1 del Estatuto: el Gobierno presentará el proyecto de presupuesto a la Asamblea con una antelación mínima de DOS MESES a la fecha del inicio del correspondiente ejercicio."
+          },
+          {
+            q: "El presupuesto de la Comunidad de Madrid, según el artículo 61.2 del Estatuto:",
+            options: [
+              "Es plurianual y puede ser parcial.",
+              "Será único, tendrá carácter anual e incluirá la totalidad de los ingresos y gastos de la Comunidad.",
+              "Solo incluye los gastos del Gobierno, no de los organismos dependientes.",
+              "Es bienal por imperativo legal."
+            ],
+            a: 1,
+            exp: "Art. 61.2 del Estatuto: el presupuesto será único, tendrá carácter anual e incluirá la totalidad de los ingresos y gastos de la Comunidad y de los organismos, instituciones y empresas de ella dependientes."
+          },
+          {
+            q: "La elaboración y ejecución del presupuesto de la CAM corresponde a:",
+            options: [
+              "La Asamblea de Madrid.",
+              "El Gobierno de la Comunidad; a la Asamblea corresponde su examen, enmienda, aprobación y control.",
+              "El Presidente, en exclusiva.",
+              "El Consejero de Hacienda directamente."
+            ],
+            a: 1,
+            exp: "Art. 61.1 del Estatuto: corresponde al Gobierno la elaboración y ejecución del presupuesto de la CAM, y a la Asamblea, su examen, enmienda, aprobación y control."
+          },
+          {
+            q: "El porcentaje de participación de la CAM en los ingresos del Estado podrá ser objeto de revisión cuando, transcurridos desde su entrada en vigor, sea solicitada su revisión por el Estado o la CAM (art. 54):",
+            options: [
+              "Tres años.",
+              "Cinco años.",
+              "Diez años.",
+              "Quince años."
+            ],
+            a: 1,
+            exp: "Art. 54.1.d del Estatuto: el porcentaje podrá ser revisado cuando, transcurridos CINCO años desde su entrada en vigor, sea solicitada su revisión por el Estado o la CAM."
+          },
+          {
+            q: "Según el artículo 58, la Comunidad de Madrid:",
+            options: [
+              "No tiene ningún beneficio fiscal.",
+              "Gozará del mismo tratamiento fiscal que la Ley establezca para el Estado.",
+              "Tributa como una entidad privada cualquiera.",
+              "Está exenta de todo tipo de tributo en su territorio."
+            ],
+            a: 1,
+            exp: "Art. 58 del Estatuto: la CAM gozará del mismo tratamiento fiscal que la Ley establezca para el Estado."
+          },
+          {
+            q: "Las operaciones de crédito y deuda pública de la CAM (art. 55) requieren:",
+            options: [
+              "Solo autorización del Presidente.",
+              "Acuerdo de la Asamblea, para financiar operaciones de inversión.",
+              "Autorización previa del Banco de España.",
+              "Aprobación de los Ayuntamientos."
+            ],
+            a: 1,
+            exp: "Art. 55.1 del Estatuto: la CAM, mediante acuerdo de la Asamblea, podrá concertar operaciones de crédito y deuda pública, en los ámbitos nacional y extranjero, para financiar operaciones de inversión."
+          },
+          {
+            q: "La reforma del Estatuto se regula en el artículo:",
+            options: ["Artículo 60", "Artículo 62", "Artículo 63", "Artículo 64"],
+            a: 3,
+            exp: "Art. 64 del Estatuto (Título VI): regula el procedimiento de reforma del Estatuto de Autonomía de la CAM."
+          },
+          {
+            q: "La iniciativa de la reforma del Estatuto corresponde a (art. 64):",
+            options: [
+              "Únicamente al Presidente de la Comunidad.",
+              "Al Gobierno, o a la Asamblea de Madrid (a propuesta de 1/3 de sus miembros, o de 2/3 de los municipios cuya población represente mayoría absoluta de la CAM).",
+              "A 500.000 electores de la CAM.",
+              "Solo a las Cortes Generales."
+            ],
+            a: 1,
+            exp: "Art. 64.1 del Estatuto: la iniciativa de la reforma corresponderá al Gobierno o a la Asamblea de Madrid, a propuesta de una tercera parte de sus miembros, o de dos tercios de los municipios de la Comunidad cuya población represente la mayoría absoluta de la CAM."
+          },
+          {
+            q: "La propuesta de reforma del Estatuto requerirá, en todo caso (art. 64.1):",
+            options: [
+              "La aprobación de la Asamblea por mayoría simple.",
+              "La aprobación de la Asamblea por mayoría de dos tercios y la aprobación de las Cortes Generales mediante ley orgánica.",
+              "Solo referéndum de los madrileños.",
+              "Aprobación únicamente del Senado por mayoría absoluta."
+            ],
+            a: 1,
+            exp: "Art. 64.1 del Estatuto: la propuesta de reforma requerirá, en todo caso, la aprobación de la Asamblea por mayoría de DOS TERCIOS y la aprobación de las Cortes Generales mediante ley orgánica."
+          },
+          {
+            q: "Si la propuesta de reforma del Estatuto no es aprobada por la Asamblea o por las Cortes Generales (art. 64.2):",
+            options: [
+              "Podrá reintroducirse al día siguiente.",
+              "No podrá ser sometida nuevamente a debate y votación de la Asamblea hasta que haya transcurrido un año.",
+              "Quedará vetada durante toda la legislatura.",
+              "Requerirá referéndum obligatorio para volver a debatirse."
+            ],
+            a: 1,
+            exp: "Art. 64.2 del Estatuto: si la propuesta de reforma no es aprobada por la Asamblea o por las Cortes Generales, no podrá ser sometida nuevamente a debate y votación de la Asamblea hasta que haya transcurrido un año."
+          },
+          {
+            q: "Indique la afirmación INCORRECTA respecto al Estatuto de Autonomía de la CAM:",
+            options: [
+              "Fue aprobado por Ley Orgánica 3/1983, de 25 de febrero.",
+              "Consta de 64 artículos.",
+              "Tiene Exposición de motivos detallada en sus primeras páginas.",
+              "Su norma institucional básica es el propio Estatuto."
+            ],
+            a: 2,
+            exp: "El Estatuto de Autonomía de la CAM NO tiene Exposición de motivos. Esta es una particularidad respecto a otras normas."
+          },
+          {
+            q: "Los municipios de la CAM, según el artículo 3:",
+            options: [
+              "No tienen personalidad jurídica propia.",
+              "Gozan de plena personalidad jurídica y autonomía para la gestión de sus intereses.",
+              "Dependen orgánicamente del Gobierno regional.",
+              "Solo gestionan competencias delegadas por la CAM."
+            ],
+            a: 1,
+            exp: "Art. 3.1 del Estatuto: los Municipios gozan de plena personalidad jurídica y autonomía para la gestión de los intereses que les son propios."
+          },
+          {
+            q: "Según el artículo 3.3 del Estatuto, las circunscripciones territoriales propias se establecerán:",
+            options: [
+              "Por Decreto del Gobierno autonómico.",
+              "Por Ley de la Asamblea de Madrid, mediante la agrupación de municipios limítrofes.",
+              "Por Real Decreto del Gobierno de la Nación.",
+              "Por ordenanza municipal."
+            ],
+            a: 1,
+            exp: "Art. 3.3 del Estatuto: por Ley de la Asamblea de Madrid se podrán establecer, mediante la agrupación de municipios limítrofes, circunscripciones territoriales propias que gozarán de plena personalidad jurídica."
+          },
+          {
+            q: "El Escudo de la Comunidad de Madrid se establece:",
+            options: [
+              "Directamente en el Estatuto de Autonomía.",
+              "Por ley de la Asamblea de Madrid.",
+              "Por Real Decreto del Gobierno de la Nación.",
+              "Por acuerdo del Consejo de Gobierno."
+            ],
+            a: 1,
+            exp: "Art. 4.2 del Estatuto: el Escudo de la Comunidad de Madrid se establece por ley de la Asamblea."
+          },
+          {
+            q: "El Himno de la Comunidad de Madrid:",
+            options: [
+              "No está previsto en el Estatuto.",
+              "La CAM tiene Himno propio, establecido por ley de la Asamblea.",
+              "Es el Himno Nacional español.",
+              "Se aprueba mediante decreto del Presidente."
+            ],
+            a: 1,
+            exp: "Art. 4.3 del Estatuto: la Comunidad de Madrid tiene Himno propio, siendo éste establecido por ley de la Asamblea."
+          }
+        ]
+      },
+
+      tema3: {
+        title: "Tema 3 — Asamblea de Madrid, Procedimiento Legislativo y Gobierno",
+        questions: [
+          {
+            q: "Según el artículo 10 del Estatuto, la Asamblea de Madrid es elegida por sufragio universal por un período de:",
+            options: ["Cinco años.", "Cuatro años.", "Seis años.", "El que determine la Ley electoral."],
+            a: 1,
+            exp: "Art. 10.1 del Estatuto: la Asamblea es elegida por CUATRO AÑOS mediante sufragio universal, libre, igual, directo y secreto, atendiendo a criterios de representación proporcional."
+          },
+          {
+            q: "La Asamblea de Madrid estará compuesta por:",
+            options: [
+              "Un Diputado por cada 40.000 habitantes o fracción superior a 20.000.",
+              "Un Diputado por cada 50.000 habitantes o fracción superior a 25.000.",
+              "Un Diputado por cada 60.000 habitantes o fracción superior a 30.000.",
+              "Un número fijo de 129 Diputados."
+            ],
+            a: 1,
+            exp: "Art. 10.2 del Estatuto: la Asamblea estará compuesta por un Diputado por cada 50.000 habitantes o fracción superior a 25.000."
+          },
+          {
+            q: "La circunscripción electoral en las elecciones a la Asamblea de Madrid es:",
+            options: ["El municipio.", "La provincia.", "El partido judicial.", "La comarca."],
+            a: 1,
+            exp: "Art. 10.5 del Estatuto: la circunscripción electoral es la provincia."
+          },
+          {
+            q: "Para la distribución de escaños en las elecciones autonómicas, solo serán tenidas en cuenta las listas que hayan obtenido al menos:",
+            options: ["El 3% de los sufragios.", "El 5% de los sufragios.", "El 10% de los sufragios.", "El 15% de los sufragios."],
+            a: 1,
+            exp: "Art. 10.6 del Estatuto: para la distribución de escaños sólo serán tenidas en cuenta las listas que hubieran obtenido, al menos, el 5 por 100 de los sufragios válidamente emitidos."
+          },
+          {
+            q: "Las elecciones a la Asamblea de Madrid tendrán lugar:",
+            options: [
+              "El primer domingo de mayo de cada cuatro años.",
+              "El segundo domingo de mayo de cada cuatro años.",
+              "El cuarto domingo de mayo de cada cuatro años.",
+              "El último domingo de mayo de cada cuatro años."
+            ],
+            a: 2,
+            exp: "Art. 10.7 del Estatuto: las elecciones tendrán lugar el cuarto domingo de mayo de cada cuatro años."
+          },
+          {
+            q: "La sesión constitutiva de la Asamblea tendrá lugar dentro de los:",
+            options: [
+              "Quince días siguientes a la proclamación de los resultados.",
+              "Veinte días siguientes a la proclamación de los resultados.",
+              "Veinticinco días siguientes a la proclamación de los resultados.",
+              "Treinta días siguientes a la proclamación de los resultados."
+            ],
+            a: 2,
+            exp: "Art. 10.7 del Estatuto: la sesión constitutiva tendrá lugar dentro de los VEINTICINCO días siguientes a la proclamación de los resultados electorales."
+          },
+          {
+            q: "La inviolabilidad de los Diputados de la Asamblea de Madrid se predica:",
+            options: [
+              "Solo durante el ejercicio del mandato.",
+              "Aun después de haber cesado en el mandato, por las opiniones manifestadas en el ejercicio de sus funciones.",
+              "Únicamente durante las sesiones del Pleno.",
+              "Únicamente en el territorio de la Comunidad de Madrid."
+            ],
+            a: 1,
+            exp: "Art. 11.5 del Estatuto (y art. 23 Reglamento): los Diputados gozarán, aun después de haber cesado en su mandato, de inviolabilidad por las opiniones manifestadas en el ejercicio de sus funciones."
+          },
+          {
+            q: "Durante su mandato, los Diputados de la Asamblea no podrán ser detenidos por actos delictivos cometidos en el territorio de la CAM, salvo:",
+            options: [
+              "En caso de orden judicial expresa.",
+              "En caso de flagrante delito.",
+              "En caso de autorización del Tribunal Constitucional.",
+              "Cuando lo apruebe el Pleno por mayoría absoluta."
+            ],
+            a: 1,
+            exp: "Art. 11.6 del Estatuto: los miembros de la Asamblea no podrán ser detenidos ni retenidos por actos delictivos cometidos en el territorio de la Comunidad, sino en caso de flagrante delito."
+          },
+          {
+            q: "La inculpación, prisión, procesamiento y juicio de un Diputado por delito cometido en el territorio de la CAM corresponderá decidir a:",
+            options: [
+              "La Sala de lo Penal del Tribunal Supremo.",
+              "El Tribunal Constitucional.",
+              "El Tribunal Superior de Justicia de Madrid.",
+              "La Audiencia Provincial de Madrid."
+            ],
+            a: 2,
+            exp: "Art. 11.6 del Estatuto: corresponde decidir, en todo caso, sobre su inculpación, prisión, procesamiento y juicio al Tribunal Superior de Justicia de Madrid. Fuera de dicho territorio, ante la Sala de lo Penal del Tribunal Supremo."
+          },
+          {
+            q: "El Reglamento de la Asamblea de Madrid se aprueba mediante:",
+            options: [
+              "Mayoría simple del Pleno.",
+              "Mayoría absoluta del Pleno, en una votación final sobre el conjunto.",
+              "Mayoría de dos tercios de los Diputados.",
+              "Ley de la Asamblea, en lectura única."
+            ],
+            a: 1,
+            exp: "Art. 12.1 del Estatuto: la Asamblea se dotará de su propio Reglamento, cuya aprobación y reforma serán sometidas a una votación final sobre su totalidad, que requerirá el voto afirmativo de la mayoría absoluta de los Diputados."
+          },
+          {
+            q: "Los períodos ordinarios de sesiones de la Asamblea de Madrid son:",
+            options: [
+              "De enero a julio y de septiembre a diciembre.",
+              "De septiembre a diciembre y de febrero a junio.",
+              "De octubre a febrero y de abril a julio.",
+              "Sesión única continuada de septiembre a junio."
+            ],
+            a: 1,
+            exp: "Art. 14.1 del Estatuto (y art. 101.1 Reglamento): los períodos ordinarios serán dos al año: el primero de septiembre a diciembre y el segundo de febrero a junio."
+          },
+          {
+            q: "Las sesiones extraordinarias de la Asamblea de Madrid podrán ser convocadas a petición de:",
+            options: [
+              "Únicamente del Gobierno.",
+              "Del Gobierno, de la Diputación Permanente, de una cuarta parte de los Diputados o del número de Grupos Parlamentarios que el Reglamento determine.",
+              "Únicamente del Presidente de la Asamblea.",
+              "De un tercio de los Diputados, exclusivamente."
+            ],
+            a: 1,
+            exp: "Art. 14.3 del Estatuto: las sesiones extraordinarias habrán de ser convocadas por el Presidente de la Asamblea a petición del Gobierno, de la Diputación Permanente, de una cuarta parte de los Diputados o del número de Grupos Parlamentarios que el Reglamento determine."
+          },
+          {
+            q: "Las sesiones ordinarias del Pleno de la Asamblea tendrán lugar, con carácter general:",
+            options: [
+              "El lunes que corresponda.",
+              "El martes que corresponda.",
+              "El jueves que corresponda.",
+              "El día que libremente decida la Mesa cada semana."
+            ],
+            a: 2,
+            exp: "Art. 101.3 del Reglamento: las sesiones ordinarias del Pleno tendrán lugar en día hábil, una vez por cada semana, y se celebrarán el jueves que corresponda, salvo que la Junta de Portavoces acuerde por unanimidad su celebración otro día."
+          },
+          {
+            q: "La Mesa de la Asamblea de Madrid estará compuesta por:",
+            options: [
+              "Una Presidencia, dos Vicepresidencias y dos Secretarías.",
+              "Una Presidencia, tres Vicepresidencias y tres Secretarías.",
+              "Una Presidencia, cuatro Vicepresidencias y dos Secretarías.",
+              "Una Presidencia, una Vicepresidencia y una Secretaría."
+            ],
+            a: 1,
+            exp: "Art. 48.2 del Reglamento: la Mesa estará compuesta por una Presidencia, TRES Vicepresidencias y TRES Secretarías."
+          },
+          {
+            q: "Indique la afirmación INCORRECTA respecto a la elección de la Mesa de la Asamblea:",
+            options: [
+              "La elección se realiza por votación secreta por papeletas.",
+              "Para ser elegido Presidente se requiere la mayoría absoluta de los miembros de la Asamblea en primera votación.",
+              "Las tres Vicepresidencias se eligen simultáneamente, resultando elegidos los tres más votados.",
+              "Las tres Secretarías se eligen simultáneamente en una sola votación."
+            ],
+            a: 3,
+            exp: "Art. 52.4 del Reglamento: las tres Secretarías se eligen en DOS votaciones sucesivas (no simultáneamente): en la primera, las Secretarías Primera y Segunda; en la segunda, la Tercera."
+          },
+          {
+            q: "Los acuerdos de la Junta de Portavoces se adoptan:",
+            options: [
+              "Por mayoría simple de los presentes.",
+              "Por unanimidad, en todo caso.",
+              "Siempre en función del criterio de voto ponderado.",
+              "Por mayoría absoluta de Portavoces."
+            ],
+            a: 2,
+            exp: "Art. 60 del Reglamento: los acuerdos de la Junta de Portavoces se adoptarán siempre en función del criterio de voto ponderado. Se imputará a cada Portavoz tantos votos como Diputados integran el Grupo Parlamentario al que representa."
+          },
+          {
+            q: "Conforme al artículo 67 del Reglamento, las Comisiones se entenderán válidamente constituidas cuando estén presentes:",
+            options: [
+              "Una tercera parte de sus miembros.",
+              "Al menos la mitad de los miembros.",
+              "La mitad más uno de sus miembros, además de Presidencia/Vicepresidencia y Secretaría.",
+              "Dos tercios de los miembros."
+            ],
+            a: 2,
+            exp: "Art. 67.2 del Reglamento: las Comisiones se entenderán válidamente constituidas cuando estén presentes, además de su Presidencia o Vicepresidencia y de su Secretaría, la MITAD MÁS UNO de sus miembros."
+          },
+          {
+            q: "¿Cuál de las siguientes NO es una Comisión Permanente Legislativa según el artículo 72 del Reglamento?",
+            options: [
+              "Comisión de Estatuto de Autonomía, Reglamento y Estatuto del Diputado.",
+              "Comisión de Presupuestos.",
+              "Comisión de Vigilancia de las Contrataciones.",
+              "Comisión de Mujer."
+            ],
+            a: 2,
+            exp: "Art. 72.2.b del Reglamento: la Comisión de Vigilancia de las Contrataciones es una Comisión Permanente NO Legislativa (junto con la de Radio Televisión Madrid y la de Participación). Las otras tres son Permanentes Legislativas."
+          },
+          {
+            q: "La creación de una Comisión de Investigación podrá ser propuesta por:",
+            options: [
+              "Un solo Grupo Parlamentario.",
+              "Dos Grupos Parlamentarios o una quinta parte de los miembros de la Cámara.",
+              "Únicamente por la Mesa de la Asamblea.",
+              "Una décima parte de los Diputados."
+            ],
+            a: 1,
+            exp: "Art. 75.1 del Reglamento: la creación de una Comisión de Investigación podrá ser propuesta por DOS Grupos Parlamentarios o UNA QUINTA PARTE de los miembros de la Cámara."
+          },
+          {
+            q: "La Diputación Permanente estará compuesta por:",
+            options: [
+              "La Presidencia y un número de Diputados equivalente a una cuarta parte de la Cámara.",
+              "La Presidencia y un número de Diputados equivalente al tercio de los Diputados de la Cámara, incluidos los miembros de la Mesa como miembros natos.",
+              "Únicamente los miembros de la Mesa.",
+              "La mitad de los Diputados elegidos al efecto."
+            ],
+            a: 1,
+            exp: "Art. 80.2 del Reglamento: la Diputación Permanente estará compuesta por la Presidencia y por un número de Diputados equivalente al TERCIO de los Diputados de la Cámara, incluidos los miembros de la Mesa, que serán miembros natos."
+          },
+          {
+            q: "Para constituir un Grupo Parlamentario en la Asamblea de Madrid se requiere un mínimo de:",
+            options: ["3 Diputados.", "5 Diputados.", "7 Diputados.", "10 Diputados."],
+            a: 1,
+            exp: "Art. 36 del Reglamento: los Diputados, en número no inferior a CINCO, podrán constituirse en Grupo Parlamentario."
+          },
+          {
+            q: "El plazo para constituir los Grupos Parlamentarios desde la sesión constitutiva de la Asamblea es:",
+            options: ["3 días.", "5 días.", "10 días.", "15 días."],
+            a: 1,
+            exp: "Art. 39.1 del Reglamento: la constitución de los Grupos Parlamentarios se hará dentro de los CINCO días siguientes a la sesión constitutiva de la Asamblea de Madrid."
+          },
+          {
+            q: "Los Diputados que abandonen su Grupo Parlamentario de origen por voluntad propia o por decisión del Grupo tendrán la consideración de:",
+            options: [
+              "Diputados independientes.",
+              "Diputados sin grupo.",
+              "Diputados no adscritos durante el tiempo que reste de Legislatura.",
+              "Se incorporan automáticamente al Grupo Mixto."
+            ],
+            a: 2,
+            exp: "Art. 43.2 del Reglamento: los Diputados que dejen de pertenecer a su Grupo Parlamentario de origen por voluntad propia o por decisión del Grupo tendrán la consideración de Diputados NO ADSCRITOS durante el tiempo que reste de Legislatura."
+          },
+          {
+            q: "La detención preventiva o retención de un Diputado durante su mandato puede acompañarse de qué tratamiento conforme al art. 22 del Reglamento:",
+            options: [
+              "Todos los Diputados reciben tratamiento de Excelencia.",
+              "La Presidencia tendrá tratamiento de Excelencia; los restantes Diputados, Ilustrísima; en actos parlamentarios emplearán Señoría.",
+              "Todos los Diputados reciben tratamiento de Ilustrísima.",
+              "Todos los Diputados reciben tratamiento de Señoría en cualquier acto."
+            ],
+            a: 1,
+            exp: "Art. 22.4 del Reglamento: la Presidencia tendrá tratamiento de Excelencia. Los restantes Diputados tendrán tratamiento de Ilustrísima. En los actos parlamentarios, los Diputados emplearán el tratamiento de Señoría."
+          },
+          {
+            q: "El Consejo de Gobierno deberá facilitar los datos, informes o documentos solicitados por un Diputado en un plazo no superior a:",
+            options: ["Quince días.", "Veinte días.", "Treinta días.", "Sesenta días."],
+            a: 2,
+            exp: "Art. 18.2 del Reglamento: el Consejo de Gobierno deberá, en plazo no superior a TREINTA días, facilitar los datos, informes o documentos recabados, o manifestar las razones fundadas en Derecho que lo impidan."
+          },
+          {
+            q: "La iniciativa legislativa ante la Asamblea de Madrid corresponde a:",
+            options: [
+              "Únicamente al Consejo de Gobierno.",
+              "Únicamente a los Diputados y Grupos Parlamentarios.",
+              "Al Consejo de Gobierno, a los Diputados y a los Grupos Parlamentarios, y a los ciudadanos y Ayuntamientos.",
+              "Únicamente al Presidente de la Comunidad."
+            ],
+            a: 2,
+            exp: "Art. 139 del Reglamento: la iniciativa legislativa corresponde al Consejo de Gobierno (proyecto de ley), a los Diputados y a los Grupos Parlamentarios (proposición de ley), y a los ciudadanos y a los Ayuntamientos (proposición de ley conforme a la Ley 6/1986, de 25 de junio)."
+          },
+          {
+            q: "Las proposiciones de ley de los Diputados podrán ser presentadas por:",
+            options: [
+              "Un Diputado, con la firma de otros dos Diputados.",
+              "Un Diputado, con la firma de otros cuatro Diputados, o por un Grupo Parlamentario con la sola firma de su Portavoz.",
+              "Únicamente por los Grupos Parlamentarios.",
+              "Tres Diputados conjuntamente."
+            ],
+            a: 1,
+            exp: "Art. 151.1 del Reglamento: las proposiciones de ley de los Diputados podrán ser presentadas por un Diputado, con la firma de otros CUATRO Diputados; o por un Grupo Parlamentario, con la sola firma de su Portavoz."
+          },
+          {
+            q: "El plazo para la presentación de enmiendas a la totalidad de un proyecto de ley es de:",
+            options: [
+              "5 días desde su publicación.",
+              "10 días desde su publicación en el BOAM.",
+              "15 días desde su publicación.",
+              "20 días desde su publicación."
+            ],
+            a: 1,
+            exp: "Art. 141.3 del Reglamento: las enmiendas a la totalidad podrán ser presentadas por los Grupos Parlamentarios en el plazo de los DIEZ días siguientes a la publicación del proyecto de ley en el BOAM."
+          },
+          {
+            q: "El plazo para la presentación de enmiendas al articulado de un proyecto de ley es de:",
+            options: ["10 días.", "15 días.", "20 días.", "30 días."],
+            a: 2,
+            exp: "Art. 141.4 del Reglamento: las enmiendas al articulado podrán ser presentadas por los Diputados y Grupos Parlamentarios en el plazo de los VEINTE días siguientes a la publicación del proyecto de ley en el BOAM."
+          },
+          {
+            q: "Indique cuál de los siguientes NO puede ser objeto de tramitación en lectura única:",
+            options: [
+              "Un proyecto de ley sencillo presentado por el Consejo de Gobierno.",
+              "Una proposición de ley de un Grupo Parlamentario.",
+              "Las proposiciones de iniciativa legislativa popular y las de los Ayuntamientos.",
+              "Una ley ordinaria sin enmiendas previsibles."
+            ],
+            a: 2,
+            exp: "Art. 169.1 del Reglamento: NO podrán ser objeto de tramitación en lectura única: a) las proposiciones de iniciativa legislativa popular y las de los Ayuntamientos; b) los proyectos y proposiciones de reforma del Estatuto de Autonomía; c) el proyecto de ley de Presupuestos Generales."
+          },
+          {
+            q: "El procedimiento de urgencia podrá ser acordado por la Mesa de la Asamblea a petición de:",
+            options: [
+              "Únicamente del Consejo de Gobierno.",
+              "Del Consejo de Gobierno, de un Grupo Parlamentario o de la décima parte de los Diputados.",
+              "De una quinta parte de los Diputados.",
+              "De un tercio de los Diputados."
+            ],
+            a: 1,
+            exp: "Art. 132.1 del Reglamento: a petición motivada del Consejo de Gobierno, de un Grupo Parlamentario o de la DÉCIMA PARTE de los Diputados, la Mesa de la Asamblea podrá acordar que un asunto se tramite por el procedimiento de urgencia."
+          },
+          {
+            q: "En el procedimiento de urgencia, los plazos tendrán una duración:",
+            options: [
+              "Igual a los ordinarios.",
+              "De la mitad de los ordinarios.",
+              "De una tercera parte de los ordinarios.",
+              "De una cuarta parte de los ordinarios."
+            ],
+            a: 1,
+            exp: "Art. 132.3 del Reglamento: en el procedimiento de urgencia, los plazos tendrán una duración de la MITAD de los establecidos con carácter ordinario."
+          },
+          {
+            q: "La aprobación de una proposición de ley a remitir a la Mesa del Congreso de los Diputados requerirá:",
+            options: [
+              "Mayoría simple del Pleno.",
+              "Mayoría absoluta del Pleno, en una votación final sobre el conjunto del texto.",
+              "Dos tercios del Pleno.",
+              "Tres quintos del Pleno."
+            ],
+            a: 1,
+            exp: "Art. 176.2 del Reglamento: la aprobación de las proposiciones de ley a remitir a la Mesa del Congreso de los Diputados requerirá el voto favorable de la MAYORÍA ABSOLUTA del Pleno de la Asamblea de Madrid, en una votación final sobre el conjunto del texto."
+          },
+          {
+            q: "El Presidente de la Comunidad de Madrid es elegido por:",
+            options: [
+              "El Rey, directamente.",
+              "La Asamblea, de entre sus miembros, y nombrado por el Rey.",
+              "El Gobierno de la Nación.",
+              "Los Diputados, por sufragio directo de los ciudadanos."
+            ],
+            a: 1,
+            exp: "Art. 16.1 del Estatuto y art. 4 Ley 1/1983: el Presidente de la Comunidad de Madrid es elegido de entre sus miembros por la Asamblea y nombrado por el Rey, mediante Real Decreto."
+          },
+          {
+            q: "En la investidura, si en primera votación el candidato no obtiene mayoría absoluta:",
+            options: [
+              "Se considera rechazado y se proponen nuevos candidatos.",
+              "Se somete a nueva votación 48 horas después, otorgándose la confianza con mayoría simple.",
+              "Se disuelve automáticamente la Asamblea.",
+              "Se somete a referéndum popular."
+            ],
+            a: 1,
+            exp: "Art. 18.3 del Estatuto: si la Asamblea no otorgase por mayoría absoluta su confianza, se someterá la misma propuesta a nueva votación cuarenta y ocho horas después y la confianza se entenderá otorgada si obtuviese mayoría simple."
+          },
+          {
+            q: "Si transcurrido un plazo desde la primera votación de investidura ningún candidato hubiere obtenido la confianza, la Asamblea quedará disuelta. Ese plazo es de:",
+            options: ["Un mes.", "Dos meses.", "Tres meses.", "Cuatro meses."],
+            a: 1,
+            exp: "Art. 18.5 del Estatuto: si transcurrido el plazo de DOS MESES, a partir de la primera votación de investidura, ningún candidato hubiere obtenido la confianza de la Asamblea, ésta quedará disuelta, convocándose de inmediato nuevas elecciones."
+          },
+          {
+            q: "La moción de censura en la Asamblea de Madrid habrá de ser propuesta, al menos, por:",
+            options: [
+              "Un 10 por 100 de los Diputados.",
+              "Un 15 por 100 de los Diputados.",
+              "Un 20 por 100 de los Diputados.",
+              "Un Grupo Parlamentario."
+            ],
+            a: 1,
+            exp: "Art. 20.1 del Estatuto: la moción de censura habrá de ser propuesta, al menos, por un 15 por 100 de los Diputados y habrá de incluir un candidato a la Presidencia de la Comunidad de Madrid."
+          },
+          {
+            q: "La moción de censura en la Asamblea de Madrid se adopta:",
+            options: [
+              "Por mayoría simple.",
+              "Por mayoría absoluta.",
+              "Por mayoría de dos tercios.",
+              "Por mayoría de tres quintos."
+            ],
+            a: 1,
+            exp: "Art. 20.1 del Estatuto: la Asamblea puede exigir la responsabilidad política del Presidente o del Gobierno mediante la adopción por MAYORÍA ABSOLUTA de la moción de censura."
+          },
+          {
+            q: "La moción de censura no podrá ser votada hasta que transcurran:",
+            options: [
+              "Tres días desde su presentación.",
+              "Cinco días desde su presentación.",
+              "Diez días desde su presentación.",
+              "Quince días desde su presentación."
+            ],
+            a: 1,
+            exp: "Art. 20.2 del Estatuto: la moción de censura no podrá ser votada hasta que concurran CINCO DÍAS desde su presentación. Si la moción no fuese aprobada, sus signatarios no podrán presentar otra durante el mismo período de sesiones."
+          },
+          {
+            q: "La cuestión de confianza planteada por el Presidente de la Comunidad de Madrid se entenderá otorgada:",
+            options: [
+              "Cuando vote a favor la mayoría simple de los Diputados.",
+              "Cuando vote a favor la mayoría absoluta.",
+              "Cuando voten a favor dos tercios de los Diputados.",
+              "Por unanimidad."
+            ],
+            a: 0,
+            exp: "Art. 19.1 del Estatuto: la confianza se entenderá otorgada cuando vote a favor de la misma la MAYORÍA SIMPLE de los Diputados."
+          },
+          {
+            q: "El Presidente NO podrá acordar la disolución de la Asamblea en ninguno de los siguientes supuestos EXCEPTO:",
+            options: [
+              "Durante el primer período de sesiones de la legislatura.",
+              "Cuando reste menos de un año para la terminación de la legislatura.",
+              "Cuando se encuentre en tramitación una moción de censura.",
+              "Tras un año desde la última disolución."
+            ],
+            a: 3,
+            exp: "Art. 21.2 del Estatuto: el Presidente NO podrá disolver en el primer período de sesiones, cuando reste menos de un año, cuando se tramite una moción de censura o cuando esté convocado un proceso electoral estatal. NO procederá nueva disolución antes de que transcurra un año desde la anterior — por tanto, tras un año sí es posible."
+          },
+          {
+            q: "El cargo de Presidente de la Comunidad de Madrid es COMPATIBLE con:",
+            options: [
+              "El ejercicio de cualquier otra función pública.",
+              "La actividad profesional o empresarial.",
+              "La condición de Diputado de la Asamblea.",
+              "Ninguna otra función o actividad."
+            ],
+            a: 2,
+            exp: "Art. 6 Ley 1/1983: el cargo es incompatible con el ejercicio de cualquier otra función o actividad pública que no derive de aquél, SALVO la de Diputado de la Asamblea. Es incompatible con toda actividad laboral, profesional o empresarial."
+          },
+          {
+            q: "El Gabinete del Presidente de la Comunidad de Madrid estará integrado por un número de asesores no superior a:",
+            options: ["Cuatro.", "Cinco.", "Seis.", "Ocho."],
+            a: 2,
+            exp: "Art. 11.2 Ley 1/1983: en el Gabinete del Presidente se integran los asesores del Presidente, en el número determinado por éste, y no superior a SEIS."
+          },
+          {
+            q: "Las ausencias temporales del Presidente, superiores a UN MES, precisarán:",
+            options: [
+              "La previa autorización del Consejo de Gobierno.",
+              "La previa autorización de la Asamblea.",
+              "Comunicación al Rey.",
+              "No requieren autorización."
+            ],
+            a: 1,
+            exp: "Art. 12 Ley 1/1983: las ausencias temporales del Presidente, superiores a UN MES, precisarán de la previa autorización de la Asamblea."
+          },
+          {
+            q: "Para que el Consejo de Gobierno aprecie la incapacidad transitoria del Presidente, se requiere acuerdo de:",
+            options: [
+              "La mayoría simple de sus miembros.",
+              "La mayoría absoluta de sus miembros.",
+              "Las cuatro quintas partes de la totalidad de sus miembros.",
+              "La unanimidad de sus miembros."
+            ],
+            a: 2,
+            exp: "Art. 13.1 Ley 1/1983: si el Consejo de Gobierno apreciara, por acuerdo de las CUATRO QUINTAS PARTES de la totalidad de sus miembros, que el Presidente se encuentra imposibilitado física o mentalmente de forma transitoria, lo comunicará al Presidente de la Asamblea."
+          },
+          {
+            q: "La situación de interinidad en la Presidencia no podrá ser superior a:",
+            options: [
+              "Un mes, ampliable en otro mes.",
+              "Dos meses, ampliables en otros dos.",
+              "Tres meses, ampliables en tres más.",
+              "Seis meses improrrogables."
+            ],
+            a: 1,
+            exp: "Art. 15.1 Ley 1/1983: la situación de interinidad en la Presidencia no podrá ser superior a DOS MESES, ampliables en otros dos, previo acuerdo de la Asamblea de Madrid por mayoría absoluta."
+          },
+          {
+            q: "Para que sean válidas las deliberaciones y los acuerdos del Consejo de Gobierno se requiere:",
+            options: [
+              "La presencia del Presidente o quien le sustituya y al menos un tercio de los Consejeros.",
+              "La presencia del Presidente o quien le sustituya y al menos la mitad de los Consejeros.",
+              "La presencia del Presidente y de todos los Consejeros.",
+              "La presencia de dos tercios de los miembros."
+            ],
+            a: 1,
+            exp: "Art. 24 Ley 1/1983: para la validez de las deliberaciones y de los acuerdos es preciso que estén presentes el Presidente o quien le sustituya y, al menos, LA MITAD de los Consejeros."
+          },
+          {
+            q: "Los acuerdos del Consejo de Gobierno se adoptan por mayoría simple. En caso de empate:",
+            options: [
+              "Se considera rechazado el acuerdo.",
+              "El voto del Presidente es dirimente.",
+              "Se vuelve a votar tras 24 horas.",
+              "Decide el Consejero de mayor antigüedad."
+            ],
+            a: 1,
+            exp: "Art. 24 Ley 1/1983: los acuerdos del Consejo de Gobierno se adoptan por mayoría simple, en caso de empate, el voto del Presidente es DIRIMENTE."
+          },
+          {
+            q: "Las actas del Consejo de Gobierno serán extendidas por:",
+            options: [
+              "El Consejero de mayor antigüedad.",
+              "El Consejero de Hacienda.",
+              "El Consejero de la Presidencia, en su calidad de Secretario del Consejo.",
+              "El Letrado Mayor."
+            ],
+            a: 2,
+            exp: "Art. 25.3 Ley 1/1983: los acuerdos del Consejo de Gobierno deberán constar en acta, que extenderá el CONSEJERO DE LA PRESIDENCIA en su calidad de Secretario del Consejo."
+          },
+          {
+            q: "Para ser Vicepresidente de la Comunidad de Madrid, según el artículo 27 de la Ley 1/1983, se requiere:",
+            options: [
+              "Únicamente ser Diputado de la Asamblea.",
+              "Ser Consejero y reunir, además, la condición de Diputado de la Asamblea.",
+              "Tener al menos 5 años de experiencia política.",
+              "Ser elegido por el Pleno de la Asamblea."
+            ],
+            a: 1,
+            exp: "Art. 27.1 Ley 1/1983: el Presidente podrá nombrar, de entre los CONSEJEROS QUE REÚNAN A SU VEZ LA CONDICIÓN DE DIPUTADOS de la Asamblea, uno o más Vicepresidentes."
+          },
+          {
+            q: "Para ser Consejero de la Comunidad de Madrid, según el Estatuto:",
+            options: [
+              "Es necesario ser Diputado de la Asamblea.",
+              "No es necesaria la condición de Diputado.",
+              "Es necesario ser funcionario público.",
+              "Es necesario haber sido alcalde previamente."
+            ],
+            a: 1,
+            exp: "Art. 22.2 del Estatuto: para ser Vicepresidente o Consejero NO será necesaria la condición de Diputado."
+          },
+          {
+            q: "Los Consejeros son nombrados y cesados por:",
+            options: [
+              "La Asamblea.",
+              "El Rey, a propuesta del Presidente.",
+              "El Presidente de la Comunidad.",
+              "El Consejo de Gobierno."
+            ],
+            a: 2,
+            exp: "Art. 28 Ley 1/1983: los Consejeros son nombrados y cesados por el PRESIDENTE de la Comunidad."
+          },
+          {
+            q: "Los Consejeros de la Comunidad de Madrid tienen derecho a recibir el tratamiento de:",
+            options: ["Señoría.", "Ilustrísima.", "Excelencia.", "Ilustrísimo Señor."],
+            a: 2,
+            exp: "Art. 30.1 Ley 1/1983: los Consejeros tendrán derecho a recibir el tratamiento de EXCELENCIA y están sometidos al mismo régimen de incompatibilidades que el Presidente."
+          },
+          {
+            q: "La responsabilidad penal del Presidente de la Comunidad de Madrid será exigible ante:",
+            options: [
+              "El Tribunal Superior de Justicia de Madrid.",
+              "La Sala de lo Penal del Tribunal Supremo.",
+              "La Audiencia Nacional.",
+              "El Tribunal Constitucional."
+            ],
+            a: 1,
+            exp: "Art. 25.1 del Estatuto: la responsabilidad penal del Presidente de Gobierno, Vicepresidentes y de los Consejeros será exigible ante la SALA DE LO PENAL DEL TRIBUNAL SUPREMO."
+          },
+          {
+            q: "La responsabilidad penal de los Consejeros, por delitos cometidos en el ámbito territorial de su jurisdicción, será exigible ante:",
+            options: [
+              "La Sala de lo Penal del Tribunal Supremo.",
+              "El Tribunal Superior de Justicia de Madrid.",
+              "La Audiencia Provincial.",
+              "El Tribunal Constitucional."
+            ],
+            a: 1,
+            exp: "Art. 25.1 del Estatuto: la responsabilidad penal de los Vicepresidentes y Consejeros, para los delitos cometidos en el ámbito territorial de su jurisdicción, será exigible ante el TRIBUNAL SUPERIOR DE JUSTICIA DE MADRID."
+          },
+          {
+            q: "El Consejo de Gobierno cesa en los siguientes casos EXCEPTO:",
+            options: [
+              "Tras la celebración de elecciones a la Asamblea.",
+              "Por pérdida de la cuestión de confianza.",
+              "Por aprobación de moción de censura.",
+              "Por simple decisión del Presidente sin causa específica."
+            ],
+            a: 3,
+            exp: "Art. 24 del Estatuto y art. 20 Ley 1/1983: el Gobierno cesa tras la celebración de elecciones, pérdida de confianza parlamentaria, dimisión, incapacidad o fallecimiento del Presidente. No cesa por simple decisión sin causa; sí puede dimitir el Presidente, que es causa distinta."
+          }
+        ]
+      }
+    };
+
+    // Test mixto
+    TESTS.mixto = {
+      title: "Test Mixto — Todos los temas",
+      questions: shuffle([...TESTS.tema1.questions, ...TESTS.tema2.questions, ...TESTS.tema3.questions]).slice(0, 20)
+    };
+
+    /* ─────────────────────────────────────────
+       LÓGICA DE LA APP
+    ───────────────────────────────────────── */
+    let currentTest = null;
+    let currentMode = 'estudio'; // 'estudio' | 'examen'
+    let questions = [];
+    let currentIdx = 0;
+    let score = 0;
+    let answered = false;
+    let answers = []; // {correct, chosen, qIndex}
+    let timerInt = null;
+    let timerSeconds = 0;
+    let questionFlags = {}; // qIdx -> {dudoso, importante}
+
+    const selectorView = document.getElementById('selectorView');
+    const quizView = document.getElementById('quizView');
+    const resultView = document.getElementById('resultView');
+
+    /* ── Toggle modo estudio/examen ── */
+    document.querySelectorAll('input[name="testMode"]').forEach(r => {
+      r.addEventListener('change', () => {
+        document.getElementById('examenConfig').style.display = (r.value === 'examen' && r.checked) ? 'block' : 'none';
+        if (r.checked) currentMode = r.value;
+      });
+    });
+
+    /* ── Botón "Mis falladas" ── */
+    function updateFalladasMeta() {
+      const cnt = (typeof CAM_Wrong !== 'undefined') ? CAM_Wrong.count() : 0;
+      const meta = document.getElementById('falladasMeta');
+      const card = document.getElementById('falladasCard');
+      if (meta) meta.textContent = cnt + ' pregunta' + (cnt === 1 ? '' : 's') + ' guardada' + (cnt === 1 ? '' : 's');
+      if (card) {
+        card.style.opacity = cnt === 0 ? '0.55' : '';
+        card.style.pointerEvents = cnt === 0 ? 'none' : '';
+      }
+    }
+    updateFalladasMeta();
+
+    document.querySelectorAll('.test-card').forEach(card => {
+      if (card.classList.contains('disabled')) return;
+      card.addEventListener('click', () => {
+        const key = card.dataset.test;
+        startTest(key);
+      });
+    });
+
+    document.getElementById('quitBtn').addEventListener('click', () => { stopTimer(); goHome(); });
+    document.getElementById('backBtn').addEventListener('click', goHome);
+    document.getElementById('retryBtn').addEventListener('click', () => startTest(currentTest));
+    document.getElementById('nextBtn').addEventListener('click', nextQuestion);
+    document.getElementById('reviewBtn').addEventListener('click', showReview);
+    document.getElementById('reviewBackBtn').addEventListener('click', backToResult);
+    document.getElementById('reviewRetryBtn').addEventListener('click', () => startTest(currentTest));
+
+    // Marcadores
+    document.getElementById('flagDoubt').addEventListener('click', () => toggleQuestionFlag('dudoso'));
+    document.getElementById('flagImp').addEventListener('click', () => toggleQuestionFlag('importante'));
+
+    // Filtros de revisión
+    document.querySelectorAll('.filter-btn').forEach(b => {
+      b.addEventListener('click', () => {
+        document.querySelectorAll('.filter-btn').forEach(x => x.classList.remove('active'));
+        b.classList.add('active');
+        applyReviewFilter(b.dataset.filter);
+      });
+    });
+
+    /* ── ATAJOS DE TECLADO ── */
+    document.addEventListener('keydown', (e) => {
+      // Solo si estamos en el quiz
+      if (quizView.classList.contains('hidden')) return;
+      if (e.target.matches('input, textarea, select')) return;
+
+      const key = e.key.toLowerCase();
+      const opts = document.querySelectorAll('.options .option');
+
+      if (['a','b','c','d','1','2','3','4'].includes(key) && !answered) {
+        e.preventDefault();
+        const map = { a:0, b:1, c:2, d:3, '1':0, '2':1, '3':2, '4':3 };
+        const idx = map[key];
+        if (opts[idx]) opts[idx].click();
+      } else if (e.key === 'Enter') {
+        const nb = document.getElementById('nextBtn');
+        if (!nb.disabled) { e.preventDefault(); nb.click(); }
+      } else if (e.key === 'Escape') {
+        e.preventDefault();
+        if (confirm('¿Salir del test? Se perderá el progreso actual.')) { stopTimer(); goHome(); }
+      } else if (key === 'd') {
+        e.preventDefault(); toggleQuestionFlag('dudoso');
+      } else if (key === 'i') {
+        e.preventDefault(); toggleQuestionFlag('importante');
+      }
+    });
+
+    function startTest(key, resumedState) {
+      currentTest = key;
+      const test = TESTS[key];
+      currentMode = document.querySelector('input[name="testMode"]:checked')?.value || 'estudio';
+
+      // Bancos
+      if (resumedState && resumedState.questions) {
+        // Restaurar un test inacabado
+        questions = resumedState.questions;
+        currentMode = resumedState.mode || 'estudio';
+      } else if (key === 'mixto') {
+        questions = shuffle([...TESTS.tema1.questions, ...TESTS.tema2.questions, ...TESTS.tema3.questions]).slice(0, 20);
+      } else if (key === 'falladas') {
+        const wrong = (typeof CAM_Wrong !== 'undefined') ? CAM_Wrong.getAll() : {};
+        const pool = [];
+        Object.keys(wrong).forEach(testKey => {
+          const bank = TESTS[testKey];
+          if (!bank) return;
+          Object.keys(wrong[testKey]).forEach(qText => {
+            const q = bank.questions.find(qq => qq.q === qText);
+            if (q) pool.push({ ...q, _sourceTest: testKey });
+          });
+        });
+        if (pool.length === 0) {
+          CAM_Toast.show('No tienes preguntas falladas guardadas');
+          return;
+        }
+        questions = shuffle(pool).slice(0, Math.min(20, pool.length));
+      } else if (key === 'tema1' || key === 'tema2' || key === 'tema3') {
+        questions = shuffle([...test.questions]).slice(0, 15);
+      } else {
+        questions = shuffle([...test.questions]);
+      }
+
+      // ── MODO FLASHCARDS: ruta totalmente distinta
+      if (currentMode === 'flash' && key !== 'falladas') {
+        startFlashcards(key, questions);
+        return;
+      }
+
+      currentIdx = resumedState ? (resumedState.currentIdx || 0) : 0;
+      score = resumedState ? (resumedState.score || 0) : 0;
+      answers = resumedState ? (resumedState.answers || []) : [];
+      answered = false;
+      questionFlags = resumedState ? (resumedState.questionFlags || {}) : {};
+
+      document.getElementById('quizTitle').textContent = (test && test.title) || (key === 'falladas' ? 'Mis falladas' : 'Test');
+      document.getElementById('qTotal').textContent = questions.length;
+
+      // Mini-mapa de preguntas (solo modo examen)
+      const minimap = document.getElementById('quizMinimap');
+      if (currentMode === 'examen') {
+        minimap.classList.remove('hidden');
+      } else {
+        minimap.classList.add('hidden');
+      }
+
+      // Timer si es modo examen
+      stopTimer();
+      const timerEl = document.getElementById('quizTimer');
+      if (currentMode === 'examen' && key !== 'falladas') {
+        const minutes = resumedState && resumedState.timerSeconds ?
+          Math.ceil(resumedState.timerSeconds / 60) :
+          parseInt(document.getElementById('examTime').value, 10);
+        timerSeconds = resumedState && resumedState.timerSeconds ? resumedState.timerSeconds : minutes * 60;
+        timerEl.style.display = 'inline-flex';
+        updateTimerDisplay();
+        timerInt = setInterval(() => {
+          timerSeconds--;
+          updateTimerDisplay();
+          saveUnfinishedState();
+          if (timerSeconds <= 0) {
+            stopTimer();
+            CAM_Toast.show('⏰ Tiempo agotado');
+            while (answers.length < questions.length) {
+              answers.push({ correct: false, chosen: -1, qIndex: answers.length });
+            }
+            showResult();
+          }
+        }, 1000);
+      } else {
+        timerEl.style.display = 'none';
+      }
+
+      selectorView.classList.add('hidden');
+      resultView.classList.add('hidden');
+      document.getElementById('reviewView').classList.add('hidden');
+      document.getElementById('flashView').classList.add('hidden');
+      quizView.classList.remove('hidden');
+      renderQuestion();
+      saveUnfinishedState();
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    }
+
+    /* ── Persistir estado del test (para resume) ── */
+    function saveUnfinishedState() {
+      if (!questions || !questions.length || currentMode === 'flash') return;
+      // Solo guardar si NO se ha terminado
+      if (resultView && !resultView.classList.contains('hidden')) return;
+      if (typeof CAM_Unfinished === 'undefined') return;
+      CAM_Unfinished.save({
+        key: currentTest,
+        mode: currentMode,
+        questions: questions,
+        currentIdx,
+        score,
+        answers,
+        questionFlags,
+        timerSeconds: currentMode === 'examen' ? timerSeconds : 0
+      });
+    }
+    function clearUnfinished() {
+      if (typeof CAM_Unfinished !== 'undefined') CAM_Unfinished.clear();
+    }
+
+    /* ── Mini-mapa quiz ── */
+    function renderMinimap() {
+      const minimap = document.getElementById('quizMinimap');
+      if (!minimap || minimap.classList.contains('hidden')) return;
+      let html = '';
+      for (let i = 0; i < questions.length; i++) {
+        let cls = 'qm-dot';
+        if (answers[i]) cls += ' answered';
+        if (i === currentIdx) cls += ' current';
+        if (questionFlags[i] && (questionFlags[i].dudoso || questionFlags[i].importante)) cls += ' flagged';
+        html += `<button class="${cls}" data-idx="${i}" title="Pregunta ${i+1}">${i+1}</button>`;
+      }
+      minimap.innerHTML = html;
+      minimap.querySelectorAll('.qm-dot').forEach(d => {
+        d.addEventListener('click', () => {
+          const idx = parseInt(d.dataset.idx, 10);
+          currentIdx = idx;
+          renderQuestion();
+        });
+      });
+    }
+
+    function updateTimerDisplay() {
+      const m = Math.floor(timerSeconds / 60);
+      const s = timerSeconds % 60;
+      document.getElementById('timerDisplay').textContent =
+        String(m).padStart(2,'0') + ':' + String(s).padStart(2,'0');
+      const el = document.getElementById('quizTimer');
+      el.classList.toggle('warning', timerSeconds <= 120 && timerSeconds > 30);
+      el.classList.toggle('danger', timerSeconds <= 30);
+    }
+    function stopTimer() {
+      if (timerInt) { clearInterval(timerInt); timerInt = null; }
+      const el = document.getElementById('quizTimer');
+      if (el) { el.style.display = 'none'; el.classList.remove('warning','danger'); }
+    }
+
+    function toggleQuestionFlag(type) {
+      if (!questionFlags[currentIdx]) questionFlags[currentIdx] = {};
+      questionFlags[currentIdx][type] = !questionFlags[currentIdx][type];
+      updateFlagButtons();
+
+      // Persistir en localStorage usando CAM_Flags
+      // Identificador: testKey + primeros 60 caracteres del enunciado (único)
+      const q = questions[currentIdx];
+      if (q && typeof CAM_Flags !== 'undefined') {
+        const testKey = q._sourceTest || currentTest || 'desconocido';
+        const qId = 'q:' + (q.q || '').slice(0, 80).replace(/[^\w]/g, '_').slice(0, 60);
+        CAM_Flags.set(testKey, qId, type, questionFlags[currentIdx][type]);
+      }
+
+      CAM_Toast.show(questionFlags[currentIdx][type] ?
+        (type === 'dudoso' ? '🤔 Pregunta marcada como dudosa' : '⭐ Pregunta marcada como importante') :
+        'Marca eliminada');
+    }
+    function updateFlagButtons() {
+      // Cargar estado desde localStorage si no está en memoria
+      const q = questions[currentIdx];
+      if (q && !questionFlags[currentIdx] && typeof CAM_Flags !== 'undefined') {
+        const testKey = q._sourceTest || currentTest || 'desconocido';
+        const qId = 'q:' + (q.q || '').slice(0, 80).replace(/[^\w]/g, '_').slice(0, 60);
+        const persisted = CAM_Flags.get(testKey, qId);
+        if (persisted.dudoso || persisted.importante) {
+          questionFlags[currentIdx] = { ...persisted };
+        }
+      }
+      const f = questionFlags[currentIdx] || {};
+      const dBtn = document.getElementById('flagDoubt');
+      const iBtn = document.getElementById('flagImp');
+      dBtn.classList.toggle('active', !!f.dudoso);
+      dBtn.setAttribute('aria-pressed', !!f.dudoso);
+      iBtn.classList.toggle('active', !!f.importante);
+      iBtn.setAttribute('aria-pressed', !!f.importante);
+    }
+
+    function renderQuestion() {
+      answered = false;
+      const q = questions[currentIdx];
+      document.getElementById('qCurrent').textContent = currentIdx + 1;
+      document.getElementById('progressFill').style.width = ((currentIdx) / questions.length * 100) + '%';
+
+      document.getElementById('questionText').innerHTML =
+        `<span class="qnum">${currentIdx + 1}</span>${escapeHtml(q.q)}`;
+
+      const optList = document.getElementById('optionsList');
+      optList.innerHTML = '';
+      const letters = ['A', 'B', 'C', 'D'];
+      // Si esta pregunta ya fue respondida en modo examen, mostrar el estado
+      const previousAnswer = answers.find(a => a && a.qIndex === currentIdx);
+      q.options.forEach((opt, i) => {
+        const btn = document.createElement('button');
+        btn.className = 'option';
+        btn.innerHTML = `<span class="letter">${letters[i]}</span><span>${escapeHtml(opt)}</span>`;
+        if (previousAnswer && currentMode === 'examen') {
+          if (i === previousAnswer.chosen) {
+            btn.style.borderColor = 'var(--accent)';
+            btn.style.background = 'var(--accent-light)';
+          }
+          btn.disabled = false; // permitir cambiar la respuesta
+        }
+        btn.addEventListener('click', () => selectOption(i, btn));
+        optList.appendChild(btn);
+      });
+
+      document.getElementById('explanationBox').classList.add('hidden');
+      document.getElementById('explanationBox').innerHTML = '';
+      const nextBtn = document.getElementById('nextBtn');
+      const prevBtn = document.getElementById('prevBtn');
+      // Botón "Anterior": visible solo en modo examen y si hay anteriores
+      if (currentMode === 'examen' && currentIdx > 0) {
+        prevBtn.classList.remove('hidden');
+      } else {
+        prevBtn.classList.add('hidden');
+      }
+      nextBtn.disabled = !(previousAnswer || (currentMode === 'examen' && currentIdx < questions.length - 1));
+      // En modo examen, "Siguiente" siempre activo (permite saltar)
+      if (currentMode === 'examen') nextBtn.disabled = false;
+      nextBtn.textContent = (currentIdx === questions.length - 1) ? 'Ver resultado →' : 'Siguiente →';
+
+      updateFlagButtons();
+      renderMinimap();
+    }
+
+    function selectOption(idx, btn) {
+      const q = questions[currentIdx];
+      const opts = document.querySelectorAll('.options .option');
+      const correct = (idx === q.a);
+
+      // ── MODO EXAMEN: se puede cambiar la respuesta cuantas veces se quiera
+      if (currentMode === 'examen' && currentTest !== 'falladas') {
+        // Quitar respuesta previa de esta pregunta
+        const existingIdx = answers.findIndex(a => a && a.qIndex === currentIdx);
+        if (existingIdx !== -1) {
+          if (answers[existingIdx].correct) score--;
+          answers.splice(existingIdx, 1);
+        }
+        if (correct) score++;
+        answers.push({ correct, chosen: idx, qIndex: currentIdx });
+        opts.forEach((o, i) => {
+          o.style.borderColor = i === idx ? 'var(--accent)' : '';
+          o.style.background = i === idx ? 'var(--accent-light)' : '';
+        });
+        document.getElementById('nextBtn').disabled = false;
+        renderMinimap();
+        saveUnfinishedState();
+        return;
+      }
+
+      // ── MODO ESTUDIO: solo una respuesta, feedback inmediato
+      if (answered) return;
+      answered = true;
+      if (correct) score++;
+      answers.push({ correct, chosen: idx, qIndex: currentIdx });
+
+      opts.forEach((o, i) => {
+        o.disabled = true;
+        if (i === q.a) o.classList.add('correct');
+        else if (i === idx) o.classList.add('wrong');
+        else o.classList.add('dim');
+      });
+
+      const expBox = document.getElementById('explanationBox');
+      expBox.innerHTML = `<b>${correct ? '✓ Correcto.' : '✗ Incorrecto.'}</b> ${escapeHtml(q.exp)}`;
+      expBox.classList.remove('hidden');
+
+      // Persistencia: guardar/quitar pregunta fallada
+      if (typeof CAM_Wrong !== 'undefined') {
+        const srcKey = q._sourceTest || currentTest;
+        if (!correct) CAM_Wrong.add(srcKey, q.q);
+        else CAM_Wrong.remove(srcKey, q.q);
+      }
+
+      document.getElementById('nextBtn').disabled = false;
+    }
+
+    function nextQuestion() {
+      if (currentIdx < questions.length - 1) {
+        currentIdx++;
+        renderQuestion();
+        saveUnfinishedState();
+      } else {
+        // En modo examen, avisar si quedan preguntas sin contestar
+        if (currentMode === 'examen' && currentTest !== 'falladas') {
+          const unanswered = [];
+          for (let i = 0; i < questions.length; i++) {
+            if (!answers.find(a => a && a.qIndex === i)) unanswered.push(i + 1);
+          }
+          if (unanswered.length > 0) {
+            const ok = confirm(`Tienes ${unanswered.length} pregunta${unanswered.length === 1 ? '' : 's'} sin contestar (${unanswered.join(', ')}). ¿Finalizar el test de todas formas?`);
+            if (!ok) return;
+          }
+        }
+        showResult();
+      }
+    }
+
+    function previousQuestion() {
+      if (currentIdx > 0) {
+        currentIdx--;
+        renderQuestion();
+        saveUnfinishedState();
+      }
+    }
+
+    function showResult() {
+      stopTimer();
+      clearUnfinished();
+      quizView.classList.add('hidden');
+      resultView.classList.remove('hidden');
+
+      const total = questions.length;
+      const pct = Math.round((score / total) * 100);
+
+      // ── Persistencia: guardar en histórico
+      if (typeof CAM_History !== 'undefined') {
+        CAM_History.add({
+          key: currentTest,
+          score, total,
+          mode: currentMode === 'examen' ? 'Examen' : 'Estudio'
+        });
+      }
+      // Registrar actividad para la racha
+      if (typeof CAM_recordActivity === 'function') CAM_recordActivity();
+      // Comprobar logros nuevos
+      if (typeof CAM_Achievements !== 'undefined') CAM_Achievements.check();
+
+      // ── En modo examen, ahora sí guardamos las falladas en localStorage
+      if (currentMode === 'examen' && typeof CAM_Wrong !== 'undefined') {
+        answers.forEach((a, i) => {
+          const q = questions[i];
+          if (!q) return;
+          const srcKey = q._sourceTest || currentTest;
+          if (!a.correct) CAM_Wrong.add(srcKey, q.q);
+          else CAM_Wrong.remove(srcKey, q.q);
+        });
+      }
+      updateFalladasMeta();
+
+      // ── Confeti si +90%
+      if (pct >= 90 && typeof CAM_confetti === 'function') {
+        setTimeout(() => CAM_confetti(), 350);
+      }
+
+      document.getElementById('scorePct').textContent = pct + '%';
+      document.getElementById('okCount').textContent = score;
+      document.getElementById('koCount').textContent = total - score;
+      document.getElementById('totalCount').textContent = total;
+
+      // Conic gradient
+      const deg = (pct / 100) * 360;
+      const color = pct >= 75 ? 'var(--green)' : pct >= 50 ? 'var(--accent)' : 'var(--red)';
+      const lightColor = pct >= 75 ? 'var(--green-light)' : pct >= 50 ? 'var(--accent-light)' : 'var(--red-light)';
+      const circle = document.getElementById('scoreCircle');
+      circle.style.background = `conic-gradient(${color} ${deg}deg, ${lightColor} ${deg}deg)`;
+      document.querySelector('.score-text').style.color = color;
+
+      // Mensaje según puntuación
+      let title, msg;
+      if (pct >= 90) { title = '¡Excelente!'; msg = 'Dominas la materia. Sigue así, vas por muy buen camino.'; }
+      else if (pct >= 75) { title = '¡Muy bien!'; msg = 'Buen nivel. Revisa los fallos y consolida los conceptos.'; }
+      else if (pct >= 50) { title = 'Vas progresando'; msg = 'Aprobado, pero hay margen de mejora. Repasa el temario.'; }
+      else { title = 'Sigue estudiando'; msg = 'No te desanimes. Vuelve al temario y repite el test cuando estés preparado.'; }
+      document.getElementById('resultTitle').textContent = title;
+      document.getElementById('resultMsg').textContent = msg;
+
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    }
+
+    function goHome() {
+      quizView.classList.add('hidden');
+      resultView.classList.add('hidden');
+      document.getElementById('reviewView').classList.add('hidden');
+      selectorView.classList.remove('hidden');
+      document.getElementById('toTopBtn')?.classList.remove('visible');
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    }
+
+    function backToResult() {
+      document.getElementById('reviewView').classList.add('hidden');
+      resultView.classList.remove('hidden');
+      document.getElementById('toTopBtn')?.classList.remove('visible');
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    }
+
+    function showReview() {
+      resultView.classList.add('hidden');
+      const reviewView = document.getElementById('reviewView');
+      reviewView.classList.remove('hidden');
+
+      const total = questions.length;
+      const ok = score;
+      const ko = total - score;
+
+      // Resumen
+      document.getElementById('reviewSummary').innerHTML =
+        `<b>${total}</b> preguntas · <span class="ok">✓ ${ok} acertadas</span> · <span class="ko">✗ ${ko} falladas</span>`;
+
+      // Lista de revisión
+      const list = document.getElementById('reviewList');
+      list.innerHTML = '';
+      const letters = ['A', 'B', 'C', 'D'];
+
+      questions.forEach((q, idx) => {
+        const ans = answers[idx];
+        const isCorrect = ans ? ans.correct : false;
+        const chosen = ans ? ans.chosen : -1;
+
+        const item = document.createElement('div');
+        item.className = 'review-item ' + (isCorrect ? 'ok' : 'ko');
+        item.dataset.status = isCorrect ? 'right' : 'wrong';
+
+        let optsHtml = '';
+        q.options.forEach((opt, i) => {
+          let cls = 'review-opt';
+          let tag = '';
+          if (i === q.a) {
+            cls += ' correct';
+            tag = '<span class="review-tag t-correct">Correcta</span>';
+          }
+          if (i === chosen && !isCorrect) {
+            cls += ' wrong-chosen';
+            tag = '<span class="review-tag t-yours">Tu respuesta</span>';
+          } else if (i === chosen && isCorrect) {
+            tag = '<span class="review-tag t-correct">Tu respuesta ✓</span>';
+          }
+          optsHtml += `<div class="${cls}"><span class="letter">${letters[i]}</span><span>${escapeHtml(opt)}${tag}</span></div>`;
+        });
+
+        item.innerHTML = `
+          <div class="review-head">
+            <span class="review-qnum">Pregunta ${idx + 1} de ${total}</span>
+            <span class="review-status ${isCorrect ? 'ok' : 'ko'}">${isCorrect ? '✓ Correcta' : '✗ Incorrecta'}</span>
+          </div>
+          <div class="review-question">${escapeHtml(q.q)}</div>
+          <div class="review-options">${optsHtml}</div>
+          <div class="review-exp"><b>Explicación:</b> ${escapeHtml(q.exp)}</div>
+        `;
+        list.appendChild(item);
+      });
+
+      // Resetear filtros
+      document.querySelectorAll('.filter-btn').forEach(x => x.classList.remove('active'));
+      document.querySelector('.filter-btn[data-filter="all"]').classList.add('active');
+
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    }
+
+    function applyReviewFilter(filter) {
+      document.querySelectorAll('.review-item').forEach(it => {
+        const st = it.dataset.status;
+        let show = true;
+        if (filter === 'wrong') show = (st === 'wrong');
+        else if (filter === 'right') show = (st === 'right');
+        it.classList.toggle('hidden-filter', !show);
+      });
+    }
+
+    // Botón "ir arriba"
+    const toTopBtn = document.createElement('button');
+    toTopBtn.id = 'toTopBtn';
+    toTopBtn.className = 'to-top';
+    toTopBtn.title = 'Ir arriba';
+    toTopBtn.innerHTML = '↑';
+    toTopBtn.addEventListener('click', () => window.scrollTo({ top: 0, behavior: 'smooth' }));
+    document.body.appendChild(toTopBtn);
+
+    window.addEventListener('scroll', () => {
+      const inReview = !document.getElementById('reviewView').classList.contains('hidden');
+      if (inReview && window.scrollY > 300) toTopBtn.classList.add('visible');
+      else toTopBtn.classList.remove('visible');
+    });
+
+    /* Utils */
+    function shuffle(arr) {
+      const a = arr.slice();
+      for (let i = a.length - 1; i > 0; i--) {
+        const j = Math.floor(Math.random() * (i + 1));
+        [a[i], a[j]] = [a[j], a[i]];
+      }
+      return a;
+    }
+    /* ─────────────────────────────────────────
+       FLASHCARDS
+    ───────────────────────────────────────── */
+    let flashIdx = 0;
+    let flashQuestions = [];
+    let flashStats = { ok: 0, ko: 0 };
+
+    function startFlashcards(key, qs) {
+      flashIdx = 0;
+      flashStats = { ok: 0, ko: 0 };
+      flashQuestions = qs;
+      selectorView.classList.add('hidden');
+      quizView.classList.add('hidden');
+      resultView.classList.add('hidden');
+      document.getElementById('reviewView').classList.add('hidden');
+      document.getElementById('flashView').classList.remove('hidden');
+      renderFlashcard();
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    }
+    function renderFlashcard() {
+      if (flashIdx >= flashQuestions.length) {
+        // Mostrar resultado simple con stats
+        document.getElementById('flashView').classList.add('hidden');
+        resultView.classList.remove('hidden');
+        const total = flashStats.ok + flashStats.ko;
+        const pct = total > 0 ? Math.round((flashStats.ok / total) * 100) : 0;
+        document.getElementById('scorePct').textContent = pct + '%';
+        document.getElementById('okCount').textContent = flashStats.ok;
+        document.getElementById('koCount').textContent = flashStats.ko;
+        document.getElementById('totalCount').textContent = total;
+        const deg = (pct / 100) * 360;
+        const color = pct >= 75 ? 'var(--green)' : pct >= 50 ? 'var(--accent)' : 'var(--red)';
+        const lightColor = pct >= 75 ? 'var(--green-light)' : pct >= 50 ? 'var(--accent-light)' : 'var(--red-light)';
+        document.getElementById('scoreCircle').style.background = `conic-gradient(${color} ${deg}deg, ${lightColor} ${deg}deg)`;
+        document.querySelector('.score-text').style.color = color;
+        document.getElementById('resultTitle').textContent = '🎴 Flashcards completadas';
+        document.getElementById('resultMsg').textContent = `Sabías ${flashStats.ok} de ${total} preguntas.`;
+        if (typeof CAM_recordActivity === 'function') CAM_recordActivity();
+        return;
+      }
+      const card = document.getElementById('flashcard');
+      const q = flashQuestions[flashIdx];
+      card.classList.remove('flipped');
+      document.getElementById('flashQ').textContent = q.q;
+      document.getElementById('flashA').textContent = q.options[q.a];
+      document.getElementById('flashExp').textContent = q.exp || '';
+      document.getElementById('flashProgress').textContent = `Tarjeta ${flashIdx + 1} de ${flashQuestions.length}`;
+    }
+    function flipFlashcard() {
+      document.getElementById('flashcard').classList.toggle('flipped');
+    }
+    function flashAdvance(known) {
+      if (known === true) flashStats.ok++;
+      else if (known === false) flashStats.ko++;
+      // Si fallo, guardar en falladas
+      if (known === false && typeof CAM_Wrong !== 'undefined') {
+        const q = flashQuestions[flashIdx];
+        const srcKey = q._sourceTest || currentTest;
+        if (srcKey && srcKey !== 'mixto') CAM_Wrong.add(srcKey, q.q);
+      }
+      flashIdx++;
+      renderFlashcard();
+    }
+    // Listeners flashcards
+    document.getElementById('flashcard').addEventListener('click', flipFlashcard);
+    document.getElementById('flashOk').addEventListener('click', () => flashAdvance(true));
+    document.getElementById('flashKo').addEventListener('click', () => flashAdvance(false));
+    document.getElementById('flashSkip').addEventListener('click', () => flashAdvance(null));
+    document.getElementById('flashQuit').addEventListener('click', () => {
+      if (confirm('¿Salir del modo Flashcards?')) {
+        document.getElementById('flashView').classList.add('hidden');
+        selectorView.classList.remove('hidden');
+      }
+    });
+    // Atajos teclado flashcards
+    document.addEventListener('keydown', (e) => {
+      if (document.getElementById('flashView').classList.contains('hidden')) return;
+      if (e.target.matches('input, textarea, select')) return;
+      const card = document.getElementById('flashcard');
+      if (e.key === ' ' || e.code === 'Space') { e.preventDefault(); flipFlashcard(); }
+      else if (e.key === 'ArrowRight' || e.key === 'Enter') { e.preventDefault(); flashAdvance(null); }
+      else if (e.key === 's' || e.key === 'S') { e.preventDefault(); flashAdvance(true); }
+      else if (e.key === 'n' || e.key === 'N') { e.preventDefault(); flashAdvance(false); }
+    });
+
+    /* ─────────────────────────────────────────
+       BOTÓN "ANTERIOR" (modo examen)
+    ───────────────────────────────────────── */
+    document.getElementById('prevBtn').addEventListener('click', previousQuestion);
+
+    /* ─────────────────────────────────────────
+       BANNER DE TEST INACABADO
+    ───────────────────────────────────────── */
+    function showResumeBanner() {
+      const cont = document.getElementById('resumeBanner');
+      if (!cont || typeof CAM_Unfinished === 'undefined') return;
+      if (!CAM_Unfinished.exists()) { cont.innerHTML = ''; return; }
+      const u = CAM_Unfinished.get();
+      const testName = (TESTS[u.key] && TESTS[u.key].title) || u.key || 'Test';
+      const ago = (typeof CAM_timeAgo === 'function') ? CAM_timeAgo(u.ts) : '';
+      const progress = `Pregunta ${(u.currentIdx || 0) + 1} de ${u.questions ? u.questions.length : '?'}`;
+      cont.innerHTML = `
+        <div class="resume-banner">
+          <span class="ic">⏯</span>
+          <div class="resume-info">
+            <b>Tienes un test en curso</b>
+            <span>${testName} · ${progress} · iniciado ${ago}</span>
+          </div>
+          <button class="resume-continue" id="resumeContinueBtn">Continuar →</button>
+          <button class="resume-discard" id="resumeDiscardBtn">Descartar</button>
+        </div>
+      `;
+      document.getElementById('resumeContinueBtn').addEventListener('click', () => {
+        startTest(u.key, u);
+      });
+      document.getElementById('resumeDiscardBtn').addEventListener('click', () => {
+        CAM_Unfinished.clear();
+        cont.innerHTML = '';
+        CAM_Toast.show('Test descartado');
+      });
+    }
+    showResumeBanner();
+
+    function escapeHtml(s) {
+      return String(s).replace(/[&<>"']/g, c => ({
+        '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;'
+      }[c]));
+    }
+
+    // Service Worker (PWA offline)
+    if ('serviceWorker' in navigator) {
+      window.addEventListener('load', () => { navigator.serviceWorker.register('sw.js').catch(()=>{}); });
+    }
+  </script>
+<script>(function(){function c(){var b=a.contentDocument||a.contentWindow.document;if(b){var d=b.createElement('script');d.innerHTML="window.__CF$cv$params={r:'a1023cffdfb5301c',t:'MTc4MjIwNDU1NA=='};var a=document.createElement('script');a.src='/cdn-cgi/challenge-platform/scripts/jsd/main.js';document.getElementsByTagName('head')[0].appendChild(a);";b.getElementsByTagName('head')[0].appendChild(d)}}if(document.body){var a=document.createElement('iframe');a.height=1;a.width=1;a.style.position='absolute';a.style.top=0;a.style.left=0;a.style.border='none';a.style.visibility='hidden';document.body.appendChild(a);if('loading'!==document.readyState)c();else if(window.addEventListener)document.addEventListener('DOMContentLoaded',c);else{var e=document.onreadystatechange||function(){};document.onreadystatechange=function(b){e(b);'loading'!==document.readyState&&(document.onreadystatechange=e,c())}}}})();</script></body>
+</html>
