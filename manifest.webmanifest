@@ -1,0 +1,46 @@
+{
+  "name": "Oposiciones CAM",
+  "short_name": "CAM Opos",
+  "description": "Plataforma de estudio para las oposiciones de la Comunidad de Madrid: temario íntegro y tests interactivos.",
+  "start_url": "./index.html",
+  "scope": "./",
+  "display": "standalone",
+  "orientation": "any",
+  "background_color": "#fdf5f7",
+  "theme_color": "#c0305a",
+  "lang": "es",
+  "icons": [
+    {
+      "src": "icons/icon-192.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "icons/icon-512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "favicon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml",
+      "purpose": "any"
+    }
+  ],
+  "shortcuts": [
+    {
+      "name": "Tests Interactivos",
+      "short_name": "Tests",
+      "url": "./tests.html",
+      "description": "Hacer un test interactivo"
+    },
+    {
+      "name": "Mi progreso",
+      "short_name": "Progreso",
+      "url": "./progreso.html",
+      "description": "Ver mi histórico y estadísticas"
+    }
+  ]
+}
