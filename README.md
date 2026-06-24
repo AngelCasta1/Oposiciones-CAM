@@ -45,6 +45,7 @@ oposiciones-cam/
 ├── tema1.html                  # Constitución Española de 1978
 ├── tema2.html                  # Estatuto de Autonomía CAM
 ├── tema3.html                  # Asamblea y Gobierno CAM
+├── tema4.html                  # Administración de la CAM
 ├── tests.html                  # Tests interactivos (estudio + examen + flashcards)
 ├── progreso.html               # Racha, logros, gráfico y diagnóstico
 ├── 404.html                    # Página de error personalizada
@@ -56,9 +57,11 @@ oposiciones-cam/
 │   ├── tema-extras.js          # Copiar texto, siguiente artículo, atajos
 │   └── theme.css               # Paleta + componentes + modo oscuro
 ├── temas-cifrados/
+│   ├── canary.json
 │   ├── tema1.json              # Contenido cifrado del Tema 1
 │   ├── tema2.json              # Contenido cifrado del Tema 2
-│   └── tema3.json              # Contenido cifrado del Tema 3
+│   ├── tema3.json              # Contenido cifrado del Tema 3
+│   └── tema4.json              # Contenido cifrado del Tema 4
 ├── icons/
 │   ├── icon-192.png
 │   └── icon-512.png
