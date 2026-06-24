@@ -1,6 +1,6 @@
 # 📚 Oposiciones CAM — Plataforma de Estudio
 
-> Plataforma web ultraligera, instalable como app y completamente offline para preparar las oposiciones de la **Comunidad Autónoma de Madrid**. Temario íntegro cifrado, 162 preguntas tipo test, modo oscuro y seguimiento personal de progreso.
+> Plataforma web ultraligera, instalable como app y completamente offline para preparar las oposiciones de la **Comunidad Autónoma de Madrid**. Temario íntegro cifrado, +200 preguntas tipo test, modo oscuro y seguimiento personal de progreso.
 
 ![HTML5](https://img.shields.io/badge/HTML5-E34F26?style=flat&logo=html5&logoColor=white)
 ![CSS3](https://img.shields.io/badge/CSS3-1572B6?style=flat&logo=css3&logoColor=white)
