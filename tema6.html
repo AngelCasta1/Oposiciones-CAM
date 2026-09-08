@@ -4,15 +4,13 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Oposiciones CAM — Tema 1</title>
-  <link
-    href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;700&family=Source+Serif+4:ital,wght@0,300;0,400;0,600;1,300&display=swap"
-    rel="stylesheet">
+  <title>Oposiciones CAM — Tema 6</title>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;700&family=Source+Serif+4:ital,wght@0,300;0,400;0,600;1,300&display=swap" rel="stylesheet">
   <meta name="theme-color" content="#c0305a">
   <link rel="icon" type="image/svg+xml" href="favicon.svg">
   <link rel="apple-touch-icon" href="icons/icon-192.png">
   <link rel="manifest" href="manifest.webmanifest">
-  <meta property="og:title" content="Tema 1 — Constitución Española de 1978 | CAM Oposiciones">
+  <meta property="og:title" content="Tema 6 — Protección de Datos Personales (RGPD y LOPDGDD) | CAM Oposiciones">
   <meta property="og:type" content="article">
   <meta property="og:image" content="og-image.png">
   <meta property="og:locale" content="es_ES">
@@ -737,72 +735,65 @@
 
   </style>
 </head>
+<body data-tema="tema6">
 
-<body data-tema="tema1">
-
-  <!-- TOP NAV -->
-  <nav class="topnav">
-    <button class="hamburger" id="menuBtn" aria-label="Abrir menú">☰</button>
-    <a class="brand" href="index.html" style="text-decoration:none;">← CAM Oposiciones</a>
-    <div class="nav-tabs" id="navTabs">
-      <a class="nav-tab active" href="tema1.html">
-        <span class="dot"></span>Tema 1
-      </a>
-      <a class="nav-tab" href="tema2.html">
-        <span class="dot"></span>Tema 2
-      </a>
-      <a class="nav-tab" href="tema3.html">
-        <span class="dot"></span>Tema 3
-      </a>
-      <a class="nav-tab" href="tema4.html">
-        <span class="dot"></span>Tema 4
-      </a>
-      <a class="nav-tab" href="tema5.html">
-        <span class="dot"></span>Tema 5
-      </a>
-      <a class="nav-tab" href="tema6.html">
-        <span class="dot"></span>Tema 6
-      </a>
-      <a class="nav-tab" href="tests.html" style="color:rgba(255,255,255,.85);">
-        <span class="dot" style="background:#e05a80;"></span>Tests
-      </a>
+<!-- TOP NAV -->
+<nav class="topnav">
+  <button class="hamburger" id="menuBtn" aria-label="Abrir menú">☰</button>
+  <a class="brand" href="index.html" style="text-decoration:none;">← CAM Oposiciones</a>
+  <div class="nav-tabs" id="navTabs">
+    <a class="nav-tab" href="tema1.html"><span class="dot"></span>Tema 1</a>
+    <a class="nav-tab" href="tema2.html"><span class="dot"></span>Tema 2</a>
+    <a class="nav-tab" href="tema3.html"><span class="dot"></span>Tema 3</a>
+    <a class="nav-tab" href="tema4.html"><span class="dot"></span>Tema 4</a>
+    <a class="nav-tab" href="tema5.html"><span class="dot"></span>Tema 5</a>
+    <a class="nav-tab active" href="tema6.html"><span class="dot"></span>Tema 6</a>
+    <a class="nav-tab" href="tests.html" style="color:rgba(255,255,255,.85);"><span class="dot" style="background:#e05a80;"></span>Tests</a>
       <a class="nav-tab" href="progreso.html"><span class="dot"></span>Mi Progreso</a>
       <button id="themeToggle" class="theme-toggle" aria-label="Cambiar tema" title="Cambiar tema">
         <svg class="icon-moon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path></svg>
         <svg class="icon-sun" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="5"></circle><line x1="12" y1="1" x2="12" y2="3"></line><line x1="12" y1="21" x2="12" y2="23"></line><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line><line x1="1" y1="12" x2="3" y2="12"></line><line x1="21" y1="12" x2="23" y2="12"></line><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line></svg>
       </button>
-    </div>
-    <div class="search-wrap">
-      <input type="text" id="searchInput" placeholder="🔍 Buscar artículo…">
-    </div>
-  </nav>
-  <div class="sidebar-overlay" id="sidebarOverlay"></div>
-  <div class="layout">
+  </div>
+  <div class="search-wrap">
+    <input type="text" id="searchInput" placeholder="🔍 Buscar artículo…">
+  </div>
+</nav>
 
-    <!-- SIDEBAR -->
-    <aside class="sidebar">
-      <div class="sidebar-title">Índice — Tema 1</div>
-      <div id="sidebarNav">
-        <a class="idx-link" href="#fechas">1.1 Fechas clave</a>
-        <a class="idx-link" href="#caracteristicas">1.2 Características</a>
-        <a class="idx-link" href="#estructura">1.3 Estructura</a>
-        <a class="idx-link" href="#preambulo">1.4 Preámbulo y valores</a>
-        <a class="idx-link idx-sub" href="#tit-preliminar">Título Preliminar (Art. 1–9)</a>
-        <a class="idx-link idx-sub" href="#titulo-i">Título I — Art. 10</a>
-        <a class="idx-link idx-sub" href="#cap-i">Cap. I: Españoles y extranjeros (11–13)</a>
-        <a class="idx-link idx-sub" href="#cap-ii">Cap. II: Derechos y libertades (14)</a>
-        <a class="idx-link idx-sub" href="#sec-1">Sec. 1ª: Derechos fundamentales (15–29)</a>
-        <a class="idx-link idx-sub" href="#sec-2">Sec. 2ª: Derechos ciudadanos (30–38)</a>
-        <a class="idx-link idx-sub" href="#cap-iii">Cap. III: Principios rectores (39–52)</a>
-        <a class="idx-link idx-sub" href="#cap-iv">Cap. IV: Garantías (53–54)</a>
-        <a class="idx-link idx-sub" href="#cap-v">Cap. V: Suspensión (55)</a>
-        <a class="idx-link idx-sub" href="#titulo-x">Título X: Reforma (166–169)</a>
-        <a class="idx-link idx-sub" href="#arts-extra">Arts. adicionales (81, 116)</a>
-      </div>
-    </aside>
+<div class="sidebar-overlay" id="sidebarOverlay"></div>
 
-    <!-- MAIN CONTENT -->
-    <main class="main" id="mainContent">
+<div class="layout">
+
+  <!-- SIDEBAR -->
+  <aside class="sidebar" id="sidebar">
+    <div class="sidebar-title">Índice — Tema 6</div>
+    <div id="sidebarNav">
+      <a class="idx-link" href="#rgpd-eu">1. RGPD · Normativa Europea</a>
+      <a class="idx-link idx-sub" href="#art1-1">Cap. I: Disposiciones generales (1–4)</a>
+      <a class="idx-link idx-sub" href="#art1-5">Cap. II: Principios (5–11)</a>
+      <a class="idx-link idx-sub" href="#art1-12">Cap. III: Derechos del interesado (12–23)</a>
+      <a class="idx-link idx-sub" href="#art1-24">Cap. IV: Responsable y encargado (24–43)</a>
+      <a class="idx-link idx-sub" href="#art1-44">Cap. V: Transferencias internacionales (44–50)</a>
+      <a class="idx-link idx-sub" href="#art1-51">Cap. VI: Autoridades de control (51–59)</a>
+      <a class="idx-link idx-sub" href="#art1-60">Cap. VII: Cooperación y coherencia (60–76)</a>
+      <a class="idx-link idx-sub" href="#art1-77">Cap. VIII: Recursos y sanciones (77–84)</a>
+      <a class="idx-link idx-sub" href="#art1-85">Cap. IX-X: Específicas y finales (85–93)</a>
+      <a class="idx-link" href="#lopdgdd-es">2. LOPDGDD · Normativa Estatal</a>
+      <a class="idx-link idx-sub" href="#art2-1">Tít. I: Disposiciones generales (1–3)</a>
+      <a class="idx-link idx-sub" href="#art2-4">Tít. II: Principios (4–10)</a>
+      <a class="idx-link idx-sub" href="#art2-11">Tít. III: Derechos de las personas (11–18)</a>
+      <a class="idx-link idx-sub" href="#art2-19">Tít. IV: Tratamientos concretos (19–27)</a>
+      <a class="idx-link idx-sub" href="#art2-28">Tít. V: Responsable y encargado (28–39)</a>
+      <a class="idx-link idx-sub" href="#art2-40">Tít. VI: Transferencias internacionales (40–43)</a>
+      <a class="idx-link idx-sub" href="#art2-44">Tít. VII: Autoridades de protección (44–62)</a>
+      <a class="idx-link idx-sub" href="#art2-63">Tít. VIII: Procedimientos (63–69)</a>
+      <a class="idx-link idx-sub" href="#art2-70">Tít. IX: Régimen sancionador (70–78)</a>
+      <a class="idx-link idx-sub" href="#art2-79">Tít. X: Derechos digitales (79–97)</a>
+    </div>
+  </aside>
+
+  <!-- MAIN CONTENT -->
+  <main class="main" id="mainContent">
       <!-- Contenido cifrado, se descifra al cargar con clave correcta -->
       <div id="encryptedLoader" style="text-align:center;padding:80px 20px;color:var(--muted);font-family:'Source Serif 4',Georgia,serif;">
         <div style="font-size:2.5rem;margin-bottom:14px;animation:pulse 1.6s infinite ease-in-out;">🔐</div>
@@ -811,99 +802,71 @@
         <div id="encErr" style="display:none;margin-top:20px;padding:14px 20px;background:var(--accent-light);border:1px solid var(--accent-mid);border-radius:10px;color:var(--accent);max-width:420px;margin-left:auto;margin-right:auto;font-size:.88rem;"></div>
       </div>
     </main>
-  </div>
+</div><!-- /layout -->
 
-  <script>
+<script>
     /* ─── Envuelto: solo se ejecuta cuando el contenido cifrado ha sido descifrado ─── */
     window.reinitTemaAfterDecrypt = function () {
-    /* ── Accordion artículos ── */
-    window.toggleArt = function (header) {
-      var art = header.parentElement;
-      art.classList.toggle('open');
-      // Marcar como leído al abrir
-      if (art.classList.contains('open') && art.id && window.CAM_Read) {
-        window.CAM_Read.mark('tema1', art.id);
-        art.classList.add('read');
-      }
-    };
-
-    /* ── Buscador ── */
-    document.getElementById('searchInput').addEventListener('input', function () {
-      var q = this.value.trim().toLowerCase();
-      var arts = document.querySelectorAll('.article');
-      arts.forEach(function (a) {
-        if (!q) { a.classList.remove('hidden'); return }
-        var txt = a.innerText.toLowerCase();
-        a.classList.toggle('hidden', !txt.includes(q));
-        if (txt.includes(q) && q.length > 1) a.classList.add('open');
-      });
-      document.querySelectorAll('.section').forEach(function (s) {
-        if (!q) { s.classList.remove('hidden'); return }
-        var vis = [].slice.call(s.querySelectorAll('.article')).some(function (a) { return !a.classList.contains('hidden') });
-        var directText = s.querySelector('.section-title') ? s.querySelector('.section-title').innerText.toLowerCase().includes(q) : false;
-        s.classList.toggle('hidden', !vis && !directText);
-      });
-    });
-
-    /* ── Scroll activo en sidebar ── */
-    var sideLinks = document.querySelectorAll('.idx-link');
-    function onScroll() {
-      var scroll = window.scrollY + 90;
-      var active = null;
-      document.querySelectorAll('.section[id]').forEach(function (s) {
-        if (s.offsetTop <= scroll) active = s.id;
-      });
-      sideLinks.forEach(function (l) {
-        var href = l.getAttribute('href').replace('#', '');
-        l.classList.toggle('active', href === active);
-      });
+  window.toggleArt = function (header) {
+    if (header.parentElement.id && window.CAM_Read && !header.parentElement.classList.contains('open')) {
+      window.CAM_Read.mark('tema5', header.parentElement.id);
+      header.parentElement.classList.add('read');
     }
-    window.addEventListener('scroll', onScroll, { passive: true });
+    var art = header.parentElement;
+    art.classList.toggle('open');
+  };
 
+  document.getElementById('searchInput').addEventListener('input', function () {
+    var q = this.value.trim().toLowerCase();
+    var arts = document.querySelectorAll('.article');
+    arts.forEach(function (a) {
+      if (!q) { a.classList.remove('hidden'); return }
+      var txt = a.innerText.toLowerCase();
+      a.classList.toggle('hidden', !txt.includes(q));
+      if (txt.includes(q) && q.length > 1) a.classList.add('open');
+    });
+    document.querySelectorAll('.section').forEach(function (s) {
+      if (!q) { s.classList.remove('hidden'); return }
+      var vis = [].slice.call(s.querySelectorAll('.article')).some(function (a) { return !a.classList.contains('hidden') });
+      var directText = s.querySelector('.section-title') ? s.querySelector('.section-title').innerText.toLowerCase().includes(q) : false;
+      s.classList.toggle('hidden', !vis && !directText);
+    });
+  });
+
+  var sideLinks = document.querySelectorAll('.idx-link');
+  function onScroll() {
+    var scroll = window.scrollY + 90;
+    var active = null;
+    document.querySelectorAll('.section[id], .article[id]').forEach(function (s) {
+      if (s.offsetTop <= scroll) active = s.id;
+    });
     sideLinks.forEach(function (l) {
-      l.addEventListener('click', function (e) {
-        e.preventDefault();
-        var id = this.getAttribute('href').replace('#', '');
-        var el = document.getElementById(id);
-        if (el) { window.scrollTo({ top: el.offsetTop - 78, behavior: 'smooth' }) }
-        /* Cerrar sidebar en móvil al hacer click */
-        closeSidebar();
-      });
+      var href = l.getAttribute('href').replace('#', '');
+      l.classList.toggle('active', href === active);
     });
+  }
+  window.addEventListener('scroll', onScroll, { passive: true });
 
-    /* ── Tabs ── */
-    document.querySelectorAll('.nav-tab:not(.disabled)').forEach(function (t) {
-      t.addEventListener('click', function () {
-        document.querySelectorAll('.nav-tab').forEach(function (x) { x.classList.remove('active') });
-        this.classList.add('active');
-      });
+  sideLinks.forEach(function (l) {
+    l.addEventListener('click', function (e) {
+      e.preventDefault();
+      var id = this.getAttribute('href').replace('#', '');
+      var el = document.getElementById(id);
+      if (el) { window.scrollTo({ top: el.offsetTop - 78, behavior: 'smooth' }) }
+      closeSidebar();
     });
+  });
 
-    /* ── Hamburger / Sidebar móvil ── */
-    var sidebar = document.querySelector('.sidebar');
-    var overlay = document.getElementById('sidebarOverlay');
-    var menuBtn = document.getElementById('menuBtn');
+  var sidebar = document.querySelector('.sidebar');
+  var overlay = document.getElementById('sidebarOverlay');
+  var menuBtn = document.getElementById('menuBtn');
 
-    function openSidebar() {
-      sidebar.classList.add('open');
-      overlay.classList.add('open');
-      menuBtn.textContent = '✕';
-    }
-    function closeSidebar() {
-      sidebar.classList.remove('open');
-      overlay.classList.remove('open');
-      menuBtn.textContent = '☰';
-    }
+  function openSidebar() { sidebar.classList.add('open'); overlay.classList.add('open'); menuBtn.textContent = '✕'; }
+  function closeSidebar() { sidebar.classList.remove('open'); overlay.classList.remove('open'); menuBtn.textContent = '☰'; }
 
-    if (menuBtn) {
-      menuBtn.addEventListener('click', function () {
-        sidebar.classList.contains('open') ? closeSidebar() : openSidebar();
-      });
-    }
-    if (overlay) {
-      overlay.addEventListener('click', closeSidebar);
-    }
-  
+  if (menuBtn) menuBtn.addEventListener('click', function () { sidebar.classList.contains('open') ? closeSidebar() : openSidebar(); });
+  if (overlay) overlay.addEventListener('click', closeSidebar);
+
     /* ─────────────────────────────────────────
        MEJORAS UNIVERSALES — añadidas en cada tema
     ───────────────────────────────────────── */
@@ -1218,6 +1181,6 @@
       }
     })();
   </script>
-<script>(function(){function c(){var b=a.contentDocument||(a.contentWindow&&a.contentWindow.document);if(b){var d=b.createElement('script');d.innerHTML="window.__CF$cv$params={r:'a37ecc874a8b0341',t:'MTc4ODg3OTM3Ng=='};var a=document.createElement('script');a.src='/cdn-cgi/challenge-platform/scripts/jsd/main.js';document.getElementsByTagName('head')[0].appendChild(a);";b.getElementsByTagName('head')[0].appendChild(d)}}if(document.body){var a=document.createElement('iframe');a.height=1;a.width=1;a.style.position='absolute';a.style.top=0;a.style.left=0;a.style.border='none';a.style.visibility='hidden';document.body.appendChild(a);if('loading'!==document.readyState)c();else if(window.addEventListener)document.addEventListener('DOMContentLoaded',c);else{var e=document.onreadystatechange||function(){};document.onreadystatechange=function(b){e(b);'loading'!==document.readyState&&(document.onreadystatechange=e,c())}}}})();</script></body>
+<script>(function(){function c(){var b=a.contentDocument||(a.contentWindow&&a.contentWindow.document);if(b){var d=b.createElement('script');d.innerHTML="window.__CF$cv$params={r:'a37ecbded93f0341',t:'MTc4ODg3OTM0OQ=='};var a=document.createElement('script');a.src='/cdn-cgi/challenge-platform/scripts/jsd/main.js';document.getElementsByTagName('head')[0].appendChild(a);";b.getElementsByTagName('head')[0].appendChild(d)}}if(document.body){var a=document.createElement('iframe');a.height=1;a.width=1;a.style.position='absolute';a.style.top=0;a.style.left=0;a.style.border='none';a.style.visibility='hidden';document.body.appendChild(a);if('loading'!==document.readyState)c();else if(window.addEventListener)document.addEventListener('DOMContentLoaded',c);else{var e=document.onreadystatechange||function(){};document.onreadystatechange=function(b){e(b);'loading'!==document.readyState&&(document.onreadystatechange=e,c())}}}})();</script></body>
 
 </html>
