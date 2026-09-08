@@ -1,5 +1,5 @@
 /* CAM Oposiciones — Service Worker (PWA offline) */
-const CACHE = 'cam-opos-v20';
+const CACHE = 'cam-opos-v21';
 const ASSETS = [
   './',
   './index.html',
