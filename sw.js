@@ -1,5 +1,5 @@
 /* CAM Oposiciones — Service Worker (PWA offline) */
-const CACHE = 'cam-opos-v13';
+const CACHE = 'cam-opos-v14';
 const ASSETS = [
   './',
   './index.html',
@@ -7,6 +7,7 @@ const ASSETS = [
   './tema2.html',
   './tema3.html',
   './tema4.html',
+  './tema5.html',
   './tests.html',
   './progreso.html',
   './404.html',
@@ -21,6 +22,7 @@ const ASSETS = [
   './temas-cifrados/tema2.json',
   './temas-cifrados/tema3.json',
   './temas-cifrados/tema4.json',
+  './temas-cifrados/tema5.json',
   './favicon.svg',
   './manifest.webmanifest',
   './icons/icon-192.png',
