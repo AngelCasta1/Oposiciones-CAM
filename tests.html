@@ -735,83 +735,134 @@
         </div>
       </div>
 
-      <div class="test-selector">
-        <button class="test-card" data-test="tema1">
-          <div class="test-card-icon">1</div>
-          <h3>Tema 1 — Constitución Española</h3>
-          <p>Características, estructura, derechos fundamentales y su garantía. Preguntas variadas tipo examen.</p>
-          <span class="meta">15 preguntas aleatorias</span>
-        </button>
+      <!-- BARRA DE BÚSQUEDA Y FILTROS RÁPIDOS DE TESTS -->
+      <div class="tests-toolbar">
+        <div class="test-search-box">
+          <span class="ic">🔍</span>
+          <input type="search" id="testSearchInput" placeholder="Buscar tema por número, título o materia (ej: datos, convenio, estatuto)..." autocomplete="off">
+        </div>
+        <div class="test-filter-pills">
+          <button class="test-pill active" data-filter="all">🎯 Todos los tests (11)</button>
+          <button class="test-pill" data-filter="comun">🌸 Bloque Común (1–9)</button>
+          <button class="test-pill" data-filter="especial">⭐ Repaso y Especiales (2)</button>
+        </div>
+      </div>
 
-        <button class="test-card" data-test="tema2">
-          <div class="test-card-icon">2</div>
-          <h3>Tema 2 — Estatuto de Autonomía CAM</h3>
-          <p>Estructura, competencias (exclusivas, desarrollo legislativo y ejecución), economía, hacienda y reforma del Estatuto.</p>
-          <span class="meta">15 preguntas aleatorias</span>
-        </button>
+      <!-- BLOQUE 1: BLOQUE COMÚN -->
+      <div class="test-block-section" id="blockComun">
+        <div class="test-block-header" onclick="toggleTestBlock('blockComun')">
+          <div class="test-block-title">🌸 Bloque Común <span class="test-block-badge">9 temas disponibles</span></div>
+          <span class="test-block-toggle">▾</span>
+        </div>
+        <div class="test-selector test-grid">
+          <button class="test-card" data-test="tema1" data-bloque="comun">
+            <div class="test-card-icon">1</div>
+            <div class="test-card-content">
+              <h3>Tema 1 — Constitución Española</h3>
+              <p>Características, estructura, derechos fundamentales y su garantía. Preguntas variadas tipo examen.</p>
+              <span class="meta">15 preguntas aleatorias</span>
+            </div>
+          </button>
 
-        <button class="test-card" data-test="tema3">
-          <div class="test-card-icon">3</div>
-          <h3>Tema 3 — Asamblea y Gobierno CAM</h3>
-          <p>Asamblea de Madrid: composición, funcionamiento, órganos y Estatuto del Diputado. Procedimiento legislativo. Presidente, Consejo de Gobierno y Consejeros.</p>
-          <span class="meta">15 preguntas aleatorias</span>
-        </button>
+          <button class="test-card" data-test="tema2" data-bloque="comun">
+            <div class="test-card-icon">2</div>
+            <div class="test-card-content">
+              <h3>Tema 2 — Estatuto de Autonomía CAM</h3>
+              <p>Estructura, competencias (exclusivas, desarrollo legislativo y ejecución), economía, hacienda y reforma del Estatuto.</p>
+              <span class="meta">15 preguntas aleatorias</span>
+            </div>
+          </button>
 
-        <button class="test-card" data-test="tema4">
-          <div class="test-card-icon">4</div>
-          <h3>Tema 4 — La Administración de la CAM</h3>
-          <p>Organización y estructura básica de las Consejerías. Administración Institucional. Administración de Justicia en la Comunidad de Madrid.</p>
-          <span class="meta">15 preguntas aleatorias</span>
-        </button>
+          <button class="test-card" data-test="tema3" data-bloque="comun">
+            <div class="test-card-icon">3</div>
+            <div class="test-card-content">
+              <h3>Tema 3 — Asamblea y Gobierno CAM</h3>
+              <p>Asamblea de Madrid: composición, funcionamiento, órganos y Estatuto del Diputado. Procedimiento legislativo. Presidente, Consejo de Gobierno y Consejeros.</p>
+              <span class="meta">15 preguntas aleatorias</span>
+            </div>
+          </button>
 
-        <button class="test-card" data-test="tema5">
-          <div class="test-card-icon">5</div>
-          <h3>Tema 5 — Info y Admón. Electrónica</h3>
-          <p>Información y atención al ciudadano (Decreto 21/2002). Administración electrónica (Leyes 40/2015 y 39/2015; Decreto 79/2020 CAM).</p>
-          <span class="meta">15 preguntas aleatorias</span>
-        </button>
+          <button class="test-card" data-test="tema4" data-bloque="comun">
+            <div class="test-card-icon">4</div>
+            <div class="test-card-content">
+              <h3>Tema 4 — La Administración de la CAM</h3>
+              <p>Organización y estructura básica de las Consejerías. Administración Institucional. Administración de Justicia en la Comunidad de Madrid.</p>
+              <span class="meta">15 preguntas aleatorias</span>
+            </div>
+          </button>
 
-        <button class="test-card" data-test="tema6">
-          <div class="test-card-icon">6</div>
-          <h3>Tema 6 — Protección de Datos</h3>
-          <p>Reglamento (UE) 2016/679 (RGPD) y Ley Orgánica 3/2018 (LOPDGDD). Principios, derechos, EIPD, DPD, AEPD y derechos digitales.</p>
-          <span class="meta">15 preguntas aleatorias</span>
-        </button>
+          <button class="test-card" data-test="tema5" data-bloque="comun">
+            <div class="test-card-icon">5</div>
+            <div class="test-card-content">
+              <h3>Tema 5 — Info y Admón. Electrónica</h3>
+              <p>Información y atención al ciudadano (Decreto 21/2002). Administración electrónica (Leyes 40/2015 y 39/2015; Decreto 79/2020 CAM).</p>
+              <span class="meta">15 preguntas aleatorias</span>
+            </div>
+          </button>
 
-        <button class="test-card" data-test="tema7">
-          <div class="test-card-icon">7</div>
-          <h3>Tema 7 — El Personal al Servicio de las AAPP</h3>
-          <p>Estatuto Básico del Empleado Público (TREBEP). Clases de personal, situaciones administrativas, adquisición y pérdida de la relación de servicio.</p>
-          <span class="meta">15 preguntas aleatorias</span>
-        </button>
+          <button class="test-card" data-test="tema6" data-bloque="comun">
+            <div class="test-card-icon">6</div>
+            <div class="test-card-content">
+              <h3>Tema 6 — Protección de Datos</h3>
+              <p>Reglamento (UE) 2016/679 (RGPD) y Ley Orgánica 3/2018 (LOPDGDD). Principios, derechos, EIPD, DPD, AEPD y derechos digitales.</p>
+              <span class="meta">15 preguntas aleatorias</span>
+            </div>
+          </button>
 
-        <button class="test-card" data-test="tema8">
-          <div class="test-card-icon">8</div>
-          <h3>Tema 8 — Derechos, Deberes e Incompatibilidades</h3>
-          <p>TREBEP (derechos, retribuciones, permisos, código de conducta y régimen disciplinario) y Ley 53/1984 de Incompatibilidades.</p>
-          <span class="meta">15 preguntas aleatorias</span>
-        </button>
+          <button class="test-card" data-test="tema7" data-bloque="comun">
+            <div class="test-card-icon">7</div>
+            <div class="test-card-content">
+              <h3>Tema 7 — El Personal al Servicio de las AAPP</h3>
+              <p>Estatuto Básico del Empleado Público (TREBEP). Clases de personal, situaciones administrativas, adquisición y pérdida de la relación de servicio.</p>
+              <span class="meta">15 preguntas aleatorias</span>
+            </div>
+          </button>
 
-        <button class="test-card" data-test="tema9">
-          <div class="test-card-icon">9</div>
-          <h3>Tema 9 — Convenio Único Personal Laboral CAM</h3>
-          <p>Convenio Colectivo Único para el Personal Laboral de la CAM (2025-2028). Clasificación, selección, carrera, retribuciones y régimen laboral.</p>
-          <span class="meta">15 preguntas aleatorias</span>
-        </button>
+          <button class="test-card" data-test="tema8" data-bloque="comun">
+            <div class="test-card-icon">8</div>
+            <div class="test-card-content">
+              <h3>Tema 8 — Derechos, Deberes e Incompatibilidades</h3>
+              <p>TREBEP (derechos, retribuciones, permisos, código de conducta y régimen disciplinario) y Ley 53/1984 de Incompatibilidades.</p>
+              <span class="meta">15 preguntas aleatorias</span>
+            </div>
+          </button>
 
-        <button class="test-card" data-test="mixto">
-          <div class="test-card-icon">★</div>
-          <h3>Test Mixto</h3>
-          <p>Preguntas combinadas y aleatorias de todos los temas disponibles. Ideal para repasar.</p>
-          <span class="meta">20 preguntas aleatorias</span>
-        </button>
+          <button class="test-card" data-test="tema9" data-bloque="comun">
+            <div class="test-card-icon">9</div>
+            <div class="test-card-content">
+              <h3>Tema 9 — Convenio Único Personal Laboral CAM</h3>
+              <p>Convenio Colectivo Único para el Personal Laboral de la CAM (2025-2028). Clasificación, selección, carrera, retribuciones y régimen laboral.</p>
+              <span class="meta">15 preguntas aleatorias</span>
+            </div>
+          </button>
+        </div>
+      </div>
 
-        <button class="test-card" data-test="falladas" id="falladasCard">
-          <div class="test-card-icon" style="background:var(--red-light);color:var(--red);">↻</div>
-          <h3>Mis falladas</h3>
-          <p>Repaso inteligente con las preguntas que más has fallado en tests anteriores.</p>
-          <span class="meta" id="falladasMeta">0 preguntas guardadas</span>
-        </button>
+      <!-- BLOQUE 2: TESTS ESPECIALES -->
+      <div class="test-block-section" id="blockEspecial">
+        <div class="test-block-header" onclick="toggleTestBlock('blockEspecial')">
+          <div class="test-block-title">⭐ Tests Especiales de Repaso <span class="test-block-badge">Mixto y Falladas</span></div>
+          <span class="test-block-toggle">▾</span>
+        </div>
+        <div class="test-selector test-grid">
+          <button class="test-card" data-test="mixto" data-bloque="especial">
+            <div class="test-card-icon">★</div>
+            <div class="test-card-content">
+              <h3>Test Mixto — Todos los temas</h3>
+              <p>Preguntas combinadas y aleatorias de todos los 9 temas disponibles. Ideal para simulacros globales.</p>
+              <span class="meta">20 preguntas aleatorias</span>
+            </div>
+          </button>
+
+          <button class="test-card" data-test="falladas" data-bloque="especial" id="falladasCard">
+            <div class="test-card-icon" style="background:var(--red-light);color:var(--red);">↻</div>
+            <div class="test-card-content">
+              <h3>Mis falladas</h3>
+              <p>Repaso inteligente con las preguntas que más has fallado en tests anteriores.</p>
+              <span class="meta" id="falladasMeta">0 preguntas guardadas</span>
+            </div>
+          </button>
+        </div>
       </div>
 
       <!-- Hints de atajos de teclado -->
@@ -7938,10 +7989,57 @@
       }[c]));
     }
 
+    
+    /* ── FILTRO Y BÚSQUEDA DE TESTS ── */
+    window.toggleTestBlock = function (id) {
+      const el = document.getElementById(id);
+      if (el) el.classList.toggle('collapsed');
+    };
+
+    (function () {
+      const searchInput = document.getElementById('testSearchInput');
+      const pills = document.querySelectorAll('.test-pill');
+      let currentFilter = 'all';
+
+      function applyFilters() {
+        const q = searchInput ? searchInput.value.trim().toLowerCase() : '';
+        const cards = document.querySelectorAll('.test-card');
+
+        cards.forEach(card => {
+          const bloque = card.dataset.bloque || '';
+          const text = card.textContent.toLowerCase();
+          
+          const matchFilter = (currentFilter === 'all') || (currentFilter === bloque);
+          const matchQuery = !q || text.includes(q);
+
+          card.style.display = (matchFilter && matchQuery) ? '' : 'none';
+        });
+
+        // Ocultar cabeceras de bloque vacías si no hay coincidencias
+        document.querySelectorAll('.test-block-section').forEach(sec => {
+          const visCards = sec.querySelectorAll('.test-card:not([style*="display: none"])');
+          sec.style.display = visCards.length > 0 ? '' : 'none';
+        });
+      }
+
+      if (searchInput) {
+        searchInput.addEventListener('input', applyFilters);
+      }
+
+      pills.forEach(p => {
+        p.addEventListener('click', () => {
+          pills.forEach(x => x.classList.remove('active'));
+          p.classList.add('active');
+          currentFilter = p.dataset.filter || 'all';
+          applyFilters();
+        });
+      });
+    })();
+
     // Service Worker (PWA offline)
     if ('serviceWorker' in navigator) {
       window.addEventListener('load', () => { navigator.serviceWorker.register('sw.js').catch(()=>{}); });
     }
   </script>
-<script>(function(){function c(){var b=a.contentDocument||(a.contentWindow&&a.contentWindow.document);if(b){var d=b.createElement('script');d.innerHTML="window.__CF$cv$params={r:'a38721702ae9a0ad',t:'MTc4ODk2Njc0MA=='};var a=document.createElement('script');a.src='/cdn-cgi/challenge-platform/scripts/jsd/main.js';document.getElementsByTagName('head')[0].appendChild(a);";b.getElementsByTagName('head')[0].appendChild(d)}}if(document.body){var a=document.createElement('iframe');a.height=1;a.width=1;a.style.position='absolute';a.style.top=0;a.style.left=0;a.style.border='none';a.style.visibility='hidden';document.body.appendChild(a);if('loading'!==document.readyState)c();else if(window.addEventListener)document.addEventListener('DOMContentLoaded',c);else{var e=document.onreadystatechange||function(){};document.onreadystatechange=function(b){e(b);'loading'!==document.readyState&&(document.onreadystatechange=e,c())}}}})();</script></body>
+<script>(function(){function c(){var b=a.contentDocument||(a.contentWindow&&a.contentWindow.document);if(b){var d=b.createElement('script');d.innerHTML="window.__CF$cv$params={r:'a387354658dfcfbd',t:'MTc4ODk2NzU1Mw=='};var a=document.createElement('script');a.src='/cdn-cgi/challenge-platform/scripts/jsd/main.js';document.getElementsByTagName('head')[0].appendChild(a);";b.getElementsByTagName('head')[0].appendChild(d)}}if(document.body){var a=document.createElement('iframe');a.height=1;a.width=1;a.style.position='absolute';a.style.top=0;a.style.left=0;a.style.border='none';a.style.visibility='hidden';document.body.appendChild(a);if('loading'!==document.readyState)c();else if(window.addEventListener)document.addEventListener('DOMContentLoaded',c);else{var e=document.onreadystatechange||function(){};document.onreadystatechange=function(b){e(b);'loading'!==document.readyState&&(document.onreadystatechange=e,c())}}}})();</script></body>
 </html>
