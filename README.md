@@ -1,6 +1,6 @@
 # 📚 Oposiciones CAM — Plataforma de Estudio
 
-> Plataforma web ultraligera, instalable como app y completamente offline para preparar las oposiciones de la **Comunidad Autónoma de Madrid**. Temario íntegro cifrado con AES-256, +420 preguntas tipo test, modo oscuro y seguimiento personal de progreso.
+> Plataforma web ultraligera, instalable como app y completamente offline para preparar las oposiciones de la **Comunidad Autónoma de Madrid**. Temario íntegro cifrado con AES-256, +580 preguntas tipo test, modo oscuro y seguimiento personal de progreso.
 
 ![HTML5](https://img.shields.io/badge/HTML5-E34F26?style=flat&logo=html5&logoColor=white)
 ![CSS3](https://img.shields.io/badge/CSS3-1572B6?style=flat&logo=css3&logoColor=white)
@@ -98,8 +98,8 @@ oposiciones-cam/
 - **Botón copiar texto** y navegación rápida dentro de cada artículo
 - **Hash deep‑linking** que abre y resalta el artículo de destino
 
-### ✅ Tests Interactivos (422 preguntas)
-- **6 bancos específicos** por tema + **Test Mixto** (20 aleatorias) + **Mis falladas** (repaso inteligente)
+### ✅ Tests Interactivos (582 preguntas)
+- **9 bancos específicos** por tema + **Test Mixto** (20 aleatorias) + **Mis falladas** (repaso inteligente)
 - **Modo Estudio** con feedback inmediato y fundamentación legal detallada
 - **Modo Examen** con cronómetro configurable (15/30/45/60 min) y minimapa interactivo
 - **Modo Flashcards 🎴** para memorización rápida con atajos `Space` / `S` / `N`
@@ -113,7 +113,7 @@ oposiciones-cam/
 - 🏆 **Sistema de logros** desbloqueables
 - 📈 **Gráfico SVG** con la evolución de los últimos tests
 - Histórico detallado de puntuaciones e intentos
-- Estadísticas reales en vivo: **9 temas · 1016 artículos · 422 preguntas**
+- Estadísticas reales en vivo: **9 temas · 1016 artículos · 582 preguntas**
 - 📥 **Exportar/importar** datos en JSON (copia de seguridad)
 - 🗑 Borrado selectivo o reinicio de estadísticas
 
