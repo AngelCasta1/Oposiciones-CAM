@@ -197,6 +197,9 @@
       <a class="nav-tab" href="tema4.html"><span class="dot"></span>Tema 4</a>
       <a class="nav-tab" href="tema5.html"><span class="dot"></span>Tema 5</a>
       <a class="nav-tab" href="tema6.html"><span class="dot"></span>Tema 6</a>
+      <a class="nav-tab" href="tema7.html"><span class="dot"></span>Tema 7</a>
+      <a class="nav-tab" href="tema8.html"><span class="dot"></span>Tema 8</a>
+      <a class="nav-tab" href="tema9.html"><span class="dot"></span>Tema 9</a>
       <a class="nav-tab" href="tests.html"><span class="dot"></span>Tests</a>
       <a class="nav-tab active" href="progreso.html"><span class="dot"></span>Mi Progreso</a>
       <button id="themeToggle" class="theme-toggle" aria-label="Cambiar tema" title="Cambiar tema" style="margin-left:auto;">
@@ -267,12 +270,15 @@
       tema4: { name: 'Tema 4 — Administración CAM', total: 94, href: 'tema4.html' },
       tema5: { name: 'Tema 5 — Info y Administración Electrónica', total: 71, href: 'tema5.html' },
       tema6: { name: 'Tema 6 — Protección de Datos (RGPD y LOPDGDD)', total: 191, href: 'tema6.html' },
+      tema7: { name: 'Tema 7 — El Personal al Servicio de las AAPP (TREBEP)', total: 35, href: 'tema7.html' },
+      tema8: { name: 'Tema 8 — Derechos, Deberes, Disciplinario e Incompatibilidades', total: 68, href: 'tema8.html' },
+      tema9: { name: 'Tema 9 — Convenio Colectivo Único CAM (2025-2028)', total: 284, href: 'tema9.html' },
       mixto: { name: 'Test Mixto', total: 0, href: 'tests.html' }
     };
 
     /* Cargar totales reales de los temas en segundo plano (no bloqueante) */
     async function loadRealTotals() {
-      const keys = ['tema1', 'tema2', 'tema3', 'tema4', 'tema5', 'tema6'];
+      const keys = ['tema1', 'tema2', 'tema3', 'tema4', 'tema5', 'tema6', 'tema7', 'tema8', 'tema9'];
       let changed = false;
       for (const k of keys) {
         try {
@@ -411,7 +417,7 @@
       let html = '';
       html += `<b>📚 Artículos visitados por tema:</b><br>`;
       let totalVis = 0;
-      ['tema1','tema2','tema3','tema4','tema5','tema6'].forEach(k => {
+      ['tema1','tema2','tema3','tema4','tema5','tema6','tema7','tema8','tema9'].forEach(k => {
         const cnt = visited[k] ? Object.keys(visited[k]).length : 0;
         totalVis += cnt;
         html += `&nbsp;&nbsp;${k}: <b style="color:${cnt>0?'var(--green)':'var(--muted)'}">${cnt}</b> artículos<br>`;
@@ -668,5 +674,5 @@
       navigator.serviceWorker.register('sw.js').catch(()=>{});
     }
   </script>
-<script>(function(){function c(){var b=a.contentDocument||(a.contentWindow&&a.contentWindow.document);if(b){var d=b.createElement('script');d.innerHTML="window.__CF$cv$params={r:'a37ecc736ccd0341',t:'MTc4ODg3OTM3Mw=='};var a=document.createElement('script');a.src='/cdn-cgi/challenge-platform/scripts/jsd/main.js';document.getElementsByTagName('head')[0].appendChild(a);";b.getElementsByTagName('head')[0].appendChild(d)}}if(document.body){var a=document.createElement('iframe');a.height=1;a.width=1;a.style.position='absolute';a.style.top=0;a.style.left=0;a.style.border='none';a.style.visibility='hidden';document.body.appendChild(a);if('loading'!==document.readyState)c();else if(window.addEventListener)document.addEventListener('DOMContentLoaded',c);else{var e=document.onreadystatechange||function(){};document.onreadystatechange=function(b){e(b);'loading'!==document.readyState&&(document.onreadystatechange=e,c())}}}})();</script></body>
+<script>(function(){function c(){var b=a.contentDocument||(a.contentWindow&&a.contentWindow.document);if(b){var d=b.createElement('script');d.innerHTML="window.__CF$cv$params={r:'a386bc4f0c9633db',t:'MTc4ODk2MjU5OA=='};var a=document.createElement('script');a.src='/cdn-cgi/challenge-platform/scripts/jsd/main.js';document.getElementsByTagName('head')[0].appendChild(a);";b.getElementsByTagName('head')[0].appendChild(d)}}if(document.body){var a=document.createElement('iframe');a.height=1;a.width=1;a.style.position='absolute';a.style.top=0;a.style.left=0;a.style.border='none';a.style.visibility='hidden';document.body.appendChild(a);if('loading'!==document.readyState)c();else if(window.addEventListener)document.addEventListener('DOMContentLoaded',c);else{var e=document.onreadystatechange||function(){};document.onreadystatechange=function(b){e(b);'loading'!==document.readyState&&(document.onreadystatechange=e,c())}}}})();</script></body>
 </html>

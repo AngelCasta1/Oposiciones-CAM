@@ -48,6 +48,9 @@ oposiciones-cam/
 ├── tema4.html                  # Tema 4: La Administración de la CAM (94 arts)
 ├── tema5.html                  # Tema 5: Info y Administración Electrónica (71 arts)
 ├── tema6.html                  # Tema 6: Protección de Datos Personales — RGPD y LOPDGDD (191 arts)
+├── tema7.html                  # Tema 7: El Personal al Servicio de las AAPP — TREBEP (35 arts)
+├── tema8.html                  # Tema 8: Derechos, Deberes, Disciplinario e Incompatibilidades (68 arts)
+├── tema9.html                  # Tema 9: Convenio Colectivo Único del Personal Laboral CAM (284 arts/disp)
 ├── tests.html                  # Tests interactivos (estudio + examen + flashcards + falladas)
 ├── progreso.html               # Racha, logros, gráfico SVG y diagnóstico por tema
 ├── 404.html                    # Página de error personalizada
@@ -65,14 +68,17 @@ oposiciones-cam/
 │   ├── tema3.json              # Contenido cifrado del Tema 3
 │   ├── tema4.json              # Contenido cifrado del Tema 4
 │   ├── tema5.json              # Contenido cifrado del Tema 5
-│   └── tema6.json              # Contenido cifrado del Tema 6
+│   ├── tema6.json              # Contenido cifrado del Tema 6
+│   ├── tema7.json              # Contenido cifrado del Tema 7
+│   ├── tema8.json              # Contenido cifrado del Tema 8
+│   └── tema9.json              # Contenido cifrado del Tema 9
 ├── icons/
 │   ├── icon-192.png
 │   └── icon-512.png
 ├── favicon.svg
 ├── og-image.png                # Preview para redes sociales
 ├── manifest.webmanifest        # PWA manifest
-├── sw.js                       # Service Worker (offline cache v21)
+├── sw.js                       # Service Worker (offline cache v24)
 └── README.md
 ```
 
@@ -107,7 +113,7 @@ oposiciones-cam/
 - 🏆 **Sistema de logros** desbloqueables
 - 📈 **Gráfico SVG** con la evolución de los últimos tests
 - Histórico detallado de puntuaciones e intentos
-- Estadísticas reales en vivo: **6 temas · 629 artículos · 422 preguntas**
+- Estadísticas reales en vivo: **9 temas · 1016 artículos · 422 preguntas**
 - 📥 **Exportar/importar** datos en JSON (copia de seguridad)
 - 🗑 Borrado selectivo o reinicio de estadísticas
 
