@@ -555,4 +555,167 @@
     if (document.body && document.body.dataset && document.body.dataset.tema) recordActivity();
   }
 
+  /* ─────────────────────────────────
+     18. BARRA INFERIOR MÓVIL Y SELECTOR DE TEMAS
+  ───────────────────────────────── */
+  const TEMAS_LIST = [
+    { id: 'tema1', num: '01', name: 'Constitución Española de 1978', desc: 'Características, derechos y garantías', href: 'tema1.html', bloque: 'comun' },
+    { id: 'tema2', num: '02', name: 'Estatuto de Autonomía CAM', desc: 'Estructura y competencias de la CAM', href: 'tema2.html', bloque: 'comun' },
+    { id: 'tema3', num: '03', name: 'Asamblea, Procedimiento y Gobierno', desc: 'Reglamento, Ley 1/1983, Presidente y Consejeros', href: 'tema3.html', bloque: 'comun' },
+    { id: 'tema4', num: '04', name: 'La Administración de la CAM', desc: 'Consejerías, Admón. Institucional y Justicia', href: 'tema4.html', bloque: 'comun' },
+    { id: 'tema5', num: '05', name: 'Información y Admón. Electrónica', desc: 'Decreto 21/2002, Leyes 39 y 40/2015, Dec 79/2020', href: 'tema5.html', bloque: 'comun' },
+    { id: 'tema6', num: '06', name: 'Protección de Datos Personales', desc: 'RGPD (UE) 2016/679 y Ley Orgánica 3/2018', href: 'tema6.html', bloque: 'comun' },
+    { id: 'tema7', num: '07', name: 'El Personal al Servicio de las AAPP', desc: 'TREBEP (RDL 5/2015). Clases y situaciones', href: 'tema7.html', bloque: 'comun' },
+    { id: 'tema8', num: '08', name: 'Derechos, Deberes e Incompatibilidades', desc: 'TREBEP (código conducta, disciplinario) y Ley 53/1984', href: 'tema8.html', bloque: 'comun' },
+    { id: 'tema9', num: '09', name: 'Convenio Colectivo Único CAM', desc: 'Convenio Único para el Personal Laboral (2025-2028)', href: 'tema9.html', bloque: 'comun' }
+  ];
+
+  function setupMobileNav() {
+    // 1. Inyectar botón "Temas ▾" en topnav si existe
+    const topnav = document.querySelector('.topnav');
+    if (topnav && !document.getElementById('topnavMobileBtn')) {
+      const btn = document.createElement('button');
+      btn.id = 'topnavMobileBtn';
+      btn.className = 'topnav-mobile-btn';
+      btn.innerHTML = '📚 Temas ▾';
+      btn.setAttribute('aria-label', 'Abrir lista de temas');
+      btn.addEventListener('click', (e) => {
+        e.preventDefault();
+        openTopicsSheet();
+      });
+      // Insertar antes del themeToggle si existe, o al final
+      const themeToggle = document.getElementById('themeToggle');
+      if (themeToggle) topnav.insertBefore(btn, themeToggle);
+      else topnav.appendChild(btn);
+    }
+
+    // 2. Inyectar Barra de Navegación Inferior (Bottom Bar)
+    if (!document.getElementById('camBottomNav')) {
+      const path = window.location.pathname;
+      const isIndex = path.endsWith('index.html') || path === '/' || path.endsWith('/Oposiciones-CAM/');
+      const isTests = path.includes('tests.html');
+      const isProg = path.includes('progreso.html');
+      const isTema = path.includes('tema');
+
+      const bnav = document.createElement('nav');
+      bnav.id = 'camBottomNav';
+      bnav.className = 'cam-bottom-nav';
+      bnav.setAttribute('aria-label', 'Navegación principal móvil');
+      bnav.innerHTML = `
+        <button class="cam-bnav-item ${isTema || isIndex ? 'active' : ''}" id="bnavTemasBtn" aria-label="Temario">
+          <span class="bnav-icon">📖</span>
+          <span>Temario</span>
+        </button>
+        <a href="tests.html" class="cam-bnav-item ${isTests ? 'active' : ''}" aria-label="Tests">
+          <span class="bnav-icon">📝</span>
+          <span>Tests</span>
+        </a>
+        <a href="progreso.html" class="cam-bnav-item ${isProg ? 'active' : ''}" aria-label="Mi Progreso">
+          <span class="bnav-icon">📊</span>
+          <span>Progreso</span>
+        </a>
+        <button class="cam-bnav-item" id="bnavThemeBtn" aria-label="Cambiar tema claro/oscuro">
+          <span class="bnav-icon">🌓</span>
+          <span>Tema</span>
+        </button>
+      `;
+      document.body.appendChild(bnav);
+
+      document.getElementById('bnavTemasBtn').addEventListener('click', (e) => {
+        e.preventDefault();
+        openTopicsSheet();
+      });
+      document.getElementById('bnavThemeBtn').addEventListener('click', (e) => {
+        e.preventDefault();
+        toggleTheme();
+      });
+    }
+
+    // 3. Inyectar Sheet Modal de Temas
+    if (!document.getElementById('camSheetOverlay')) {
+      const sheetOverlay = document.createElement('div');
+      sheetOverlay.id = 'camSheetOverlay';
+      sheetOverlay.className = 'cam-sheet-overlay';
+      sheetOverlay.setAttribute('role', 'dialog');
+      sheetOverlay.setAttribute('aria-modal', 'true');
+      
+      const currentTemaId = document.body && document.body.dataset && document.body.dataset.tema;
+
+      let itemsHtml = '';
+      TEMAS_LIST.forEach(t => {
+        const isActive = (currentTemaId === t.id);
+        itemsHtml += `
+          <a href="${t.href}" class="cam-sheet-item ${isActive ? 'active' : ''}" data-id="${t.id}">
+            <div class="cam-sheet-num">${t.num}</div>
+            <div class="cam-sheet-info">
+              <div class="cam-sheet-name">${t.name}</div>
+              <div class="cam-sheet-desc">${t.desc}</div>
+            </div>
+            <span class="cam-sheet-arrow">→</span>
+          </a>
+        `;
+      });
+
+      sheetOverlay.innerHTML = `
+        <div class="cam-sheet">
+          <div class="cam-sheet-header">
+            <div class="cam-sheet-title">📚 Temario de Oposiciones</div>
+            <button class="cam-sheet-close" id="camSheetCloseBtn" aria-label="Cerrar">✕</button>
+          </div>
+          <div class="cam-sheet-search">
+            <span class="search-ic">🔍</span>
+            <input type="text" id="camSheetSearchInput" placeholder="Filtrar temas por nombre o materia..." autocomplete="off">
+          </div>
+          <div class="cam-sheet-list" id="camSheetList">
+            ${itemsHtml}
+          </div>
+        </div>
+      `;
+      document.body.appendChild(sheetOverlay);
+
+      // Listeners del sheet
+      document.getElementById('camSheetCloseBtn').addEventListener('click', closeTopicsSheet);
+      sheetOverlay.addEventListener('click', (e) => {
+        if (e.target === sheetOverlay) closeTopicsSheet();
+      });
+
+      // Filtro en tiempo real dentro del sheet
+      const searchInput = document.getElementById('camSheetSearchInput');
+      searchInput.addEventListener('input', () => {
+        const q = searchInput.value.trim().toLowerCase();
+        const items = document.querySelectorAll('.cam-sheet-item');
+        items.forEach(item => {
+          const text = item.textContent.toLowerCase();
+          item.style.display = (!q || text.includes(q)) ? 'flex' : 'none';
+        });
+      });
+    }
+  }
+
+  function openTopicsSheet() {
+    const sheet = document.getElementById('camSheetOverlay');
+    if (sheet) {
+      sheet.classList.add('open');
+      const input = document.getElementById('camSheetSearchInput');
+      if (input) setTimeout(() => input.focus(), 150);
+    }
+  }
+  window.CAM_openTopicsSheet = openTopicsSheet;
+
+  function closeTopicsSheet() {
+    const sheet = document.getElementById('camSheetOverlay');
+    if (sheet) sheet.classList.remove('open');
+  }
+  window.CAM_closeTopicsSheet = closeTopicsSheet;
+
+  document.addEventListener('keydown', (e) => {
+    if (e.key === 'Escape') closeTopicsSheet();
+  });
+
+  if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', setupMobileNav);
+  } else {
+    setupMobileNav();
+  }
+
 })();
