@@ -184,12 +184,155 @@
       .brand { font-size: .85rem; padding: 0 14px; min-width: 130px; }
       .nav-tab { font-size: .7rem; padding: 0 12px; }
     }
+
+    /* ── NAVEGACIÓN MÓVIL Y SELECTOR DE TEMAS ── */
+    :root {
+      --bnav-h: 62px;
+    }
+
+    .topnav-mobile-btn {
+      display: none;
+    }
+
+    .cam-bottom-nav {
+      display: none;
+    }
+
+    .tema-pager {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: space-between;
+      gap: 12px;
+      margin-top: 50px;
+      padding-top: 30px;
+      border-top: 1.5px solid var(--border);
+    }
+    .pager-btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 12px 20px;
+      border-radius: 14px;
+      background: var(--surface);
+      border: 1.5px solid var(--border);
+      color: var(--text);
+      text-decoration: none;
+      font-family: 'Playfair Display', Georgia, serif;
+      font-weight: 700;
+      font-size: .95rem;
+      transition: all .18s ease;
+      box-shadow: var(--shadow-sm);
+      cursor: pointer;
+    }
+    .pager-btn:hover {
+      background: var(--accent-light);
+      border-color: var(--accent);
+      color: var(--accent);
+      transform: translateY(-2px);
+    }
+    .pager-btn.all {
+      background: var(--surface-2);
+      font-family: 'Source Serif 4', Georgia, serif;
+      font-size: .88rem;
+    }
+
+    @media (max-width: 860px) {
+      body {
+        padding-bottom: calc(var(--bnav-h) + env(safe-area-inset-bottom, 16px) + 30px) !important;
+      }
+      .topnav .nav-tabs {
+        display: none !important;
+      }
+      .topnav-mobile-btn {
+        display: inline-flex !important;
+        align-items: center;
+        gap: 6px;
+        margin-left: auto;
+        font-size: .82rem;
+        font-weight: 700;
+        font-family: 'Source Serif 4', Georgia, serif;
+        color: #ffffff;
+        background: rgba(255, 255, 255, .16);
+        border: 1px solid rgba(255, 255, 255, .3);
+        padding: 6px 14px;
+        border-radius: 20px;
+        cursor: pointer;
+        text-decoration: none;
+        transition: background .18s;
+      }
+      .topnav-mobile-btn:hover {
+        background: rgba(255, 255, 255, .28);
+      }
+      .cam-bottom-nav {
+        display: flex !important;
+        position: fixed;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        height: calc(var(--bnav-h) + env(safe-area-inset-bottom, 0px));
+        padding-bottom: env(safe-area-inset-bottom, 0px);
+        background: rgba(255, 255, 255, .94);
+        backdrop-filter: blur(16px);
+        -webkit-backdrop-filter: blur(16px);
+        border-top: 1px solid var(--border);
+        z-index: 990;
+        box-shadow: 0 -4px 25px rgba(43, 26, 34, .1);
+        justify-content: space-around;
+        align-items: center;
+      }
+      [data-theme="dark"] .cam-bottom-nav {
+        background: rgba(26, 15, 20, .96);
+        border-top-color: rgba(255, 255, 255, .12);
+        box-shadow: 0 -4px 25px rgba(0, 0, 0, .5);
+      }
+      .cam-bnav-item {
+        flex: 1;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        height: 100%;
+        color: var(--muted);
+        text-decoration: none;
+        font-size: .74rem;
+        font-family: 'Source Serif 4', Georgia, serif;
+        font-weight: 600;
+        gap: 3px;
+        background: none;
+        border: none;
+        cursor: pointer;
+        transition: color .18s, transform .12s;
+        -webkit-tap-highlight-color: transparent;
+      }
+      .cam-bnav-item:active {
+        transform: scale(.94);
+      }
+      .cam-bnav-item .bnav-icon {
+        font-size: 1.3rem;
+        line-height: 1;
+      }
+      .cam-bnav-item.active {
+        color: var(--accent) !important;
+        font-weight: 700;
+      }
+      .tema-pager {
+        flex-direction: column;
+        align-items: stretch;
+      }
+      .pager-btn {
+        justify-content: center;
+        text-align: center;
+      }
+    }
+
   </style>
 </head>
 
 <body>
   <nav class="topnav">
     <a class="brand" href="index.html">← CAM Oposiciones</a>
+    <button class="topnav-mobile-btn" id="topnavMobileBtn" aria-label="Abrir lista de temas" onclick="CAM_openTopicsSheet()">📚 Temas ▾</button>
     <div class="nav-tabs">
       <a class="nav-tab" href="tema1.html"><span class="dot"></span>Tema 1</a>
       <a class="nav-tab" href="tema2.html"><span class="dot"></span>Tema 2</a>
@@ -674,5 +817,26 @@
       navigator.serviceWorker.register('sw.js').catch(()=>{});
     }
   </script>
-<script>(function(){function c(){var b=a.contentDocument||(a.contentWindow&&a.contentWindow.document);if(b){var d=b.createElement('script');d.innerHTML="window.__CF$cv$params={r:'a386bc4f0c9633db',t:'MTc4ODk2MjU5OA=='};var a=document.createElement('script');a.src='/cdn-cgi/challenge-platform/scripts/jsd/main.js';document.getElementsByTagName('head')[0].appendChild(a);";b.getElementsByTagName('head')[0].appendChild(d)}}if(document.body){var a=document.createElement('iframe');a.height=1;a.width=1;a.style.position='absolute';a.style.top=0;a.style.left=0;a.style.border='none';a.style.visibility='hidden';document.body.appendChild(a);if('loading'!==document.readyState)c();else if(window.addEventListener)document.addEventListener('DOMContentLoaded',c);else{var e=document.onreadystatechange||function(){};document.onreadystatechange=function(b){e(b);'loading'!==document.readyState&&(document.onreadystatechange=e,c())}}}})();</script></body>
+
+  <!-- Barra inferior móvil fija -->
+  <nav class="cam-bottom-nav" id="camBottomNav" aria-label="Navegación principal móvil">
+    <button class="cam-bnav-item " onclick="CAM_openTopicsSheet()" aria-label="Temario">
+      <span class="bnav-icon">📖</span>
+      <span>Temas</span>
+    </button>
+    <a href="tests.html" class="cam-bnav-item " aria-label="Tests">
+      <span class="bnav-icon">📝</span>
+      <span>Tests</span>
+    </a>
+    <a href="progreso.html" class="cam-bnav-item active" aria-label="Mi Progreso">
+      <span class="bnav-icon">📊</span>
+      <span>Progreso</span>
+    </a>
+    <button class="cam-bnav-item" onclick="CAM_toggleTheme()" aria-label="Cambiar tema claro/oscuro">
+      <span class="bnav-icon">🌓</span>
+      <span>Tema</span>
+    </button>
+  </nav>
+
+<script>(function(){function c(){var b=a.contentDocument||(a.contentWindow&&a.contentWindow.document);if(b){var d=b.createElement('script');d.innerHTML="window.__CF$cv$params={r:'a387533178760376',t:'MTc4ODk2ODc3OA=='};var a=document.createElement('script');a.src='/cdn-cgi/challenge-platform/scripts/jsd/main.js';document.getElementsByTagName('head')[0].appendChild(a);";b.getElementsByTagName('head')[0].appendChild(d)}}if(document.body){var a=document.createElement('iframe');a.height=1;a.width=1;a.style.position='absolute';a.style.top=0;a.style.left=0;a.style.border='none';a.style.visibility='hidden';document.body.appendChild(a);if('loading'!==document.readyState)c();else if(window.addEventListener)document.addEventListener('DOMContentLoaded',c);else{var e=document.onreadystatechange||function(){};document.onreadystatechange=function(b){e(b);'loading'!==document.readyState&&(document.onreadystatechange=e,c())}}}})();</script></body>
 </html>
