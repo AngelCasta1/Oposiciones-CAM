@@ -559,15 +559,18 @@
      18. BARRA INFERIOR MÓVIL Y SELECTOR DE TEMAS
   ───────────────────────────────── */
   const TEMAS_LIST = [
-    { id: 'tema1', num: '01', name: 'Constitución Española de 1978', desc: 'Características, derechos y garantías', href: 'tema1.html', bloque: 'comun' },
-    { id: 'tema2', num: '02', name: 'Estatuto de Autonomía CAM', desc: 'Estructura y competencias de la CAM', href: 'tema2.html', bloque: 'comun' },
-    { id: 'tema3', num: '03', name: 'Asamblea, Procedimiento y Gobierno', desc: 'Reglamento, Ley 1/1983, Presidente y Consejeros', href: 'tema3.html', bloque: 'comun' },
-    { id: 'tema4', num: '04', name: 'La Administración de la CAM', desc: 'Consejerías, Admón. Institucional y Justicia', href: 'tema4.html', bloque: 'comun' },
-    { id: 'tema5', num: '05', name: 'Información y Admón. Electrónica', desc: 'Decreto 21/2002, Leyes 39 y 40/2015, Dec 79/2020', href: 'tema5.html', bloque: 'comun' },
-    { id: 'tema6', num: '06', name: 'Protección de Datos Personales', desc: 'RGPD (UE) 2016/679 y Ley Orgánica 3/2018', href: 'tema6.html', bloque: 'comun' },
-    { id: 'tema7', num: '07', name: 'El Personal al Servicio de las AAPP', desc: 'TREBEP (RDL 5/2015). Clases y situaciones', href: 'tema7.html', bloque: 'comun' },
-    { id: 'tema8', num: '08', name: 'Derechos, Deberes e Incompatibilidades', desc: 'TREBEP (código conducta, disciplinario) y Ley 53/1984', href: 'tema8.html', bloque: 'comun' },
-    { id: 'tema9', num: '09', name: 'Convenio Colectivo Único CAM', desc: 'Convenio Único para el Personal Laboral (2025-2028)', href: 'tema9.html', bloque: 'comun' }
+    // BLOQUE COMÚN
+    { id: 'tema1', num: '01', name: 'Constitución Española de 1978', desc: 'Características, derechos y garantías', href: 'tema1.html', bloque: 'comun', cat: 'Bloque Común' },
+    { id: 'tema2', num: '02', name: 'Estatuto de Autonomía CAM', desc: 'Estructura y competencias de la CAM', href: 'tema2.html', bloque: 'comun', cat: 'Bloque Común' },
+    { id: 'tema3', num: '03', name: 'Asamblea, Procedimiento y Gobierno', desc: 'Reglamento, Ley 1/1983, Presidente y Consejeros', href: 'tema3.html', bloque: 'comun', cat: 'Bloque Común' },
+    { id: 'tema4', num: '04', name: 'La Administración de la CAM', desc: 'Consejerías, Admón. Institucional y Justicia', href: 'tema4.html', bloque: 'comun', cat: 'Bloque Común' },
+    { id: 'tema5', num: '05', name: 'Información y Admón. Electrónica', desc: 'Decreto 21/2002, Leyes 39 y 40/2015, Dec 79/2020', href: 'tema5.html', bloque: 'comun', cat: 'Bloque Común' },
+    { id: 'tema6', num: '06', name: 'Protección de Datos Personales', desc: 'RGPD (UE) 2016/679 y Ley Orgánica 3/2018', href: 'tema6.html', bloque: 'comun', cat: 'Bloque Común' },
+    { id: 'tema7', num: '07', name: 'El Personal al Servicio de las AAPP', desc: 'TREBEP (RDL 5/2015). Clases y situaciones', href: 'tema7.html', bloque: 'comun', cat: 'Bloque Común' },
+    { id: 'tema8', num: '08', name: 'Derechos, Deberes e Incompatibilidades', desc: 'TREBEP (código conducta, disciplinario) y Ley 53/1984', href: 'tema8.html', bloque: 'comun', cat: 'Bloque Común' },
+    { id: 'tema9', num: '09', name: 'Convenio Colectivo Único CAM', desc: 'Convenio Único para el Personal Laboral (2025-2028)', href: 'tema9.html', bloque: 'comun', cat: 'Bloque Común' },
+    // BLOQUE ESPECÍFICO (EDUCADOR INFANTIL)
+    { id: 'tema1-esp', num: 'E01', name: 'Tema 1 Esp. — Modalidades y Pedagogía', desc: 'Atención a la infancia en España y UE. Tendencias pedagógicas y psicológicas', href: 'tema1-esp.html', bloque: 'especifico', cat: 'Educador Infantil' }
   ];
 
   function setupMobileNav() {
@@ -583,7 +586,6 @@
         e.preventDefault();
         openTopicsSheet();
       });
-      // Insertar antes del themeToggle si existe, o al final
       const themeToggle = document.getElementById('themeToggle');
       if (themeToggle) topnav.insertBefore(btn, themeToggle);
       else topnav.appendChild(btn);
@@ -604,7 +606,7 @@
       bnav.innerHTML = `
         <button class="cam-bnav-item ${isTema || isIndex ? 'active' : ''}" id="bnavTemasBtn" aria-label="Temario">
           <span class="bnav-icon">📖</span>
-          <span>Temario</span>
+          <span>Temas</span>
         </button>
         <a href="tests.html" class="cam-bnav-item ${isTests ? 'active' : ''}" aria-label="Tests">
           <span class="bnav-icon">📝</span>
@@ -631,7 +633,7 @@
       });
     }
 
-    // 3. Inyectar Sheet Modal de Temas
+    // 3. Inyectar Sheet Modal de Temas con dos Boxes (Común y Específico)
     if (!document.getElementById('camSheetOverlay')) {
       const sheetOverlay = document.createElement('div');
       sheetOverlay.id = 'camSheetOverlay';
@@ -645,8 +647,8 @@
       TEMAS_LIST.forEach(t => {
         const isActive = (currentTemaId === t.id);
         itemsHtml += `
-          <a href="${t.href}" class="cam-sheet-item ${isActive ? 'active' : ''}" data-id="${t.id}">
-            <div class="cam-sheet-num">${t.num}</div>
+          <a href="${t.href}" class="cam-sheet-item ${isActive ? 'active' : ''}" data-id="${t.id}" data-bloque="${t.bloque}">
+            <div class="cam-sheet-num" style="${t.bloque === 'especifico' ? 'background:linear-gradient(135deg, #e05a80 0%, #c0305a 100%);' : ''}">${t.num}</div>
             <div class="cam-sheet-info">
               <div class="cam-sheet-name">${t.name}</div>
               <div class="cam-sheet-desc">${t.desc}</div>
@@ -656,12 +658,29 @@
         `;
       });
 
+      const isCurrentEsp = currentTemaId && currentTemaId.includes('esp');
+
       sheetOverlay.innerHTML = `
         <div class="cam-sheet">
           <div class="cam-sheet-header">
             <div class="cam-sheet-title">📚 Temario de Oposiciones</div>
             <button class="cam-sheet-close" id="camSheetCloseBtn" aria-label="Cerrar">✕</button>
           </div>
+
+          <!-- DOS BOXES DE SELECCIÓN DE BLOQUE -->
+          <div class="cam-sheet-bloque-tabs">
+            <button class="cam-bloque-tab ${!isCurrentEsp ? 'active' : ''}" id="sheetTabComun" data-bloque="comun">
+              <span class="tab-badge">🌸 General</span>
+              <span class="tab-title">Bloque Común</span>
+              <span class="tab-count">9 temas (Todas las opos)</span>
+            </button>
+            <button class="cam-bloque-tab ${isCurrentEsp ? 'active' : ''}" id="sheetTabEsp" data-bloque="especifico">
+              <span class="tab-badge">⚡ Especialidad</span>
+              <span class="tab-title">Educador Infantil</span>
+              <span class="tab-count">Tema 1 Específico</span>
+            </button>
+          </div>
+
           <div class="cam-sheet-search">
             <span class="search-ic">🔍</span>
             <input type="text" id="camSheetSearchInput" placeholder="Filtrar temas por nombre o materia..." autocomplete="off">
@@ -679,16 +698,42 @@
         if (e.target === sheetOverlay) closeTopicsSheet();
       });
 
-      // Filtro en tiempo real dentro del sheet
-      const searchInput = document.getElementById('camSheetSearchInput');
-      searchInput.addEventListener('input', () => {
-        const q = searchInput.value.trim().toLowerCase();
+      let activeBloqueFilter = isCurrentEsp ? 'especifico' : 'comun';
+
+      function applySheetFilters() {
+        const q = (document.getElementById('camSheetSearchInput')?.value || '').trim().toLowerCase();
         const items = document.querySelectorAll('.cam-sheet-item');
         items.forEach(item => {
+          const bloque = item.dataset.bloque || 'comun';
           const text = item.textContent.toLowerCase();
-          item.style.display = (!q || text.includes(q)) ? 'flex' : 'none';
+          const matchBloque = (activeBloqueFilter === bloque);
+          const matchQuery = !q || text.includes(q);
+          item.style.display = (matchBloque && matchQuery) ? 'flex' : 'none';
         });
+      }
+
+      const tabComun = document.getElementById('sheetTabComun');
+      const tabEsp = document.getElementById('sheetTabEsp');
+
+      tabComun.addEventListener('click', () => {
+        tabComun.classList.add('active');
+        tabEsp.classList.remove('active');
+        activeBloqueFilter = 'comun';
+        applySheetFilters();
       });
+
+      tabEsp.addEventListener('click', () => {
+        tabEsp.classList.add('active');
+        tabComun.classList.remove('active');
+        activeBloqueFilter = 'especifico';
+        applySheetFilters();
+      });
+
+      const searchInput = document.getElementById('camSheetSearchInput');
+      searchInput.addEventListener('input', applySheetFilters);
+
+      // Aplicar filtro inicial
+      applySheetFilters();
     }
   }
 

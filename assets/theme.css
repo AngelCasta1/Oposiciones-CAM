@@ -2001,3 +2001,64 @@ mark.cam-highlight {
     font-size: .72rem !important;
   }
 }
+
+
+/* ── PESTAÑAS DE BLOQUE EN EL MODAL DE TEMAS ── */
+.cam-sheet-bloque-tabs {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 10px;
+  margin-bottom: 14px;
+}
+.cam-bloque-tab {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding: 12px 14px;
+  border-radius: 16px;
+  background: var(--surface-2);
+  border: 1.5px solid var(--border);
+  color: var(--text);
+  cursor: pointer;
+  transition: all .18s ease;
+  text-align: left;
+  user-select: none;
+  -webkit-tap-highlight-color: transparent;
+}
+.cam-bloque-tab:hover {
+  border-color: var(--accent-mid);
+  transform: translateY(-1px);
+}
+.cam-bloque-tab.active {
+  background: var(--accent-light) !important;
+  border-color: var(--accent) !important;
+  box-shadow: 0 4px 14px rgba(192, 48, 90, .18);
+}
+.cam-bloque-tab .tab-badge {
+  font-size: .68rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  color: var(--accent);
+  margin-bottom: 4px;
+}
+.cam-bloque-tab .tab-title {
+  font-family: 'Playfair Display', Georgia, serif;
+  font-weight: 700;
+  font-size: .95rem;
+  color: var(--text);
+  line-height: 1.2;
+}
+.cam-bloque-tab .tab-count {
+  font-size: .72rem;
+  color: var(--muted);
+  font-style: italic;
+  margin-top: 2px;
+}
+[data-theme="dark"] .cam-bloque-tab {
+  background: rgba(255, 255, 255, .04);
+  border-color: rgba(255, 255, 255, .1);
+}
+[data-theme="dark"] .cam-bloque-tab.active {
+  background: rgba(192, 48, 90, .2) !important;
+  border-color: var(--accent-mid) !important;
+}
