@@ -574,24 +574,7 @@
   ];
 
   function setupMobileNav() {
-    // 1. Inyectar botón "Temas ▾" en topnav si existe
-    const topnav = document.querySelector('.topnav');
-    if (topnav && !document.getElementById('topnavMobileBtn')) {
-      const btn = document.createElement('button');
-      btn.id = 'topnavMobileBtn';
-      btn.className = 'topnav-mobile-btn';
-      btn.innerHTML = '📚 Temas ▾';
-      btn.setAttribute('aria-label', 'Abrir lista de temas');
-      btn.addEventListener('click', (e) => {
-        e.preventDefault();
-        openTopicsSheet();
-      });
-      const themeToggle = document.getElementById('themeToggle');
-      if (themeToggle) topnav.insertBefore(btn, themeToggle);
-      else topnav.appendChild(btn);
-    }
-
-    // 2. Inyectar Barra de Navegación Inferior (Bottom Bar)
+    // 1. Inyectar Barra de Navegación Inferior (Bottom Bar)
     if (!document.getElementById('camBottomNav')) {
       const path = window.location.pathname;
       const isIndex = path.endsWith('index.html') || path === '/' || path.endsWith('/Oposiciones-CAM/');
@@ -606,7 +589,7 @@
       bnav.innerHTML = `
         <button class="cam-bnav-item ${isTema || isIndex ? 'active' : ''}" id="bnavTemasBtn" aria-label="Temario">
           <span class="bnav-icon">📖</span>
-          <span>Temas</span>
+          <span>Temario</span>
         </button>
         <a href="tests.html" class="cam-bnav-item ${isTests ? 'active' : ''}" aria-label="Tests">
           <span class="bnav-icon">📝</span>
@@ -633,7 +616,7 @@
       });
     }
 
-    // 3. Inyectar Sheet Modal de Temas con dos Boxes (Común y Específico)
+    // 2. Inyectar Sheet Modal de Temas con dos Boxes destacados (Común y Específico)
     if (!document.getElementById('camSheetOverlay')) {
       const sheetOverlay = document.createElement('div');
       sheetOverlay.id = 'camSheetOverlay';
@@ -641,7 +624,8 @@
       sheetOverlay.setAttribute('role', 'dialog');
       sheetOverlay.setAttribute('aria-modal', 'true');
       
-      const currentTemaId = document.body && document.body.dataset && document.body.dataset.tema;
+      const currentTemaId = (document.body && document.body.dataset && document.body.dataset.tema) || '';
+      const isCurrentEsp = currentTemaId.includes('esp');
 
       let itemsHtml = '';
       TEMAS_LIST.forEach(t => {
@@ -658,8 +642,6 @@
         `;
       });
 
-      const isCurrentEsp = currentTemaId && currentTemaId.includes('esp');
-
       sheetOverlay.innerHTML = `
         <div class="cam-sheet">
           <div class="cam-sheet-header">
@@ -667,17 +649,17 @@
             <button class="cam-sheet-close" id="camSheetCloseBtn" aria-label="Cerrar">✕</button>
           </div>
 
-          <!-- DOS BOXES DE SELECCIÓN DE BLOQUE -->
+          <!-- DOS BOXES DESTACADOS PARA ELEGIR BLOQUE -->
           <div class="cam-sheet-bloque-tabs">
             <button class="cam-bloque-tab ${!isCurrentEsp ? 'active' : ''}" id="sheetTabComun" data-bloque="comun">
-              <span class="tab-badge">🌸 General</span>
-              <span class="tab-title">Bloque Común</span>
-              <span class="tab-count">9 temas (Todas las opos)</span>
+              <span class="tab-badge">🌸 Bloque Común</span>
+              <span class="tab-title">Temas Comunes</span>
+              <span class="tab-count">9 temas (Todas las opos CAM)</span>
             </button>
             <button class="cam-bloque-tab ${isCurrentEsp ? 'active' : ''}" id="sheetTabEsp" data-bloque="especifico">
-              <span class="tab-badge">⚡ Especialidad</span>
+              <span class="tab-badge" style="color:#1a5f7a;">⚡ Bloque Específico</span>
               <span class="tab-title">Educador Infantil</span>
-              <span class="tab-count">Tema 1 Específico</span>
+              <span class="tab-count">Tema 1 Específico disponible</span>
             </button>
           </div>
 

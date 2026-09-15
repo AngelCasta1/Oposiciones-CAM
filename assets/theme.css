@@ -2062,3 +2062,84 @@ mark.cam-highlight {
   background: rgba(192, 48, 90, .2) !important;
   border-color: var(--accent-mid) !important;
 }
+
+
+/* ── SELECTOR DE BLOQUE EN PORTADA (INDEX.HTML) ── */
+.bloque-selector-wrapper {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 16px;
+  margin-bottom: 28px;
+}
+@media (max-width: 640px) {
+  .bloque-selector-wrapper {
+    grid-template-columns: 1fr;
+    gap: 12px;
+  }
+}
+.bloque-select-card {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding: 20px 22px;
+  border-radius: 20px;
+  background: var(--surface);
+  border: 2px solid var(--border);
+  color: var(--text);
+  cursor: pointer;
+  transition: all .2s ease;
+  text-align: left;
+  user-select: none;
+  box-shadow: var(--shadow-sm);
+  -webkit-tap-highlight-color: transparent;
+}
+.bloque-select-card:hover {
+  border-color: var(--accent-mid);
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-md);
+}
+.bloque-select-card.active {
+  background: var(--accent-light) !important;
+  border-color: var(--accent) !important;
+  box-shadow: 0 8px 24px rgba(192, 48, 90, .2);
+}
+.bloque-select-card .bloque-badge {
+  font-size: .72rem;
+  font-weight: 700;
+  letter-spacing: .08em;
+  text-transform: uppercase;
+  color: var(--accent);
+  background: var(--surface-2);
+  border: 1px solid var(--border);
+  padding: 4px 12px;
+  border-radius: 20px;
+  margin-bottom: 10px;
+}
+.bloque-select-card h3 {
+  font-family: 'Playfair Display', Georgia, serif;
+  font-size: 1.3rem;
+  font-weight: 700;
+  color: var(--text);
+  margin-bottom: 6px;
+  line-height: 1.2;
+}
+.bloque-select-card p {
+  font-size: .88rem;
+  color: var(--muted);
+  line-height: 1.5;
+  margin-bottom: 12px;
+}
+.bloque-select-card .bloque-count {
+  font-size: .8rem;
+  font-weight: 700;
+  color: var(--accent);
+  margin-top: auto;
+}
+[data-theme="dark"] .bloque-select-card {
+  background: rgba(255, 255, 255, .04);
+  border-color: rgba(255, 255, 255, .1);
+}
+[data-theme="dark"] .bloque-select-card.active {
+  background: rgba(192, 48, 90, .18) !important;
+  border-color: var(--accent-mid) !important;
+}
