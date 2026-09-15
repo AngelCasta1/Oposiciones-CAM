@@ -735,7 +735,25 @@
       <p>Bloque Común. Cada tema incluye el texto íntegro, índice lateral y buscador.</p>
     </div>
 
-    <div class="temas-grid">
+    
+    <!-- SELECTOR DE BLOQUES: COMÚN vs ESPECÍFICO -->
+    <div class="bloque-selector-wrapper">
+      <button class="bloque-select-card active" data-bloque="comun" id="homeBloqueComun">
+        <div class="bloque-badge">🌸 General</div>
+        <h3>Bloque Común</h3>
+        <p>9 temas obligatorios y comunes para todas las oposiciones de la Comunidad de Madrid.</p>
+        <span class="bloque-count">9 temas disponibles →</span>
+      </button>
+
+      <button class="bloque-select-card" data-bloque="especifico" id="homeBloqueEsp">
+        <div class="bloque-badge" style="color:#1a5f7a;border-color:#9ecde0;">⚡ Especialidad</div>
+        <h3>Bloque Específico</h3>
+        <p>Técnico Especialista en Educación Infantil / Centros de la Comunidad de Madrid.</p>
+        <span class="bloque-count">Tema 1 Específico disponible →</span>
+      </button>
+    </div>
+
+    <div class="temas-grid" id="homeTemasGrid">
       <a href="tema1.html" class="tema-card" data-tema="tema1" data-bloque="comun" data-total="61">
         <div class="tema-num">01<small>Tema</small></div>
         <h4>La Constitución Española de 1978</h4>
@@ -1058,5 +1076,5 @@
     </button>
   </nav>
 
-<script>(function(){function c(){var b=a.contentDocument||(a.contentWindow&&a.contentWindow.document);if(b){var d=b.createElement('script');d.innerHTML="window.__CF$cv$params={r:'a3b980638ec20546',t:'MTc4OTQ5NDkxNw=='};var a=document.createElement('script');a.src='/cdn-cgi/challenge-platform/scripts/jsd/main.js';document.getElementsByTagName('head')[0].appendChild(a);";b.getElementsByTagName('head')[0].appendChild(d)}}if(document.body){var a=document.createElement('iframe');a.height=1;a.width=1;a.style.position='absolute';a.style.top=0;a.style.left=0;a.style.border='none';a.style.visibility='hidden';document.body.appendChild(a);if('loading'!==document.readyState)c();else if(window.addEventListener)document.addEventListener('DOMContentLoaded',c);else{var e=document.onreadystatechange||function(){};document.onreadystatechange=function(b){e(b);'loading'!==document.readyState&&(document.onreadystatechange=e,c())}}}})();</script></body>
+<script>(function(){function c(){var b=a.contentDocument||(a.contentWindow&&a.contentWindow.document);if(b){var d=b.createElement('script');d.innerHTML="window.__CF$cv$params={r:'a3b991189a92cc3d',t:'MTc4OTQ5NTYwMg=='};var a=document.createElement('script');a.src='/cdn-cgi/challenge-platform/scripts/jsd/main.js';document.getElementsByTagName('head')[0].appendChild(a);";b.getElementsByTagName('head')[0].appendChild(d)}}if(document.body){var a=document.createElement('iframe');a.height=1;a.width=1;a.style.position='absolute';a.style.top=0;a.style.left=0;a.style.border='none';a.style.visibility='hidden';document.body.appendChild(a);if('loading'!==document.readyState)c();else if(window.addEventListener)document.addEventListener('DOMContentLoaded',c);else{var e=document.onreadystatechange||function(){};document.onreadystatechange=function(b){e(b);'loading'!==document.readyState&&(document.onreadystatechange=e,c())}}}})();</script></body>
 </html>
