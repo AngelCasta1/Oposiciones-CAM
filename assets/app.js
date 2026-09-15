@@ -1,4 +1,4 @@
-* ─────────────────────────────────────────────────────────
+/* ─────────────────────────────────────────────────────────
    CAM OPOSICIONES — APP SHARED LOGIC
    Modo oscuro · localStorage · Progreso · Toasts · Notas
 ───────────────────────────────────────────────────────── */
@@ -570,7 +570,8 @@
     { id: 'tema8', num: '08', name: 'Derechos, Deberes e Incompatibilidades', desc: 'TREBEP (código conducta, disciplinario) y Ley 53/1984', href: 'tema8.html', bloque: 'comun', cat: 'Bloque Común' },
     { id: 'tema9', num: '09', name: 'Convenio Colectivo Único CAM', desc: 'Convenio Único para el Personal Laboral (2025-2028)', href: 'tema9.html', bloque: 'comun', cat: 'Bloque Común' },
     // BLOQUE ESPECÍFICO (EDUCADOR INFANTIL)
-    { id: 'tema1-esp', num: 'E01', name: 'Tema 1 Esp. — Modalidades y Pedagogía', desc: 'Atención a la infancia en España y UE. Tendencias pedagógicas y psicológicas', href: 'tema1-esp.html', bloque: 'especifico', cat: 'Educador Infantil' }
+    { id: 'tema1-esp', num: 'E01', name: 'Tema 1 Esp. — Modalidades y Pedagogía', desc: 'Atención a la infancia en España y UE. Tendencias pedagógicas y psicológicas', href: 'tema1-esp.html', bloque: 'especifico', cat: 'Educador Infantil' },
+    { id: 'tema2-esp', num: 'E02', name: 'Tema 2 Esp. — Escuela Infantil y Protección', desc: 'LOMLOE, Decreto 36/2022, LO 1/1996, Ley 4/2023 CAM y medidas de protección', href: 'tema2-esp.html', bloque: 'especifico', cat: 'Educador Infantil' }
   ];
 
   function setupMobileNav() {
@@ -659,7 +660,7 @@
             <button class="cam-bloque-tab ${isCurrentEsp ? 'active' : ''}" id="sheetTabEsp" data-bloque="especifico">
               <span class="tab-badge" style="color:#1a5f7a;">⚡ Bloque Específico</span>
               <span class="tab-title">Educador Infantil</span>
-              <span class="tab-count">Tema 1 Específico disponible</span>
+              <span class="tab-count">2 temas Específicos disponibles</span>
             </button>
           </div>
 
