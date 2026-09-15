@@ -1098,9 +1098,9 @@
           <input type="search" id="testSearchInput" placeholder="Buscar tema por número, título o materia (ej: datos, convenio, estatuto)..." autocomplete="off">
         </div>
         <div class="test-filter-pills">
-          <button class="test-pill active" data-filter="all">🎯 Todos los tests (12)</button>
+          <button class="test-pill active" data-filter="all">🎯 Todos los tests (13)</button>
           <button class="test-pill" data-filter="comun">🌸 Bloque Común (1–9)</button>
-          <button class="test-pill" data-filter="especifico">⚡ Bloque Específico (1)</button>
+          <button class="test-pill" data-filter="especifico">⚡ Bloque Específico (2)</button>
           <button class="test-pill" data-filter="especial">⭐ Repaso y Especiales (2)</button>
         </div>
       </div>
@@ -1200,7 +1200,7 @@
       <!-- BLOQUE 2: BLOQUE ESPECÍFICO (EDUCADOR INFANTIL) -->
       <div class="test-block-section" id="blockEsp">
         <div class="test-block-header" onclick="toggleTestBlock('blockEsp')">
-          <div class="test-block-title">⚡ Bloque Específico — Educador Infantil <span class="test-block-badge">1 tema disponible</span></div>
+          <div class="test-block-title">⚡ Bloque Específico — Educador Infantil <span class="test-block-badge">2 temas disponibles</span></div>
           <span class="test-block-toggle">▾</span>
         </div>
         <div class="test-selector test-grid">
@@ -1212,6 +1212,15 @@
               <span class="meta">15 preguntas aleatorias</span>
             </div>
           </button>
+          <button class="test-card" data-test="tema2-esp" data-bloque="especifico">
+            <div class="test-card-icon" style="background:linear-gradient(135deg, #e05a80 0%, #c0305a 100%);">E2</div>
+            <div class="test-card-content">
+              <h3>Tema 2 Esp. — Escuela Infantil y Protección</h3>
+              <p>Marco legal básico (LOMLOE, Dec. 36/2022). Derechos de la infancia, LO 1/1996, Ley 4/2023 de la CAM y medidas de protección.</p>
+              <span class="meta">15 preguntas aleatorias</span>
+            </div>
+          </button>
+
         </div>
       </div>
 
@@ -8081,13 +8090,458 @@
                             "exp": "La relación estrecha con las familias (entrevistas, diario escolar, intercambios cotidianos) es un principio pedagógico fundamental para la coherencia educativa y el bienestar del menor."
                   }
         ]
+      },
+      'tema2-esp': {
+        title: "Tema 2 Específico — La Escuela Infantil y el Marco Legal de Protección a la Infancia",
+        questions: [
+                  {
+                            "q": "Según el artículo 12 de la LOE/LOMLOE, la Educación Infantil es una etapa educativa que:",
+                            "options": [
+                                      "Tiene carácter voluntario y constituye una etapa educativa única con identidad propia que atiende a niñas y niños desde el nacimiento hasta los seis años de edad",
+                                      "Es obligatoria y gratuita en sus dos ciclos desde los 0 años",
+                                      "Tiene carácter meramente asistencial y de custodia laboral",
+                                      "Se estructura en tres ciclos de dos años cada uno"
+                            ],
+                            "a": 0,
+                            "exp": "Art. 12 LOE/LOMLOE: La educación infantil constituye una etapa educativa con identidad propia que atiende a niñas y niños desde el nacimiento hasta los seis años de edad, y tiene carácter voluntario."
+                  },
+                  {
+                            "q": "Las tres áreas curriculares en las que se organizan los contenidos de la Educación Infantil según el RD 95/2022 y el Decreto 36/2022 de la CAM son:",
+                            "options": [
+                                      "Crecimiento en Armonía; Descubrimiento y Exploración del Entorno; y Comunicación y Representación de la Realidad",
+                                      "Lenguaje y Literatura; Matemáticas; y Ciencias de la Naturaleza",
+                                      "Educación Física; Expresión Artística; y Religión",
+                                      "Autonomía Personal; Lengua Castellana; y Juego Simbólico"
+                            ],
+                            "a": 0,
+                            "exp": "Decreto 36/2022 CAM y RD 95/2022: Las áreas de ambos ciclos son: 1. Crecimiento en Armonía; 2. Descubrimiento y Exploración del Entorno; 3. Comunicación y Representación de la Realidad."
+                  },
+                  {
+                            "q": "El Decreto 36/2022 de la Comunidad de Madrid establece respecto a la lengua extranjera en el SEGUNDO CICLO de Educación Infantil que:",
+                            "options": [
+                                      "Se dedicará en todos los cursos del segundo ciclo al menos 1,5 horas semanales a la lengua extranjera, repartidas en un mínimo de dos sesiones semanales",
+                                      "Está prohibida la enseñanza de idiomas antes de los 6 años",
+                                      "La lengua extranjera ocupará el 50% del horario escolar en todos los centros no bilingües",
+                                      "Solo se impartirá en centros privados autorizados"
+                            ],
+                            "a": 0,
+                            "exp": "Decreto 36/2022 CAM: En todos los cursos del segundo ciclo se dedicará al menos 1,5 horas semanales al bloque de contenidos de lengua extranjera, repartidas en un mínimo de dos sesiones."
+                  },
+                  {
+                            "q": "Según el Decreto 18/2008 de la Comunidad de Madrid, los centros de primer ciclo de Educación Infantil deben contar con un patio de juegos de uso exclusivo al aire libre con una superficie mínima de:",
+                            "options": [
+                                      "75 metros cuadrados (o 150 metros cuadrados en centros con más de tres unidades)",
+                                      "20 metros cuadrados",
+                                      "500 metros cuadrados obligatorios en todos los centros",
+                                      "No es obligatorio disponer de patio exterior"
+                            ],
+                            "a": 0,
+                            "exp": "Art. 3 Decreto 18/2008 CAM: El patio de juegos será de uso exclusivo del centro, al aire libre, con una superficie mínima de 75 m², y de 150 m² para centros con más de tres unidades."
+                  },
+                  {
+                            "q": "En las aulas para niños de 1 a 2 años y de 2 a 3 años, el Decreto 18/2008 de la CAM exige que los aseos cuenten como mínimo con:",
+                            "options": [
+                                      "Dos lavabos y dos inodoros adecuados a su tamaño, visibles y accesibles desde el aula",
+                                      "Cinco duchas de hidromasaje",
+                                      "Un único lavabo situado en el pasillo exterior",
+                                      "Baños exclusivos para adultos"
+                            ],
+                            "a": 0,
+                            "exp": "Art. 3 Decreto 18/2008 CAM: Las aulas para niños de 1 a 2 y de 2 a 3 años dispondrán de aseo integrado visible y accesible con dos lavabos y dos inodoros adaptados a su estatura."
+                  },
+                  {
+                            "q": "De acuerdo con el Decreto 18/2008 de la CAM, la ratio máxima de alumnos por aula en el primer ciclo es de:",
+                            "options": [
+                                      "Hasta 8 en menores de 1 año; hasta 14 en 1 a 2 años; y hasta 20 en 2 a 3 años",
+                                      "10 en menores de 1 año; 20 en 1 a 2 años; y 30 en 2 a 3 años",
+                                      "15 alumnos en todas las edades",
+                                      "Hasta 25 alumnos por aula en centros públicos"
+                            ],
+                            "a": 0,
+                            "exp": "Art. 4 Decreto 18/2008 CAM: Ratios: menores de 1 año = máx 8; de 1 a 2 años = máx 14; de 2 a 3 años = máx 20 alumnos."
+                  },
+                  {
+                            "q": "La Orden 460/2023 de la Comunidad de Madrid establece que la EVALUACIÓN en la etapa de Educación Infantil será:",
+                            "options": [
+                                      "Global, continua y formativa, teniendo como técnica principal la observación directa y sistemática",
+                                      "Cuantitativa mediante exámenes numéricos del 1 al 10",
+                                      "Exclusivamente sumativa y eliminatoria a final de curso",
+                                      "Inexistente por tener carácter voluntario la etapa"
+                            ],
+                            "a": 0,
+                            "exp": "Orden 460/2023 CAM: La evaluación en Educación Infantil es global, continua y formativa, basada en la observación directa y sistemática para valorar el proceso de aprendizaje y desarrollo."
+                  },
+                  {
+                            "q": "La Convención sobre los Derechos del Niño de Naciones Unidas (1989) se asienta sobre cuatro principios rectores fundamentales:",
+                            "options": [
+                                      "1. No discriminación; 2. Interés superior del menor; 3. Derecho a la vida, supervivencia y desarrollo; 4. Derecho a la participación y ser escuchado",
+                                      "1. Obligación de trabajar; 2. Obediencia ciega; 3. Castigo ejemplar; 4. Autarquía familiar",
+                                      "1. Selección escolar; 2. Rendimiento académico; 3. Uniformidad; 4. Disciplina militar",
+                                      "1. Exclusión; 2. Dependencia económica; 3. Tutela judicial perpetua; 4. Silencio"
+                            ],
+                            "a": 0,
+                            "exp": "La Convención de 1989 se basa en cuatro pilares: no discriminación (art. 2), interés superior del niño (art. 3), vida y desarrollo (art. 6) y participación/escucha (art. 12)."
+                  },
+                  {
+                            "q": "El artículo 39 de la Constitución Española de 1978 establece que los poderes públicos aseguran:",
+                            "options": [
+                                      "La protección social, económica y jurídica de la familia y la protección integral de los hijos, iguales éstos ante la ley con independencia de su filiación",
+                                      "La escolarización obligatoria de los niños desde los 2 meses",
+                                      "El internamiento forzoso de familias sin vivienda",
+                                      "La tutela exclusiva de los hijos por parte de los abuelos"
+                            ],
+                            "a": 0,
+                            "exp": "Art. 39 CE: Los poderes públicos aseguran la protección social, económica y jurídica de la familia y la protección integral de los hijos, iguales ante la ley con independencia de su filiación."
+                  },
+                  {
+                            "q": "Según el Código Civil español, la PATRIA POTESTAD sobre los hijos menores no emancipados:",
+                            "options": [
+                                      "Se ejercerá siempre en beneficio de los hijos, de acuerdo con su personalidad y con respeto a sus derechos y a su integridad física y psicológica",
+                                      "Es un derecho absoluto de propiedad de los padres sobre los hijos",
+                                      "Autoriza el castigo físico moderado o severo",
+                                      "Se extingue automáticamente a los 12 años de edad"
+                            ],
+                            "a": 0,
+                            "exp": "Art. 154 Código Civil: La patria potestad se ejercerá siempre en beneficio de los hijos, comprendiendo los deberes de velar por ellos, tenerlos en su compañía, alimentarlos, educarlos y procurarles una formación integral."
+                  },
+                  {
+                            "q": "La Ley Orgánica 1/1996 de Protección Jurídica del Menor (LOPJM) define la situación de DESAMPARO como aquella que:",
+                            "options": [
+                                      "Se produce de hecho a causa del incumplimiento o del imposible o inadecuado ejercicio de los deberes de protección establecidos por las leyes para la guarda de los menores, cuando éstos queden privados de la necesaria asistencia moral o material",
+                                      "Ocurre cuando los padres no compran juguetes caros al menor",
+                                      "Afecta a los menores que suspenden una asignatura escolar",
+                                      "Se declara únicamente cuando fallecen ambos progenitores"
+                            ],
+                            "a": 0,
+                            "exp": "Art. 18 LOPJM y art. 172 Código Civil: El desamparo es la situación de hecho producida por el incumplimiento o inadecuado ejercicio de los deberes de guarda, quedando el menor privado de asistencia moral o material."
+                  },
+                  {
+                            "q": "La declaración legal de DESAMPARO por la Entidad Pública competente conlleva automáticamente:",
+                            "options": [
+                                      "La asunción de la tutela del menor por ministerio de la ley (tutela ex lege) y la suspensión de la patria potestad o tutela ordinaria",
+                                      "La pérdida definitiva e irreversible de la nacionalidad española",
+                                      "El encarcelamiento inmediato de los progenitores",
+                                      "La adopción obligatoria en 24 horas"
+                            ],
+                            "a": 0,
+                            "exp": "Art. 172.1 Código Civil: La asunción de la tutela por la entidad pública (tutela ex lege) lleva consigo la suspensión de la patria potestad o de la tutela ordinaria."
+                  },
+                  {
+                            "q": "La Ley Orgánica 8/2021 de Protección Integral a la Infancia y la Adolescencia frente a la Violencia (LOPIVI) introduce en los centros educativos la figura del:",
+                            "options": [
+                                      "Coordinador o Coordinadora de Bienestar y Protección",
+                                      "Comisario de disciplina escolar",
+                                      "Inspector de asistencia obligatoria",
+                                      "Juez de paz escolar"
+                            ],
+                            "a": 0,
+                            "exp": "Art. 35 LOPIVI: Todos los centros educativos deben designar un Coordinador de Bienestar y Protección para prevenir la violencia, coordinar protocolos de actuación y velar por el buen trato."
+                  },
+                  {
+                            "q": "El DEBER DE COMUNICACIÓN regulado en la LOPIVI (art. 16 Ley Orgánica 8/2021) obliga a:",
+                            "options": [
+                                      "Toda persona que tenga conocimiento de una situación de violencia sobre un menor a comunicarlo de forma inmediata a la autoridad competente o a las Fuerzas y Cuerpos de Seguridad",
+                                      "Guardar silencio para proteger la imagen del centro",
+                                      "Comunicar la sospecha solo si se tiene una prueba pericial judicial previa",
+                                      "Avisar exclusivamente a los medios de comunicación"
+                            ],
+                            "a": 0,
+                            "exp": "Art. 16 LOPIVI: Toda persona que advierta indicios de violencia o abuso sobre un menor tiene la obligación legal de comunicarlo inmediatamente a las autoridades competentes, servicios sociales o policía."
+                  },
+                  {
+                            "q": "La Ley 4/2023 de la Comunidad de Madrid regula:",
+                            "options": [
+                                      "Los Derechos, Garantías y Protección Integral de la Infancia y la Adolescencia de la Comunidad de Madrid",
+                                      "El régimen urbanístico del suelo metropolitano",
+                                      "El código tributario municipal de la capital",
+                                      "El transporte interurbano de viajeros"
+                            ],
+                            "a": 0,
+                            "exp": "La Ley 4/2023, de 22 de marzo, es la ley marco autonómica de derechos, garantías y protección integral de la infancia y la adolescencia en la Comunidad de Madrid."
+                  },
+                  {
+                            "q": "Según la Ley 4/2023 de la CAM, la diferencia entre «situación de riesgo» y «situación de desamparo» radica en que:",
+                            "options": [
+                                      "En el riesgo el perjuicio no alcanza gravedad suficiente para separar al menor de su familia, mientras que el desamparo priva de la asistencia necesaria y exige la asunción de tutela por la Administración y la separación del núcleo familiar",
+                                      "El riesgo solo aplica a mayores de 16 años",
+                                      "El desamparo es una sanción económica a los padres",
+                                      "No existe ninguna diferencia jurídica entre ambos conceptos"
+                            ],
+                            "a": 0,
+                            "exp": "Ley 4/2023 CAM: La situación de riesgo permite intervenir con apoyos a la familia manteniendo al menor en su hogar; el desamparo implica gravedad lesiva que exige la asunción de tutela y separación familiar."
+                  },
+                  {
+                            "q": "El órgano colegiado de la Comunidad de Madrid competente para formalizar las propuestas y resoluciones de tutela, guarda, acogimiento y adopción es:",
+                            "options": [
+                                      "La Comisión de Protección a la Infancia y a la Adolescencia",
+                                      "La Asamblea de Madrid en sesión plenaria",
+                                      "El Consejo de Administración del Metro",
+                                      "El Tribunal de Cuentas"
+                            ],
+                            "a": 0,
+                            "exp": "La Comisión de Protección a la Infancia y a la Adolescencia de la CAM es el órgano colegiado administrativo que dictamina las medidas de protección y propuestas de acogimiento y adopción."
+                  },
+                  {
+                            "q": "El organismo internacional especializado de Naciones Unidas encargado específicamente de proteger los derechos de la infancia y promover el bienestar infantil en todo el mundo es:",
+                            "options": [
+                                      "UNICEF (Fondo de las Naciones Unidas para la Infancia)",
+                                      "El Fondo Monetario Internacional (FMI)",
+                                      "La Organización Mundial del Comercio (OMC)",
+                                      "La Agencia Espacial Europea (ESA)"
+                            ],
+                            "a": 0,
+                            "exp": "UNICEF (creado en 1946 por la ONU) es la principal agencia internacional dedicada a la protección, supervivencia, educación y desarrollo de los derechos de los niños en el mundo."
+                  },
+                  {
+                            "q": "La OMEP (Organización Mundial para la Educación Preescolar) es:",
+                            "options": [
+                                      "Una organización no gubernamental internacional fundada en 1948 vinculada a la UNESCO que defiende los derechos y la calidad educativa de los niños de 0 a 8 años",
+                                      "Una multinacional de fabricación de material de oficina",
+                                      "Un sindicato laboral del sector del automóvil",
+                                      "Una academia militar de formación de oficiales"
+                            ],
+                            "a": 0,
+                            "exp": "La OMEP es la organización internacional más antigua dedicada a la defensa de los derechos de la primera infancia y la promoción de la educación preescolar en más de 70 países."
+                  },
+                  {
+                            "q": "La organización no gubernamental «Save the Children» fue fundada en 1919 por:",
+                            "options": [
+                                      "Eglantyne Jebb (quien redactó la Declaración de Ginebra de 1924 sobre los Derechos del Niño)",
+                                      "Maria Montessori",
+                                      "Jean Piaget",
+                                      "Pablo Montesinos"
+                            ],
+                            "a": 0,
+                            "exp": "Save the Children fue fundada en 1919 por Eglantyne Jebb tras la I Guerra Mundial para socorrer a niños afectados por el conflicto, redactando la pionera Declaración de Ginebra."
+                  },
+                  {
+                            "q": "La GUARDA VOLUNTARIA de un menor por parte de la Entidad Pública (art. 172 bis Código Civil y Ley 4/2023 CAM):",
+                            "options": [
+                                      "Se asume a solicitud justificada de los progenitores o tutores cuando por circunstancias graves y transitorias no puedan cuidar al menor, por un plazo máximo de dos años",
+                                      "Extingue definitivamente la patria potestad",
+                                      "Solo puede solicitarse si el menor tiene más de 16 años",
+                                      "Es concedida de forma ilimitada de por vida"
+                            ],
+                            "a": 0,
+                            "exp": "Art. 172 bis Código Civil: La guarda voluntaria a petición de los padres por circunstancias graves y transitorias no superará el plazo máximo de 2 años, promoviendo el retorno familiar."
+                  },
+                  {
+                            "q": "El ACOGIMIENTO FAMILIAR DE URGENCIA (art. 173 bis Código Civil):",
+                            "options": [
+                                      "Está dirigido principalmente a menores de seis años, con una duración máxima no superior a seis meses, mientras se decide la medida de protección definitiva",
+                                      "Dura obligatoriamente diez años",
+                                      "Solo se formaliza con personas extranjeras no residentes",
+                                      "Exige el consentimiento expreso del menor ante notario"
+                            ],
+                            "a": 0,
+                            "exp": "Art. 173 bis Código Civil: El acogimiento de urgencia se aplica principalmente a menores de 6 años para evitar su ingreso en centros residenciales, con una duración máxima de 6 meses."
+                  },
+                  {
+                            "q": "El ACOGIMIENTO FAMILIAR TEMPORAL tiene una duración máxima de:",
+                            "options": [
+                                      "Dos años, salvo que el interés superior del menor aconseje una prórroga por previsión de reintegración familiar a corto plazo",
+                                      "Un mes improrrogable",
+                                      "Dieciocho años en todo caso",
+                                      "Tres días hábiles"
+                            ],
+                            "a": 0,
+                            "exp": "Art. 173 bis Código Civil: El acogimiento temporal tendrá una duración máxima de dos años, mientras se prevé la reintegración del menor en su familia de origen o una medida más estable."
+                  },
+                  {
+                            "q": "La distinción entre acogimiento familiar en FAMILIA EXTENSA y en FAMILIA AJENA consiste en que:",
+                            "options": [
+                                      "En familia extensa se formaliza con personas vinculadas al menor por parentesco o relación afectiva previa; en familia ajena se realiza con personas sin vínculo previo debidamente valoradas y seleccionadas",
+                                      "En familia extensa es obligatorio pagar una fianza mensual",
+                                      "En familia ajena el menor pierde sus apellidos biológicos",
+                                      "El acogimiento en familia ajena solo dura 24 horas"
+                            ],
+                            "a": 0,
+                            "exp": "El acogimiento en familia extensa se realiza con abuelos, tíos u otros parientes biológicos (prioritario por ley); en familia ajena se lleva a cabo con familias educadoras seleccionadas por la entidad pública."
+                  },
+                  {
+                            "q": "El ACOGIMIENTO RESIDENCIAL en centros de menores para niños MENORES DE SEIS AÑOS:",
+                            "options": [
+                                      "Solo se acordará con carácter excepcional y cuando no sea posible el acogimiento familiar o éste no resulte conveniente para el interés del menor",
+                                      "Es la medida obligatoria y preferente por ley",
+                                      "Se prohíbe taxativamente en todos los casos sin excepciones",
+                                      "Se formaliza en cuarteles militares"
+                            ],
+                            "a": 0,
+                            "exp": "Art. 21 bis LOPJM: Para menores de seis años no se acordará el acogimiento residencial salvo que no sea posible el acogimiento familiar inmediato o no convenga a su interés superior (principio de desinstitucionalización)."
+                  },
+                  {
+                            "q": "Para la formalización de la ADOPCIÓN de un menor en España, el adoptante debe cumplir el requisito legal de:",
+                            "options": [
+                                      "Tener al menos veinticinco años de edad y que la diferencia de edad entre adoptante y adoptando sea de al menos dieciséis años y no superior a cuarenta y cinco años",
+                                      "Haber cumplido cincuenta años y no tener descendientes biológicos",
+                                      "Pagar una tasa de compraventa civil",
+                                      "Tener ingresos superiores a un millón de euros anuales"
+                            ],
+                            "a": 0,
+                            "exp": "Art. 175 Código Civil: El adoptante debe ser mayor de 25 años (en parejas basta que uno lo sea) y la diferencia de edad con el adoptado debe ser de al menos 16 años y no mayor de 45 años."
+                  },
+                  {
+                            "q": "La constitución formal y definitiva de la ADOPCIÓN (art. 176 Código Civil) se realiza mediante:",
+                            "options": [
+                                      "Resolución judicial motivada (auto del juez de primera instancia/familia), previa propuesta de la Entidad Pública y declaración de idoneidad",
+                                      "Contrato privado firmado ante un gestor administrativo",
+                                      "Acuerdo verbal entre los padres biológicos y adoptivos",
+                                      "Resolución de la policía local"
+                            ],
+                            "a": 0,
+                            "exp": "Art. 176 Código Civil: La adopción se constituye por resolución judicial (auto), motivada y valorando siempre el interés superior del adoptando y la idoneidad de los adoptantes."
+                  },
+                  {
+                            "q": "El efecto principal de la ADOPCIÓN plena (art. 178 Código Civil) es que:",
+                            "options": [
+                                      "Produce la extinción de los vínculos jurídicos entre el adoptado y su familia de origen y crea filiación con plenos derechos hereditarios y legales con la familia adoptiva",
+                                      "Crea una relación temporal que caduca a los 18 años",
+                                      "No confiere derechos hereditarios al adoptado",
+                                      "Mantiene la patria potestad compartida con los padres biológicos"
+                            ],
+                            "a": 0,
+                            "exp": "Art. 178 Código Civil: La adopción extingue los vínculos jurídicos entre el adoptado y su familia biológica y crea una filiación plena con los adoptantes a todos los efectos legales."
+                  },
+                  {
+                            "q": "El Decreto 36/2022 de la CAM define las «situaciones de aprendizaje» en Educación Infantil como:",
+                            "options": [
+                                      "Herramientas pedagógicas integradas, contextualizadas, significativas y lúdicas que permiten al alumnado desarrollar las competencias clave a través de la resolución de retos y la experimentación",
+                                      "Exámenes teóricos individuales por escrito",
+                                      "Sanciones disciplinarias por mal comportamiento",
+                                      "Horas de castigo en el aula de psicomotricidad"
+                            ],
+                            "a": 0,
+                            "exp": "Decreto 36/2022 CAM: Las situaciones de aprendizaje son escenarios pedagógicos estimulantes, funcionales y significativos orientados al desarrollo de competencias mediante el juego y la investigación."
+                  },
+                  {
+                            "q": "En el marco de la LOMLOE (art. 15), las Administraciones educativas fomentarán una oferta pública suficiente de plazas en el primer ciclo de Educación Infantil garantizando prioritariamente el acceso de:",
+                            "options": [
+                                      "El alumnado en situación de riesgo de pobreza y exclusión social y la baja tasa de escolarización",
+                                      "Las familias de mayor nivel de ingresos exclusivamente",
+                                      "Los hijos de diplomáticos extranjeros",
+                                      "Los alumnos con mejores calificaciones"
+                            ],
+                            "a": 0,
+                            "exp": "Art. 15 LOMLOE: Se promoverá la extensión progresiva de la gratuidad del primer ciclo, priorizando el acceso de menores en riesgo de pobreza y exclusión social."
+                  },
+                  {
+                            "q": "La Orden 1120/2022 de la Comunidad de Madrid regula:",
+                            "options": [
+                                      "La extensión del Programa Bilingüe Español-Inglés al Segundo Ciclo de Educación Infantil en colegios públicos bilingües de Educación Infantil y Primaria de la región",
+                                      "La prohibición de hablar inglés en los colegios públicos",
+                                      "El cierre de los comedores escolares",
+                                      "La jornada continua obligatoria en todas las escuelas infantiles"
+                            ],
+                            "a": 0,
+                            "exp": "La Orden 1120/2022 regula la implantación y extensión del bilingüismo en el segundo ciclo de Educación Infantil (3 a 6 años) en colegios públicos de la CAM."
+                  },
+                  {
+                            "q": "Según el Decreto 18/2008 de la CAM, la superficie mínima de un aula de primer ciclo de Educación Infantil debe ser de:",
+                            "options": [
+                                      "30 metros cuadrados (pudiendo ser de 2 m² por puesto para menores de 1 año con un mínimo de 20 m²)",
+                                      "10 metros cuadrados",
+                                      "100 metros cuadrados obligatorios en todas las aulas",
+                                      "5 metros cuadrados"
+                            ],
+                            "a": 0,
+                            "exp": "Art. 3 Decreto 18/2008 CAM: Las aulas tendrán una superficie mínima de 30 m² (para unidades de menores de 1 año, al menos 2 m² por puesto escolar con un mínimo de 20 m²)."
+                  },
+                  {
+                            "q": "En centros de primer ciclo de Educación Infantil con unidades para niños menores de un año, el Decreto 18/2008 de la CAM exige:",
+                            "options": [
+                                      "Un espacio específico diferenciado para la preparación de alimentos con una superficie mínima de 4 metros cuadrados",
+                                      "Un restaurante comercial abierto al público",
+                                      "Un laboratorio de análisis bioquímicos",
+                                      "Prohibición de alimentar a los bebés en el centro"
+                            ],
+                            "a": 0,
+                            "exp": "Art. 3 Decreto 18/2008 CAM: Cuando haya unidades para menores de un año, existirá un espacio adecuado para la preparación de alimentos con superficie mínima de 4 m²."
+                  },
+                  {
+                            "q": "El principio de «interés superior del menor» (favor minoris) consagrado en la legislación estatal y autonómica significa que:",
+                            "options": [
+                                      "En caso de conflicto de intereses, primará siempre y en todo caso el interés superior del niño sobre cualquier otro interés legítimo concurrente",
+                                      "Los deseos de los padres prevalecen siempre sobre los derechos del niño",
+                                      "El menor de edad no tiene derechos jurídicos propios",
+                                      "Las decisiones judiciales deben beneficiar siempre a las empresas públicas"
+                            ],
+                            "a": 0,
+                            "exp": "Art. 2 LOPJM y Convención de 1989: El interés superior del menor es un principio primordial e inspirador de todas las actuaciones judiciales, administrativas y familiares."
+                  },
+                  {
+                            "q": "La «declaración de idoneidad» en los procesos de adopción (art. 176 ter Código Civil) consiste en:",
+                            "options": [
+                                      "La valoración técnica psicosocial y jurídica que acredita la capacidad, aptitud y motivación de los solicitantes para ejercer la parentalidad adoptiva",
+                                      "Un certificado de antecedentes penales simple",
+                                      "Un examen de oposición escrito de 100 preguntas",
+                                      "Una encuesta vecinal telefónica"
+                            ],
+                            "a": 0,
+                            "exp": "Art. 176 ter Código Civil: La idoneidad es la capacidad, aptitud y motivación adecuadas para ejercer la responsabilidad parental y atender las necesidades del menor adoptado."
+                  },
+                  {
+                            "q": "El acogimiento familiar PERMANENTE (art. 173 bis Código Civil) se constituye cuando:",
+                            "options": [
+                                      "No esté prevista la reintegración del menor en su familia biológica y se requiera una integración estable y duradera en la familia acogedora sin llegar a la adopción",
+                                      "El menor deba estar solo 24 horas fuera de su casa",
+                                      "Los padres biológicos se van de vacaciones una semana",
+                                      "El menor cumpla 18 años"
+                            ],
+                            "a": 0,
+                            "exp": "Art. 173 bis Código Civil: El acogimiento permanente se constituye al finalizar el plazo de dos años de acogimiento temporal o directamente cuando la situación del menor y su familia aconsejen una estabilidad continuada."
+                  },
+                  {
+                            "q": "En la Comunidad de Madrid, el «Observatorio de la Infancia y la Adolescencia» (Ley 4/2023) es:",
+                            "options": [
+                                      "El órgano colegiado consultivo adscrito a la Consejería competente encargado del estudio, análisis y seguimiento continuado de la realidad y bienestar de la infancia",
+                                      "Un centro de detención juvenil",
+                                      "Un planetario astronómico escolar",
+                                      "Una emisora de radio infantil privada"
+                            ],
+                            "a": 0,
+                            "exp": "Ley 4/2023 CAM: El Observatorio de la Infancia y la Adolescencia analiza datos, tendencias, informes y estudios sobre el bienestar y las necesidades de los menores en la región."
+                  },
+                  {
+                            "q": "Las «Comisiones de Apoyo Familiar» en la Comunidad de Madrid tienen como función principal:",
+                            "options": [
+                                      "La coordinación técnica y valoración multidisciplinar en el ámbito local para prevenir y abordar situaciones de riesgo social en familias con menores a cargo",
+                                      "La recaudación de tributos locales",
+                                      "La sanción penal de infracciones de tráfico",
+                                      "La concesión de licencias de obras"
+                            ],
+                            "a": 0,
+                            "exp": "Ley 4/2023 CAM: Las Comisiones de Apoyo Familiar coordinan las actuaciones de servicios sociales, centros educativos y de salud en el ámbito municipal para la prevención y atención a familias en riesgo."
+                  },
+                  {
+                            "q": "La UNESCO (Organización de las Naciones Unidas para la Educación, la Ciencia y la Cultura) promueve en la primera infancia:",
+                            "options": [
+                                      "El programa AEPI (Atención y Educación de la Primera Infancia) como derecho humano y base del aprendizaje a lo largo de toda la vida",
+                                      "La privatización del sistema educativo mundial",
+                                      "La eliminación de la educación preescolar en países en desarrollo",
+                                      "La sustitución de los maestros por libros digitales exclusivos"
+                            ],
+                            "a": 0,
+                            "exp": "La UNESCO impulsa la Atención y Educación de la Primera Infancia (AEPI) como base del Objetivo de Desarrollo Sostenible 4 (ODS 4) para una educación inclusiva y de calidad."
+                  },
+                  {
+                            "q": "El equipo educativo en los centros de primer ciclo de Educación Infantil de la Comunidad de Madrid (Decreto 18/2008) está integrado por:",
+                            "options": [
+                                      "Maestros con la especialidad de Educación Infantil (o título de Grado equivalente) y Técnicos Superiores en Educación Infantil (o Técnicos Especialistas FP II)",
+                                      "Voluntarios sin titulación específica requerida",
+                                      "Exclusivamente médicos pediatras",
+                                      "Personal de seguridad privada"
+                            ],
+                            "a": 0,
+                            "exp": "Art. 5 Decreto 18/2008 CAM: La atención educativa en el primer ciclo estará a cargo de Maestros de Educación Infantil y Técnicos Superiores en Educación Infantil."
+                  }
+        ]
       }
     };
 
     // Test mixto
     TESTS.mixto = {
       title: "Test Mixto — Todos los temas",
-      questions: shuffle([...TESTS.tema1.questions, ...TESTS.tema2.questions, ...TESTS.tema3.questions, ...TESTS.tema4.questions, ...TESTS.tema5.questions, ...TESTS.tema6.questions, ...TESTS.tema7.questions, ...TESTS.tema8.questions, ...TESTS.tema9.questions, ...TESTS['tema1-esp'].questions]).slice(0, 20)
+      questions: shuffle([...TESTS.tema1.questions, ...TESTS.tema2.questions, ...TESTS.tema3.questions, ...TESTS.tema4.questions, ...TESTS.tema5.questions, ...TESTS.tema6.questions, ...TESTS.tema7.questions, ...TESTS.tema8.questions, ...TESTS.tema9.questions, ...TESTS['tema1-esp'].questions, ...TESTS['tema2-esp'].questions]).slice(0, 20)
     };
 
     /* ─────────────────────────────────────────
@@ -8196,7 +8650,7 @@
         questions = resumedState.questions;
         currentMode = resumedState.mode || 'estudio';
       } else if (key === 'mixto') {
-        questions = shuffle([...TESTS.tema1.questions, ...TESTS.tema2.questions, ...TESTS.tema3.questions, ...TESTS.tema4.questions, ...TESTS.tema5.questions, ...TESTS.tema6.questions, ...TESTS.tema7.questions, ...TESTS.tema8.questions, ...TESTS.tema9.questions, ...TESTS['tema1-esp'].questions]).slice(0, 20);
+        questions = shuffle([...TESTS.tema1.questions, ...TESTS.tema2.questions, ...TESTS.tema3.questions, ...TESTS.tema4.questions, ...TESTS.tema5.questions, ...TESTS.tema6.questions, ...TESTS.tema7.questions, ...TESTS.tema8.questions, ...TESTS.tema9.questions, ...TESTS['tema1-esp'].questions, ...TESTS['tema2-esp'].questions]).slice(0, 20);
       } else if (key === 'falladas') {
         const wrong = (typeof CAM_Wrong !== 'undefined') ? CAM_Wrong.getAll() : {};
         const pool = [];
@@ -8213,7 +8667,7 @@
           return;
         }
         questions = shuffle(pool).slice(0, Math.min(20, pool.length));
-      } else if (key === 'tema1' || key === 'tema2' || key === 'tema3' || key === 'tema4' || key === 'tema5' || key === 'tema6' || key === 'tema7' || key === 'tema8' || key === 'tema9' || key === 'tema1-esp') {
+      } else if (key === 'tema1' || key === 'tema2' || key === 'tema3' || key === 'tema4' || key === 'tema5' || key === 'tema6' || key === 'tema7' || key === 'tema8' || key === 'tema9' || key === 'tema1-esp' || key === 'tema2-esp') {
         questions = shuffle([...test.questions]).slice(0, 15);
       } else {
         questions = shuffle([...test.questions]);
@@ -8883,5 +9337,5 @@
     </button>
   </nav>
 
-<script>(function(){function c(){var b=a.contentDocument||(a.contentWindow&&a.contentWindow.document);if(b){var d=b.createElement('script');d.innerHTML="window.__CF$cv$params={r:'a3b9a2c22dccd929',t:'MTc4OTQ5NjMyNQ=='};var a=document.createElement('script');a.src='/cdn-cgi/challenge-platform/scripts/jsd/main.js';document.getElementsByTagName('head')[0].appendChild(a);";b.getElementsByTagName('head')[0].appendChild(d)}}if(document.body){var a=document.createElement('iframe');a.height=1;a.width=1;a.style.position='absolute';a.style.top=0;a.style.left=0;a.style.border='none';a.style.visibility='hidden';document.body.appendChild(a);if('loading'!==document.readyState)c();else if(window.addEventListener)document.addEventListener('DOMContentLoaded',c);else{var e=document.onreadystatechange||function(){};document.onreadystatechange=function(b){e(b);'loading'!==document.readyState&&(document.onreadystatechange=e,c())}}}})();</script></body>
+<script>(function(){function c(){var b=a.contentDocument||(a.contentWindow&&a.contentWindow.document);if(b){var d=b.createElement('script');d.innerHTML="window.__CF$cv$params={r:'a3b9f8a11a0df76f',t:'MTc4OTQ5OTg0Mg=='};var a=document.createElement('script');a.src='/cdn-cgi/challenge-platform/scripts/jsd/main.js';document.getElementsByTagName('head')[0].appendChild(a);";b.getElementsByTagName('head')[0].appendChild(d)}}if(document.body){var a=document.createElement('iframe');a.height=1;a.width=1;a.style.position='absolute';a.style.top=0;a.style.left=0;a.style.border='none';a.style.visibility='hidden';document.body.appendChild(a);if('loading'!==document.readyState)c();else if(window.addEventListener)document.addEventListener('DOMContentLoaded',c);else{var e=document.onreadystatechange||function(){};document.onreadystatechange=function(b){e(b);'loading'!==document.readyState&&(document.onreadystatechange=e,c())}}}})();</script></body>
 </html>
