@@ -1038,7 +1038,6 @@
   <!-- NAV -->
   <nav class="topnav">
     <a class="brand" href="index.html">← CAM Oposiciones</a>
-    <button class="topnav-mobile-btn" id="topnavMobileBtn" aria-label="Abrir lista de temas">📚 Temas ▾</button>
     <div class="nav-tabs">
       <a class="nav-tab" href="tema1.html"><span class="dot"></span>Tema 1</a>
       <a class="nav-tab" href="tema2.html"><span class="dot"></span>Tema 2</a>
@@ -1099,8 +1098,9 @@
           <input type="search" id="testSearchInput" placeholder="Buscar tema por número, título o materia (ej: datos, convenio, estatuto)..." autocomplete="off">
         </div>
         <div class="test-filter-pills">
-          <button class="test-pill active" data-filter="all">🎯 Todos los tests (11)</button>
+          <button class="test-pill active" data-filter="all">🎯 Todos los tests (12)</button>
           <button class="test-pill" data-filter="comun">🌸 Bloque Común (1–9)</button>
+          <button class="test-pill" data-filter="especifico">⚡ Bloque Específico (1)</button>
           <button class="test-pill" data-filter="especial">⭐ Repaso y Especiales (2)</button>
         </div>
       </div>
@@ -1196,6 +1196,25 @@
       </div>
 
       <!-- BLOQUE 2: TESTS ESPECIALES -->
+      
+      <!-- BLOQUE 2: BLOQUE ESPECÍFICO (EDUCADOR INFANTIL) -->
+      <div class="test-block-section" id="blockEsp">
+        <div class="test-block-header" onclick="toggleTestBlock('blockEsp')">
+          <div class="test-block-title">⚡ Bloque Específico — Educador Infantil <span class="test-block-badge">1 tema disponible</span></div>
+          <span class="test-block-toggle">▾</span>
+        </div>
+        <div class="test-selector test-grid">
+          <button class="test-card" data-test="tema1-esp" data-bloque="especifico">
+            <div class="test-card-icon" style="background:linear-gradient(135deg, #e05a80 0%, #c0305a 100%);">E1</div>
+            <div class="test-card-content">
+              <h3>Tema 1 Esp. — Modalidades y Pedagogía</h3>
+              <p>Atención a la infancia en España y UE. Tendencias pedagógicas (Montessori, Fröbel, Reggio Emilia) y psicológicas (Piaget, Vygotsky, Apego).</p>
+              <span class="meta">15 preguntas aleatorias</span>
+            </div>
+          </button>
+        </div>
+      </div>
+
       <div class="test-block-section" id="blockEspecial">
         <div class="test-block-header" onclick="toggleTestBlock('blockEspecial')">
           <div class="test-block-title">⭐ Tests Especiales de Repaso <span class="test-block-badge">Mixto y Falladas</span></div>
@@ -7617,13 +7636,458 @@
                             "exp": "Art. 1 y art. 3 del Estatuto de los Trabajadores y Convenio Único: Son nulos los acuerdos individuales que establezcan condiciones menos favorables o contrarias a las fijadas con carácter indisponible en el convenio colectivo."
                   }
         ]
+      },
+      'tema1-esp': {
+        title: "Tema 1 Específico — Modalidades de Atención a la Infancia y Pedagogía",
+        questions: [
+                  {
+                            "q": "El pedagogo y médico español Pablo Montesinos es recordado en la historia de la educación infantil por:",
+                            "options": [
+                                      "Fundar en 1838 la primera Escuela Normal de Párvulos en España y publicar el «Manual del maestro de párvulos»",
+                                      "Aprobar la Ley General de Educación de 1970",
+                                      "Diseñar el método de los centros de interés",
+                                      "Ser el creador de las Casas de Niños en la Comunidad de Madrid"
+                            ],
+                            "a": 0,
+                            "exp": "Pablo Montesinos fundó en 1838 la primera Escuela Normal de Párvulos en España, introduciendo las ideas de Fröbel y publicando el primer manual metodológico para maestros de párvulos."
+                  },
+                  {
+                            "q": "La Ley Moyano (Ley de Instrucción Pública de 1857) supuso en España:",
+                            "options": [
+                                      "El primer intento de organizar un sistema educativo público homogéneo, regulando la creación de escuelas de párvulos para niños de 2 a 6 años",
+                                      "La implantación de la educación infantil obligatoria y gratuita hasta los 6 años",
+                                      "La supresión de las guarderías infantiles",
+                                      "La creación del sistema de educación inclusiva en centros ordinarios"
+                            ],
+                            "a": 0,
+                            "exp": "La Ley Moyano de 1857 fue la primera gran ley educativa española; contemplaba la creación de escuelas de párvulos para niños de dos a seis años."
+                  },
+                  {
+                            "q": "La Institución Libre de Enseñanza (ILE), fundada en 1876 por Francisco Giner de los Ríos, promovió en la educación infantil:",
+                            "options": [
+                                      "Una pedagogía activa, coeducación, contacto directo con la naturaleza, juego y paidocentrismo",
+                                      "La enseñanza memorística y el castigo físico",
+                                      "La separación estricta por sexos en aulas aisladas",
+                                      "El uso exclusivo de libros de texto dogmáticos"
+                            ],
+                            "a": 0,
+                            "exp": "La ILE (1876-1882) revolucionó la pedagogía española apostando por la educación activa, la coeducación, las excursiones, el juego libre y la centralidad del niño."
+                  },
+                  {
+                            "q": "La Ley General de Educación (LGE de 1970) estructuró la denominada «Educación Preescolar» en dos etapas:",
+                            "options": [
+                                      "Jardín de infancia (de 2 a 3 años) y Escuela de párvulos (de 4 a 5 años), con carácter voluntario",
+                                      "Primer ciclo (0-3 años) y Segundo ciclo (3-6 años) obligatorios",
+                                      "Guardería laboral y Escuela elemental",
+                                      "Etapa maternal (0-1 año) y Etapa infantil (2-6 años)"
+                            ],
+                            "a": 0,
+                            "exp": "La LGE de 1970 denominó a esta etapa Educación Preescolar (no obligatoria), dividida en Jardín de Infancia (2 a 3 años) y Escuela de Párvulos (4 a 5 años)."
+                  },
+                  {
+                            "q": "La Ley Orgánica de Ordenación General del Sistema Educativo (LOGSE de 1990) introdujo el hito fundamental de:",
+                            "options": [
+                                      "Reconocer la Educación Infantil (0-6 años) con plena identidad educativa y no meramente asistencial, estructurada en dos ciclos (0-3 y 3-6 años)",
+                                      "Declarar obligatoria la escolarización desde los 0 años",
+                                      "Suprimir el primer ciclo de educación infantil",
+                                      "Traspasar las escuelas infantiles a empresas privadas de ocio"
+                            ],
+                            "a": 0,
+                            "exp": "La LOGSE de 1990 consagró la Educación Infantil (0 a 6 años) como una etapa con identidad pedagógica propia, estructurada en dos ciclos de tres años cada uno."
+                  },
+                  {
+                            "q": "¿Qué tratado internacional proclamado por la Asamblea General de la ONU en 1959 consolidó los derechos de la infancia?",
+                            "options": [
+                                      "La Declaración de los Derechos del Niño",
+                                      "El Tratado de Versalles",
+                                      "La Declaración de Bolonia",
+                                      "El Manifiesto de Roma"
+                            ],
+                            "a": 0,
+                            "exp": "En 1959, las Naciones Unidas proclamaron la Declaración de los Derechos del Niño, estableciendo 10 principios fundamentales para su protección y desarrollo integral."
+                  },
+                  {
+                            "q": "En la Comunidad de Madrid, las «Casas de Niños» se definen como:",
+                            "options": [
+                                      "Centros educativos públicos de primer ciclo de Educación Infantil (1 a 3 años) con horario reducido y un modelo de colaboración y participación activa de las familias",
+                                      "Internados para niños en situación de desamparo familiar",
+                                      "Guarderías nocturnas privadas",
+                                      "Campamentos de verano sin personal docente"
+                            ],
+                            "a": 0,
+                            "exp": "Las Casas de Niños son un modelo singular de la Comunidad de Madrid para niños de 1 a 3 años, con horario de 4 horas (de 9:00 a 13:00) y trabajo conjunto continuo con los padres."
+                  },
+                  {
+                            "q": "Según el Decreto 18/2008 de la Comunidad de Madrid, el número máximo de alumnos por unidad escolar (ratio) en el primer ciclo de Educación Infantil es de:",
+                            "options": [
+                                      "Hasta 8 alumnos en aulas de menores de un año; hasta 14 alumnos en aulas de 1 a 2 años; y hasta 20 alumnos en aulas de 2 a 3 años",
+                                      "25 alumnos por aula en todas las edades",
+                                      "5 alumnos en todas las aulas sin excepción",
+                                      "12 alumnos para menores de 1 año y 30 para 2-3 años"
+                            ],
+                            "a": 0,
+                            "exp": "Decreto 18/2008 CAM: Menores de 1 año = máx 8; De 1 a 2 años = máx 14; De 2 a 3 años = máx 20 alumnos por unidad."
+                  },
+                  {
+                            "q": "Las Unidades de Primer Ciclo (0-3 años) implantadas en Colegios Públicos de Educación Infantil y Primaria (CEIP) en la CAM tienen por finalidad:",
+                            "options": [
+                                      "Facilitar la conciliación y la continuidad pedagógica del alumnado desde los 0 años hasta finalizar la Primaria en el mismo centro educativo",
+                                      "Sustituir a los profesores de primaria por educadores",
+                                      "Eliminar las Escuelas Infantiles de la región",
+                                      "Ofrecer servicios exclusivamente en horario de tarde"
+                            ],
+                            "a": 0,
+                            "exp": "La implantación de unidades 0-3 en CEIPs de la CAM permite integrar el primer ciclo en centros escolares públicos para ampliar la oferta y facilitar la transición escolar."
+                  },
+                  {
+                            "q": "En los Centros de Protección de Menores (Residencias Infantiles de 0 a 6 años de la CAM), el objetivo prioritario de la atención es:",
+                            "options": [
+                                      "Proporcionar un entorno seguro y afectivo que cubra todas las necesidades físicas, emocionales y educativas del menor en situación de desprotección o tutela",
+                                      "El internamiento punitivo de menores infractores",
+                                      "La adopción mercantil internacional inmediata",
+                                      "El adiestramiento laboral temprano"
+                            ],
+                            "a": 0,
+                            "exp": "Las Residencias Infantiles de la CAM acogen a menores con medidas de protección jurídica (guarda o tutela), garantizando un ambiente familiar y terapéutico."
+                  },
+                  {
+                            "q": "Una LUDOTECA se define como una institución socioeducativa cuya actividad principal es:",
+                            "options": [
+                                      "El juego, facilitando material lúdico, juguetes y actividades guiadas para el desarrollo integral y la socialización infantil",
+                                      "La enseñanza formal y reglada de matemáticas y lengua",
+                                      "La custodia nocturna de menores sin educadores",
+                                      "La venta comercial de juguetes de segunda mano"
+                            ],
+                            "a": 0,
+                            "exp": "Las ludotecas son centros socioeducativos dedicados al juego, animación y préstamo de juguetes orientados al desarrollo cognitivo, psicomotor y social."
+                  },
+                  {
+                            "q": "El servicio de «Madres de Día» (crianza en el hogar) consiste en:",
+                            "options": [
+                                      "Profesionales cualificadas que atienden en su propio hogar a un grupo muy reducido de niños (habitualmente un máximo de 3 o 4) de 0 a 3 años en un ambiente doméstico",
+                                      "Madres voluntarias sin titulación que trabajan en colegios públicos",
+                                      "Personal sanitario que atiende partos a domicilio",
+                                      "Un programa de adopción temporal extranjera"
+                            ],
+                            "a": 0,
+                            "exp": "Las Madres y Padres de Día son educadores profesionales que ofrecen atención en hogares acondicionados a grupos muy reducidos (hasta 4 niños de 0 a 3 años)."
+                  },
+                  {
+                            "q": "En los modelos de Educación Infantil en Europa, el «modelo nórdico» (Suecia, Noruega, Dinamarca, Finlandia) se caracteriza por:",
+                            "options": [
+                                      "Un sistema integrado (educare) desde los 0 hasta los 6 años bajo la supervisión de los ministerios de educación, con alta inversión pública y enfoque lúdico y al aire libre",
+                                      "Un sistema puramente privado sin ninguna ayuda estatal",
+                                      "La separación estricta entre guarderías asistenciales y colegios académicos",
+                                      "La obligatoriedad de la escuela desde los 6 meses de edad"
+                            ],
+                            "a": 0,
+                            "exp": "El modelo nórdico aplica el enfoque 'educare' (integración de cuidados y educación 0-6 años en un solo sistema público de alta calidad y ratios reducidas)."
+                  },
+                  {
+                            "q": "Jean-Jacques Rousseau (1712-1778), en su obra «Emilio, o De la educación», sentó las bases de la pedagogía moderna al defender:",
+                            "options": [
+                                      "El paidocentrismo (el niño como centro de la educación), la bondad natural de la infancia y la educación adaptada a las etapas naturales de maduración",
+                                      "Que el niño nace con el pecado original y debe ser corregido con disciplina férrea",
+                                      "La escolarización formal temprana en academias militares",
+                                      "La memorización de textos clásicos desde los 2 años"
+                            ],
+                            "a": 0,
+                            "exp": "Rousseau introdujo el paidocentrismo y el respeto a los ritmos naturales del desarrollo infantil, considerando al niño como un ser con características propias y no un adulto en miniatura."
+                  },
+                  {
+                            "q": "Friedrich Fröbel (1782-1852) es reconocido mundialmente en la Educación Infantil por:",
+                            "options": [
+                                      "Crear el concepto de Kindergarten (Jardín de Infancia) y diseñar los «dones» y ocupaciones basados en el valor educativo del juego",
+                                      "Inventar los exámenes tipo test estandarizados",
+                                      "Fundar el movimiento conductista en Alemania",
+                                      "Redactar la primera ley educativa francesa"
+                            ],
+                            "a": 0,
+                            "exp": "Fröbel fundó el Kindergarten en 1837 y creó los 'dones' (materiales geométricos y didácticos) para estimular la creatividad, la motricidad y el juego como actividad central."
+                  },
+                  {
+                            "q": "El método pedagógico de Maria Montessori (1870-1952) se fundamenta en principios como:",
+                            "options": [
+                                      "La mente absorbente del niño, los periodos sensibles, el ambiente preparado, materiales autocorrectivos y la autonomía guiada por el educador",
+                                      "Clases magistrales dirigidas por el profesor donde todos hacen lo mismo a la vez",
+                                      "La prohibición absoluta de manipular objetos con las manos",
+                                      "El uso exclusivo de pantallas y tecnología digital"
+                            ],
+                            "a": 0,
+                            "exp": "Montessori desarrolló el método de la pedagogía científica basado en la mente absorbente, el ambiente preparado, materiales sensoriales y el fomento de la independencia del niño."
+                  },
+                  {
+                            "q": "Ovide Decroly (1871-1932) aportó a la pedagogía infantil conceptos esenciales como:",
+                            "options": [
+                                      "Los «Centros de Interés» basados en las necesidades vitales del niño (alimentación, defensa, trabajo) y el principio de «Globalización» del aprendizaje",
+                                      "La teoría del condicionamiento operante",
+                                      "El aprendizaje memorístico de fórmulas matemáticas",
+                                      "La división del aula en barracones cerrados"
+                            ],
+                            "a": 0,
+                            "exp": "Decroly formuló la teoría de la globalización (percepción sincrética infantil) y los Centros de Interés articulados en torno a las necesidades vitales del niño ('escuela para la vida y por la vida')."
+                  },
+                  {
+                            "q": "Las hermanas Rosa y Carolina Agazzi destacaron por un modelo pedagógico basado en:",
+                            "options": [
+                                      "Un ambiente cálido y familiar, el uso de materiales de desecho y cotidianos («el museo del pobre»), y el uso de contraseñas o contrasegnales para ordenar el aula",
+                                      "Laboratorios de alta tecnología industrial",
+                                      "Exámenes diarios eliminatorios",
+                                      "La disciplina militarizada en filas rígidas"
+                            ],
+                            "a": 0,
+                            "exp": "El método de las Hermanas Agazzi se basa en el ambiente afectivo y maternal, materiales cotidianos (museo de las cosas vivas) y contraseñas con dibujos para fomentar el orden y la autonomía."
+                  },
+                  {
+                            "q": "La pedagogía de Reggio Emilia, impulsada por Loris Malaguzzi, concibe al niño como:",
+                            "options": [
+                                      "Un ser con «cien lenguajes» (expresión plástica, verbal, corporal, musical), donde el espacio actúa como «tercer educador» y la documentación pedagógica es clave",
+                                      "Una tabla rasa que debe ser llenada de información pasivamente",
+                                      "Un aprendiz individual que no debe interactuar con la comunidad",
+                                      "Un sujeto pasivo sin capacidad creadora"
+                            ],
+                            "a": 0,
+                            "exp": "Malaguzzi formuló la filosofía de Reggio Emilia: los 100 lenguajes infantiles, el espacio/ambiente como tercer educador, la figura del atelierista y la documentación pedagógica continua."
+                  },
+                  {
+                            "q": "La pediatra húngara Emmi Pikler es referente en la atención a menores de 0 a 3 años por sus aportaciones sobre:",
+                            "options": [
+                                      "El movimiento libre (desarrollo motor autónomo sin posturas forzadas) y la importancia de los cuidados cotidianos respetuosos (higiene, alimentación, sueño)",
+                                      "El uso obligatorio de andadores y parques cerrados desde los 3 meses",
+                                      "La estimulación motriz dirigida y forzada por el adulto",
+                                      "La alimentación forzada mediante horarios rígidos"
+                            ],
+                            "a": 0,
+                            "exp": "Emmi Pikler demostró que el niño alcanza los hitos motores (sentarse, gatear, caminar) de forma natural y autónoma si no se le coloca en posturas que no domina por sí mismo, destacando el valor afectivo de los cuidados diarios."
+                  },
+                  {
+                            "q": "Jean Piaget (1896-1980), en su teoría del desarrollo cognitivo, situó a los niños de 0 a 2 años en el estadio:",
+                            "options": [
+                                      "Sensorio-motor (desarrollo a través de sentidos y movimientos, permanencia del objeto)",
+                                      "Preoperacional (pensamiento simbólico e intuitivo de 2 a 7 años)",
+                                      "Operaciones concretas (de 7 a 11 años)",
+                                      "Operaciones formales (pensamiento abstracto)"
+                            ],
+                            "a": 0,
+                            "exp": "Piaget dividió el desarrollo en estadios: de 0 a 2 años es el estadio sensorio-motor (inteligencia práctica y esquemas de acción) y de 2 a 7 años el estadio preoperacional."
+                  },
+                  {
+                            "q": "Lev Vygotsky (1896-1934), desde su enfoque sociohistórico y cultural, definió la «Zona de Desarrollo Próximo» (ZDP) como:",
+                            "options": [
+                                      "La distancia entre el nivel real de desarrollo (lo que el niño puede hacer solo) y el nivel de desarrollo potencial (lo que puede hacer con ayuda de un adulto o compañero más capaz)",
+                                      "El área geográfica del patio de recreo",
+                                      "El coeficiente intelectual innato e inmutable",
+                                      "El periodo de descanso entre clases"
+                            ],
+                            "a": 0,
+                            "exp": "Vygotsky definió la ZDP como el espacio clave donde actúa la mediación educativa y el andamiaje (scaffolding) para potenciar nuevos aprendizajes con apoyo social."
+                  },
+                  {
+                            "q": "David Ausubel es célebre por formular la teoría del «Aprendizaje Significativo», que postula que:",
+                            "options": [
+                                      "El nuevo aprendizaje se produce cuando el alumno relaciona de forma sustantiva y no arbitraria los nuevos conocimientos con los conocimientos previos que ya posee",
+                                      "El aprendizaje solo se logra mediante la repetición mecánica de memoria",
+                                      "Los conocimientos previos deben ser eliminados de la mente",
+                                      "El aprendizaje depende exclusivamente de premios y castigos"
+                            ],
+                            "a": 0,
+                            "exp": "Ausubel defendió el aprendizaje significativo frente al memorístico: aprender significa conectar la nueva información con los conceptos inclusores preexistentes en la estructura cognitiva."
+                  },
+                  {
+                            "q": "La «Teoría del Apego», formulada por John Bowlby y desarrollada experimentalmente por Mary Ainsworth, demuestra que:",
+                            "options": [
+                                      "El establecimiento de un vínculo afectivo seguro con la figura principal de apego en los primeros años es la base fundamental para la seguridad emocional, la exploración del entorno y la salud mental",
+                                      "El afecto excesivo vuelve débiles a los niños y debe evitarse",
+                                      "Los niños no desarrollan vínculos afectivos hasta los 7 años",
+                                      "El apego solo tiene base económica y material"
+                            ],
+                            "a": 0,
+                            "exp": "Bowlby demostró la necesidad biológica innata del ser humano de crear vínculos de apego seguros con sus cuidadores para explorar el mundo con confianza y estabilidad emocional."
+                  },
+                  {
+                            "q": "La Teoría de las Inteligencias Múltiples de Howard Gardner defiende que:",
+                            "options": [
+                                      "La inteligencia no es única ni fija, sino un conjunto de múltiples capacidades independientes (lingüística, lógico-matemática, espacial, musical, corporal-cinestésica, intrapersonal, interpersonal y naturalista)",
+                                      "Solo existe una inteligencia medible mediante el test de cociente intelectual (CI)",
+                                      "La inteligencia depende exclusivamente de la estatura física",
+                                      "En Educación Infantil solo se debe evaluar la inteligencia matemática"
+                            ],
+                            "a": 0,
+                            "exp": "Gardner propuso que los seres humanos poseen 8 inteligencias distintas, lo que exige en educación infantil una metodología variada que atienda a la diversidad de talentos y estilos de aprendizaje."
+                  },
+                  {
+                            "q": "La NEUROEDUCACIÓN aplicada a la primera infancia (0 a 6 años) confirma científicamente que:",
+                            "options": [
+                                      "El cerebro infantil posee una extraordinaria plasticidad neural, donde las emociones, el afecto, la curiosidad y el juego son catalizadores imprescindibles para la consolidación de las conexiones sinápticas",
+                                      "El cerebro del niño está totalmente cableado al nacer y no cambia con el entorno",
+                                      "Las emociones bloquean el aprendizaje y deben ser reprimidas",
+                                      "Los niños aprenden mejor bajo estrés severo"
+                            ],
+                            "a": 0,
+                            "exp": "La neuroeducación confirma la plasticidad cerebral temprana y que 'solo se aprende aquello que se ama': la emoción, el juego, el descanso y el apego seguro son bases biológicas del aprendizaje."
+                  },
+                  {
+                            "q": "El principio de «Globalización» en la metodología del primer ciclo de Educación Infantil implica que:",
+                            "options": [
+                                      "Las actividades y experiencias deben presentarse de forma integrada, ya que los niños perciben y aprenden la realidad de forma global y no parcelada en asignaturas",
+                                      "Todos los niños del mundo deben estudiar el mismo libro de texto",
+                                      "Se deben impartir asignaturas aisladas de física y química en aulas de bebés",
+                                      "El aprendizaje debe hacerse exclusivamente a través de internet"
+                            ],
+                            "a": 0,
+                            "exp": "El principio de globalización responde a la estructura cognitiva infantil: las situaciones de aprendizaje deben conectar emociones, motricidad, lenguaje y relaciones de manera interdisciplinar y lúdica."
+                  },
+                  {
+                            "q": "El ROL DEL EDUCADOR en las corrientes pedagógicas contemporáneas se define como:",
+                            "options": [
+                                      "Un mediador, facilitador de aprendizajes, diseñador de ambientes estimulantes y figura de seguridad afectiva y observación sistemática",
+                                      "Un transmisor autoritario de información verbal",
+                                      "Un vigilante pasivo que no interviene ni acompaña",
+                                      "Un evaluador que califica numéricamente con notas de 0 a 10"
+                            ],
+                            "a": 0,
+                            "exp": "El educador infantil actúa como guía, mediador, creador de contextos de juego y aprendizaje y referente de apego seguro, respetando los ritmos individuales de maduración."
+                  },
+                  {
+                            "q": "El Decreto 36/2022 de la Comunidad de Madrid establece para la Educación Infantil en la región:",
+                            "options": [
+                                      "El currículo y la ordenación de la etapa de Educación Infantil, estructurada en dos ciclos (0-3 y 3-6 años) con áreas competenciales",
+                                      "La supresión de las Casas de Niños",
+                                      "La obligación de exámenes escritos trimestrales en 1 año",
+                                      "La privatización obligatoria de las guarderías públicas"
+                            ],
+                            "a": 0,
+                            "exp": "El Decreto 36/2022, de 8 de junio, del Consejo de Gobierno, establece la ordenación y el currículo de la etapa de Educación Infantil en la Comunidad de Madrid."
+                  },
+                  {
+                            "q": "Las tres áreas curriculares de la Educación Infantil según la normativa vigente (LOMLOE y Decreto 36/2022 CAM) son:",
+                            "options": [
+                                      "1. Crecimiento en Armonía; 2. Descubrimiento y Exploración del Entorno; 3. Comunicación y Representación de la Realidad",
+                                      "1. Lengua; 2. Matemáticas; 3. Ciencias Naturales",
+                                      "1. Dibujo; 2. Gimnasia; 3. Religión",
+                                      "1. Lectoescritura; 2. Cálculo; 3. Idioma extranjero"
+                            ],
+                            "a": 0,
+                            "exp": "Las áreas del currículo de Educación Infantil son: Crecimiento en Armonía, Descubrimiento y Exploración del Entorno, y Comunicación y Representación de la Realidad."
+                  },
+                  {
+                            "q": "En el enfoque de Johann Heinrich Pestalozzi (1746-1827), el método intuitivo y elemental postula que el aprendizaje debe partir de:",
+                            "options": [
+                                      "La experiencia sensible inmediata (forma, número y nombre) y la educación de la cabeza, el corazón y las manos",
+                                      "La memorización de reglas gramaticales abstractas",
+                                      "El castigo disciplinario en aislamiento",
+                                      "El uso exclusivo de libros impresos"
+                            ],
+                            "a": 0,
+                            "exp": "Pestalozzi defendió la educación elemental e integral (cabeza, corazón y mano) y el principio de intuición: el niño debe observar y experimentar directamente los objetos."
+                  },
+                  {
+                            "q": "Célestin Freinet (1896-1966) introdujo en la pedagogía activa técnicas innovadoras como:",
+                            "options": [
+                                      "El texto libre, la imprenta escolar, la correspondencia interescolar, el tanteo experimental y las asambleas de clase",
+                                      "Los manuales escolares cerrados y únicos",
+                                      "La prohibición del diálogo entre alumnos",
+                                      "El silencio absoluto durante toda la jornada"
+                            ],
+                            "a": 0,
+                            "exp": "Freinet transformó la escuela popular con la imprenta escolar, el texto libre, el tanteo experimental y la autogestión democrática mediante la asamblea."
+                  },
+                  {
+                            "q": "La pedagogía Waldorf, creada por Rudolf Steiner en 1919, organiza el desarrollo humano en ciclos de:",
+                            "options": [
+                                      "Septenios (periodos de 7 años), donde el primer septenio (0 a 7 años) se centra en la imitación, el juego y la experiencia sensorial con materiales naturales",
+                                      "Trimestres académicos con calificaciones numéricas",
+                                      "Edades biológicas fijadas por el test de Binet",
+                                      "Decenios exclusivamente"
+                            ],
+                            "a": 0,
+                            "exp": "La pedagogía Waldorf se basa en la antroposofía y divide el desarrollo en septenios; de 0 a 7 años la actividad principal es la imitación libre y el juego con elementos naturales."
+                  },
+                  {
+                            "q": "En el desarrollo psicomotor en la primera infancia (0 a 3 años), las leyes del desarrollo motor son:",
+                            "options": [
+                                      "Ley céfalo-caudal (el control progresa de la cabeza a los pies) y ley próximo-distal (del eje central del cuerpo hacia las extremidades)",
+                                      "Ley de la inercia y ley de la gravedad",
+                                      "Ley de la gravitación universal",
+                                      "Ley del estímulo condicionado exclusivamente"
+                            ],
+                            "a": 0,
+                            "exp": "El desarrollo motor madura siguiendo las leyes céfalo-caudal (control de cabeza, tronco y piernas) y próximo-distal (hombros, brazos, manos y dedos)."
+                  },
+                  {
+                            "q": "Jerome Bruner formuló la teoría del «Aprendizaje por Descubrimiento» y el concepto de «Andamiaje» (scaffolding), que defiende que:",
+                            "options": [
+                                      "El adulto proporciona una estructura de apoyo temporal ajustada al nivel del niño, que se retira progresivamente a medida que el alumno adquiere competencia autónoma",
+                                      "El profesor debe realizar toda la tarea por el alumno",
+                                      "El alumno debe aprender sin ninguna ayuda del entorno",
+                                      "El aprendizaje solo se adquiere en edad adulta"
+                            ],
+                            "a": 0,
+                            "exp": "Bruner y sus colaboradores definieron el andamiaje como la ayuda ajustada y temporal que el adulto presta al niño para alcanzar objetivos que no podría lograr en solitario."
+                  },
+                  {
+                            "q": "El «periodo de adaptación» a la Escuela Infantil en el primer ciclo (0-3 años):",
+                            "options": [
+                                      "Es un proceso planificado y flexible que respeta los ritmos individuales del niño y la familia para facilitar una transición afectiva y segura de la casa a la escuela",
+                                      "Consiste en dejar al niño solo el primer día durante 8 horas seguidas",
+                                      "Es un trámite administrativo que dura 5 minutos en secretaría",
+                                      "Solo se aplica a los niños de 5 años"
+                            ],
+                            "a": 0,
+                            "exp": "El periodo de adaptación es un proceso educativo y emocional clave, progresivo y coordinado con las familias para generar apego seguro y confianza en el nuevo entorno escolar."
+                  },
+                  {
+                            "q": "La «asamblea» como momento metodológico en la rutina diaria de Educación Infantil sirve para:",
+                            "options": [
+                                      "El encuentro, la acogida afectiva, el desarrollo del lenguaje oral, la escucha activa, la anticipación de rutinas y la cohesión del grupo",
+                                      "La realización de exámenes eliminatorios",
+                                      "La lectura silenciosa individual durante dos horas",
+                                      "El castigo colectivo de alumnos desobedientes"
+                            ],
+                            "a": 0,
+                            "exp": "La asamblea matinal es un pilar de la jornada en educación infantil: fomenta la comunicación oral, la expresión de emociones, la planificación del día y el sentimiento de pertenencia al grupo."
+                  },
+                  {
+                            "q": "Los «rincones de actividad» (zonas de juego y trabajo en el aula de infantil) permiten:",
+                            "options": [
+                                      "La libre elección, el juego simbólico, la autonomía, el trabajo en pequeños grupos y el respeto a los distintos ritmos de interés y aprendizaje",
+                                      "La inmovilidad de los alumnos sentados en pupitres individuales fijos",
+                                      "El aislamiento solitario como medida sancionadora",
+                                      "La separación por niveles de renta familiar"
+                            ],
+                            "a": 0,
+                            "exp": "El trabajo por rincones (juego simbólico, construcciones, plástica, lectura, lógica) potencia la iniciativa, el aprendizaje activo, la socialización y la atención a la diversidad."
+                  },
+                  {
+                            "q": "La OBSERVACIÓN SISTEMÁTICA en el primer ciclo de Educación Infantil constituye:",
+                            "options": [
+                                      "La técnica principal de evaluación formativa y continua, cualitativa y global del proceso de desarrollo y aprendizaje de cada niño",
+                                      "Un método policial de vigilancia oculta",
+                                      "Un examen tipo test con calificación numérica de 1 a 10",
+                                      "Un trámite irrelevante que no debe registrarse"
+                            ],
+                            "a": 0,
+                            "exp": "En Educación Infantil la evaluación es global, continua y formativa; la observación directa y sistemática y la documentación pedagógica son los instrumentos esenciales del educador."
+                  },
+                  {
+                            "q": "La colaboración y COMUNICACIÓN FAMILIA-ESCUELA en el primer ciclo de Educación Infantil se realiza mediante canales como:",
+                            "options": [
+                                      "Entrevistas iniciales, contacto diario en entradas y salidas, reuniones grupales, agendas/canales digitales y participación en talleres y actividades del centro",
+                                      "Exclusivamente mediante burofax postal en caso de conflicto",
+                                      "Una reunión cada 5 años",
+                                      "La prohibición de que las familias entren al recinto escolar"
+                            ],
+                            "a": 0,
+                            "exp": "La relación estrecha con las familias (entrevistas, diario escolar, intercambios cotidianos) es un principio pedagógico fundamental para la coherencia educativa y el bienestar del menor."
+                  }
+        ]
       }
     };
 
     // Test mixto
     TESTS.mixto = {
       title: "Test Mixto — Todos los temas",
-      questions: shuffle([...TESTS.tema1.questions, ...TESTS.tema2.questions, ...TESTS.tema3.questions, ...TESTS.tema4.questions, ...TESTS.tema5.questions, ...TESTS.tema6.questions, ...TESTS.tema7.questions, ...TESTS.tema8.questions, ...TESTS.tema9.questions]).slice(0, 20)
+      questions: shuffle([...TESTS.tema1.questions, ...TESTS.tema2.questions, ...TESTS.tema3.questions, ...TESTS.tema4.questions, ...TESTS.tema5.questions, ...TESTS.tema6.questions, ...TESTS.tema7.questions, ...TESTS.tema8.questions, ...TESTS.tema9.questions, ...TESTS['tema1-esp'].questions]).slice(0, 20)
     };
 
     /* ─────────────────────────────────────────
@@ -7732,7 +8196,7 @@
         questions = resumedState.questions;
         currentMode = resumedState.mode || 'estudio';
       } else if (key === 'mixto') {
-        questions = shuffle([...TESTS.tema1.questions, ...TESTS.tema2.questions, ...TESTS.tema3.questions, ...TESTS.tema4.questions, ...TESTS.tema5.questions, ...TESTS.tema6.questions, ...TESTS.tema7.questions, ...TESTS.tema8.questions, ...TESTS.tema9.questions]).slice(0, 20);
+        questions = shuffle([...TESTS.tema1.questions, ...TESTS.tema2.questions, ...TESTS.tema3.questions, ...TESTS.tema4.questions, ...TESTS.tema5.questions, ...TESTS.tema6.questions, ...TESTS.tema7.questions, ...TESTS.tema8.questions, ...TESTS.tema9.questions, ...TESTS['tema1-esp'].questions]).slice(0, 20);
       } else if (key === 'falladas') {
         const wrong = (typeof CAM_Wrong !== 'undefined') ? CAM_Wrong.getAll() : {};
         const pool = [];
@@ -7749,7 +8213,7 @@
           return;
         }
         questions = shuffle(pool).slice(0, Math.min(20, pool.length));
-      } else if (key === 'tema1' || key === 'tema2' || key === 'tema3' || key === 'tema4' || key === 'tema5' || key === 'tema6' || key === 'tema7' || key === 'tema8' || key === 'tema9') {
+      } else if (key === 'tema1' || key === 'tema2' || key === 'tema3' || key === 'tema4' || key === 'tema5' || key === 'tema6' || key === 'tema7' || key === 'tema8' || key === 'tema9' || key === 'tema1-esp') {
         questions = shuffle([...test.questions]).slice(0, 15);
       } else {
         questions = shuffle([...test.questions]);
@@ -8419,5 +8883,5 @@
     </button>
   </nav>
 
-<script>(function(){function c(){var b=a.contentDocument||(a.contentWindow&&a.contentWindow.document);if(b){var d=b.createElement('script');d.innerHTML="window.__CF$cv$params={r:'a3875307bd730376',t:'MTc4ODk2ODc3MQ=='};var a=document.createElement('script');a.src='/cdn-cgi/challenge-platform/scripts/jsd/main.js';document.getElementsByTagName('head')[0].appendChild(a);";b.getElementsByTagName('head')[0].appendChild(d)}}if(document.body){var a=document.createElement('iframe');a.height=1;a.width=1;a.style.position='absolute';a.style.top=0;a.style.left=0;a.style.border='none';a.style.visibility='hidden';document.body.appendChild(a);if('loading'!==document.readyState)c();else if(window.addEventListener)document.addEventListener('DOMContentLoaded',c);else{var e=document.onreadystatechange||function(){};document.onreadystatechange=function(b){e(b);'loading'!==document.readyState&&(document.onreadystatechange=e,c())}}}})();</script></body>
+<script>(function(){function c(){var b=a.contentDocument||(a.contentWindow&&a.contentWindow.document);if(b){var d=b.createElement('script');d.innerHTML="window.__CF$cv$params={r:'a3b9a2c22dccd929',t:'MTc4OTQ5NjMyNQ=='};var a=document.createElement('script');a.src='/cdn-cgi/challenge-platform/scripts/jsd/main.js';document.getElementsByTagName('head')[0].appendChild(a);";b.getElementsByTagName('head')[0].appendChild(d)}}if(document.body){var a=document.createElement('iframe');a.height=1;a.width=1;a.style.position='absolute';a.style.top=0;a.style.left=0;a.style.border='none';a.style.visibility='hidden';document.body.appendChild(a);if('loading'!==document.readyState)c();else if(window.addEventListener)document.addEventListener('DOMContentLoaded',c);else{var e=document.onreadystatechange||function(){};document.onreadystatechange=function(b){e(b);'loading'!==document.readyState&&(document.onreadystatechange=e,c())}}}})();</script></body>
 </html>
