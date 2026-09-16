@@ -417,12 +417,13 @@
       tema9: { name: 'Tema 9 — Convenio Colectivo Único CAM (2025-2028)', total: 284, href: 'tema9.html' },
       'tema1-esp': { name: 'Tema 1 Esp. — Modalidades y Pedagogía (Educador Infantil)', total: 17, href: 'tema1-esp.html' },
       'tema2-esp': { name: 'Tema 2 Esp. — Escuela Infantil y Protección (Educador Infantil)', total: 20, href: 'tema2-esp.html' },
+      'tema3-esp': { name: 'Tema 3 Esp. — Riesgo Social y Maltrato (Educador Infantil)', total: 18, href: 'tema3-esp.html' },
       mixto: { name: 'Test Mixto', total: 0, href: 'tests.html' }
     };
 
     /* Cargar totales reales de los temas en segundo plano (no bloqueante) */
     async function loadRealTotals() {
-      const keys = ['tema1', 'tema2', 'tema3', 'tema4', 'tema5', 'tema6', 'tema7', 'tema8', 'tema9', 'tema1-esp', 'tema2-esp'];
+      const keys = ['tema1', 'tema2', 'tema3', 'tema4', 'tema5', 'tema6', 'tema7', 'tema8', 'tema9', 'tema1-esp', 'tema2-esp', 'tema3-esp'];
       let changed = false;
       for (const k of keys) {
         try {
@@ -561,7 +562,7 @@
       let html = '';
       html += `<b>📚 Artículos visitados por tema:</b><br>`;
       let totalVis = 0;
-      ['tema1','tema2','tema3','tema4','tema5','tema6','tema7','tema8','tema9','tema1-esp','tema2-esp'].forEach(k => {
+      ['tema1','tema2','tema3','tema4','tema5','tema6','tema7','tema8','tema9','tema1-esp','tema2-esp','tema3-esp'].forEach(k => {
         const cnt = visited[k] ? Object.keys(visited[k]).length : 0;
         totalVis += cnt;
         html += `&nbsp;&nbsp;${k}: <b style="color:${cnt>0?'var(--green)':'var(--muted)'}">${cnt}</b> artículos<br>`;
@@ -839,5 +840,5 @@
     </button>
   </nav>
 
-<script>(function(){function c(){var b=a.contentDocument||(a.contentWindow&&a.contentWindow.document);if(b){var d=b.createElement('script');d.innerHTML="window.__CF$cv$params={r:'a3b9bb9d6b0431fe',t:'MTc4OTQ5NzM0Mw=='};var a=document.createElement('script');a.src='/cdn-cgi/challenge-platform/scripts/jsd/main.js';document.getElementsByTagName('head')[0].appendChild(a);";b.getElementsByTagName('head')[0].appendChild(d)}}if(document.body){var a=document.createElement('iframe');a.height=1;a.width=1;a.style.position='absolute';a.style.top=0;a.style.left=0;a.style.border='none';a.style.visibility='hidden';document.body.appendChild(a);if('loading'!==document.readyState)c();else if(window.addEventListener)document.addEventListener('DOMContentLoaded',c);else{var e=document.onreadystatechange||function(){};document.onreadystatechange=function(b){e(b);'loading'!==document.readyState&&(document.onreadystatechange=e,c())}}}})();</script></body>
+<script>(function(){function c(){var b=a.contentDocument||(a.contentWindow&&a.contentWindow.document);if(b){var d=b.createElement('script');d.innerHTML="window.__CF$cv$params={r:'a3bdf5955cae191e',t:'MTc4OTU0MTY2MQ=='};var a=document.createElement('script');a.src='/cdn-cgi/challenge-platform/scripts/jsd/main.js';document.getElementsByTagName('head')[0].appendChild(a);";b.getElementsByTagName('head')[0].appendChild(d)}}if(document.body){var a=document.createElement('iframe');a.height=1;a.width=1;a.style.position='absolute';a.style.top=0;a.style.left=0;a.style.border='none';a.style.visibility='hidden';document.body.appendChild(a);if('loading'!==document.readyState)c();else if(window.addEventListener)document.addEventListener('DOMContentLoaded',c);else{var e=document.onreadystatechange||function(){};document.onreadystatechange=function(b){e(b);'loading'!==document.readyState&&(document.onreadystatechange=e,c())}}}})();</script></body>
 </html>
