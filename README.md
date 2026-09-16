@@ -1,6 +1,6 @@
 # 📚 Oposiciones CAM — Plataforma de Estudio
 
-> Plataforma web ultraligera, instalable como app y completamente offline para preparar las oposiciones de la **Comunidad Autónoma de Madrid**. Temario íntegro cifrado con AES-256, +580 preguntas tipo test, modo oscuro y seguimiento personal de progreso.
+> Plataforma web ultraligera, instalable como app y completamente offline para preparar las oposiciones de la **Comunidad Autónoma de Madrid**. Temario íntegro cifrado con AES-256, +780 preguntas tipo test, modo oscuro y seguimiento personal de progreso.
 
 ![HTML5](https://img.shields.io/badge/HTML5-E34F26?style=flat&logo=html5&logoColor=white)
 ![CSS3](https://img.shields.io/badge/CSS3-1572B6?style=flat&logo=css3&logoColor=white)
@@ -51,6 +51,12 @@ oposiciones-cam/
 ├── tema7.html                  # Tema 7: El Personal al Servicio de las AAPP — TREBEP (35 arts)
 ├── tema8.html                  # Tema 8: Derechos, Deberes, Disciplinario e Incompatibilidades (68 arts)
 ├── tema9.html                  # Tema 9: Convenio Colectivo Único del Personal Laboral CAM (284 arts/disp)
+├── tema1-esp.html              # Tema 1 Específico: Modalidades de Atención a la Infancia y Pedagogía (17 arts)
+├── tema2-esp.html              # Tema 2 Específico: La Escuela Infantil y Protección a la Infancia (20 arts)
+├── tema3-esp.html              # Tema 3 Específico: Riesgo Social y Maltrato Infantil (18 arts)
+├── tema4-esp.html              # Tema 4 Específico: Sentido, Desarrollo 0-6 y Reflejos Primarios (9 arts/secc)
+├── tema5-esp.html              # Tema 5 Específico: Organización de las Escuelas de Educación Infantil (12 arts)
+├── tema6-esp.html              # Tema 6 Específico: La Evaluación en la Escuela Infantil (16 arts)
 ├── tests.html                  # Tests interactivos (estudio + examen + flashcards + falladas)
 ├── progreso.html               # Racha, logros, gráfico SVG y diagnóstico por tema
 ├── 404.html                    # Página de error personalizada
@@ -71,14 +77,20 @@ oposiciones-cam/
 │   ├── tema6.json              # Contenido cifrado del Tema 6
 │   ├── tema7.json              # Contenido cifrado del Tema 7
 │   ├── tema8.json              # Contenido cifrado del Tema 8
-│   └── tema9.json              # Contenido cifrado del Tema 9
+│   ├── tema9.json              # Contenido cifrado del Tema 9
+│   ├── tema1-esp.json          # Contenido cifrado del Tema 1 Específico
+│   ├── tema2-esp.json          # Contenido cifrado del Tema 2 Específico
+│   ├── tema3-esp.json          # Contenido cifrado del Tema 3 Específico
+│   ├── tema4-esp.json          # Contenido cifrado del Tema 4 Específico
+│   ├── tema5-esp.json          # Contenido cifrado del Tema 5 Específico
+│   └── tema6-esp.json          # Contenido cifrado del Tema 6 Específico
 ├── icons/
 │   ├── icon-192.png
 │   └── icon-512.png
 ├── favicon.svg
 ├── og-image.png                # Preview para redes sociales
 ├── manifest.webmanifest        # PWA manifest
-├── sw.js                       # Service Worker (offline cache v24)
+├── sw.js                       # Service Worker (offline cache v31)
 └── README.md
 ```
 
@@ -88,6 +100,7 @@ oposiciones-cam/
 
 ### 📖 Modo Estudio
 - **Texto íntegro y oficial** de cada artículo (sin resúmenes ni recortes)
+- **Doble bloque temático**: Selector rápido entre **Bloque Común** (Temas 1–9) y **Bloque Específico** (Educador Infantil)
 - **Acordeón** por artículo, con índice lateral + scrollspy
 - **Buscador** con resaltado de coincidencias en tiempo real + contador
 - **Marcadores** 🤔 *Dudoso* y ⭐ *Importante* persistentes
@@ -98,8 +111,8 @@ oposiciones-cam/
 - **Botón copiar texto** y navegación rápida dentro de cada artículo
 - **Hash deep‑linking** que abre y resalta el artículo de destino
 
-### ✅ Tests Interactivos (582 preguntas)
-- **9 bancos específicos** por tema + **Test Mixto** (20 aleatorias) + **Mis falladas** (repaso inteligente)
+### ✅ Tests Interactivos (782 preguntas)
+- **Bancos específicos** por tema + **Test Mixto** (20 aleatorias) + **Mis falladas** (repaso inteligente)
 - **Modo Estudio** con feedback inmediato y fundamentación legal detallada
 - **Modo Examen** con cronómetro configurable (15/30/45/60 min) y minimapa interactivo
 - **Modo Flashcards 🎴** para memorización rápida con atajos `Space` / `S` / `N`
@@ -113,7 +126,7 @@ oposiciones-cam/
 - 🏆 **Sistema de logros** desbloqueables
 - 📈 **Gráfico SVG** con la evolución de los últimos tests
 - Histórico detallado de puntuaciones e intentos
-- Estadísticas reales en vivo: **9 temas · 1016 artículos · 582 preguntas**
+- Estadísticas reales en vivo: **15 temas · 1108 artículos · 782 preguntas**
 - 📥 **Exportar/importar** datos en JSON (copia de seguridad)
 - 🗑 Borrado selectivo o reinicio de estadísticas
 
