@@ -1098,9 +1098,9 @@
           <input type="search" id="testSearchInput" placeholder="Buscar tema por número, título o materia (ej: datos, convenio, estatuto)..." autocomplete="off">
         </div>
         <div class="test-filter-pills">
-          <button class="test-pill active" data-filter="all">🎯 Todos los tests (13)</button>
+          <button class="test-pill active" data-filter="all">🎯 Todos los tests (16)</button>
           <button class="test-pill" data-filter="comun">🌸 Bloque Común (1–9)</button>
-          <button class="test-pill" data-filter="especifico">⚡ Bloque Específico (2)</button>
+          <button class="test-pill" data-filter="especifico">⚡ Bloque Específico (5)</button>
           <button class="test-pill" data-filter="especial">⭐ Repaso y Especiales (2)</button>
         </div>
       </div>
@@ -1200,7 +1200,7 @@
       <!-- BLOQUE 2: BLOQUE ESPECÍFICO (EDUCADOR INFANTIL) -->
       <div class="test-block-section" id="blockEsp">
         <div class="test-block-header" onclick="toggleTestBlock('blockEsp')">
-          <div class="test-block-title">⚡ Bloque Específico — Educador Infantil <span class="test-block-badge">2 temas disponibles</span></div>
+          <div class="test-block-title">⚡ Bloque Específico — Educador Infantil <span class="test-block-badge">5 temas disponibles</span></div>
           <span class="test-block-toggle">▾</span>
         </div>
         <div class="test-selector test-grid">
@@ -1220,6 +1220,33 @@
               <span class="meta">15 preguntas aleatorias</span>
             </div>
           </button>
+          <button class="test-card" data-test="tema3-esp" data-bloque="especifico">
+            <div class="test-card-icon" style="background:linear-gradient(135deg, #e05a80 0%, #c0305a 100%);">E3</div>
+            <div class="test-card-content">
+              <h3>Tema 3 Esp. — Riesgo Social y Maltrato Infantil</h3>
+              <p>Detección del riesgo social, tipología e indicadores de maltrato infantil, hoja de notificación CAM y programas de apoyo.</p>
+              <span class="meta">15 preguntas aleatorias</span>
+            </div>
+          </button>
+          <button class="test-card" data-test="tema4-esp" data-bloque="especifico">
+            <div class="test-card-icon" style="background:linear-gradient(135deg, #e05a80 0%, #c0305a 100%);">E4</div>
+            <div class="test-card-content">
+              <h3>Tema 4 Esp. — Sentido, Desarrollo y Reflejos</h3>
+              <p>Sentido y fines de Infantil, desarrollo 0–6, reflejos primarios (Moro, Landau, etc.) y teoría curricular (DUA, ciclos, áreas).</p>
+              <span class="meta">15 preguntas aleatorias</span>
+            </div>
+          </button>
+
+          <button class="test-card" data-test="tema5-esp" data-bloque="especifico">
+            <div class="test-card-icon" style="background:linear-gradient(135deg, #e05a80 0%, #c0305a 100%);">E5</div>
+            <div class="test-card-content">
+              <h3>Tema 5 Esp. — Organización de Escuelas Infantiles</h3>
+              <p>Recursos espaciales, temporales y materiales, órganos de gobierno (ROC), equipo educativo y colaboración familia-centro.</p>
+              <span class="meta">15 preguntas aleatorias</span>
+            </div>
+          </button>
+
+
 
         </div>
       </div>
@@ -8535,13 +8562,1348 @@
                             "exp": "Art. 5 Decreto 18/2008 CAM: La atención educativa en el primer ciclo estará a cargo de Maestros de Educación Infantil y Técnicos Superiores en Educación Infantil."
                   }
         ]
+      },
+      'tema3-esp': {
+        title: "Tema 3 Específico — Infancia en Riesgo Social y Maltrato Infantil",
+        questions: [
+                  {
+                            "q": "La «situación de riesgo social» en la infancia se define legal y técnicamente como aquella en la que:",
+                            "options": [
+                                      "Existe un perjuicio para el menor que no alcanza la gravedad suficiente para justificar su separación del núcleo familiar, orientándose la intervención a eliminar dichos factores de riesgo dentro del ámbito familiar",
+                                      "El menor es retirado de forma obligatoria y permanente de sus progenitores en 24 horas",
+                                      "La familia tiene ingresos superiores a la media autonómica",
+                                      "El menor comete una infracción penal en el centro escolar"
+                            ],
+                            "a": 0,
+                            "exp": "La situación de riesgo social implica la existencia de factores que perjudican el desarrollo del menor sin alcanzar la gravedad del desamparo, por lo que se interviene con la familia en su propio entorno."
+                  },
+                  {
+                            "q": "¿Cuál fue la primera ley estatal española en incorporar formalmente el concepto de riesgo social en el marco de la protección de menores?",
+                            "options": [
+                                      "La Ley Orgánica 1/1996, de 15 de enero, de Protección Jurídica del Menor",
+                                      "La Ley Moyano de 1857",
+                                      "El Código de Comercio de 1885",
+                                      "La Ley General de Educación de 1970"
+                            ],
+                            "a": 0,
+                            "exp": "La Ley Orgánica 1/1996 de Protección Jurídica del Menor introdujo por primera vez en el ordenamiento estatal el concepto de riesgo social y su delimitación frente al desamparo."
+                  },
+                  {
+                            "q": "La Ley Orgánica 8/2021 (LOPIVI) tiene como objeto principal:",
+                            "options": [
+                                      "Garantizar los derechos fundamentales de los menores a su integridad física, psíquica y moral frente a cualquier forma de violencia, asegurando medidas de sensibilización, prevención y detección precoz",
+                                      "Regular el contrato mercantil de guarderías privadas",
+                                      "Fijar el horario de apertura de los parques infantiles",
+                                      "Sancionar económicamente a los alumnos que no asistan a clase"
+                            ],
+                            "a": 0,
+                            "exp": "La LOPIVI (Ley Orgánica 8/2021) establece un marco integral de protección frente a la violencia hacia niños, niñas y adolescentes en todos los ámbitos (familiar, educativo, sanitario, digital)."
+                  },
+                  {
+                            "q": "En el análisis del riesgo social infantil, respecto a la interacción de los factores de riesgo:",
+                            "options": [
+                                      "Un factor de riesgo aislado rara vez explica por sí solo la desprotección, siendo la acumulación e interacción de múltiples factores lo que potencia exponencialmente el nivel de riesgo",
+                                      "Un solo factor económico determina automáticamente la retirada del menor",
+                                      "Los factores de riesgo nunca pueden prevenirse",
+                                      "Solo influyen los factores genéticos hereditarios"
+                            ],
+                            "a": 0,
+                            "exp": "El riesgo social es de naturaleza multifactorial; el impacto lesivo se multiplica cuando coexisten factores socioeconómicos, psicosociales y relacionales sin redes de apoyo."
+                  },
+                  {
+                            "q": "¿Cuál de los siguientes se clasifica como un FACTOR PSICOSOCIAL de riesgo en el entorno familiar?",
+                            "options": [
+                                      "Trastornos graves de salud mental no tratados en los progenitores, adicciones a sustancias tóxicas o violencia de género en el hogar",
+                                      "La pertenencia a una asociación deportiva del barrio",
+                                      "El horario laboral flexible de los padres",
+                                      "Disponer de biblioteca en el domicilio familiar"
+                            ],
+                            "a": 0,
+                            "exp": "Los factores psicosociales abarcan la salud mental de los cuidadores, toxicomanías, violencia machista o doméstica y dinámicas de apego desorganizado o grave conflictividad de pareja."
+                  },
+                  {
+                            "q": "La «prevención primaria» o universal en materia de infancia tiene por objetivo:",
+                            "options": [
+                                      "Dirigirse a toda la población infantil y familiar para promover el bienestar, la parentalidad positiva y evitar la aparición de factores de riesgo",
+                                      "Intervenir exclusivamente en familias donde ya se ha declarado el desamparo judicial",
+                                      "Separar a los niños de sus padres en el momento del nacimiento",
+                                      "Tratar las secuelas postraumáticas crónicas tras años de maltrato"
+                            ],
+                            "a": 0,
+                            "exp": "La prevención primaria actúa sobre la población general fomentando pautas de crianza positiva, servicios educativos y sanitarios universales y apoyo comunitario."
+                  },
+                  {
+                            "q": "La «prevención secundaria» en la protección de menores se dirige a:",
+                            "options": [
+                                      "Poblaciones, grupos o familias en las que ya se han identificado factores de riesgo específicos, con el fin de evitar que se produzca el maltrato o desprotección",
+                                      "Todos los ciudadanos sin distinción",
+                                      "Menores que ya están en centros de internamiento penal",
+                                      "Familias adoptivas con expediente cerrado"
+                            ],
+                            "a": 0,
+                            "exp": "La prevención secundaria interviene tempranamente sobre familias vulnerables o con factores de riesgo detectados para corregir las disfunciones antes de que generen daño al menor."
+                  },
+                  {
+                            "q": "La escuela infantil y los centros educativos se consideran un entorno privilegiado para la DETECCIÓN PRECOZ del riesgo social porque:",
+                            "options": [
+                                      "Los educadores observan al niño de forma continuada en el tiempo, en sus rutinas cotidianas y en interacción con sus iguales y con su familia",
+                                      "Tienen potestad policial para registrar domicilios privados",
+                                      "Es el único lugar donde los niños comen a diario",
+                                      "Los maestros tienen acceso a las cuentas bancarias de las familias"
+                            ],
+                            "a": 0,
+                            "exp": "La relación cotidiana y continuada de los educadores con el alumnado permite observar cambios sutiles de conducta, aspecto físico, higiene, alimentación y vínculos afectivos con las familias."
+                  },
+                  {
+                            "q": "Según la Organización Mundial de la Salud (OMS), el MALTRATO INFANTIL abarca:",
+                            "options": [
+                                      "Todas las formas de malos tratos físicos o emocionales, abuso sexual, abandono o trato negligente, o explotación comercial o de otro tipo, que causen o puedan causar daño a la salud, supervivencia o desarrollo del niño",
+                                      "Únicamente las lesiones físicas con hospitalización quirúrgica",
+                                      "Solo los castigos corporales impuestos por personas ajenas a la familia",
+                                      "Cualquier desacuerdo verbal entre progenitores"
+                            ],
+                            "a": 0,
+                            "exp": "La OMS define el maltrato infantil de manera amplia, incluyendo tanto acciones lesivas (físicas, emocionales, sexuales) como omisiones de cuidados básicos (negligencia)."
+                  },
+                  {
+                            "q": "La NEGLIGENCIA o abandono físico en la primera infancia consiste en:",
+                            "options": [
+                                      "La falta de atención no accidental a las necesidades físicas y básicas del niño (alimentación, higiene, vestimenta adecuada, atención médica, vacunas y seguridad)",
+                                      "Un golpe accidental jugando en el parque",
+                                      "No comprarle al niño el último modelo de videojuego",
+                                      "Llevar al niño a la guardería 5 minutos antes de la hora"
+                            ],
+                            "a": 0,
+                            "exp": "La negligencia es la omisión reiterada de los deberes de cuidado básico esencial para la supervivencia, salud y desarrollo psicofísico del menor."
+                  },
+                  {
+                            "q": "El MALTRATO EMOCIONAL o psicológico se caracteriza por:",
+                            "options": [
+                                      "Pautas de comportamiento hostiles, rechazo, descalificaciones continuas, amenazas, aislamiento o indiferencia afectiva que dañan la autoestima y el desarrollo emocional del niño",
+                                      "Poner límites normativos y pautas educativas adecuadas a la edad",
+                                      "Felicitar al menor cuando realiza una tarea correctamente",
+                                      "Exigir que recoja los juguetes tras la actividad"
+                            ],
+                            "a": 0,
+                            "exp": "El maltrato emocional daña la estructura psíquica del menor mediante el desprecio sistemático, culpabilización, insultos, rechazo afectivo o exigencias desproporcionadas."
+                  },
+                  {
+                            "q": "En la exploración física de un menor, ¿cuál de las siguientes lesiones es un indicador ALTAMENTE SOSPECHOSO de maltrato físico no accidental?",
+                            "options": [
+                                      "Hematomas simétricos o en zonas blandas/protegidas (cuello, mejillas, orejas, abdomen, glúteos) y quemaduras con patrón geométrico o por inmersión en guante/calcetín",
+                                      "Una rozadura superficial en la rodilla por una caída corriendo",
+                                      "Una pequeña picadura de mosquito en el brazo",
+                                      "Un chichón en la frente propio de los primeros pasos"
+                            ],
+                            "a": 0,
+                            "exp": "Las lesiones sospechosas de maltrato físico se ubican en zonas no expuestas a caídas accidentales habituales (glúteos, genitales, espalda, cuello) o presentan patrones geométricos (marcas de objetos, quemaduras de cigarrillo, líneas de inmersión)."
+                  },
+                  {
+                            "q": "¿Cuál de los siguientes comportamientos en un niño de 0 a 3 años puede ser un indicador de negligencia grave o privación afectiva?",
+                            "options": [
+                                      "Hambre voraz continua, retraso en el crecimiento sin causa orgánica (fallo de medro), apatía extrema o búsqueda indiscriminada de afecto en personas desconocidas",
+                                      "Mostrar preferencia por sus juguetes favoritos",
+                                      "Llorar al separarse de la madre el primer día de adaptación",
+                                      "Tener sueño tras la sesión de psicomotricidad"
+                            ],
+                            "a": 0,
+                            "exp": "El fallo de medro no orgánico, la voracidad alimentaria desesperada, la falta de respuesta a estímulos y la sociabilidad indiscriminada con extraños son signos de privación grave y negligencia."
+                  },
+                  {
+                            "q": "El «Síndrome de Münchhausen por poderes» es una forma de maltrato infantil en la que:",
+                            "options": [
+                                      "Un progenitor o cuidador simula, inventa o provoca intencionadamente síntomas patológicos o enfermedades en el menor para someterlo a exploraciones y tratamientos médicos innecesarios",
+                                      "El menor finge no querer hacer los deberes",
+                                      "El niño sufre un retraso leve en el habla",
+                                      "Los padres se niegan a contratar actividades extraescolares"
+                            ],
+                            "a": 0,
+                            "exp": "Es una forma grave de maltrato físico y psicológico en la que el cuidador inventa o induce dolencias en el niño para asumir el rol de protector abnegado ante el personal sanitario."
+                  },
+                  {
+                            "q": "En el caso de sospecha de ABUSO SEXUAL INFANTIL en una escuela infantil, el educador debe:",
+                            "options": [
+                                      "Escuchar al menor con calma sin juzgar, no formular preguntas inductivas ni interrogar de forma reiterada, registrar los hechos observados de forma literal y notificarlo de inmediato por el cauce oficial",
+                                      "Interrogar al niño delante de todos sus compañeros",
+                                      "Confrontar directamente al presunto agresor en el pasillo",
+                                      "Publicar los datos en el grupo de mensajería de padres"
+                            ],
+                            "a": 0,
+                            "exp": "El protocolo exige evitar la revictimización: no interrogar, escuchar de forma acogedora sin sugerir respuestas, transcribir literalmente las palabras del menor y derivar a los servicios especializados."
+                  },
+                  {
+                            "q": "En la Comunidad de Madrid, el instrumento oficial estandarizado para comunicar una situación de riesgo o sospecha de maltrato desde el centro educativo es:",
+                            "options": [
+                                      "La Hoja de Notificación de Sospecha de Maltrato Infantil",
+                                      "Una carta manuscrita anónima sin remitente",
+                                      "Un correo electrónico informal a la prensa",
+                                      "Una denuncia en la comisaría de policía exclusivamente por el director"
+                            ],
+                            "a": 0,
+                            "exp": "La CAM dispone de la Hoja de Notificación de Sospecha de Maltrato Infantil, documento normalizado e interdepartamental para derivar los casos detectados."
+                  },
+                  {
+                            "q": "El principio de «mínima injerencia» en la intervención protectora de menores establece que:",
+                            "options": [
+                                      "Las medidas que se adopten deben ser las menos restrictivas posibles de los derechos del menor y de su familia, priorizando siempre que sea viable el mantenimiento en el entorno familiar con apoyos",
+                                      "La Administración no debe intervenir nunca en las familias",
+                                      "Todos los menores deben ser internados inmediatamente",
+                                      "Solo se interviene si hay una sentencia del Tribunal Supremo"
+                            ],
+                            "a": 0,
+                            "exp": "El principio de proporcionalidad y mínima injerencia exige agotar los apoyos en el propio medio familiar antes de recurrir a la separación del menor de su entorno biológico."
+                  },
+                  {
+                            "q": "Si en la escuela infantil se detecta una situación de maltrato con RIESGO VITAL INMEDIATO o lesiones físicas de gravedad flagrante:",
+                            "options": [
+                                      "Se debe trasladar inmediatamente al menor a un centro sanitario de urgencias y poner el hecho en conocimiento inmediato del Juzgado de Guardia, Fiscalía de Menores o Policía",
+                                      "Se debe esperar 3 meses a la siguiente reunión ordinaria",
+                                      "Se envía una carta certificada ordinaria a los abuelos",
+                                      "Se le da el alta en la guardería para no tener problemas"
+                            ],
+                            "a": 0,
+                            "exp": "Ante un riesgo vital o delito inminente, la prioridad absoluta es la asistencia médica inmediata y la comunicación urgente a las autoridades judiciales y policiales."
+                  },
+                  {
+                            "q": "Los Servicios Sociales de Atención Social Primaria (Servicios Sociales Municipales) en casos de riesgo social infantil tienen como función:",
+                            "options": [
+                                      "La valoración diagnóstica de la situación familiar, la elaboración del Proyecto de Intervención Familiar y la prestación de ayudas socioeducativas y de apoyo a la parentalidad",
+                                      "Dictar sentencias de privación de libertad",
+                                      "La detención policial de personas adultas",
+                                      "El enjuiciamiento de delitos penales"
+                            ],
+                            "a": 0,
+                            "exp": "Los Servicios Sociales Municipales y sus Equipos de Familia son la puerta de entrada del sistema: evalúan, diagnostican y ejecutan planes de apoyo en el medio sociofamiliar."
+                  },
+                  {
+                            "q": "El Grupo de Menores de la Policía Nacional (GRUME) y los Equipos Mujer-Menor de la Guardia Civil (EMUME) son:",
+                            "options": [
+                                      "Unidades policiales especializadas en la investigación de delitos contra la infancia, violencia de género y protección integral de menores",
+                                      "Brigadas de tráfico de carreteras",
+                                      "Equipos de rescate de montaña exclusivamente",
+                                      "Centros escolares privados"
+                            ],
+                            "a": 0,
+                            "exp": "El GRUME (Cuerpo Nacional de Policía) y el EMUME (Guardia Civil) son unidades policiales con formación específica en investigación y atención a víctimas menores de edad."
+                  },
+                  {
+                            "q": "La figura del «Agente Tutor» en los Cuerpos de Policía Local de la Comunidad de Madrid tiene como cometido principal:",
+                            "options": [
+                                      "La prevención, mediación y resolución de conflictos en el entorno escolar y la protección de menores en situaciones de absentismo, riesgo o desamparo",
+                                      "Imponer multas de tráfico a los profesores",
+                                      "Vigilar los exámenes de selectividad",
+                                      "Impartir las clases de lengua y matemáticas"
+                            ],
+                            "a": 0,
+                            "exp": "El Agente Tutor es un policía local especializado en la protección de menores y la prevención de conductas de riesgo y absentismo en coordinación con los centros educativos y servicios sociales."
+                  },
+                  {
+                            "q": "En el ámbito educativo de la CAM, los Equipos de Atención Temprana (EAT) son:",
+                            "options": [
+                                      "Servicios psicopedagógicos especializados que intervienen en la etapa de 0 a 6 años (con prioridad en 0-3 años) para la prevención, detección y atención a niños con necesidades educativas o riesgo social",
+                                      "Empresas privadas de catering escolar",
+                                      "Escuadrones de limpieza industrial",
+                                      "Tribunales de oposiciones universitarias"
+                            ],
+                            "a": 0,
+                            "exp": "Los EAT de la Consejería de Educación orientan y asesoran a las familias y escuelas infantiles en el desarrollo temprano y la detección de dificultades evolutivas o situaciones de vulnerabilidad."
+                  },
+                  {
+                            "q": "La EVALUACIÓN de la intervención socioeducativa con menores en situación de riesgo debe caracterizarse por ser:",
+                            "options": [
+                                      "Continua, formativa, participativa y multidisciplinar, revisando periódicamente la consecución de objetivos y la evolución del bienestar del menor y su familia",
+                                      "Realizada una única vez al cabo de 10 años",
+                                      "Un examen de preguntas teóricas impuesto a los progenitores",
+                                      "Secreta y sin conocimiento de los profesionales implicados"
+                            ],
+                            "a": 0,
+                            "exp": "La evaluación socioeducativa valora de forma continua la eficacia de las medidas acordadas en el Plan de Caso, adaptándolas a las necesidades cambiantes del niño y su familia."
+                  },
+                  {
+                            "q": "El «maltrato prenatal» es una modalidad de desprotección infantil que comprende:",
+                            "options": [
+                                      "Las conductas de la madre gestante (consumo de drogas, alcohol, falta intencionada de controles médicos) que pueden perjudicar gravemente la salud y desarrollo del feto",
+                                      "El parto natural sin anestesia",
+                                      "Las revisiones ecográficas mensuales del obstetra",
+                                      "La compra de ropa de bebé de color blanco"
+                            ],
+                            "a": 0,
+                            "exp": "El maltrato prenatal abarca el consumo de tóxicos o la omisión grave de cuidados durante la gestación que provocan secuelas físicas o neurológicas en el recién nacido (ej. síndrome de abstinencia neonatal o síndrome alcohólico fetal)."
+                  },
+                  {
+                            "q": "El «maltrato institucional» hacia la infancia hace referencia a:",
+                            "options": [
+                                      "Cualquier legislación, procedimiento, actuación u omisión procedente de los poderes públicos o de instituciones que vulnere los derechos del menor o le cause daño",
+                                      "Un conflicto de patio entre dos alumnos de tres años",
+                                      "El pago de impuestos municipales por una guardería",
+                                      "La huelga de transportes urbanos"
+                            ],
+                            "a": 0,
+                            "exp": "El maltrato institucional se produce cuando las administraciones, centros o profesionales públicos no garantizan la protección debida o aplican medidas lesivas o demoras perjudiciales para los menores."
+                  },
+                  {
+                            "q": "Ante un relato ESPONTÁNEO de un niño sobre una situación de maltrato o abuso, ¿cuál es la actitud profesional correcta del educador?",
+                            "options": [
+                                      "Mantener la serenidad, no mostrar alarma ni rechazo, transmitir seguridad y protección al niño, no interrumpir con preguntas insistentes y no prometer secretos que no se puedan cumplir",
+                                      "Decirle al niño que no diga tonterías y mandarle a jugar",
+                                      "Llamar a los padres inmediatamente delante del niño para reñirles",
+                                      "Grabar al niño en vídeo con el móvil personal y subirlo a internet"
+                            ],
+                            "a": 0,
+                            "exp": "El educador debe acoger el testimonio con calma, validar los sentimientos del niño, no prometer confidencialidad absoluta (debe explicarse que se pedirá ayuda para protegerlo) y documentar lo expresado."
+                  },
+                  {
+                            "q": "El papel del Pediatra y del Equipo de Atención Primaria de Salud en la detección del maltrato infantil incluye:",
+                            "options": [
+                                      "El seguimiento del Programa del Niño Sano, control de vacunaciones, detección de lesiones físicas sospechosas y emisión del Parte de Lesiones judicial si procede",
+                                      "La condena penal de los progenitores",
+                                      "La redacción de las leyes educativas",
+                                      "El cobro de aranceles médicos privados"
+                            ],
+                            "a": 0,
+                            "exp": "La atención pediátrica es clave para detectar incongruencias entre las lesiones y el relato familiar, desnutrición, retrasos ponderales y emitir partes médicos de notificación judicial."
+                  },
+                  {
+                            "q": "En la Comunidad de Madrid, la entidad pública competente en materia de protección de menores asume la guarda o tutela a través de:",
+                            "options": [
+                                      "La Dirección General competente en materia de Infancia y Familias de la Consejería responsable de Asuntos Sociales",
+                                      "La Consejería de Transportes",
+                                      "El Patronato de Turismo",
+                                      "La Cámara Oficial de Comercio"
+                            ],
+                            "a": 0,
+                            "exp": "La Dirección General con competencias en Infancia y Familias de la CAM es el órgano técnico administrativo responsable de la ejecución de las medidas de protección y tutela de menores."
+                  },
+                  {
+                            "q": "La «parentalidad positiva», según la Recomendación del Consejo de Europa de 2006, se refiere a:",
+                            "options": [
+                                      "El comportamiento de los padres fundamentado en el interés superior del niño, que cuida, desarrolla sus capacidades, no es violento y ofrece reconocimiento y orientación que incluye el establecimiento de límites",
+                                      "La ausencia total de normas y límites en el hogar",
+                                      "El uso del castigo físico moderado como método educativo",
+                                      "Delegar la crianza exclusiva en la escuela infantil"
+                            ],
+                            "a": 0,
+                            "exp": "La parentalidad positiva promueve vínculos afectivos cálidos, comunicación abierta, límites no violentos y fomento de la autonomía del menor en un entorno estructurado y seguro."
+                  },
+                  {
+                            "q": "El «absentismo escolar reiterado e injustificado» en la etapa infantil (art. 3.5.2):",
+                            "options": [
+                                      "Constituye un indicador relevante de posible negligencia o desprotección social que debe ser valorado por los servicios sociales",
+                                      "Es una decisión privada de los padres sin relevancia",
+                                      "Otorga derecho a una beca de estudios automática",
+                                      "Se castiga con la expulsión definitiva del menor del sistema escolar"
+                            ],
+                            "a": 0,
+                            "exp": "La falta continuada y no justificada de asistencia escolar es una señal de alerta de negligencia en los deberes de cuidado, socialización y estimulación del menor."
+                  },
+                  {
+                            "q": "Las quemaduras causadas por «inmersión en líquido caliente» con línea de nivel horizontal nítida y sin salpicaduras:",
+                            "options": [
+                                      "Son un signo inequívoco de maltrato físico infligido deliberadamente (introducción forzada en agua hirviendo)",
+                                      "Son siempre accidentes domésticos fortuitos",
+                                      "Se deben a reacciones alérgicas solares",
+                                      "Son lesiones propias del gateo natural"
+                            ],
+                            "a": 0,
+                            "exp": "Las quemaduras por inmersión forzada presentan bordes nítidos, afectación simétrica de manos o pies (en guante o calcetín) y ausencia de salpicaduras típicas del derrame accidental."
+                  },
+                  {
+                            "q": "En el informe socioeducativo de derivación de sospecha de maltrato elaborado por la escuela infantil, es imprescindible:",
+                            "options": [
+                                      "Describir hechos observables, fechas, citas literales del menor y conductas objetivas, distinguiéndolas claramente de las interpretaciones u opiniones personales",
+                                      "Incluir rumores y comentarios informales de vecinos no contrastados",
+                                      "Diagnosticar patologías psiquiátricas complejas a los padres",
+                                      "Ocultar los datos de identidad del menor"
+                            ],
+                            "a": 0,
+                            "exp": "El rigor técnico exige redactar observaciones objetivas, datos fácticos precisos, registro cronológico y citas textuales, evitando conjeturas subjetivas o juicios de valor."
+                  },
+                  {
+                            "q": "El principio de «confidencialidad y deber de reserva» de los profesionales que intervienen en casos de maltrato infantil implica que:",
+                            "options": [
+                                      "La información solo debe compartirse con los profesionales y autoridades directamente implicados en la protección del menor, protegiendo la intimidad del niño y su familia",
+                                      "El caso puede comentarse libremente en la sala de profesores con cualquier persona",
+                                      "Está prohibido informar a la policía o al juzgado",
+                                      "Se debe publicar en la página web del colegio para prevenir a otras familias"
+                            ],
+                            "a": 0,
+                            "exp": "El deber de secreto profesional y la protección de datos garantizan la intimidad del menor, restringiendo la información exclusivamente al equipo técnico y judicial que deba intervenir."
+                  },
+                  {
+                            "q": "El «acoso escolar» (bullying) y el ciberacoso entre menores, de acuerdo con la LOPIVI:",
+                            "options": [
+                                      "Son formas de violencia entre iguales que los centros educativos tienen la obligación legal de prevenir, detectar precozmente e intervenir mediante protocolos específicos",
+                                      "Son cosas de niños normales que no requieren intervención educativa",
+                                      "Solo son sancionables si ocurren fuera del centro escolar",
+                                      "No están tipificados en el ordenamiento jurídico"
+                            ],
+                            "a": 0,
+                            "exp": "La LOPIVI tipifica la violencia entre iguales y obliga a todos los centros a disponer de planes de convivencia y protocolos de actuación inmediata ante acoso y ciberacoso."
+                  },
+                  {
+                            "q": "La «resiliencia infantil» se define como:",
+                            "options": [
+                                      "La capacidad del ser humano para sobreponerse a experiencias adversas, traumas o situaciones de riesgo y salir fortalecido de ellas, potenciada por la existencia de figuras de apego seguro y tutores de resiliencia",
+                                      "La resistencia física a las enfermedades contagiosas",
+                                      "El aislamiento voluntario de los demás compañeros",
+                                      "La falta total de sentimientos y emociones"
+                            ],
+                            "a": 0,
+                            "exp": "La resiliencia es la capacidad de adaptación positiva frente a la adversidad; los educadores pueden actuar como 'tutores de resiliencia' proporcionando seguridad afectiva y refuerzo positivo."
+                  },
+                  {
+                            "q": "El «Proyecto de Intervención Familiar» (PIF) diseñado por los Servicios Sociales tiene como finalidad:",
+                            "options": [
+                                      "Establecer objetivos consensuados con la familia, pautas educativas, apoyos domiciliarios y compromisos para superar la situación de riesgo y garantizar el bienestar del menor",
+                                      "La venta forzosa de la vivienda familiar",
+                                      "Sustituir a los padres en la patria potestad",
+                                      "La concesión de un crédito bancario comercial"
+                            ],
+                            "a": 0,
+                            "exp": "El PIF es el plan de trabajo individualizado que articula las medidas de apoyo, terapia familiar, recursos educativos y seguimiento periódico para capacitar a la familia en el cuidado del menor."
+                  },
+                  {
+                            "q": "Las mordeduras humanas en el cuerpo de un menor:",
+                            "options": [
+                                      "Pueden distinguirse por la distancia entre los caninos; si la distancia es superior a 3 cm indica que la mordedura fue infligida por un adulto y no por otro niño",
+                                      "Son siempre lesiones provocadas por animales domésticos",
+                                      "No dejan ninguna marca visible en la piel",
+                                      "Solo se producen durante la comida"
+                            ],
+                            "a": 0,
+                            "exp": "En medicina forense y pediatría, una arcada dentaria con distancia intercanina superior a 3 cm es compatible con la mordedura de una persona adulta o adolescente, constituyendo un indicador de maltrato físico."
+                  },
+                  {
+                            "q": "La privación médica o el rechazo de los padres a tratamientos médicos vitales para el menor por motivos ideológicos o religiosos:",
+                            "options": [
+                                      "Constituye una situación de negligencia grave y riesgo vital que faculta a los profesionales sanitarios y a la fiscalía a solicitar autorización judicial urgente para dispensar el tratamiento",
+                                      "Es un derecho absoluto de los padres que no puede ser revocado",
+                                      "Obliga al médico a dar el alta voluntaria sin actuar",
+                                      "Exime de cualquier responsabilidad a los tutores"
+                            ],
+                            "a": 0,
+                            "exp": "El derecho a la vida y a la salud del menor prevalece sobre las convicciones de los progenitores; los jueces autorizan intervenciones médicas de urgencia ante la negativa injustificada de los padres."
+                  },
+                  {
+                            "q": "En el ámbito de la intervención con familias en riesgo social, el «acompañamiento socioeducativo» del Técnico Educador persigue:",
+                            "options": [
+                                      "Reforzar las competencias parentales, modelar pautas de interacción afectiva y promover la autonomía y autoestima de la familia sin juzgar",
+                                      "Castigar a los padres con multas diarias",
+                                      "Retirar la custodia sin informe previo",
+                                      "Imponer sus propias costumbres familiares privadas"
+                            ],
+                            "a": 0,
+                            "exp": "La intervención socioeducativa se basa en la relación de ayuda, la capacitación parental, el refuerzo de las capacidades positivas y el modelado de hábitos saludables de crianza."
+                  },
+                  {
+                            "q": "La coordinación periódica entre los centros de Educación Infantil y los Servicios Sociales Municipales (Mesa de Coordinación o Comisión de Apoyo Familiar) permite:",
+                            "options": [
+                                      "El seguimiento conjunto de los casos de riesgo, la optimización de recursos, la detección precoz y la coherencia en las pautas educativas aplicadas al menor",
+                                      "El intercambio de información comercial de empresas",
+                                      "La celebración de juicios sumarios en el colegio",
+                                      "La privatización de las guarderías municipales"
+                            ],
+                            "a": 0,
+                            "exp": "El trabajo en red interdisciplinar entre educación, servicios sociales y salud es la herramienta más eficaz para prevenir la cronicidad del riesgo y proteger integralmente a la infancia."
+                  }
+        ]
+      },
+      'tema4-esp': {
+        title: "Tema 4 Específico — Sentido, Desarrollo 0–6 y Reflejos Primarios",
+        questions: [
+                  {
+                            "q": "Según el artículo 12.1 de la LOE/LOMLOE, la Educación Infantil es una etapa educativa que:",
+                            "options": [
+                                      "Tiene identidad propia y atiende a niñas y niños desde el nacimiento hasta los seis años de edad",
+                                      "Es obligatoria desde los 2 años en centros públicos",
+                                      "Se estructura en un solo ciclo de seis años sin divisiones",
+                                      "Tiene carácter exclusivamente asistencial"
+                            ],
+                            "a": 0,
+                            "exp": "Art. 12.1 LOMLOE: La educación infantil constituye la etapa educativa con identidad propia que atiende a niñas y niños desde el nacimiento hasta los seis años de edad."
+                  },
+                  {
+                            "q": "El carácter voluntario de la Educación Infantil (art. 12.3 LOMLOE) implica que:",
+                            "options": [
+                                      "Su finalidad es contribuir al desarrollo físico, afectivo, social, cognitivo y artístico, así como la educación en valores cívicos para la convivencia, sin ser obligatoria la escolarización",
+                                      "Los centros pueden expulsar alumnos sin motivo justificado",
+                                      "No existe ningún currículo oficial regulado",
+                                      "Los educadores no necesitan ninguna titulación"
+                            ],
+                            "a": 0,
+                            "exp": "Art. 12.3 LOMLOE: La educación infantil tiene carácter voluntario y su finalidad es contribuir al desarrollo integral del alumnado en todas sus dimensiones."
+                  },
+                  {
+                            "q": "El artículo 13 de la LOMLOE recoge entre los objetivos de la Educación Infantil:",
+                            "options": [
+                                      "Conocer el propio cuerpo, observar y explorar el entorno, adquirir autonomía, desarrollar capacidades afectivas y relacionarse en igualdad evitando la violencia",
+                                      "Aprender a resolver ecuaciones de segundo grado",
+                                      "Memorizar la tabla periódica de los elementos",
+                                      "Superar pruebas físicas atléticas de alto rendimiento"
+                            ],
+                            "a": 0,
+                            "exp": "Art. 13 LOMLOE: Los objetivos de etapa incluyen el autoconocimiento corporal, la autonomía en rutinas, el desarrollo afectivo, la empatía, la resolución pacífica de conflictos y la igualdad de género."
+                  },
+                  {
+                            "q": "Los métodos de trabajo en ambos ciclos de la Educación Infantil (art. 14.3 y 14.4 LOMLOE):",
+                            "options": [
+                                      "Se basarán en las experiencias, las actividades y el juego y se aplicarán en un ambiente de afecto y confianza",
+                                      "Se basarán exclusivamente en clases magistrales y libros de texto",
+                                      "Prohíben el juego libre en el aula",
+                                      "Exigen exámenes semanales eliminatorios"
+                            ],
+                            "a": 0,
+                            "exp": "Art. 14 LOMLOE: Los métodos de trabajo en ambos ciclos se basarán en las experiencias, las actividades y el juego en un ambiente de afecto y confianza."
+                  },
+                  {
+                            "q": "¿Qué son los «reflejos primitivos o arcaicos» del recién nacido?",
+                            "options": [
+                                      "Movimientos automáticos e involuntarios mediados por el tronco encefálico y médula espinal que permiten la supervivencia y que deben integrarse en reflejos posturales y motricidad voluntaria",
+                                      "Enfermedades genéticas incurables del recién nacido",
+                                      "Conductas aprendidas mediante imitación a los 3 años",
+                                      "Movimientos voluntarios controlados por la corteza cerebral"
+                            ],
+                            "a": 0,
+                            "exp": "Los reflejos primitivos son respuestas motoras automáticas e involuntarias del neonato que deben integrarse durante los primeros meses para permitir el desarrollo motor maduro."
+                  },
+                  {
+                            "q": "El «Reflejo de Moro» (o de sobresalto/abrazo) se desencadena cuando:",
+                            "options": [
+                                      "El bebé experimenta una sensación repentina de caída hacia atrás o escucha un ruido fuerte e inesperado, abriendo simétricamente los brazos y cerrándolos luego en abrazo",
+                                      "Se le acaricia la planta del pie",
+                                      "Se le introduce un objeto en la boca",
+                                      "Se le coloca boca abajo en el agua"
+                            ],
+                            "a": 0,
+                            "exp": "El Reflejo de Moro es una respuesta de sobresalto ante la pérdida de apoyo o estímulo sonoro brusco, debiendo integrarse y desaparecer entre el 4º y 5º mes de vida."
+                  },
+                  {
+                            "q": "El «Reflejo de Prensión» (Grasping) palmar consiste en:",
+                            "options": [
+                                      "El cierre automático y firme de los dedos de la mano al presionar la palma del bebé con un objeto o dedo",
+                                      "El giro de la cabeza hacia el lado de la mejilla estimulada",
+                                      "La extensión del cuello al mirar hacia arriba",
+                                      "El pedaleo de las piernas en el aire"
+                            ],
+                            "a": 0,
+                            "exp": "El reflejo de prensión palmar es la flexión y agarre involuntario de los dedos ante el contacto en la palma; se integra hacia los 3-4 meses dando paso a la prensión voluntaria."
+                  },
+                  {
+                            "q": "El «Reflejo del Espadachín» o Tónico Asimétrico Cervical (RTAC) se manifiesta cuando:",
+                            "options": [
+                                      "Al girar la cabeza del bebé hacia un lado, se extiende el brazo y la pierna del lado hacia el que mira la cara y se flexionan las extremidades del lado opuesto",
+                                      "El bebé se pone de pie automáticamente",
+                                      "El bebé junta las dos manos en la línea media",
+                                      "El niño cierra los ojos ante la luz"
+                            ],
+                            "a": 0,
+                            "exp": "El RTAC adopta la postura de esgrima (extensión del hemicuerpo facial y flexión del occipital); se mantiene activo los primeros 2-3 meses y favorece la coordinación óculo-manual."
+                  },
+                  {
+                            "q": "El «Reflejo de Babinski» (reflejo plantar extensor) se considera fisiológicamente NORMAL en:",
+                            "options": [
+                                      "Niños de hasta 2 años de edad (el dedo gordo se extiende hacia arriba y los demás se abren en abanico al estimular el borde externo de la planta del pie)",
+                                      "Adultos de más de 40 años",
+                                      "Adolescentes en edad de pubertad",
+                                      "Ninguna edad; siempre es patológico"
+                            ],
+                            "a": 0,
+                            "exp": "El signo de Babinski es normal en lactantes y niños hasta los 2 años debido a la inmadurez de la vía piramidal. A partir de esa edad, la respuesta normal es la flexión plantar."
+                  },
+                  {
+                            "q": "El «Reflejo de Landau» aparece hacia los 4 meses y se integra hacia los 12 meses, consistiendo en que:",
+                            "options": [
+                                      "Al sostener al bebé boca abajo por el abdomen, éste eleva la cabeza y extiende el tronco y las extremidades inferiores",
+                                      "El bebé llora al quedarse a oscuras",
+                                      "El bebé succiona el chupete rítmicamente",
+                                      "El niño camina de espaldas"
+                            ],
+                            "a": 0,
+                            "exp": "El Reflejo de Landau es un reflejo postural en suspensión ventral que ayuda al tono extensor y prepara al niño para la postura erguida y la marcha."
+                  },
+                  {
+                            "q": "La persistencia anormal de los reflejos arcaicos más allá de las edades habituales de integración puede indicar:",
+                            "options": [
+                                      "Inmadurez o posibles alteraciones en el desarrollo del sistema nervioso central que requieren valoración neurológica y de atención temprana",
+                                      "Una inteligencia superior a la media",
+                                      "Falta de sueño transitoria",
+                                      "Una alimentación hipercalórica"
+                            ],
+                            "a": 0,
+                            "exp": "La no integración o la presencia asimétrica de los reflejos primitivos puede alertar de disfunción neurológica, retraso psicomotor o dificultades de coordinación motora."
+                  },
+                  {
+                            "q": "¿Qué se entiende por «currículo» en el marco de la LOMLOE?",
+                            "options": [
+                                      "El conjunto de objetivos, competencias, contenidos (saberes básicos), métodos pedagógicos y criterios de evaluación de cada una de las enseñanzas",
+                                      "La lista de libros de texto que los padres deben comprar",
+                                      "El horario de entrada y salida del centro escolar",
+                                      "El contrato laboral de los educadores"
+                            ],
+                            "a": 0,
+                            "exp": "Art. 6 LOMLOE: El currículo es el conjunto de objetivos, competencias, contenidos enunciados en forma de saberes básicos, métodos pedagógicos y criterios de evaluación."
+                  },
+                  {
+                            "q": "El PRIMER nivel de concreción curricular corresponde a:",
+                            "options": [
+                                      "El Ministerio de Educación (enseñanzas mínimas / RD 95/2022) y las Comunidades Autónomas (currículo autonómico / Decreto 36/2022 CAM)",
+                                      "El educador en su aula",
+                                      "El Consejo Escolar del centro",
+                                      "La editorial que diseña las fichas"
+                            ],
+                            "a": 0,
+                            "exp": "El 1º nivel es el marco prescriptivo oficial establecido por el Estado (enseñanzas mínimas) y la Administración Autonómica (currículo autonómico)."
+                  },
+                  {
+                            "q": "El SEGUNDO nivel de concreción curricular se materializa en el centro educativo mediante:",
+                            "options": [
+                                      "El Proyecto Educativo de Centro (PEC) y la Propuesta Pedagógica de la etapa",
+                                      "La Ley Orgánica de Educación",
+                                      "La programación didáctica diaria de cada educador",
+                                      "Las adaptaciones curriculares individualizadas"
+                            ],
+                            "a": 0,
+                            "exp": "El 2º nivel adapta el currículo prescriptivo a la realidad del centro a través del Proyecto Educativo y la Propuesta Pedagógica de Educación Infantil."
+                  },
+                  {
+                            "q": "El TERCER nivel de concreción curricular corresponde a:",
+                            "options": [
+                                      "La Programación de Aula o situaciones de aprendizaje diseñadas por el equipo docente/educador para su grupo específico de alumnos",
+                                      "El Estatuto de Autonomía de la CAM",
+                                      "El Boletín Oficial del Estado",
+                                      "El Plan de Emergencia del edificio"
+                            ],
+                            "a": 0,
+                            "exp": "El 3º nivel es la programación de aula donde el educador diseña las unidades de programación, situaciones de aprendizaje y actividades adaptadas a su grupo."
+                  },
+                  {
+                            "q": "El CUARTO nivel de concreción curricular hace referencia a:",
+                            "options": [
+                                      "Las Adaptaciones Curriculares Individualizadas (ACI) y medidas de ajuste personalizadas basadas en el Diseño Universal para el Aprendizaje (DUA)",
+                                      "La normativa estatal básica",
+                                      "El reglamento de régimen interior",
+                                      "La compra de mobiliario homologado"
+                            ],
+                            "a": 0,
+                            "exp": "El 4º nivel concreta los ajustes para alumnos con necesidades específicas de apoyo educativo (NEAE), garantizando la inclusión y la accesibilidad (DUA)."
+                  },
+                  {
+                            "q": "El Área 1 «Crecimiento en Armonía» (Decreto 36/2022 CAM) tiene como eje central:",
+                            "options": [
+                                      "El desarrollo personal, el autoconocimiento y control corporal, la autoimagen positiva, la gestión emocional y la adquisición de hábitos de vida saludable",
+                                      "El aprendizaje del abecedario y la caligrafía formal",
+                                      "La resolución de problemas algebraicos",
+                                      "La memorización de las capitales del mundo"
+                            ],
+                            "a": 0,
+                            "exp": "Área 1: Se centra en las dimensiones física, motora, afectiva y emocional del niño, la autonomía, la relación con el propio cuerpo y los hábitos saludables."
+                  },
+                  {
+                            "q": "El Área 2 «Descubrimiento y Exploración del Entorno» fomenta en los niños:",
+                            "options": [
+                                      "La curiosidad, el pensamiento lógico-matemático, la indagación sobre el medio natural, social y cultural y el respeto por los seres vivos",
+                                      "El adiestramiento para el uso de tarjetas bancarias",
+                                      "El aprendizaje de leyes jurídicas complejas",
+                                      "La memorización de fechas históricas"
+                            ],
+                            "a": 0,
+                            "exp": "Área 2: Desarrolla el pensamiento científico temprano, las relaciones espaciales y temporales, la clasificación, la exploración del medio físico y social."
+                  },
+                  {
+                            "q": "El Área 3 «Comunicación y Representación de la Realidad» comprende:",
+                            "options": [
+                                      "El desarrollo de las habilidades comunicativas y expresivas a través de los lenguajes verbal, corporal, plástico, musical y digital",
+                                      "Únicamente la lectura y escritura mecánica de textos largos",
+                                      "La oratoria parlamentaria",
+                                      "El silencio absoluto en el aula"
+                            ],
+                            "a": 0,
+                            "exp": "Área 3: Abarca todos los lenguajes (oral, gestual, plástico, musical) como herramientas de expresión, comunicación, representación y creatividad."
+                  },
+                  {
+                            "q": "El Decreto 36/2022 de la Comunidad de Madrid incorpora en el segundo ciclo de Educación Infantil:",
+                            "options": [
+                                      "La iniciación a una lengua extranjera con un mínimo de 1,5 horas semanales y la oferta de enseñanzas de religión",
+                                      "La obligatoriedad del latín y el griego",
+                                      "La prohibición del juego libre",
+                                      "Exámenes oficiales trimestrales"
+                            ],
+                            "a": 0,
+                            "exp": "Decreto 36/2022 CAM: Regula la lengua extranjera en 2º ciclo (mínimo 1,5 h semanales en dos sesiones) y la oferta voluntaria de religión para las familias."
+                  },
+                  {
+                            "q": "El principio del «Diseño Universal para el Aprendizaje» (DUA) en Educación Infantil exige:",
+                            "options": [
+                                      "Ofrecer múltiples formas de representación, expresión y motivación para que todos los niños puedan acceder y participar en el aprendizaje sin barreras",
+                                      "Que todos los niños hagan la misma ficha al mismo tiempo y de la misma manera",
+                                      "Diseñar un único examen rígido para toda la clase",
+                                      "Separar a los alumnos con dificultades en aulas aisladas"
+                            ],
+                            "a": 0,
+                            "exp": "El DUA es un enfoque pedagógico que diseña entornos y actividades flexibles y accesibles desde el inicio, atendiendo a la diversidad sin necesidad de adaptaciones segregadoras."
+                  },
+                  {
+                            "q": "Las «competencias clave» en Educación Infantil:",
+                            "options": [
+                                      "Se adaptan al desarrollo madurativo de la etapa y se inician desde el comienzo de la escolarización vinculadas a las situaciones de aprendizaje",
+                                      "Son exigibles como requisito para poder pasar a Educación Primaria",
+                                      "Se evalúan mediante notas numéricas de 1 a 10",
+                                      "Solo se aplican en la universidad"
+                            ],
+                            "a": 0,
+                            "exp": "En Educación Infantil las competencias clave se adaptan al desarrollo infantil (comunicación, personal/social, STEM temprana, cultural) sin tener carácter de promoción selectiva."
+                  },
+                  {
+                            "q": "Los «saberes básicos» en el currículo de la LOMLOE sustituyen al concepto tradicional de contenidos y se definen como:",
+                            "options": [
+                                      "Los conocimientos, destrezas y actitudes que constituyen los contenidos propios de un área y cuyo aprendizaje es necesario para adquirir las competencias",
+                                      "Los libros de texto obligatorios de la editorial",
+                                      "Los datos históricos que deben memorizarse literalmente",
+                                      "Las normas de tráfico rodado"
+                            ],
+                            "a": 0,
+                            "exp": "Los saberes básicos integran conocimientos, habilidades y actitudes necesarias para resolver situaciones de aprendizaje contextualizadas."
+                  },
+                  {
+                            "q": "El desarrollo psicomotor en la etapa de 0 a 3 años progresa siguiendo dos leyes psicofisiológicas universales:",
+                            "options": [
+                                      "Ley Céfalo-Caudal (control de cabeza a pies) y Ley Próximo-Distal (del eje corporal hacia los extremos de las extremidades)",
+                                      "Ley de Newton y Ley de Galileo",
+                                      "Ley de Ohm y Ley de Joule",
+                                      "Ley de la gravitación y ley de la inercia"
+                            ],
+                            "a": 0,
+                            "exp": "El control postural y motor madura de la cabeza a las piernas (céfalo-caudal) y desde el centro del cuerpo hacia las manos y dedos (próximo-distal)."
+                  },
+                  {
+                            "q": "La adquisición de la «permanencia del objeto» según Jean Piaget se consolida en el estadio sensorio-motor hacia:",
+                            "options": [
+                                      "Los 8 a 12 meses de edad (el bebé comprende que los objetos siguen existiendo aunque no los vea)",
+                                      "Los 10 años de edad",
+                                      "El momento exacto del nacimiento",
+                                      "Los 18 años"
+                            ],
+                            "a": 0,
+                            "exp": "La permanencia del objeto es un logro cognitivo del estadio sensorio-motor: el bebé busca un objeto escondido porque sabe que sigue existiendo aunque no esté en su campo visual."
+                  },
+                  {
+                            "q": "El «juego simbólico» (hacer 'como si') surge típicamente en los niños:",
+                            "options": [
+                                      "A partir de los 2 años, con la aparición de la función semiótica y el pensamiento preoperacional (imitar acciones cotidianas, muñecos, médicos, etc.)",
+                                      "A los 3 meses de vida",
+                                      "A los 12 años",
+                                      "Únicamente en la edad adulta"
+                            ],
+                            "a": 0,
+                            "exp": "El juego simbólico se desarrolla entre los 2 y 6 años; es fundamental para la asimilación de la realidad, la empatía, la elaboración de emociones y el lenguaje."
+                  },
+                  {
+                            "q": "El «egocentrismo infantil» en el estadio preoperacional de Piaget significa que:",
+                            "options": [
+                                      "El niño percibe el mundo exclusivamente desde su propio punto de vista y le cuesta adoptar la perspectiva física o emocional de los demás",
+                                      "El niño es egoísta por mala educación familiar",
+                                      "El niño sufre un trastorno de conducta antisocial",
+                                      "El niño rechaza a todos sus familiares"
+                            ],
+                            "a": 0,
+                            "exp": "El egocentrismo cognitivo es un rasgo evolutivo normal: el pensamiento infantil está centrado en su propia experiencia directa (sin connotación moral negativa)."
+                  },
+                  {
+                            "q": "El «habla telegráfica» en el desarrollo del lenguaje infantil es característica de la etapa:",
+                            "options": [
+                                      "De 18 a 24 meses (combinación de dos palabras con palabras de contenido como 'nene agua', sin nexos ni morfemas gramaticales)",
+                                      "De 0 a 3 meses (balbuceo)",
+                                      "De 6 a 12 años",
+                                      "En la pubertad"
+                            ],
+                            "a": 0,
+                            "exp": "El habla telegráfica aparece hacia los 18-24 meses: frases simples de 2-3 palabras con alta carga de significado sin artículos ni preposiciones."
+                  },
+                  {
+                            "q": "En el desarrollo socioafectivo, la «angustia de separación» o miedo a los extraños suele manifestarse intensamente:",
+                            "options": [
+                                      "Hacia los 8 meses de edad (consecuencia de la consolidación del apego con las figuras de referencia y la diferenciación del extraño)",
+                                      "A las 2 semanas de vida",
+                                      "A los 5 años",
+                                      "En la adolescencia tardía"
+                            ],
+                            "a": 0,
+                            "exp": "La crisis de los 8 meses (angustia de separación o del octavo mes) es un hito evolutivo normal que demuestra la formación del vínculo de apego con los cuidadores principales."
+                  },
+                  {
+                            "q": "El «Reflejo de Succión» en el recién nacido:",
+                            "options": [
+                                      "Se desencadena al estimular los labios o el paladar y permite la alimentación eficaz, pasando a ser voluntario hacia el 4º mes",
+                                      "Solo aparece si el bebé tiene fiebre",
+                                      "Es una anomalía que debe ser corregida con medicación",
+                                      "Desaparece en las primeras 2 horas de vida"
+                            ],
+                            "a": 0,
+                            "exp": "La succión refleja es esencial para la lactancia y nutrición inicial; se coordina con la deglución y la respiración y se transforma en succión voluntaria."
+                  },
+                  {
+                            "q": "El «Reflejo de Búsqueda» (Rooting) consiste en que:",
+                            "options": [
+                                      "El bebé gira la cabeza y abre la boca hacia el lado donde siente una estimulación táctil suave en la mejilla o comisura labial",
+                                      "El niño busca sus juguetes en la cuna con la vista",
+                                      "El bebé gatea hacia la madre",
+                                      "El niño busca objetos caídos debajo de la mesa"
+                            ],
+                            "a": 0,
+                            "exp": "El reflejo de búsqueda orienta la cabeza del neonato hacia el pezón materno para iniciar la alimentación."
+                  },
+                  {
+                            "q": "El «Reflejo Espinal de Galant» se evalúa mediante:",
+                            "options": [
+                                      "La estimulación paravertebral del tronco con el bebé boca abajo, produciendo una flexión lateral de la cadera hacia el lado estimulado",
+                                      "Un golpe suave en la rodilla con un martillo de reflejos",
+                                      "La colocación del bebé de pie sobre una mesa",
+                                      "La exposición a una luz brillante"
+                            ],
+                            "a": 0,
+                            "exp": "El reflejo de Galant provoca una curvatura lateral del tronco hacia el lado estimulado; ayuda en la rotación y descenso por el canal de parto."
+                  },
+                  {
+                            "q": "El «Reflejo de la Marcha Automática» en el recién nacido consiste en:",
+                            "options": [
+                                      "Movimientos coordinados de flexión y extensión de las piernas simulando pasos al sostener al bebé verticalmente con las plantas de los pies tocando una superficie plana",
+                                      "El caminar autónomo que se inicia a los 12 meses",
+                                      "La carrera libre por el aula de psicomotricidad",
+                                      "El salto con pies juntos"
+                            ],
+                            "a": 0,
+                            "exp": "La marcha automática es un reflejo primario del neonato que desaparece hacia los 2 meses y reaparece meses más tarde como marcha bípeda voluntaria."
+                  },
+                  {
+                            "q": "En la Educación Infantil, la «Propuesta Pedagógica» de centro es:",
+                            "options": [
+                                      "El documento curricular elaborado por el equipo docente que concreta y adapta el currículo autonómico a las características y contexto del centro escolar",
+                                      "Un folleto publicitario para captar alumnos",
+                                      "El presupuesto económico anual de gastos",
+                                      "El menú mensual del comedor escolar"
+                            ],
+                            "a": 0,
+                            "exp": "Art. 14 LOMLOE y Decreto 36/2022 CAM: Todos los centros que impartan Educación Infantil formalizarán el carácter educativo de ambos ciclos en una Propuesta Pedagógica."
+                  },
+                  {
+                            "q": "La «evaluación formativa» en Educación Infantil tiene por objeto:",
+                            "options": [
+                                      "Identificar los progresos y dificultades del alumnado para ajustar la ayuda pedagógica y mejorar el proceso de enseñanza y aprendizaje",
+                                      "Poner notas suspensas para repetir curso",
+                                      "Clasificar a los alumnos de más listos a más torpes",
+                                      "Sancionar a los educadores cuyos alumnos no lean a los 3 años"
+                            ],
+                            "a": 0,
+                            "exp": "La evaluación en infantil no califica ni sanciona: es formativa porque sirve para regular la intervención educativa y responder a las necesidades de cada niño."
+                  },
+                  {
+                            "q": "En el marco del Decreto 18/2008 de la CAM, la «sala de usos múltiples» en centros de primer ciclo:",
+                            "options": [
+                                      "Deberá contar con una superficie mínima de 30 metros cuadrados (que podrá utilizarse como comedor)",
+                                      "Es un espacio optativo exclusivo de colegios privados",
+                                      "Debe tener al menos 200 metros cuadrados",
+                                      "Solo puede ser utilizada por los padres"
+                            ],
+                            "a": 0,
+                            "exp": "Art. 3 Decreto 18/2008 CAM: Los centros de primer ciclo dispondrán de una sala de usos múltiples de al menos 30 m² que, en su caso, podrá destinarse a comedor."
+                  },
+                  {
+                            "q": "En el segundo ciclo de Educación Infantil, las enseñanzas mínimas y el currículo de la CAM garantizan:",
+                            "options": [
+                                      "La gratuidad de la enseñanza en todos los centros sostenidos con fondos públicos",
+                                      "La obligatoriedad de asistencia desde los 3 años",
+                                      "El cobro de una matrícula mensual obligatoria",
+                                      "La selección de alumnos por pruebas de nivel"
+                            ],
+                            "a": 0,
+                            "exp": "Art. 15 LOMLOE y legislación CAM: El segundo ciclo de Educación Infantil (3 a 6 años) es gratuito en todos los centros públicos y concertados."
+                  },
+                  {
+                            "q": "El juego como principio metodológico en Educación Infantil se fundamenta en que:",
+                            "options": [
+                                      "Es la actividad natural, placentera y espontánea del niño a través de la cual explora, experimenta, asimila conocimientos, expresa emociones y se socializa",
+                                      "Es una pérdida de tiempo que debe reducirse al mínimo",
+                                      "Solo debe permitirse como premio si termina las fichas",
+                                      "Debe sustituirse por clases magistrales formales"
+                            ],
+                            "a": 0,
+                            "exp": "El juego es el motor del desarrollo infantil: a través del juego motor, sensorial, simbólico y de reglas el niño construye su aprendizaje de forma activa y significativa."
+                  },
+                  {
+                            "q": "La coordinación pedagógica entre el Primer Ciclo (0-3) y el Segundo Ciclo (3-6) de Educación Infantil persigue:",
+                            "options": [
+                                      "Asegurar la coherencia, continuidad formativa y una transición armónica y sin rupturas en el desarrollo de las competencias infantiles",
+                                      "Hacer los mismos exámenes en ambos ciclos",
+                                      "Unificar las tallas de ropa de los alumnos",
+                                      "Obligar a los niños de 1 año a leer textos largos"
+                            ],
+                            "a": 0,
+                            "exp": "La continuidad entre ciclos garantiza que las experiencias y aprendizajes de 0 a 3 años sirvan de base sólida para el segundo ciclo sin saltos metodológicos bruscos."
+                  },
+                  {
+                            "q": "El desarrollo del lenguaje en el segundo ciclo de Educación Infantil (3 a 6 años) se orienta a:",
+                            "options": [
+                                      "Enriquecer el vocabulario, mejorar la estructuración sintáctica, fomentar el diálogo y la escucha activa y posibilitar una primera aproximación lúdica al lenguaje escrito",
+                                      "La memorización de las reglas de acentuación diacrítica",
+                                      "La traducción de textos clásicos latinos",
+                                      "El silencio absoluto durante la jornada escolar"
+                            ],
+                            "a": 0,
+                            "exp": "Decreto 36/2022 CAM: El lenguaje oral es el instrumento prioritario de socialización y aprendizaje; se propicia el interés por la literatura infantil y la aproximación lúdica al código escrito."
+                  }
+        ]
+      },
+      'tema5-esp': {
+        title: "Tema 5 Específico — La Organización de las Escuelas de Educación Infantil",
+        questions: [
+                  {
+                            "q": "La pedagoga María Lina Iglesias Forneiro define el «espacio escolar» en Educación Infantil como:",
+                            "options": [
+                                      "Un todo indisociado del marco físico y las relaciones que se establecen en él (afectos, olores, formas, colores, sonidos y personas que lo habitan y le dan vida)",
+                                      "Un simple contenedor de paredes blancas sin influencia pedagógica",
+                                      "Un almacén cerrado de mesas y sillas",
+                                      "El patio exterior exclusivamente"
+                            ],
+                            "a": 0,
+                            "exp": "Lina Iglesias define el espacio educativo como un microsistema relacional, estético y afectivo donde el entorno físico y las interacciones humanas se condicionan mutuamente."
+                  },
+                  {
+                            "q": "El concepto de «el espacio como tercer educador» fue acuñado y defendido por:",
+                            "options": [
+                                      "Loris Malaguzzi (filosofía de Reggio Emilia)",
+                                      "B.F. Skinner",
+                                      "Pablo Montesinos",
+                                      "Jean Piaget"
+                            ],
+                            "a": 0,
+                            "exp": "Loris Malaguzzi consideraba que tras los padres y los educadores, el ambiente/espacio es el 'tercer educador': un entorno acogedor, estético y rico en estímulos educa silenciosamente."
+                  },
+                  {
+                            "q": "En la organización del ESPACIO en la Escuela Infantil, ¿cuál de los siguientes es un criterio pedagógico esencial?",
+                            "options": [
+                                      "Seguridad, accesibilidad, polivalencia, visibilidad y adecuación a las necesidades fisiológicas, afectivas y de movimiento del niño",
+                                      "Rigidez inamovible de los muebles atornillados al suelo",
+                                      "Aislamiento de cada niño en un pupitre cerrado",
+                                      "Uso exclusivo de colores grises y oscuros"
+                            ],
+                            "a": 0,
+                            "exp": "Los espacios infantiles deben ser seguros, flexibles, accesibles para la autonomía, estéticamente cuidados y adaptados a las necesidades motoras y de descanso de los alumnos."
+                  },
+                  {
+                            "q": "En la organización del TIEMPO en la Escuela Infantil, las «rutinas cotidianas» (acogida, alimentación, higiene, juego, descanso, despedida):",
+                            "options": [
+                                      "Son el eje vertebrador de la jornada que proporciona seguridad emocional, anticipación, orden temporal y hábitos de autonomía al niño",
+                                      "Son una pérdida de tiempo que debe suprimirse",
+                                      "Deben cambiarse arbitrariamente cada día para sorprender al niño",
+                                      "Solo sirven para rellenar las horas de clase"
+                            ],
+                            "a": 0,
+                            "exp": "Las rutinas diarias estructuran el tiempo y generan confianza: al ser predecibles y reiteradas, permiten al niño situarse en el tiempo, anticipar sucesos y ganar seguridad afectiva."
+                  },
+                  {
+                            "q": "Respecto a la selección y organización de los MATERIALES en el aula de Educación Infantil:",
+                            "options": [
+                                      "Deben ser seguros (normativa CE, no tóxicos), variados, limpios, duraderos y estar colocados al alcance directo de los niños en estanterías bajas para fomentar su autonomía",
+                                      "Deben guardarse bajo llave en armarios altos fuera del alcance de los niños",
+                                      "Solo se deben utilizar materiales de plástico desechable de un solo uso",
+                                      "Se prohíbe el uso de materiales naturales como madera, telas o piñas"
+                            ],
+                            "a": 0,
+                            "exp": "Los materiales deben ser accesibles, sensorialmente ricos, seguros y favorecer la libre elección, el juego manipulativo y la exploración autónoma."
+                  },
+                  {
+                            "q": "Los materiales «no estructurados» o polivalentes (cajas de cartón, telas, corchos, envases limpios, elementos naturales):",
+                            "options": [
+                                      "Estimulan la imaginación, la creatividad y el pensamiento divergente, ya que no tienen una función única predeterminada",
+                                      "Son basura que no tiene ningún valor educativo",
+                                      "Están prohibidos en las escuelas infantiles de la CAM",
+                                      "Solo pueden usarse en clases de matemáticas universitarias"
+                            ],
+                            "a": 0,
+                            "exp": "El material no estructurado (materiales desestructurados/de desecho) es un recurso didáctico de primer orden porque ofrece infinitas posibilidades lúdicas y creativas."
+                  },
+                  {
+                            "q": "En los centros públicos de Educación Infantil, son ÓRGANOS UNIPERSONALES de gobierno (art. 3.1):",
+                            "options": [
+                                      "El Director o Directora, el Jefe o Jefa de Estudios y el Secretario o Secretaria (Equipo Directivo)",
+                                      "El Consejo Escolar y el Claustro de Profesores",
+                                      "El Inspector de Educación y el Alcalde",
+                                      "El Presidente del AMPA exclusivamente"
+                            ],
+                            "a": 0,
+                            "exp": "Los órganos unipersonales de gobierno son el Director, el Jefe de Estudios y el Secretario, que conforman el Equipo Directivo del centro educativo."
+                  },
+                  {
+                            "q": "El nombramiento del DIRECTOR o Directora de un centro docente público (LOMLOE):",
+                            "options": [
+                                      "Se realiza por concurso de méritos entre funcionarios docentes mediante un proyecto de dirección valorado por una comisión integrada por la Administración y la comunidad educativa",
+                                      "Es por designación directa hereditaria",
+                                      "Es un puesto vitalicio hasta la jubilación",
+                                      "Se decide por sorteo público"
+                            ],
+                            "a": 0,
+                            "exp": "La selección del Director se efectúa mediante concurso de méritos basado en los principios de igualdad, mérito y capacidad y en la valoración de un proyecto de dirección."
+                  },
+                  {
+                            "q": "Son ÓRGANOS COLEGIADOS de gobierno en los centros educativos:",
+                            "options": [
+                                      "El Consejo Escolar (o Consejo de Centro) y el Claustro de Profesores (o Equipo Docente)",
+                                      "El Director y el Secretario",
+                                      "Los Delegados de curso y el conserje",
+                                      "El AMPA y la Policía Local"
+                            ],
+                            "a": 0,
+                            "exp": "Los órganos colegiados de gobierno en centros escolares son el Consejo Escolar (órgano de participación de toda la comunidad educativa) y el Claustro de Profesores (órgano técnico docente)."
+                  },
+                  {
+                            "q": "El CONSEJO ESCOLAR de una Escuela Infantil pública está integrado por:",
+                            "options": [
+                                      "El Director/a (que lo preside), el Secretario/a (con voz y sin voto), representantes de los educadores/maestros, representantes de las familias (padres/madres), un representante del personal de administración y servicios (PAS) y un representante del Ayuntamiento",
+                                      "Exclusivamente los profesores del centro",
+                                      "Solo los padres de alumnos de 2 años",
+                                      "Los miembros del Parlamento autonómico"
+                            ],
+                            "a": 0,
+                            "exp": "El Consejo Escolar garantiza la representación de todos los estamentos de la comunidad educativa: dirección, profesorado/educadores, familias, personal no docente y administración local."
+                  },
+                  {
+                            "q": "El CLAUSTRO DE PROFESORES / Equipo Docente es el órgano colegiado que tiene la responsabilidad de:",
+                            "options": [
+                                      "Planificar, coordinar, decidir e informar sobre todos los aspectos docentes y educativos del centro escolar",
+                                      "Aprobar las ordenanzas fiscales municipales",
+                                      "Gestionar las cuentas bancarias de las familias",
+                                      "Contratar el personal de seguridad privada"
+                            ],
+                            "a": 0,
+                            "exp": "El Claustro es el órgano propio de participación del profesorado y personal educativo, responsable de la planificación y coordinación pedagógica del centro."
+                  },
+                  {
+                            "q": "En los centros de Educación Infantil, los ÓRGANOS DE COORDINACIÓN DOCENTE incluyen:",
+                            "options": [
+                                      "Los Equipos de Ciclo, la Comisión de Coordinación Pedagógica (CCP) y los Tutores",
+                                      "El Consejo de Ministros",
+                                      "La Junta Electoral de Zona",
+                                      "El Tribunal de Cuentas"
+                            ],
+                            "a": 0,
+                            "exp": "La coordinación pedagógica se estructura en Equipos de Ciclo (reúnen a los educadores de cada ciclo), la Comisión de Coordinación Pedagógica (CCP) y la tutoría."
+                  },
+                  {
+                            "q": "La función de la TUTORÍA en la etapa de Educación Infantil comprende:",
+                            "options": [
+                                      "El acompañamiento y seguimiento individualizado y grupal del alumnado, la coordinación del equipo educativo del grupo y la orientación y comunicación fluida y continua con las familias",
+                                      "Poner multas a los padres impuntuales",
+                                      "Impartir clases particulares cobradas aparte",
+                                      "El diagnóstico médico de enfermedades orgánicas"
+                            ],
+                            "a": 0,
+                            "exp": "El tutor es la figura de referencia que coordina el proceso educativo de su grupo, evalúa el desarrollo y mantiene una relación cercana y continuada con los padres."
+                  },
+                  {
+                            "q": "El EQUIPO EDUCATIVO en el primer ciclo de Educación Infantil de la Comunidad de Madrid está formado por:",
+                            "options": [
+                                      "Maestros especialistas en Educación Infantil y Técnicos Superiores en Educación Infantil (TSEI), que trabajan de manera coordinada y en equipo",
+                                      "Un solo maestro para todo el edificio sin ayudantes",
+                                      "Personal administrativo sin formación pedagógica",
+                                      "Monitores de ocio y tiempo libre exclusivamente"
+                            ],
+                            "a": 0,
+                            "exp": "Decreto 18/2008 CAM: El equipo educativo del primer ciclo está compuesto por Maestros de Educación Infantil y Técnicos Superiores en Educación Infantil."
+                  },
+                  {
+                            "q": "La COLABORACIÓN FAMILIA-ESCUELA en los primeros años de vida es fundamental porque:",
+                            "options": [
+                                      "La familia es el primer agente socializador y se requiere coherencia de pautas afectivas, educativas y de hábitos entre el hogar y la escuela para el bienestar y seguridad del menor",
+                                      "Los padres deben vigilar el trabajo de los educadores cada hora",
+                                      "La escuela sustituye a la familia de forma definitiva",
+                                      "Así lo exige el código de comercio"
+                            ],
+                            "a": 0,
+                            "exp": "La coherencia entre el entorno familiar y escolar evita conflictos educativos, refuerza el apego seguro y permite conocer las necesidades y características individuales del niño."
+                  },
+                  {
+                            "q": "La «entrevista inicial» entre la familia y el educador/tutor antes del comienzo de curso tiene como finalidad principal:",
+                            "options": [
+                                      "Recabar información sobre el desarrollo evolutivo, hábitos, salud, alimentación y características del niño, y establecer el primer vínculo de confianza con la familia",
+                                      "Hacer un examen de nivel cultural a los padres",
+                                      "Cobrar la fianza de matrícula en metálico",
+                                      "Decidir si el niño es admitido o expulsado"
+                            ],
+                            "a": 0,
+                            "exp": "La entrevista inicial permite conocer al niño (sueño, comidas, lenguaje, afectividad, salud) y preparar su proceso de acogida y adaptación personalizada."
+                  },
+                  {
+                            "q": "Los cauces habituales de participación de las familias en la Escuela Infantil incluyen:",
+                            "options": [
+                                      "Entrevistas individuales, intercambios diarios en entradas/salidas, asambleas de aula, talleres y fiestas, y participación institucional a través del AMPA/AFA y el Consejo Escolar",
+                                      "Exclusivamente mediante recursos judiciales por escrito",
+                                      "Una única reunión formal cada diez años",
+                                      "Mensajes anónimos en redes sociales"
+                            ],
+                            "a": 0,
+                            "exp": "La participación se articula en canales informales (encuentros diarios), formales (entrevistas, reuniones, talleres) e institucionales (AMPA y Consejo Escolar)."
+                  },
+                  {
+                            "q": "El Reglamento Orgánico de los centros docentes (ROC) en la Comunidad de Madrid:",
+                            "options": [
+                                      "Regula la estructura organizativa, los órganos de gobierno, los órganos de coordinación docente, los derechos y deberes y las normas de convivencia del centro",
+                                      "Fija las tarifas de los transportes metropolitanos",
+                                      "Establece las sanciones penales de tráfico",
+                                      "Regula la venta de material escolar"
+                            ],
+                            "a": 0,
+                            "exp": "El ROC (Decreto 288/1996 y normativa concordante) es el marco organizativo que regula el gobierno, funcionamiento y coordinación de los centros educativos."
+                  },
+                  {
+                            "q": "El «periodo de acogida o adaptación» en la Escuela Infantil exige por parte del centro:",
+                            "options": [
+                                      "Una planificación temporal flexible y progresiva acordada con las familias para facilitar la separación paulatina y generar confianza en los nuevos educadores y espacios",
+                                      "Dejar a todos los niños solos en el aula desde el primer minuto sin permitir entrar a los padres",
+                                      "Cerrar la escuela durante los dos primeros meses",
+                                      "Obligar a los niños a no llorar bajo amenaza de sanción"
+                            ],
+                            "a": 0,
+                            "exp": "La adaptación debe ser flexible, respetuosa y progresiva, permitiendo la presencia de los progenitores en el aula los primeros días para favorecer la vinculación segura."
+                  },
+                  {
+                            "q": "En las «Casas de Niños» de la Comunidad de Madrid, la participación de las familias se caracteriza por:",
+                            "options": [
+                                      "Una implicación directa y continuada donde las familias participan activamente en las actividades del centro y comparten espacios de juego y crianza con los educadores",
+                                      "La prohibición total de que los padres entren al centro",
+                                      "El pago de una mensualidad privada elevada",
+                                      "Una escolarización en régimen de internado"
+                            ],
+                            "a": 0,
+                            "exp": "Las Casas de Niños de la CAM tienen como rasgo distintivo la corresponsabilidad y participación activa de los padres en el proyecto educativo diario."
+                  },
+                  {
+                            "q": "El mobiliario en el aula de primer ciclo de Educación Infantil debe cumplir con el requisito de:",
+                            "options": [
+                                      "Estar adaptado ergonómicamente a la talla de los niños, con esquinas redondeadas, materiales lavables, no tóxicos y homologados por normas de seguridad",
+                                      "Ser idéntico al de las oficinas de adultos",
+                                      "Estar fabricado con cristales cortantes",
+                                      "Ser de metal pesado e inamovible"
+                            ],
+                            "a": 0,
+                            "exp": "El mobiliario debe garantizar la seguridad y promover la autonomía (sillas, mesas y estanterías a su altura, sin aristas vivas ni elementos desprendibles)."
+                  },
+                  {
+                            "q": "La «zona de cambio e higiene» en las aulas de 0 a 2 años de una escuela infantil debe:",
+                            "options": [
+                                      "Estar integrada o anexa al aula con visibilidad directa desde la misma, disponer de cambiador acolchado, bañera o lavamanos y espacio para los enseres personales de cada niño",
+                                      "Ubicarse en el sótano del edificio",
+                                      "Ser compartida con los baños del personal de mantenimiento",
+                                      "Carecer de agua corriente"
+                            ],
+                            "a": 0,
+                            "exp": "El espacio de cambio debe ser higiénico, ergonómico y permitir al educador no perder de vista al resto del grupo mientras atiende individualmente al bebé."
+                  },
+                  {
+                            "q": "La «zona de descanso y sueño» en la escuela infantil debe caracterizarse por:",
+                            "options": [
+                                      "Un ambiente tranquilo, con iluminación regulable, ventilación adecuada y cunas o colchonetas individuales y personalizadas",
+                                      "Estar situada en la zona más ruidosa del patio",
+                                      "Tener luces fluorescentes de máxima potencia encendidas siempre",
+                                      "No permitir dormir a ningún niño durante la jornada"
+                            ],
+                            "a": 0,
+                            "exp": "El descanso es una necesidad fisiológica básica que requiere un espacio acogedor, silencioso y con temperatura y luz confortables."
+                  },
+                  {
+                            "q": "El «comedor escolar» en Educación Infantil tiene una función pedagógica que incluye:",
+                            "options": [
+                                      "La adquisición progresiva de hábitos de higiene, autonomía en el uso de cubiertos, socialización, respeto por la comida y variedad nutricional en un ambiente relajado",
+                                      "Comer lo más rápido posible en 5 minutos en silencio absoluto",
+                                      "Obligar a los niños a comer mediante castigos",
+                                      "Alimentar a los alumnos con comida rápida comercial exclusivamente"
+                            ],
+                            "a": 0,
+                            "exp": "El momento de la comida es un espacio educativo de primer orden para el desarrollo de la autonomía motriz, hábitos saludables y convivencia en la mesa."
+                  },
+                  {
+                            "q": "Los «rincones o áreas de juego y actividad» en el aula de infantil permiten:",
+                            "options": [
+                                      "La organización simultánea del espacio en pequeños grupos (rincón de construcciones, juego simbólico/casa, plástica, lectura, lógica), favoreciendo la libre elección y la autonomía",
+                                      "El aislamiento solitario permanente de cada alumno",
+                                      "La inmovilidad física de los niños durante toda la mañana",
+                                      "La realización de exámenes eliminatorios"
+                            ],
+                            "a": 0,
+                            "exp": "La metodología por rincones permite atender a los distintos ritmos e intereses, fomentando la cooperación, el juego libre y la investigación en pequeños grupos."
+                  },
+                  {
+                            "q": "En la gestión del TIEMPO en Educación Infantil, la flexibilidad significa que:",
+                            "options": [
+                                      "El horario debe adaptarse a los ritmos biológicos individuales de los niños y a los imprevistos e intereses que surjan en el aula, sin rigideces artificiales",
+                                      "No hay ningún tipo de orden ni rutina en todo el año",
+                                      "Se puede entrar y salir del colegio a cualquier hora de la noche",
+                                      "Los niños deciden si el colegio abre o cierra"
+                            ],
+                            "a": 0,
+                            "exp": "La flexibilidad temporal respeta que cada niño tiene ritmos propios de alimentación, sueño y concentración, adaptando las propuestas pedagógicas a su bienestar."
+                  },
+                  {
+                            "q": "El tiempo de «acogida y despedida» en la escuela infantil:",
+                            "options": [
+                                      "Es un momento educativo clave y delicado para el intercambio de información con las familias y la transición afectiva y segura del hogar al centro",
+                                      "Es un trámite administrativo que debe durar menos de 2 segundos",
+                                      "Está prohibido hablar con los padres en la puerta",
+                                      "Se realiza a través de un torno automático sin educadores"
+                            ],
+                            "a": 0,
+                            "exp": "Las entradas y salidas son momentos de gran valor relacional: transmiten seguridad al menor y permiten coordinar pautas diarias con los progenitores."
+                  },
+                  {
+                            "q": "Los materiales didácticos «sensoriales» en el primer ciclo (cesto de los tesoros, botellas sensoriales, paneles de texturas):",
+                            "options": [
+                                      "Favorecen la estimulación de los cinco sentidos, la exploración táctil, auditiva, visual y el desarrollo de la coordinación óculo-manual",
+                                      "Están desaconsejados por los pedagogos modernos",
+                                      "Solo pueden usarse con guantes de látex protectores",
+                                      "Deben ser idénticos en forma, color y peso"
+                            ],
+                            "a": 0,
+                            "exp": "Los materiales sensoriales y el cesto de los tesoros (Elinor Goldschmied) son fundamentales para que el bebé explore texturas, pesos, temperaturas y sonidos naturales."
+                  },
+                  {
+                            "q": "El «juego heurístico», propuesto por Elinor Goldschmied para niños de 12 a 24 meses, consiste en:",
+                            "options": [
+                                      "Una actividad de exploración y combinación espontánea de objetos de la vida cotidiana (anillas, cadenas, rulos, cajas) para descubrir sus propiedades y relaciones espaciales",
+                                      "Un examen formal de cálculo matemático",
+                                      "Juegos competitivos con ganadores y perdedores",
+                                      "El uso exclusivo de tablets y móviles"
+                            ],
+                            "a": 0,
+                            "exp": "El juego heurístico permite a los niños de 1 a 2 años explorar y clasificar libremente objetos cotidianos combinándolos con recipientes y contenedores."
+                  },
+                  {
+                            "q": "La Comisión de Coordinación Pedagógica (CCP) en un centro educativo está presidida por:",
+                            "options": [
+                                      "El Director/a o Jefe/a de Estudios y está integrada por los coordinadores de ciclo y el orientador/psicopedagogo del centro",
+                                      "El conserje mayor del edificio",
+                                      "El presidente de la asociación de comerciantes",
+                                      "El alumno de mayor edad"
+                            ],
+                            "a": 0,
+                            "exp": "La CCP coordina los criterios pedagógicos, la elaboración de la propuesta pedagógica, la atención a la diversidad y la evaluación de la etapa."
+                  },
+                  {
+                            "q": "El Equipo de Ciclo en una escuela infantil está integrado por:",
+                            "options": [
+                                      "Todos los maestros y educadores que imparten docencia en el ciclo correspondiente, bajo la coordinación de un Coordinador/a de Ciclo",
+                                      "Exclusivamente el personal de limpieza",
+                                      "Los miembros del tribunal de cuentas",
+                                      "Los padres delegados de aula"
+                            ],
+                            "a": 0,
+                            "exp": "El Equipo de Ciclo es el órgano básico de coordinación docente que programa, evalúa y asegura la coherencia metodológica en su tramo de edad."
+                  },
+                  {
+                            "q": "La «Asociación de Madres y Padres de Alumnos» (AMPA / AFA) en un centro docente:",
+                            "options": [
+                                      "Es el cauce de representación y participación voluntaria de las familias para colaborar en las actividades educativas, promover la formación familiar y canalizar iniciativas",
+                                      "Es un órgano con potestad disciplinaria para despedir profesores",
+                                      "Es una empresa con ánimo de lucro",
+                                      "Es un departamento oficial del Ministerio del Interior"
+                            ],
+                            "a": 0,
+                            "exp": "Las AMPA/AFA canalizan la participación de las familias en la vida del centro, organizan actividades complementarias y designan a un representante en el Consejo Escolar."
+                  },
+                  {
+                            "q": "En el Consejo Escolar de un centro público, las familias tienen derecho a:",
+                            "options": [
+                                      "Estar representadas mediante miembros elegidos democráticamente por y entre los padres y madres del centro, y un representante propuesto por el AMPA",
+                                      "Votar en secreto las calificaciones numéricas de los alumnos",
+                                      "Ocupar todos los puestos docentes",
+                                      "Cobrar un sueldo mensual por asistir"
+                            ],
+                            "a": 0,
+                            "exp": "La legislación garantiza la representación de las familias en el Consejo Escolar para intervenir en la toma de decisiones sobre el proyecto educativo, presupuesto y normas del centro."
+                  },
+                  {
+                            "q": "La «Programación General Anual» (PGA) de una Escuela Infantil es:",
+                            "options": [
+                                      "El documento institucional que concreta para cada curso escolar la organización, el horario, el plan de actuación, los proyectos y los objetivos prioritarios del centro",
+                                      "El recibo de pago de la luz y el agua",
+                                      "El código civil comentado",
+                                      "El registro de llamadas telefónicas particulares"
+                            ],
+                            "a": 0,
+                            "exp": "La PGA es el documento que planifica el funcionamiento general del centro para cada curso académico, evaluándose al final de curso mediante la Memoria Anual."
+                  },
+                  {
+                            "q": "La «Memoria Anual» de centro se elabora al finalizar el curso escolar con el objeto de:",
+                            "options": [
+                                      "Evaluar el grado de consecución de los objetivos de la PGA, valorar el funcionamiento del centro y formular propuestas de mejora para el curso siguiente",
+                                      "Destruir todos los expedientes escolares",
+                                      "Sancionar a las familias que no asistieron a las fiestas",
+                                      "Clausurar definitivamente las instalaciones"
+                            ],
+                            "a": 0,
+                            "exp": "La Memoria Anual recoge las conclusiones de la evaluación interna realizada por el Claustro y el Consejo Escolar para impulsar la mejora continua del centro."
+                  },
+                  {
+                            "q": "El «Reglamento de Régimen Interior» (RRI) de un centro educativo establece:",
+                            "options": [
+                                      "Las normas de convivencia, organización y funcionamiento interno, los derechos y deberes de los miembros de la comunidad y los procedimientos de resolución de conflictos",
+                                      "El precio del transporte escolar interurbano",
+                                      "Las leyes tributarias del Estado",
+                                      "El código deontológico del colegio de arquitectos"
+                            ],
+                            "a": 0,
+                            "exp": "El RRI concreta las normas de organización y convivencia del centro, regulando horarios, entradas/salidas, uso de instalaciones y participación."
+                  },
+                  {
+                            "q": "El trabajo en equipo del Equipo Educativo en una Escuela Infantil se fundamenta en:",
+                            "options": [
+                                      "La corresponsabilidad, la coordinación sistemática en reuniones de ciclo, el intercambio de observaciones y la coherencia en las pautas pedagógicas aplicadas a los niños",
+                                      "El trabajo aislado de cada educador a puerta cerrada sin hablar con nadie",
+                                      "La competencia individual entre compañeros",
+                                      "La delegación de todas las tareas en el personal de secretaría"
+                            ],
+                            "a": 0,
+                            "exp": "El trabajo interdisciplinar y cooperativo del equipo educativo es un pilar indispensable para garantizar un proyecto pedagógico coherente y de calidad."
+                  },
+                  {
+                            "q": "La accesibilidad y el diseño universal en las instalaciones de una Escuela Infantil exigen:",
+                            "options": [
+                                      "La eliminación de barreras arquitectónicas, señalización visual clara y espacios accesibles para personas con movilidad reducida o diversidad funcional",
+                                      "La instalación obligatoria de escaleras empinadas sin rampa",
+                                      "Puertas estrechas con cerrojo inaccesible",
+                                      "Aulas en plantas altas sin ascensor"
+                            ],
+                            "a": 0,
+                            "exp": "La normativa de instalaciones exige accesibilidad física, sensorial y cognitiva para garantizar la plena inclusión de toda la comunidad escolar."
+                  },
+                  {
+                            "q": "El «patio exterior» en la Escuela Infantil no es un simple lugar de recreo, sino:",
+                            "options": [
+                                      "Un espacio educativo de primer orden para el movimiento libre, el contacto con la naturaleza, la exploración sensorial, la psicomotricidad gruesa y la socialización",
+                                      "Un aparcamiento de vehículos de profesores",
+                                      "Una zona peligrosa donde no deben salir los niños",
+                                      "Un almacén de residuos industriales"
+                            ],
+                            "a": 0,
+                            "exp": "El patio es un aula exterior que amplía las posibilidades de juego motor, experimentación con arena, agua y plantas, y relación entre iguales al aire libre."
+                  },
+                  {
+                            "q": "La función del Técnico Superior en Educación Infantil (TSEI) en la organización del centro comprende:",
+                            "options": [
+                                      "La intervención educativa directa con los niños en actividades cotidianas, de juego, hábitos de higiene y alimentación, y la colaboración activa con maestros y familias",
+                                      "La redacción en solitario de las leyes orgánicas estatales",
+                                      "La gestión exclusiva de la contabilidad fiscal del Ayuntamiento",
+                                      "La vigilancia pasiva sin interactuar con los alumnos"
+                            ],
+                            "a": 0,
+                            "exp": "El TSEI es un profesional cualificado que participa en la programación, desarrollo y evaluación de actividades educativas y en el cuidado integral y fomento de la autonomía infantil."
+                  }
+        ]
       }
     };
 
     // Test mixto
     TESTS.mixto = {
       title: "Test Mixto — Todos los temas",
-      questions: shuffle([...TESTS.tema1.questions, ...TESTS.tema2.questions, ...TESTS.tema3.questions, ...TESTS.tema4.questions, ...TESTS.tema5.questions, ...TESTS.tema6.questions, ...TESTS.tema7.questions, ...TESTS.tema8.questions, ...TESTS.tema9.questions, ...TESTS['tema1-esp'].questions, ...TESTS['tema2-esp'].questions]).slice(0, 20)
+      questions: shuffle([...TESTS.tema1.questions, ...TESTS.tema2.questions, ...TESTS.tema3.questions, ...TESTS.tema4.questions, ...TESTS.tema5.questions, ...TESTS.tema6.questions, ...TESTS.tema7.questions, ...TESTS.tema8.questions, ...TESTS.tema9.questions, ...TESTS['tema1-esp'].questions, ...TESTS['tema2-esp'].questions, ...TESTS['tema3-esp'].questions, ...TESTS['tema4-esp'].questions, ...TESTS['tema5-esp'].questions]).slice(0, 20)
     };
 
     /* ─────────────────────────────────────────
@@ -8650,7 +10012,7 @@
         questions = resumedState.questions;
         currentMode = resumedState.mode || 'estudio';
       } else if (key === 'mixto') {
-        questions = shuffle([...TESTS.tema1.questions, ...TESTS.tema2.questions, ...TESTS.tema3.questions, ...TESTS.tema4.questions, ...TESTS.tema5.questions, ...TESTS.tema6.questions, ...TESTS.tema7.questions, ...TESTS.tema8.questions, ...TESTS.tema9.questions, ...TESTS['tema1-esp'].questions, ...TESTS['tema2-esp'].questions]).slice(0, 20);
+        questions = shuffle([...TESTS.tema1.questions, ...TESTS.tema2.questions, ...TESTS.tema3.questions, ...TESTS.tema4.questions, ...TESTS.tema5.questions, ...TESTS.tema6.questions, ...TESTS.tema7.questions, ...TESTS.tema8.questions, ...TESTS.tema9.questions, ...TESTS['tema1-esp'].questions, ...TESTS['tema2-esp'].questions, ...TESTS['tema3-esp'].questions, ...TESTS['tema4-esp'].questions, ...TESTS['tema5-esp'].questions]).slice(0, 20);
       } else if (key === 'falladas') {
         const wrong = (typeof CAM_Wrong !== 'undefined') ? CAM_Wrong.getAll() : {};
         const pool = [];
@@ -8667,7 +10029,7 @@
           return;
         }
         questions = shuffle(pool).slice(0, Math.min(20, pool.length));
-      } else if (key === 'tema1' || key === 'tema2' || key === 'tema3' || key === 'tema4' || key === 'tema5' || key === 'tema6' || key === 'tema7' || key === 'tema8' || key === 'tema9' || key === 'tema1-esp' || key === 'tema2-esp') {
+      } else if (key === 'tema1' || key === 'tema2' || key === 'tema3' || key === 'tema4' || key === 'tema5' || key === 'tema6' || key === 'tema7' || key === 'tema8' || key === 'tema9' || key === 'tema1-esp' || key === 'tema2-esp' || key === 'tema3-esp' || key === 'tema4-esp' || key === 'tema5-esp') {
         questions = shuffle([...test.questions]).slice(0, 15);
       } else {
         questions = shuffle([...test.questions]);
@@ -9337,5 +10699,5 @@
     </button>
   </nav>
 
-<script>(function(){function c(){var b=a.contentDocument||(a.contentWindow&&a.contentWindow.document);if(b){var d=b.createElement('script');d.innerHTML="window.__CF$cv$params={r:'a3b9f8a11a0df76f',t:'MTc4OTQ5OTg0Mg=='};var a=document.createElement('script');a.src='/cdn-cgi/challenge-platform/scripts/jsd/main.js';document.getElementsByTagName('head')[0].appendChild(a);";b.getElementsByTagName('head')[0].appendChild(d)}}if(document.body){var a=document.createElement('iframe');a.height=1;a.width=1;a.style.position='absolute';a.style.top=0;a.style.left=0;a.style.border='none';a.style.visibility='hidden';document.body.appendChild(a);if('loading'!==document.readyState)c();else if(window.addEventListener)document.addEventListener('DOMContentLoaded',c);else{var e=document.onreadystatechange||function(){};document.onreadystatechange=function(b){e(b);'loading'!==document.readyState&&(document.onreadystatechange=e,c())}}}})();</script></body>
+<script>(function(){function c(){var b=a.contentDocument||(a.contentWindow&&a.contentWindow.document);if(b){var d=b.createElement('script');d.innerHTML="window.__CF$cv$params={r:'a3be1e68feb9f771',t:'MTc4OTU0MzMzMw=='};var a=document.createElement('script');a.src='/cdn-cgi/challenge-platform/scripts/jsd/main.js';document.getElementsByTagName('head')[0].appendChild(a);";b.getElementsByTagName('head')[0].appendChild(d)}}if(document.body){var a=document.createElement('iframe');a.height=1;a.width=1;a.style.position='absolute';a.style.top=0;a.style.left=0;a.style.border='none';a.style.visibility='hidden';document.body.appendChild(a);if('loading'!==document.readyState)c();else if(window.addEventListener)document.addEventListener('DOMContentLoaded',c);else{var e=document.onreadystatechange||function(){};document.onreadystatechange=function(b){e(b);'loading'!==document.readyState&&(document.onreadystatechange=e,c())}}}})();</script></body>
 </html>
