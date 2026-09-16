@@ -573,7 +573,9 @@
     // BLOQUE ESPECÍFICO (EDUCADOR INFANTIL)
     { id: 'tema1-esp', num: 'E01', name: 'Tema 1 Esp. — Modalidades y Pedagogía', desc: 'Atención a la infancia en España y UE. Tendencias pedagógicas y psicológicas', href: 'tema1-esp.html', bloque: 'especifico', cat: 'Educador Infantil' },
     { id: 'tema2-esp', num: 'E02', name: 'Tema 2 Esp. — Escuela Infantil y Protección', desc: 'LOMLOE, Decreto 36/2022, LO 1/1996, Ley 4/2023 CAM y medidas de protección', href: 'tema2-esp.html', bloque: 'especifico', cat: 'Educador Infantil' },
-    { id: 'tema3-esp', num: 'E03', name: 'Tema 3 Esp. — Riesgo Social y Maltrato Infantil', desc: 'Detección de riesgo, tipología de maltrato, notificación CAM y programas de apoyo', href: 'tema3-esp.html', bloque: 'especifico', cat: 'Educador Infantil' }
+    { id: 'tema3-esp', num: 'E03', name: 'Tema 3 Esp. — Riesgo Social y Maltrato Infantil', desc: 'Detección de riesgo, tipología de maltrato, notificación CAM y programas de apoyo', href: 'tema3-esp.html', bloque: 'especifico', cat: 'Educador Infantil' },
+    { id: 'tema4-esp', num: 'E04', name: 'Tema 4 Esp. — Sentido, Desarrollo y Reflejos', desc: 'Sentido y fines de Infantil, desarrollo 0–6, reflejos primarios y teoría curricular', href: 'tema4-esp.html', bloque: 'especifico', cat: 'Educador Infantil' },
+    { id: 'tema5-esp', num: 'E05', name: 'Tema 5 Esp. — Organización de Escuelas Infantiles', desc: 'Espacios, tiempos, materiales, órganos de gobierno, equipo educativo y familias', href: 'tema5-esp.html', bloque: 'especifico', cat: 'Educador Infantil' }
   ];
 
   function setupMobileNav() {
@@ -662,7 +664,7 @@
             <button class="cam-bloque-tab ${isCurrentEsp ? 'active' : ''}" id="sheetTabEsp" data-bloque="especifico">
               <span class="tab-badge" style="color:#1a5f7a;">⚡ Bloque Específico</span>
               <span class="tab-title">Educador Infantil</span>
-              <span class="tab-count">3 temas Específicos disponibles</span>
+              <span class="tab-count">5 temas Específicos disponibles</span>
             </button>
           </div>
 
