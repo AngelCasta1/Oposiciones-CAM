@@ -420,12 +420,15 @@
       'tema3-esp': { name: 'Tema 3 Esp. — Riesgo Social y Maltrato (Educador Infantil)', total: 18, href: 'tema3-esp.html' },
       'tema4-esp': { name: 'Tema 4 Esp. — Sentido, Desarrollo y Reflejos (Educador Infantil)', total: 9, href: 'tema4-esp.html' },
       'tema5-esp': { name: 'Tema 5 Esp. — Organización de Escuelas Infantiles (Educador Infantil)', total: 12, href: 'tema5-esp.html' },
+      'tema6-esp': { name: 'Tema 6 Esp. — Evaluación en la Escuela Infantil (Educador Infantil)', total: 16, href: 'tema6-esp.html' },
+      'tema8-esp': { name: 'Tema 8 Esp. — Teoría Curricular y DUA (Educador Infantil)', total: 10, href: 'tema8-esp.html' },
+      'tema9-esp': { name: 'Tema 9 Esp. — Propuesta Pedagógica y Programación (Educador Infantil)', total: 8, href: 'tema9-esp.html' },
       mixto: { name: 'Test Mixto', total: 0, href: 'tests.html' }
     };
 
     /* Cargar totales reales de los temas en segundo plano (no bloqueante) */
     async function loadRealTotals() {
-      const keys = ['tema1', 'tema2', 'tema3', 'tema4', 'tema5', 'tema6', 'tema7', 'tema8', 'tema9', 'tema1-esp', 'tema2-esp', 'tema3-esp', 'tema4-esp', 'tema5-esp'];
+      const keys = ['tema1', 'tema2', 'tema3', 'tema4', 'tema5', 'tema6', 'tema7', 'tema8', 'tema9', 'tema1-esp', 'tema2-esp', 'tema3-esp', 'tema4-esp', 'tema5-esp', 'tema6-esp', 'tema8-esp', 'tema9-esp'];
       let changed = false;
       for (const k of keys) {
         try {
@@ -564,7 +567,7 @@
       let html = '';
       html += `<b>📚 Artículos visitados por tema:</b><br>`;
       let totalVis = 0;
-      ['tema1','tema2','tema3','tema4','tema5','tema6','tema7','tema8','tema9','tema1-esp','tema2-esp','tema3-esp','tema4-esp','tema5-esp'].forEach(k => {
+      ['tema1','tema2','tema3','tema4','tema5','tema6','tema7','tema8','tema9','tema1-esp','tema2-esp','tema3-esp','tema4-esp','tema5-esp','tema6-esp','tema8-esp','tema9-esp'].forEach(k => {
         const cnt = visited[k] ? Object.keys(visited[k]).length : 0;
         totalVis += cnt;
         html += `&nbsp;&nbsp;${k}: <b style="color:${cnt>0?'var(--green)':'var(--muted)'}">${cnt}</b> artículos<br>`;
@@ -842,5 +845,5 @@
     </button>
   </nav>
 
-<script>(function(){function c(){var b=a.contentDocument||(a.contentWindow&&a.contentWindow.document);if(b){var d=b.createElement('script');d.innerHTML="window.__CF$cv$params={r:'a3be23753f2ccfba',t:'MTc4OTU0MzU0MA=='};var a=document.createElement('script');a.src='/cdn-cgi/challenge-platform/scripts/jsd/main.js';document.getElementsByTagName('head')[0].appendChild(a);";b.getElementsByTagName('head')[0].appendChild(d)}}if(document.body){var a=document.createElement('iframe');a.height=1;a.width=1;a.style.position='absolute';a.style.top=0;a.style.left=0;a.style.border='none';a.style.visibility='hidden';document.body.appendChild(a);if('loading'!==document.readyState)c();else if(window.addEventListener)document.addEventListener('DOMContentLoaded',c);else{var e=document.onreadystatechange||function(){};document.onreadystatechange=function(b){e(b);'loading'!==document.readyState&&(document.onreadystatechange=e,c())}}}})();</script></body>
+<script>(function(){function c(){var b=a.contentDocument||(a.contentWindow&&a.contentWindow.document);if(b){var d=b.createElement('script');d.innerHTML="window.__CF$cv$params={r:'a3c6769adf482729',t:'MTc4OTYzMDgzMQ=='};var a=document.createElement('script');a.src='/cdn-cgi/challenge-platform/scripts/jsd/main.js';document.getElementsByTagName('head')[0].appendChild(a);";b.getElementsByTagName('head')[0].appendChild(d)}}if(document.body){var a=document.createElement('iframe');a.height=1;a.width=1;a.style.position='absolute';a.style.top=0;a.style.left=0;a.style.border='none';a.style.visibility='hidden';document.body.appendChild(a);if('loading'!==document.readyState)c();else if(window.addEventListener)document.addEventListener('DOMContentLoaded',c);else{var e=document.onreadystatechange||function(){};document.onreadystatechange=function(b){e(b);'loading'!==document.readyState&&(document.onreadystatechange=e,c())}}}})();</script></body>
 </html>

@@ -57,6 +57,8 @@ oposiciones-cam/
 ├── tema4-esp.html              # Tema 4 Específico: Sentido, Desarrollo 0-6 y Reflejos Primarios (9 arts/secc)
 ├── tema5-esp.html              # Tema 5 Específico: Organización de las Escuelas de Educación Infantil (12 arts)
 ├── tema6-esp.html              # Tema 6 Específico: La Evaluación en la Escuela Infantil (16 arts)
+├── tema8-esp.html              # Tema 8 Específico: Teoría Curricular y DUA (10 arts)
+├── tema9-esp.html              # Tema 9 Específico: Propuesta Pedagógica y Programación (8 arts)
 ├── tests.html                  # Tests interactivos (estudio + examen + flashcards + falladas)
 ├── progreso.html               # Racha, logros, gráfico SVG y diagnóstico por tema
 ├── 404.html                    # Página de error personalizada
@@ -83,7 +85,9 @@ oposiciones-cam/
 │   ├── tema3-esp.json          # Contenido cifrado del Tema 3 Específico
 │   ├── tema4-esp.json          # Contenido cifrado del Tema 4 Específico
 │   ├── tema5-esp.json          # Contenido cifrado del Tema 5 Específico
-│   └── tema6-esp.json          # Contenido cifrado del Tema 6 Específico
+│   ├── tema6-esp.json          # Contenido cifrado del Tema 6 Específico
+│   ├── tema8-esp.json          # Contenido cifrado del Tema 8 Específico
+│   └── tema9-esp.json          # Contenido cifrado del Tema 9 Específico
 ├── icons/
 │   ├── icon-192.png
 │   └── icon-512.png
@@ -126,7 +130,7 @@ oposiciones-cam/
 - 🏆 **Sistema de logros** desbloqueables
 - 📈 **Gráfico SVG** con la evolución de los últimos tests
 - Histórico detallado de puntuaciones e intentos
-- Estadísticas reales en vivo: **15 temas · 1108 artículos · 782 preguntas**
+- Estadísticas reales en vivo: **17 temas · 1126 artículos · 782 preguntas**
 - 📥 **Exportar/importar** datos en JSON (copia de seguridad)
 - 🗑 Borrado selectivo o reinicio de estadísticas
 
