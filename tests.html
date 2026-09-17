@@ -1098,9 +1098,9 @@
           <input type="search" id="testSearchInput" placeholder="Buscar tema por número, título o materia (ej: datos, convenio, estatuto)..." autocomplete="off">
         </div>
         <div class="test-filter-pills">
-          <button class="test-pill active" data-filter="all">🎯 Todos los tests (16)</button>
+          <button class="test-pill active" data-filter="all">🎯 Todos los tests (19)</button>
           <button class="test-pill" data-filter="comun">🌸 Bloque Común (1–9)</button>
-          <button class="test-pill" data-filter="especifico">⚡ Bloque Específico (5)</button>
+          <button class="test-pill" data-filter="especifico">⚡ Bloque Específico (8)</button>
           <button class="test-pill" data-filter="especial">⭐ Repaso y Especiales (2)</button>
         </div>
       </div>
@@ -1200,7 +1200,7 @@
       <!-- BLOQUE 2: BLOQUE ESPECÍFICO (EDUCADOR INFANTIL) -->
       <div class="test-block-section" id="blockEsp">
         <div class="test-block-header" onclick="toggleTestBlock('blockEsp')">
-          <div class="test-block-title">⚡ Bloque Específico — Educador Infantil <span class="test-block-badge">5 temas disponibles</span></div>
+          <div class="test-block-title">⚡ Bloque Específico — Educador Infantil <span class="test-block-badge">8 temas disponibles</span></div>
           <span class="test-block-toggle">▾</span>
         </div>
         <div class="test-selector test-grid">
@@ -1245,6 +1245,33 @@
               <span class="meta">15 preguntas aleatorias</span>
             </div>
           </button>
+          <button class="test-card" data-test="tema6-esp" data-bloque="especifico">
+            <div class="test-card-icon" style="background:linear-gradient(135deg, #e05a80 0%, #c0305a 100%);">E6</div>
+            <div class="test-card-content">
+              <h3>Tema 6 Esp. — Evaluación en la Escuela Infantil</h3>
+              <p>Fines, funciones, tipos, técnicas de observación sistemática, instrumentos, informes y documentos oficiales (Orden 460/2023).</p>
+              <span class="meta">15 preguntas aleatorias</span>
+            </div>
+          </button>
+
+          <button class="test-card" data-test="tema8-esp" data-bloque="especifico">
+            <div class="test-card-icon" style="background:linear-gradient(135deg, #e05a80 0%, #c0305a 100%);">E8</div>
+            <div class="test-card-content">
+              <h3>Tema 8 Esp. — Teoría Curricular y DUA</h3>
+              <p>Funciones del currículo, competencias clave y específicas, saberes básicos, fuentes del currículo, niveles y Diseño Universal.</p>
+              <span class="meta">15 preguntas aleatorias</span>
+            </div>
+          </button>
+
+          <button class="test-card" data-test="tema9-esp" data-bloque="especifico">
+            <div class="test-card-icon" style="background:linear-gradient(135deg, #e05a80 0%, #c0305a 100%);">E9</div>
+            <div class="test-card-content">
+              <h3>Tema 9 Esp. — Propuesta Pedagógica y Programación</h3>
+              <p>Propuesta pedagógica (Decreto 36/2022), Unidades de Programación Didáctica (UPD), metodología 0–3 años y situaciones de aprendizaje.</p>
+              <span class="meta">15 preguntas aleatorias</span>
+            </div>
+          </button>
+
 
 
 
@@ -9897,13 +9924,1348 @@
                             "exp": "El TSEI es un profesional cualificado que participa en la programación, desarrollo y evaluación de actividades educativas y en el cuidado integral y fomento de la autonomía infantil."
                   }
         ]
+      },
+      'tema6-esp': {
+        title: "Tema 6 Específico — La Evaluación en la Escuela Infantil",
+        questions: [
+                  {
+                            "q": "La concepción moderna de la evaluación en Educación Infantil como un proceso 'formativo' centrado en la mejora continua se debe históricamente a:",
+                            "options": [
+                                      "Michael Scriven (1967), quien distinguió entre evaluación formativa y sumativa",
+                                      "Ralph Tyler (1949), quien la limitaba al control de objetivos",
+                                      "B.F. Skinner con la enseñanza programada",
+                                      "Pablo Montesinos"
+                            ],
+                            "a": 0,
+                            "exp": "Michael Scriven introdujo la distinción entre evaluación formativa (durante el proceso para orientar y mejorar) y sumativa (al final del proceso para calificar o certificar)."
+                  },
+                  {
+                            "q": "Según el artículo 14.7 de la LOMLOE y la Orden 460/2023 de la CAM, la evaluación en la etapa de Educación Infantil será:",
+                            "options": [
+                                      "Global, continua y formativa",
+                                      "Cuantitativa y sumativa",
+                                      "Normativa y clasificatoria con notas de 1 a 10",
+                                      "Exclusivamente sancionadora"
+                            ],
+                            "a": 0,
+                            "exp": "La evaluación en Educación Infantil tiene carácter global (valora el desarrollo integral), continuo (a lo largo de todo el curso) y formativo (orienta la intervención educativa)."
+                  },
+                  {
+                            "q": "El carácter 'no sancionador' de la evaluación en Educación Infantil significa que:",
+                            "options": [
+                                      "La evaluación no persigue calificar, juzgar o penalizar al alumno, sino comprender su proceso madurativo y ajustar la ayuda pedagógica a sus necesidades individuales",
+                                      "No se debe recoger ninguna información del alumno",
+                                      "Los educadores no tienen que planificar la evaluación",
+                                      "Todos los alumnos obtienen automáticamente un diploma de honor"
+                            ],
+                            "a": 0,
+                            "exp": "En infantil la evaluación no tiene efectos de promoción selectiva ni sanción; su propósito es identificar logros y dificultades para apoyar el desarrollo de cada niño."
+                  },
+                  {
+                            "q": "¿Qué se evalúa en la etapa de Educación Infantil según el Decreto 36/2022 de la CAM?",
+                            "options": [
+                                      "Tanto los aprendizajes del alumnado (competencias específicas y saberes básicos) como los procesos de enseñanza y la propia práctica docente",
+                                      "Únicamente la memoria del niño",
+                                      "Solo la puntualidad de las familias en las entradas",
+                                      "El coeficiente intelectual de los alumnos"
+                            ],
+                            "a": 0,
+                            "exp": "Decreto 36/2022 CAM: Se evalúa el proceso de aprendizaje del alumnado y, simultáneamente, el proceso de enseñanza y la práctica docente del equipo educativo."
+                  },
+                  {
+                            "q": "La técnica principal y prioritaria para la evaluación en el primer ciclo de Educación Infantil (0 a 3 años) es:",
+                            "options": [
+                                      "La observación directa y sistemática de las conductas, actividades y juego de los niños en situaciones cotidianas",
+                                      "Los exámenes escritos con preguntas de desarrollo",
+                                      "Las pruebas psicotécnicas cronometradas",
+                                      "La encuesta telefónica a los padres"
+                            ],
+                            "a": 0,
+                            "exp": "La observación sistemática y planificada por parte del educador es el instrumento por excelencia para recoger información sobre el desarrollo evolutivo y relacional del niño."
+                  },
+                  {
+                            "q": "La «evaluación inicial» en la Escuela Infantil tiene como finalidad:",
+                            "options": [
+                                      "Conocer el punto de partida del niño, su historia de desarrollo, hábitos y conocimientos previos para planificar la intervención y el periodo de adaptación",
+                                      "Poner la primera nota del trimestre",
+                                      "Seleccionar a los alumnos que pueden entrar en el aula",
+                                      "Cobrar la matrícula escolar"
+                            ],
+                            "a": 0,
+                            "exp": "La evaluación inicial (a través de la entrevista familiar y la observación en los primeros días) permite conocer el nivel madurativo y las características individuales del menor."
+                  },
+                  {
+                            "q": "El «registro anecdótico» como instrumento de observación consiste en:",
+                            "options": [
+                                      "La descripción objetiva, breve y textual de un hecho, conducta o acontecimiento significativo protagonizado por un niño en un momento determinado",
+                                      "Un resumen inventado de lo ocurrido en el patio",
+                                      "Una lista de castigos aplicados durante la semana",
+                                      "El diario personal íntimo del educador"
+                            ],
+                            "a": 0,
+                            "exp": "El registro anecdótico recoge incidentes críticos o conductas imprevistas relevantes de forma fáctica, objetiva y sin juicios de valor."
+                  },
+                  {
+                            "q": "Una «escala de estimación» (o de valoración) se diferencia de una lista de control en que:",
+                            "options": [
+                                      "Gradúa la frecuencia, intensidad o grado de adquisición de la conducta (ej: siempre, a veces, nunca o nivel 1 a 4), en lugar de constatar solo la presencia o ausencia (sí/no)",
+                                      "Solo puede ser cumplimentada por el médico pediatra",
+                                      "Es un instrumento exclusivamente cuantitativo para secundaria",
+                                      "No tiene ninguna diferencia práctica"
+                            ],
+                            "a": 0,
+                            "exp": "La escala de estimación valora el grado o matiz con que se manifiesta una conducta, mientras que la lista de control registra dicotómicamente su presencia o ausencia (sí/no)."
+                  },
+                  {
+                            "q": "El «portafolio infantil» (o porfolio) en Educación Infantil es:",
+                            "options": [
+                                      "Una colección organizada y seleccionada de producciones, dibujos, fotos y muestras de trabajo del niño que documenta su evolución y logros a lo largo del tiempo",
+                                      "Una carpeta de piel para transportar documentos de secretaría",
+                                      "Un maletín de primeros auxilios",
+                                      "Un catálogo de libros comerciales"
+                            ],
+                            "a": 0,
+                            "exp": "El portafolio es una herramienta de evaluación auténtica y formativa que visibiliza los progresos, intereses y creaciones del alumno a lo largo del ciclo."
+                  },
+                  {
+                            "q": "La «documentación pedagógica» (inspirada en la metodología de Reggio Emilia) permite:",
+                            "options": [
+                                      "Hacer visible el proceso de aprendizaje de los niños mediante paneles visuales, fotografías comentadas, notas de campo y grabaciones para reflexionar educadores, niños y familias",
+                                      "Vigilar a los docentes con cámaras de seguridad",
+                                      "Archivar facturas de compra de juguetes",
+                                      "Publicar las notas en el tablón de anuncios"
+                            ],
+                            "a": 0,
+                            "exp": "La documentación pedagógica hace visible el pensamiento infantil, transformando la observación en un diálogo reflexivo entre docentes, niños y familias."
+                  },
+                  {
+                            "q": "El «Informe Individualizado de Final de Ciclo» según la Orden 460/2023 de la CAM:",
+                            "options": [
+                                      "Es el documento oficial preceptivo que sintetiza el grado de desarrollo de las competencias y los aspectos más relevantes del aprendizaje del alumno al concluir cada ciclo",
+                                      "Es un certificado médico de vacunación",
+                                      "Es un diploma honorífico sin valor oficial",
+                                      "Se destruye al pasar a primaria"
+                            ],
+                            "a": 0,
+                            "exp": "Orden 460/2023 CAM: Al finalizar cada ciclo se elabora el Informe Individualizado de Final de Ciclo que garantiza la continuidad formativa y la transición entre etapas."
+                  },
+                  {
+                            "q": "La información sobre la evaluación facilitada a las familias en Educación Infantil debe caracterizarse por:",
+                            "options": [
+                                      "Un lenguaje claro, positivo, constructivo y accesible, destacando los progresos y fortalezas del niño y ofreciendo pautas de colaboración conjuntas",
+                                      "Términos médicos incomprensibles para los padres",
+                                      "Juicios de culpabilización hacia la familia",
+                                      "Un único informe numérico con decimales"
+                            ],
+                            "a": 0,
+                            "exp": "La comunicación con las familias debe ser empática, clara, formativa y motivadora, fomentando la corresponsabilidad educativa y la confianza mutua."
+                  },
+                  {
+                            "q": "La evaluación del propio «proceso de enseñanza y de la práctica docente» incluye valorar:",
+                            "options": [
+                                      "La adecuación de los objetivos, la organización de espacios y tiempos, la selección de materiales, la relación con las familias y el clima del aula",
+                                      "El precio del alquiler del edificio escolar",
+                                      "La vestimenta de los educadores los fines de semana",
+                                      "El número de seguidores en redes sociales del centro"
+                            ],
+                            "a": 0,
+                            "exp": "La evaluación de la práctica docente analiza la idoneidad de la propuesta pedagógica, el trabajo en equipo, los recursos empleados y la interacción educativa."
+                  },
+                  {
+                            "q": "El principio de «triangulación» en la evaluación cualitativa en Educación Infantil consiste en:",
+                            "options": [
+                                      "Recoger información contrastando distintas fuentes (educadores, familia, alumno), momentos temporales y diversas técnicas de observación para mayor objetividad",
+                                      "Dibujar figuras geométricas triangulares con los niños",
+                                      "Dividir la clase en tres grupos según la estatura",
+                                      "Hacer tres exámenes iguales el mismo día"
+                            ],
+                            "a": 0,
+                            "exp": "La triangulación metodológica combina múltiples técnicas (observación, entrevistas, muestras de trabajo) y fuentes para obtener una imagen rigurosa y no sesgada del desarrollo infantil."
+                  },
+                  {
+                            "q": "La «evaluación continua» en Educación Infantil permite al equipo educativo:",
+                            "options": [
+                                      "Detectar precozmente dificultades o barreras en el desarrollo y realizar las adaptaciones y apoyos pedagógicos oportunos de manera inmediata",
+                                      "Suspender a los alumnos que no alcancen los objetivos a mitad de curso",
+                                      "Aumentar el número de horas lectivas sin descanso",
+                                      "Imponer sanciones disciplinarias diarias"
+                            ],
+                            "a": 0,
+                            "exp": "La continuidad de la evaluación permite intervenir de forma temprana ante cualquier señal de alerta o necesidad educativa antes de que las dificultades se consoliden."
+                  },
+                  {
+                            "q": "La evaluación «criterial» se caracteriza por:",
+                            "options": [
+                                      "Comparar el progreso de cada alumno respecto a los criterios de evaluación y objetivos fijados previamente, valorando su propia evolución individual sin compararlo con los demás",
+                                      "Comparar a los niños entre sí y ordenar la clase en un ranking de mejor a peor",
+                                      "Evaluar según el criterio subjetivo y caprichoso del evaluador",
+                                      "Medir únicamente la rapidez de respuesta"
+                            ],
+                            "a": 0,
+                            "exp": "La evaluación criterial valora el aprendizaje en relación con criterios de evaluación definidos y con el propio punto de partida de cada niño (evaluación ipsativa/criterial)."
+                  },
+                  {
+                            "q": "El «diario de campo» o diario del aula del educador infantil es:",
+                            "options": [
+                                      "Un cuaderno de registro narrativo continuo donde el educador anota reflexiones, dinámicas grupales, logros, imprevistos y valoraciones pedagógicas del día a día",
+                                      "El libro de contabilidad de la escuela",
+                                      "El registro oficial de firmas de entrada de los trabajadores",
+                                      "Una lista de la compra de alimentos"
+                            ],
+                            "a": 0,
+                            "exp": "El diario de campo es un instrumento de investigación-acción que permite la autorreflexión docente sobre la práctica diaria y la evolución del grupo."
+                  },
+                  {
+                            "q": "En el periodo de adaptación, la evaluación inicial permite registrar aspectos cruciales como:",
+                            "options": [
+                                      "La reacción ante la separación de la figura de apego, la interacción con los nuevos adultos y compañeros, la exploración de los espacios y la aceptación de las rutinas",
+                                      "El nivel de lectura comprensiva a los 12 meses",
+                                      "La velocidad de carrera en 100 metros lisos",
+                                      "El cálculo de sumas con llevadas"
+                            ],
+                            "a": 0,
+                            "exp": "La evaluación durante la adaptación observa la vinculación afectiva, el llanto, el consuelo, el juego exploratorio y la paulatina adquisición de seguridad en el aula."
+                  },
+                  {
+                            "q": "Los «criterios de evaluación» en el currículo de la LOMLOE actúan como:",
+                            "options": [
+                                      "Los referentes que indican los niveles de desempeño esperados en el alumnado en las situaciones o actividades a las que se refieren las competencias específicas",
+                                      "Leyes penales obligatorias",
+                                      "Sanciones pecuniarias",
+                                      "Preguntas cerradas de un examen"
+                            ],
+                            "a": 0,
+                            "exp": "Los criterios de evaluación son los referentes curriculares observables y valorables que definen el grado de desarrollo de las competencias específicas."
+                  },
+                  {
+                            "q": "Las «rúbricas de evaluación» adaptadas a la Educación Infantil son:",
+                            "options": [
+                                      "Guías de puntuación cualitativas que describen diferentes niveles de logro o adquisición de una competencia o habilidad mediante descriptores claros",
+                                      "Formularios de quejas de las familias",
+                                      "Tarjetas de visita de los educadores",
+                                      "Contratos mercantiles de compraventa"
+                            ],
+                            "a": 0,
+                            "exp": "Las rúbricas cualitativas describen descriptores de progreso que ayudan a objetivar la observación del educador en situaciones de aprendizaje."
+                  },
+                  {
+                            "q": "La «autoevaluación docente» en la escuela infantil permite al profesional:",
+                            "options": [
+                                      "Reflexionar sobre su propio estilo pedagógico, el tono de voz, la escucha activa, la gestión de los tiempos y la empatía en el trato con los niños y familias",
+                                      "Ponerse una nota de sobresaliente sin revisar nada",
+                                      "Culpar a los niños de todos los problemas del aula",
+                                      "Pedir un aumento de sueldo automático"
+                            ],
+                            "a": 0,
+                            "exp": "La autoevaluación es el motor de la formación y mejora docente: revisar la propia intervención favorece una práctica más sensible, respetuosa y eficaz."
+                  },
+                  {
+                            "q": "El «expediente del alumno» en Educación Infantil es:",
+                            "options": [
+                                      "El documento oficial que custodia los datos personales, académicos, informes médicos o psicopedagógicos y los documentos oficiales de evaluación del menor",
+                                      "Un archivo público abierto en internet sin clave",
+                                      "Un cuaderno de dibujo de libre acceso",
+                                      "La libreta de calificaciones numéricas"
+                            ],
+                            "a": 0,
+                            "exp": "El expediente personal del alumno es el historial confidencial oficial que recopila los datos administrativos, informes psicopedagógicos y de progreso del niño."
+                  },
+                  {
+                            "q": "La función «diagnóstica» de la evaluación en Educación Infantil permite:",
+                            "options": [
+                                      "Identificar las necesidades, intereses, ritmos de maduración y posibles barreras de aprendizaje para diseñar una respuesta educativa ajustada",
+                                      "Emitir diagnósticos psiquiátricos sin facultativo",
+                                      "Etiquetar negativamente al alumno ante los demás",
+                                      "Expulsar a los alumnos con necesidades especiales"
+                            ],
+                            "a": 0,
+                            "exp": "La evaluación diagnóstica orienta la planificación inicial y la detección temprana de necesidades específicas de apoyo educativo (NEAE)."
+                  },
+                  {
+                            "q": "Los informes periódicos de evaluación que se entregan a las familias en la Comunidad de Madrid (Orden 460/2023):",
+                            "options": [
+                                      "Tendrán carácter cualitativo y describirán de forma global los progresos del niño en las diferentes áreas y su integración socioafectiva",
+                                      "Contendrán notas numéricas del 0 al 10 con decimales",
+                                      "Se publicarán en el tablón de anuncios del centro",
+                                      "Son secretos y no pueden ser leídos por los padres"
+                            ],
+                            "a": 0,
+                            "exp": "Orden 460/2023 CAM: La información periódica a las familias refleja cualitativamente el desarrollo, los hábitos y la socialización del menor de forma comprensible y formativa."
+                  },
+                  {
+                            "q": "En el marco de la LOMLOE, la evaluación de la práctica docente debe ser coordinada por:",
+                            "options": [
+                                      "El Equipo Directivo y el Claustro de Profesores / Equipo Docente en el marco de la Memoria Anual",
+                                      "La policía municipal",
+                                      "Una empresa privada de auditoría externa",
+                                      "El delegado de clase de 3 años"
+                            ],
+                            "a": 0,
+                            "exp": "La evaluación de la enseñanza y de los proyectos del centro es una competencia compartida del Claustro y del Equipo Directivo al cierre de cada curso escolar."
+                  },
+                  {
+                            "q": "La observación «participante» se caracteriza por:",
+                            "options": [
+                                      "Aquella en la que el educador interactúa activamente con los niños mientras observa y dinamiza las situaciones de juego o aprendizaje",
+                                      "Observar a través de un espejo unidireccional sin estar presente",
+                                      "Grabar a los niños con cámaras ocultas sin intervenir nunca",
+                                      "Pedir a un tercero que vigile la clase"
+                            ],
+                            "a": 0,
+                            "exp": "En la observación participante el educador forma parte del contexto de juego y relación, interactuando y recogiendo datos de forma natural y respetuosa."
+                  },
+                  {
+                            "q": "La observación «no participante» resulta especialmente útil cuando:",
+                            "options": [
+                                      "Se desea registrar conductas espontáneas, interacciones entre iguales o el uso autónomo de los rincones sin la interferencia directa del adulto",
+                                      "El educador se ausenta del centro escolar",
+                                      "Se realizan exámenes orales formales",
+                                      "No hay ningún niño en el aula"
+                            ],
+                            "a": 0,
+                            "exp": "La observación no participante permite al educador colocarse en un segundo plano para observar la iniciativa libre, la resolución de conflictos y el juego autónomo."
+                  },
+                  {
+                            "q": "Para garantizar la objetividad en la observación educativa, el educador debe:",
+                            "options": [
+                                      "Evitar prejuicios, registrar conductas observables concretas y utilizar instrumentos planificados con indicadores claros",
+                                      "Anotar únicamente las simpatías personales hacia los niños",
+                                      "Evaluar a todos los alumnos según su estado de ánimo personal",
+                                      "Hacer observaciones sin ningún criterio previo"
+                            ],
+                            "a": 0,
+                            "exp": "La objetividad se apoya en la planificación de qué, cómo y cuándo observar, utilizando indicadores operativos y contrastando con el equipo docente."
+                  },
+                  {
+                            "q": "La evaluación en la etapa de 0 a 6 años NO tiene carácter calificador ni promocional porque:",
+                            "options": [
+                                      "En Educación Infantil todos los alumnos promocionan automáticamente al ciclo o etapa siguiente, respetando su ritmo madurativo sin repeticiones de curso ordinarias",
+                                      "Los niños no aprenden nada en estas edades",
+                                      "La ley prohíbe evaluar a los menores de edad",
+                                      "Los educadores no tienen potestad evaluadora"
+                            ],
+                            "a": 0,
+                            "exp": "La Educación Infantil es una etapa unitaria de desarrollo armónico; la promoción es automática y la evaluación se orienta al acompañamiento y la mejora."
+                  },
+                  {
+                            "q": "El «principio de individualización» en la evaluación de Educación Infantil implica que:",
+                            "options": [
+                                      "Cada niño es único, con ritmos madurativos, estilos cognitivos y contextos familiares singulares que deben ser valorados respetando su propio proceso de desarrollo",
+                                      "Todos los niños deben alcanzar el mismo hito en el mismo día exacto",
+                                      "Se aísla a cada niño en una habitación separada",
+                                      "Se prohíben las actividades colectivas"
+                            ],
+                            "a": 0,
+                            "exp": "El respeto a la individualidad reconoce que cada niño tiene su propio calendario madurativo, valorando sus avances respecto a sí mismo y no en comparación con la media."
+                  },
+                  {
+                            "q": "Las «sesiones de evaluación» del equipo educativo son reuniones donde:",
+                            "options": [
+                                      "Los educadores del ciclo o grupo ponen en común sus observaciones, analizan la evolución del alumnado, valoran la práctica docente y coordinan acuerdos pedagógicos",
+                                      "Se decide la expulsión de alumnos conflictivos",
+                                      "Se fijan las vacaciones de verano de los directores",
+                                      "Se juegan partidas de ajedrez"
+                            ],
+                            "a": 0,
+                            "exp": "Las sesiones de evaluación colegiadas permiten contrastar puntos de vista, acordar pautas comunes y asegurar la coherencia de la acción educativa."
+                  },
+                  {
+                            "q": "La comunicación fluida de la evaluación con los servicios de Atención Temprana (EAT / Centros Base) es clave para:",
+                            "options": [
+                                      "La detección precoz de necesidades educativas especiales, la derivación ágil y la coordinación del plan de intervención psicopedagógica del menor",
+                                      "El cobro de ayudas económicas privadas",
+                                      "La transferencia de expedientes a la policía",
+                                      "El cierre de las escuelas infantiles"
+                            ],
+                            "a": 0,
+                            "exp": "La coordinación temprana entre la escuela infantil y los equipos de orientación psicopedagógica garantiza la respuesta inmediata a necesidades de apoyo educativo."
+                  },
+                  {
+                            "q": "En la evaluación inicial en el primer ciclo, la «entrevista con las familias» permite recabar datos sobre:",
+                            "options": [
+                                      "El embarazo, parto, lactancia, desarrollo psicomotor, hábitos de sueño, control de esfínteres, lenguaje y relaciones socioafectivas del menor",
+                                      "Los extractos bancarios mensuales de la familia",
+                                      "El voto político de los abuelos",
+                                      "Las marcas comerciales de la ropa del bebé"
+                            ],
+                            "a": 0,
+                            "exp": "La entrevista inicial recopila la anamnesis evolutiva del niño para individualizar los cuidados y la propuesta pedagógica en el aula."
+                  },
+                  {
+                            "q": "La «evaluación sumativa» o final en Educación Infantil tiene como propósito:",
+                            "options": [
+                                      "Sintetizar globalmente los logros alcanzados por el alumno al finalizar un periodo o ciclo para informar a la familia y facilitar la transición al ciclo o etapa siguiente",
+                                      "Poner una nota numérica definitiva que determine si el niño repite curso",
+                                      "Entregar un premio en metálico al mejor alumno",
+                                      "Publicar un ranking escolar"
+                            ],
+                            "a": 0,
+                            "exp": "La evaluación sumativa en infantil no califica numéricamente, sino que recapitula el grado de desarrollo competencial para asegurar la continuidad educativa."
+                  },
+                  {
+                            "q": "Las «listas de control» (o de cotejo) son instrumentos especialmente útiles para:",
+                            "options": [
+                                      "Comprobar de forma rápida y estructurada la presencia o ausencia de hitos evolutivos o habilidades concretas (ej: camina solo, coge la cuchara, responde a su nombre)",
+                                      "Redactar ensayos filosóficos sobre la educación",
+                                      "Calcular la media aritmética de las notas",
+                                      "Hacer encuestas de opinión a la dirección"
+                            ],
+                            "a": 0,
+                            "exp": "Las listas de cotejo registran de forma dicotómica (sí/no) la manifestación de destrezas motrices, de autonomía o de lenguaje en situaciones cotidianas."
+                  },
+                  {
+                            "q": "El «informe de evaluación individualizado» en el paso de Educación Infantil a Educación Primaria tiene como finalidad:",
+                            "options": [
+                                      "Garantizar la continuidad formativa y permitir al equipo docente de Primaria conocer las características, progresos y medidas de apoyo que ha recibido el alumno",
+                                      "Decidir si el alumno puede matricularse o no en Primaria",
+                                      "Imponer un castigo previo al alumno",
+                                      "Cobrar una tasa de transferencia de expediente"
+                            ],
+                            "a": 0,
+                            "exp": "El informe individualizado de final de etapa asegura una transición armónica entre Infantil y Primaria, informando de los aprendizajes y apoyos educativos precisados."
+                  },
+                  {
+                            "q": "La «evaluación de la interacción afectiva» entre el educador y el niño es relevante porque:",
+                            "options": [
+                                      "La calidad del vínculo afectivo y la disponibilidad emocional del adulto son determinantes para la seguridad, el bienestar y la motivación de aprender del menor",
+                                      "Permite sancionar a los educadores que sonrían a los niños",
+                                      "Determina el importe de la matrícula escolar",
+                                      "Es una exigencia del código tributario"
+                            ],
+                            "a": 0,
+                            "exp": "La relación afectiva cálida y sensible es la base del apego seguro y del desarrollo emocional equilibrado en la primera infancia."
+                  },
+                  {
+                            "q": "La «heteroevaluación» en el contexto de la Escuela Infantil consiste en:",
+                            "options": [
+                                      "La evaluación que realiza el educador sobre los procesos de aprendizaje y desarrollo de los alumnos de su grupo",
+                                      "La evaluación que hace un niño sobre sí mismo",
+                                      "La evaluación que hacen dos alumnos entre sí",
+                                      "La inspección policial del centro escolar"
+                            ],
+                            "a": 0,
+                            "exp": "La heteroevaluación es la valoración técnica que una persona (el educador) realiza sobre los aprendizajes de otra persona (el alumno)."
+                  },
+                  {
+                            "q": "En el marco de la Orden 460/2023 de la CAM, los documentos oficiales de evaluación son:",
+                            "options": [
+                                      "El expediente personal, las actas de evaluación, el historial escolar y el informe individualizado de final de ciclo o etapa",
+                                      "El libro de reclamaciones y el contrato mercantil",
+                                      "Las facturas de la luz y el recibo del agua",
+                                      "El folleto publicitario del centro"
+                            ],
+                            "a": 0,
+                            "exp": "Orden 460/2023 CAM: Los documentos oficiales de evaluación son el expediente personal, las actas de evaluación, el historial escolar y el informe individualizado de final de ciclo/etapa."
+                  },
+                  {
+                            "q": "La evaluación de la «competencia emocional» en el primer ciclo incluye observar:",
+                            "options": [
+                                      "La capacidad de manifestar emociones básicas, la aceptación del consuelo del adulto, el inicio de la autorregulación y el reconocimiento de emociones en los compañeros",
+                                      "La resolución de exámenes teóricos de psicología",
+                                      "La supresión total del llanto en todas las circunstancias",
+                                      "La obediencia ciega sin expresar sentimientos"
+                            ],
+                            "a": 0,
+                            "exp": "En el primer ciclo la competencia emocional se manifiesta en la expresión y regulación de afectos, la respuesta al consuelo y la empatía incipiente con sus iguales."
+                  }
+        ]
+      },
+      'tema8-esp': {
+        title: "Tema 8 Específico — Teoría Curricular y DUA en Educación Infantil",
+        questions: [
+                  {
+                            "q": "Según el artículo 6.1 de la Ley Orgánica 2/2006 (LOE/LOMLOE), se entiende por CURRÍCULO:",
+                            "options": [
+                                      "El conjunto de objetivos, competencias, contenidos (saberes básicos), métodos pedagógicos y criterios de evaluación de cada una de las enseñanzas",
+                                      "El listado de normas de convivencia de un colegio",
+                                      "La biografía profesional del profesor",
+                                      "El horario de los autobuses escolares"
+                            ],
+                            "a": 0,
+                            "exp": "Art. 6.1 LOMLOE: El currículo es el marco regulador de objetivos, competencias, contenidos enunciados en forma de saberes básicos, métodos pedagógicos y criterios de evaluación."
+                  },
+                  {
+                            "q": "La pedagoga Ángeles Gervilla Castillo define el currículo en Educación Infantil como:",
+                            "options": [
+                                      "Un proyecto educativo global que integra dimensiones técnicas, sociológicas y axiológicas, reflejando concepciones sobre la infancia y el papel del educador",
+                                      "Un examen tipo test de 100 preguntas",
+                                      "Un manual de instrucciones mecánicas cerrado",
+                                      "El catálogo comercial de juguetes"
+                            ],
+                            "a": 0,
+                            "exp": "Gervilla Castillo concibe el currículo como un proyecto cultural y axiológico integrador, contextualizado y comprometido con los valores humanos de la infancia."
+                  },
+                  {
+                            "q": "El «currículo abierto» se caracteriza por:",
+                            "options": [
+                                      "Reconocer una amplia autonomía y flexibilidad al equipo docente para adaptar objetivos, metodologías y saberes a las características y necesidades de su alumnado",
+                                      "Estar totalmente prefijado y cerrado sin permitir cambios por el profesor",
+                                      "No tener ninguna ley que lo regule",
+                                      "Ser exclusivo de universidades privadas"
+                            ],
+                            "a": 0,
+                            "exp": "El modelo de currículo abierto otorga protagonismo y capacidad de decisión al profesorado para contextualizar la enseñanza en función de su entorno escolar."
+                  },
+                  {
+                            "q": "El «currículo oculto» hace referencia a:",
+                            "options": [
+                                      "Los aprendizajes, valores, actitudes y normas no explícitas que se transmiten de forma implícita a través de las interacciones cotidianas, el ambiente y las rutinas escolares",
+                                      "Documentos clasificados como secreto militar",
+                                      "Leyes derogadas que ya no están vigentes",
+                                      "Trampas en los exámenes"
+                            ],
+                            "a": 0,
+                            "exp": "El currículo oculto comprende los mensajes y normas informales que el niño asimila a través del clima institucional, relaciones y modelos de conducta de los adultos."
+                  },
+                  {
+                            "q": "La «fuente sociológica» del currículo aporta información sobre:",
+                            "options": [
+                                      "Las demandas sociales, culturales y del entorno, los valores democráticos y las necesidades formativas que la sociedad requiere transmitir a las nuevas generaciones",
+                                      "El funcionamiento químico de las neuronas",
+                                      "Las reglas de gramática latina",
+                                      "El precio del gasoil para calefacción"
+                            ],
+                            "a": 0,
+                            "exp": "La fuente sociológica analiza las características de la sociedad y los valores de equidad, inclusión, sostenibilidad y convivencia que la escuela debe fomentar."
+                  },
+                  {
+                            "q": "La «fuente psicológica» del currículo proporciona conocimientos esenciales sobre:",
+                            "options": [
+                                      "Las características evolutivas de los niños en cada etapa, los procesos de aprendizaje y cómo se construye el conocimiento infantil",
+                                      "La historia de la filosofía medieval",
+                                      "El balance contable de la empresa",
+                                      "El plano arquitectónico del edificio"
+                            ],
+                            "a": 0,
+                            "exp": "La fuente psicológica (Piaget, Vygotsky, Ausubel, neurociencia) ayuda a determinar 'cuándo y cómo aprenden los niños' según sus estadios madurativos."
+                  },
+                  {
+                            "q": "La «fuente pedagógica» del currículo se fundamenta en:",
+                            "options": [
+                                      "La experiencia acumulada en la práctica docente, los principios metodológicos activos, el juego, la globalización y la afectividad en el aula",
+                                      "Las sentencias judiciales del Tribunal Supremo",
+                                      "El índice de precios al consumo (IPC)",
+                                      "El código de circulación vial"
+                            ],
+                            "a": 0,
+                            "exp": "La fuente pedagógica recoge la tradición y renovación metodológica (escuela activa, rincones, proyectos) que orienta el 'cómo enseñar'."
+                  },
+                  {
+                            "q": "La «fuente epistemológica» del currículo se centra en:",
+                            "options": [
+                                      "La estructura interna, lógica y científica de las áreas de conocimiento y su transposición didáctica adaptada a la etapa infantil",
+                                      "El horóscopo y la astrología",
+                                      "Las estadísticas de ventas de coches",
+                                      "El menú diario del comedor"
+                            ],
+                            "a": 0,
+                            "exp": "La fuente epistemológica aporta los fundamentos conceptuales de las disciplinas (lenguaje, lógica, expresión artística, medio natural) adaptados a la edad infantil."
+                  },
+                  {
+                            "q": "El PRIMER nivel de concreción curricular en la Comunidad de Madrid lo constituyen:",
+                            "options": [
+                                      "El Real Decreto 95/2022 (enseñanzas mínimas estatales) y el Decreto 36/2022 de la CAM (currículo autonómico)",
+                                      "La Programación de Aula del educador",
+                                      "El Proyecto Educativo de Centro (PEC)",
+                                      "La adaptación curricular individualizada"
+                            ],
+                            "a": 0,
+                            "exp": "El 1º nivel emana de las administraciones educativas (Estado y Comunidad Autónoma) con carácter prescriptivo para todos los centros."
+                  },
+                  {
+                            "q": "El SEGUNDO nivel de concreción curricular corresponde a:",
+                            "options": [
+                                      "El claustro y equipo docente del centro escolar a través de la Propuesta Pedagógica integrada en el Proyecto Educativo de Centro (PEC)",
+                                      "El Ministerio de Educación en Madrid",
+                                      "Las editoriales de libros de texto",
+                                      "El Parlamento Europeo"
+                            ],
+                            "a": 0,
+                            "exp": "El 2º nivel concreta y contextualiza el currículo autonómico en la realidad de cada escuela infantil mediante su Propuesta Pedagógica."
+                  },
+                  {
+                            "q": "El TERCER nivel de concreción curricular se sitúa en:",
+                            "options": [
+                                      "El aula, mediante la Programación Didáctica de ciclo/aula y el diseño de Situaciones de Aprendizaje para el grupo de niños",
+                                      "El Boletín Oficial de la Comunidad de Madrid",
+                                      "El Consejo de Gobierno de la CAM",
+                                      "El sindicato de profesores"
+                            ],
+                            "a": 0,
+                            "exp": "El 3º nivel es la programación de aula donde el educador planifica las situaciones de aprendizaje y actividades para su grupo concreto."
+                  },
+                  {
+                            "q": "El CUARTO nivel de concreción curricular está destinado a:",
+                            "options": [
+                                      "Las Adaptaciones Curriculares Individualizadas (ACI) y ajustes de acceso personalizados para dar respuesta a necesidades específicas de apoyo educativo (NEAE)",
+                                      "La compra de ordenadores nuevos",
+                                      "El diseño de la página web del colegio",
+                                      "La contratación de profesores sustitutos"
+                            ],
+                            "a": 0,
+                            "exp": "El 4º nivel adapta el currículo a las peculiaridades de un alumno concreto que requiere medidas específicas de apoyo o adaptación curricular."
+                  },
+                  {
+                            "q": "Los tres principios fundamentales del Diseño Universal para el Aprendizaje (DUA) son proporcionar múltiples formas de:",
+                            "options": [
+                                      "1. Implicación y motivación (el porqué); 2. Representación de la información (el qué); 3. Acción y expresión (el cómo)",
+                                      "1. Castigo; 2. Examen; 3. Silencio",
+                                      "1. Lectura; 2. Escritura; 3. Cálculo formal",
+                                      "1. Competición; 2. Clasificación; 3. Selección"
+                            ],
+                            "a": 0,
+                            "exp": "El DUA se basa en tres redes neuronales cerebrales: redes afectivas (implicación), redes de reconocimiento (representación) y redes estratégicas (acción y expresión)."
+                  },
+                  {
+                            "q": "Las «competencias específicas» en el currículo de Educación Infantil son:",
+                            "options": [
+                                      "Los desempeños que el alumnado debe poder desplegar en actividades o situaciones de aprendizaje sobre los saberes básicos de cada área",
+                                      "Habilidades exclusivas de los deportistas de élite",
+                                      "Títulos universitarios oficiales",
+                                      "Leyes penales de obligado cumplimiento"
+                            ],
+                            "a": 0,
+                            "exp": "Las competencias específicas conectan las competencias clave con los saberes básicos y los criterios de evaluación de cada una de las tres áreas."
+                  },
+                  {
+                            "q": "Las «Situaciones de Aprendizaje» reguladas en la LOMLOE y Decreto 36/2022 CAM se definen como:",
+                            "options": [
+                                      "Escenarios pedagógicos significativos, contextualizados, lúdicos y retadores que integran saberes y favorecen la resolución creativa de problemas",
+                                      "Exámenes teóricos eliminatorios",
+                                      "Fichas de papel repetitivas individuales",
+                                      "Momentos de castigo en el rincón"
+                            ],
+                            "a": 0,
+                            "exp": "Las situaciones de aprendizaje articulan tareas complejas y motivadoras que permiten al niño aplicar sus capacidades en contextos reales y funcionales."
+                  },
+                  {
+                            "q": "El principio de «globalización» en la teoría curricular de Educación Infantil postula que:",
+                            "options": [
+                                      "El aprendizaje no se produce por adición de materias aisladas, sino mediante la interacción global de las tres áreas con el entorno y las vivencias del niño",
+                                      "Los alumnos deben viajar por todo el mundo antes de los 6 años",
+                                      "Se debe enseñar economía internacional a los 2 años",
+                                      "Las clases deben impartirse exclusivamente en inglés"
+                            ],
+                            "a": 0,
+                            "exp": "La globalización responde a la estructura mental sincrética del niño: las experiencias de aprendizaje deben conectar afectos, movimiento, lenguaje y exploración sin compartimentar."
+                  },
+                  {
+                            "q": "La función «planificadora» del currículo permite:",
+                            "options": [
+                                      "Organizar y secuenciar de forma coherente y sistemática los objetivos, saberes y metodologías a lo largo de los dos ciclos de la etapa",
+                                      "Improvisar todas las mañanas sin ninguna previsión",
+                                      "Copiar el libro de texto sin adaptarlo",
+                                      "Eliminar los recreos escolares"
+                            ],
+                            "a": 0,
+                            "exp": "La función planificadora dota de intencionalidad y estructura al proceso educativo, evitando la dispersión y la improvisación en el aula."
+                  },
+                  {
+                            "q": "El «principio de actividad» en el currículo de Educación Infantil establece que:",
+                            "options": [
+                                      "El niño aprende haciendo, experimentando y manipulando la realidad con todos sus sentidos, siendo el protagonista activo de su propio aprendizaje",
+                                      "El alumno debe permanecer quieto y callado escuchando al profesor",
+                                      "Los niños solo deben mirar pantallas digitales pasivamente",
+                                      "El educador debe hacer todo el trabajo manual por el niño"
+                            ],
+                            "a": 0,
+                            "exp": "La actividad física, mental y lúdica es la vía regia del aprendizaje infantil: la acción directa y la manipulación transforman las estructuras cognitivas."
+                  },
+                  {
+                            "q": "La «transposición didáctica» en la fuente epistemológica del currículo consiste en:",
+                            "options": [
+                                      "El proceso de adaptación y transformación del conocimiento científico y cultural en un contenido accesible, comprensible y significativo para el nivel evolutivo del niño",
+                                      "Traducir un libro de un idioma a otro con un programa informático",
+                                      "Copiar un tratado universitario en la pizarra de párvulos",
+                                      "La venta de enciclopedias a las familias"
+                            ],
+                            "a": 0,
+                            "exp": "Chevallard definió la transposición didáctica como la adaptación pedagógica que hace el docente del 'saber sabio' al 'saber enseñado' adecuado a la edad de los alumnos."
+                  },
+                  {
+                            "q": "El currículo «nulo» hace referencia a:",
+                            "options": [
+                                      "Aquellos temas, contenidos o saberes que se omiten deliberadamente o se dejan fuera del currículo oficial o de la práctica del aula",
+                                      "Un currículo que no sirve para nada y está anulado por un juez",
+                                      "El horario de cierre de la escuela",
+                                      "Las faltas de asistencia de los alumnos"
+                            ],
+                            "a": 0,
+                            "exp": "Eisner conceptualizó el currículo nulo como aquello que la escuela no enseña o deja de lado, lo cual también tiene una dimensión ideológica y formativa."
+                  },
+                  {
+                            "q": "La «educación en valores cívicos para la convivencia» en el currículo de Educación Infantil incluye:",
+                            "options": [
+                                      "La igualdad de género, el respeto a la diversidad, la empatía, el consumo responsable y sostenible, y la resolución pacífica de conflictos",
+                                      "El adiestramiento militar temprano",
+                                      "La rivalidad y competencia agresiva entre compañeros",
+                                      "El aprendizaje del código penal"
+                            ],
+                            "a": 0,
+                            "exp": "Art. 12.3 y 14.3 LOMLOE: La educación en valores para la convivencia pacífica, la igualdad entre niños y niñas y el respeto medioambiental forman parte transversal del currículo."
+                  },
+                  {
+                            "q": "En el marco del DUA, ofrecer «múltiples formas de representación» en el aula significa:",
+                            "options": [
+                                      "Presentar la información a través de diversos canales sensoriales (auditivo, visual, táctil, manipulativo, gestual) para que llegue a todos los alumnos",
+                                      "Usar únicamente texto escrito para niños de un año",
+                                      "Hablar por megafonía sin mostrar objetos reales",
+                                      "Obligar a todos a mirar la misma lámina fija"
+                            ],
+                            "a": 0,
+                            "exp": "La multiplicidad de representación (Principio I del DUA) ofrece opciones perceptivas, lingüísticas y de comprensión mediante imágenes, objetos reales, canciones y gestos."
+                  },
+                  {
+                            "q": "En el marco del DUA, ofrecer «múltiples formas de acción y expresión» permite que los niños:",
+                            "options": [
+                                      "Puedan expresar lo que saben o sienten a través de distintos lenguajes (corporal, plástico, oral, musical, simbólico o mediante apoyos comunicativos)",
+                                      "Solo puedan responder mediante exámenes de opción múltiple",
+                                      "Permanezcan en silencio obligatorio sin hablar",
+                                      "Deban escribir a máquina obligatoriamente"
+                            ],
+                            "a": 0,
+                            "exp": "El Principio II del DUA permite que cada niño demuestre sus aprendizajes mediante el juego, el modelado, el dibujo, la música o la palabra según sus capacidades."
+                  },
+                  {
+                            "q": "En el marco del DUA, proporcionar «múltiples formas de implicación» persigue:",
+                            "options": [
+                                      "Fomentar el interés, la curiosidad espontánea, la motivación intrínseca y la autorregulación emocional a través de la libre elección y retos adecuados",
+                                      "Obligar a los niños a trabajar bajo amenazas de castigo",
+                                      "Repartir caramelos industriales a quienes terminen primero",
+                                      "Hacer siempre las mismas actividades rutinarias aburridas"
+                            ],
+                            "a": 0,
+                            "exp": "El Principio III del DUA activa las redes afectivas del cerebro conectando el aprendizaje con los centros de interés y la motivación intrínseca del niño."
+                  },
+                  {
+                            "q": "El carácter «prescriptivo» de las enseñanzas mínimas y del currículo autonómico implica que:",
+                            "options": [
+                                      "Son de obligado cumplimiento para todos los centros educativos autorizados que impartan Educación Infantil en la Comunidad de Madrid",
+                                      "Son recomendaciones optativas que cada colegio puede ignorar si lo desea",
+                                      "Solo obligan a los colegios de titularidad extranjera",
+                                      "Se aplican exclusivamente en los meses de verano"
+                            ],
+                            "a": 0,
+                            "exp": "El currículo prescriptivo (1º nivel) fija los mínimos obligatorios garantizados para todo el alumnado de la comunidad autónoma."
+                  },
+                  {
+                            "q": "Las «competencias clave» adaptadas a la etapa de Educación Infantil en la LOMLOE se fundamentan en:",
+                            "options": [
+                                      "La Recomendación del Consejo de la Unión Europea de 2018 relativa a las competencias clave para el aprendizaje permanente",
+                                      "Las ordenanzas municipales de tráfico",
+                                      "El reglamento de la liga de fútbol profesional",
+                                      "Los estatutos de una empresa mercantil"
+                            ],
+                            "a": 0,
+                            "exp": "El marco competencial de la LOMLOE se alinea con el Marco Europeo de Competencias Clave para el Aprendizaje Permanente (2018)."
+                  },
+                  {
+                            "q": "El papel del educador como «investigador en el aula» (Stenhouse) supone que:",
+                            "options": [
+                                      "El docente reflexiona críticamente sobre su propia práctica, prueba nuevas estrategias y evalúa los resultados para mejorar continuamente el currículo en acción",
+                                      "El educador hace experimentos químicos peligrosos con los niños",
+                                      "El docente trabaja para una agencia de detectives privados",
+                                      "Se prohíbe evaluar a los alumnos"
+                            ],
+                            "a": 0,
+                            "exp": "Stenhouse defendió la figura del 'profesor como investigador': el currículo no es un paquete cerrado, sino una hipótesis educativa que el docente comprueba y enriquece en su aula."
+                  },
+                  {
+                            "q": "La «evaluación formativa» del currículo permite:",
+                            "options": [
+                                      "Revisar y reajustar las programaciones de aula durante el curso escolar en función de la respuesta y necesidades reales del alumnado",
+                                      "Cerrar la escuela si los resultados no son perfectos",
+                                      "Poner notas suspensas en la libreta escolar",
+                                      "Sancionar a los educadores que introduzcan juegos"
+                            ],
+                            "a": 0,
+                            "exp": "La evaluación curricular es formativa porque aporta datos para perfeccionar la programación, los espacios, los tiempos y las estrategias metodológicas."
+                  },
+                  {
+                            "q": "La contextualización del currículo en el segundo nivel de concreción (Propuesta Pedagógica) debe considerar:",
+                            "options": [
+                                      "El entorno socioeconómico y cultural de las familias, las instalaciones del centro, los recursos disponibles y la diversidad del alumnado escolarizado",
+                                      "El precio del billete de avión a Nueva York",
+                                      "El resultado de las elecciones generales del país",
+                                      "La cotización en bolsa de empresas tecnológicas"
+                            ],
+                            "a": 0,
+                            "exp": "La Propuesta Pedagógica adapta el currículo prescriptivo a las singularidades de la comunidad escolar y el contexto físico y social del centro."
+                  },
+                  {
+                            "q": "Las «áreas curriculares» de la Educación Infantil NO deben entenderse como materias independientes, sino como:",
+                            "options": [
+                                      "Ámbitos de experiencia globalizados e intrínsecamente relacionados entre sí que vertebran el desarrollo integral infantil",
+                                      "Asignaturas universitarias con exámenes separados",
+                                      "Departamentos estancos aislados",
+                                      "Módulos profesionales de empleo para adultos"
+                            ],
+                            "a": 0,
+                            "exp": "Las tres áreas son ámbitos de experiencia interconectados que se abordan mediante situaciones de aprendizaje integradas y transversales."
+                  },
+                  {
+                            "q": "La inclusión educativa como principio curricular rector garantiza que:",
+                            "options": [
+                                      "Todos los niños y niñas, independientemente de sus condiciones personales, sociales, culturales o de discapacidad, tienen derecho a ser acogidos, participar y progresar en un entorno ordinario de calidad",
+                                      "Solo los niños sin dificultades pueden asistir a la escuela ordinaria",
+                                      "Se crea una escuela separada para cada nivel socioeconómico",
+                                      "Los niños con discapacidad no tienen derecho a la educación"
+                            ],
+                            "a": 0,
+                            "exp": "El principio de inclusión y equidad obliga a diseñar una educación para todos, adaptando el entorno y las metodologías para eliminar cualquier barrera de aprendizaje."
+                  },
+                  {
+                            "q": "El «tiempo para el juego» en la planificación curricular de 0 a 6 años debe ser considerado como:",
+                            "options": [
+                                      "Un contenido curricular y una metodología imprescindible y prioritaria que debe impregnar toda la jornada escolar",
+                                      "Un relleno sin valor pedagógico para cuando el profesor esté cansado",
+                                      "Una recompensa que se quita si el niño no se porta bien",
+                                      "Una actividad que solo se realiza en el patio exterior los viernes"
+                            ],
+                            "a": 0,
+                            "exp": "El juego es el medio principal a través del cual los niños exploran, comprenden el mundo, desarrollan el lenguaje, resuelven problemas y estructuran su personalidad."
+                  },
+                  {
+                            "q": "La relación entre la «teoría curricular» y la «práctica educativa» es de naturaleza:",
+                            "options": [
+                                      "Dialéctica y recíproca: la teoría fundamenta y orienta la práctica, y la práctica reflexiva en el aula retroalimenta y transforma la teoría curricular",
+                                      "Completamente desconectada e incompatible",
+                                      "De subordinación ciega a órdenes teóricas sin experiencia real",
+                                      "De indiferencia mutua"
+                            ],
+                            "a": 0,
+                            "exp": "La teoría curricular y la práctica en el aula se enriquecen mutuamente: la acción educativa cobra sentido con la teoría pedagógica y ésta se valida en el aula real."
+                  },
+                  {
+                            "q": "En el marco del Decreto 36/2022 de la CAM, la «propuesta pedagógica» es elaborada por:",
+                            "options": [
+                                      "El equipo de profesionales del centro escolar que atiende al alumnado de la etapa, bajo la coordinación del equipo directivo y la CCP",
+                                      "La policía autonómica",
+                                      "Una empresa privada de publicidad",
+                                      "El Ministerio de Asuntos Exteriores"
+                            ],
+                            "a": 0,
+                            "exp": "La elaboración colegiada de la propuesta pedagógica garantiza la corresponsabilidad y coherencia del proyecto educativo de todo el equipo docente."
+                  },
+                  {
+                            "q": "La evaluación de la propia «Propuesta Pedagógica» del centro se realiza al finalizar cada curso escolar a través de:",
+                            "options": [
+                                      "La Memoria Anual de centro aprobada por el Claustro y el Consejo Escolar, incorporando propuestas de mejora para el curso siguiente",
+                                      "Una denuncia judicial en el juzgado de guardia",
+                                      "El borrado de todos los archivos del ordenador",
+                                      "La clausura del edificio escolar"
+                            ],
+                            "a": 0,
+                            "exp": "La Memoria Anual analiza el grado de cumplimiento de los objetivos de la Propuesta Pedagógica y de la PGA, estableciendo propuestas de mejora continua."
+                  },
+                  {
+                            "q": "El «principio de individualización» curricular exige:",
+                            "options": [
+                                      "Ajustar la intervención educativa a las características, necesidades, estilos de aprendizaje y ritmos madurativos propios de cada niño",
+                                      "Exigir que todos los alumnos caminen y hablen al mismo mes exacto",
+                                      "Aislar al alumno de sus compañeros",
+                                      "Prohibir el juego en grupo"
+                            ],
+                            "a": 0,
+                            "exp": "La individualización reconoce la singularidad de cada niño, adaptando las ayudas pedagógicas para potenciar el máximo desarrollo de sus capacidades."
+                  },
+                  {
+                            "q": "El modelo de «evaluación auténtica» en el currículo de Educación Infantil propone:",
+                            "options": [
+                                      "Evaluar a los niños en situaciones reales y cotidianas de juego, interacción y resolución de problemas significativos, utilizando la observación contextualizada",
+                                      "Hacer exámenes escritos cronometrados",
+                                      "Poner notas numéricas en la pizarra",
+                                      "Preguntar lecciones orales de memoria"
+                            ],
+                            "a": 0,
+                            "exp": "La evaluación auténtica valora las competencias en contextos reales y significativos de la vida del aula, superando las pruebas artificiales descontextualizadas."
+                  },
+                  {
+                            "q": "La «transversalidad» de la educación para la salud y el consumo responsable en el currículo implica que:",
+                            "options": [
+                                      "Deben integrarse de forma continua en todas las rutinas, actividades y vivencias diarias del aula y no como lecciones aisladas",
+                                      "Solo se imparten un día al año en una conferencia magistral",
+                                      "Se contratan empresas de publicidad para vender productos",
+                                      "Está prohibido hablar de alimentación saludable en el aula"
+                            ],
+                            "a": 0,
+                            "exp": "La educación para la salud, la higiene y el cuidado del entorno impregnan de forma transversal todas las experiencias del día a día en la escuela infantil."
+                  },
+                  {
+                            "q": "El currículo de Educación Infantil en la Comunidad de Madrid se orienta a lograr que las niñas y niños:",
+                            "options": [
+                                      "Elaboren una imagen de sí mismos positiva, equilibrada e igualitaria y adquieran progresivamente autonomía personal",
+                                      "Compitan agresivamente con sus compañeros para ser los primeros",
+                                      "Obtengan un contrato laboral remunerado",
+                                      "Superen exámenes de selectividad universitaria"
+                            ],
+                            "a": 0,
+                            "exp": "Art. 14.3 LOMLOE y Decreto 36/2022 CAM: El fin primordial es facilitar la construcción de una autoimagen positiva, autoestima, autonomía y valores de igualdad."
+                  },
+                  {
+                            "q": "La función «axiológica o ideológica» del currículo se refiere a que:",
+                            "options": [
+                                      "Todo currículo transmite y hace explícita una determinada escala de valores éticos, principios democráticos y concepción de la infancia y de la sociedad",
+                                      "Solo sirve para enseñar gramática",
+                                      "No tiene ninguna relación con los valores humanos",
+                                      "Es un reglamento puramente mercantil"
+                            ],
+                            "a": 0,
+                            "exp": "El currículo no es neutro: encarna los valores éticos, de derechos humanos, igualdad y convivencia que la sociedad democrática promueve para sus ciudadanos."
+                  }
+        ]
+      },
+      'tema9-esp': {
+        title: "Tema 9 Específico — La Propuesta Pedagógica y la Programación en Primer Ciclo",
+        questions: [
+                  {
+                            "q": "La «Propuesta Pedagógica» en el marco del Decreto 36/2022 de la CAM se define como:",
+                            "options": [
+                                      "El documento institucional que concreta el currículo y recoge el carácter educativo de ambos ciclos de la etapa, formando parte del Proyecto Educativo de Centro (PEC)",
+                                      "Un catálogo comercial de venta de uniformes",
+                                      "El contrato mercantil suscrito con el servicio de comedor",
+                                      "Una hoja de reclamaciones de las familias"
+                            ],
+                            "a": 0,
+                            "exp": "Art. 14 Decreto 36/2022 CAM: La propuesta pedagógica es el documento institucional que concreta el currículo y recoge el carácter educativo de ambos ciclos dentro del PEC."
+                  },
+                  {
+                            "q": "En virtud del artículo 14.2 del Decreto 36/2022 de la CAM, ¿cuál de los siguientes elementos es PRESCRIPTIVO en la Propuesta Pedagógica?",
+                            "options": [
+                                      "La concreción del currículo en unidades de programación, la organización de espacios y tiempos, recursos materiales, atención a las diferencias individuales y colaboración con familias",
+                                      "El balance contable anual de beneficios mercantiles",
+                                      "El menú diario de los profesores",
+                                      "El listado telefónico privado de los conserjes"
+                            ],
+                            "a": 0,
+                            "exp": "Decreto 36/2022 CAM: Elementos prescriptivos: 1. Concreción curricular en UPD; 2. Organización de espacios; 3. Organización del tiempo y rutinas; 4. Recursos materiales; 5. Atención a diferencias individuales; 6. Colaboración con familias."
+                  },
+                  {
+                            "q": "Según la Orden 460/2023 de la CAM (art. 6), las «Unidades de Programación Didáctica» (UPD) son:",
+                            "options": [
+                                      "Instrumentos de planificación que concretan para cada curso de la etapa el currículo establecido, determinando competencias específicas, criterios de evaluación, contenidos y actividades o situaciones de aprendizaje",
+                                      "Exámenes trimestrales eliminatorios",
+                                      "Libros de texto editados por la imprenta oficial",
+                                      "Normas disciplinarias de expulsión de alumnos"
+                            ],
+                            "a": 0,
+                            "exp": "Orden 460/2023 CAM: Las UPD concretan el currículo para cada curso, incorporando competencias específicas, criterios de evaluación, saberes básicos y situaciones de aprendizaje."
+                  },
+                  {
+                            "q": "La pedagoga Paloma Sainz de Vicuña define las «unidades de programación» en Educación Infantil como:",
+                            "options": [
+                                      "Pequeñas parcelas de la vida del grupo que el educador dota de intención educativa, desarrollando objetivos y contenidos a través de un conjunto de actividades con sentido",
+                                      "Lecciones magistrales de 50 minutos de duración",
+                                      "Fichas de ejercicios repetitivos de copia",
+                                      "Castigos impuestos a los alumnos lentos"
+                            ],
+                            "a": 0,
+                            "exp": "Paloma Sainz de Vicuña destaca que la programación en 0-3 años parte de la vida real y cotidiana del grupo escolar, dotándola de coherencia e intencionalidad pedagógica."
+                  },
+                  {
+                            "q": "En el diseño de la programación para el primer ciclo (0 a 3 años), el eje metodológico vertebrador fundamental es:",
+                            "options": [
+                                      "La vida cotidiana, las rutinas diarias de cuidado (alimentación, higiene, sueño, acogida) y el juego libre y guiado",
+                                      "La clase magistral de gramática",
+                                      "La memorización de fórmulas científicas",
+                                      "El uso exclusivo de libros de texto impresos"
+                            ],
+                            "a": 0,
+                            "exp": "En 0 a 3 años los momentos de vida cotidiana y cuidados son los principales escenarios de aprendizaje relacional, sensorial, afectivo y de hábitos de autonomía."
+                  },
+                  {
+                            "q": "La elaboración de la Propuesta Pedagógica en la Escuela Infantil exige un «esfuerzo de equipo» porque:",
+                            "options": [
+                                      "Garantiza la coherencia pedagógica, la coordinación entre educadores y ciclos, y la continuidad de las pautas educativas que se ofrecen a los niños y familias",
+                                      "Debe firmarse ante un notario público colegiado",
+                                      "Así se ahorra el sueldo de los profesores",
+                                      "Es una exigencia del código mercantil"
+                            ],
+                            "a": 0,
+                            "exp": "El trabajo en equipo del claustro y educadores asegura un proyecto compartido, sólido y consensuado, evitando la improvisación o la disparidad de criterios."
+                  },
+                  {
+                            "q": "Un principio fundamental para una Propuesta Pedagógica eficaz en el primer ciclo es el de «flexibilidad y realismo», lo que significa que:",
+                            "options": [
+                                      "Debe partir de la realidad concreta del centro y del contexto social y familiar, permitiendo reajustes continuos según la evolución del grupo",
+                                      "No debe tener ningún tipo de documento escrito",
+                                      "Se puede cambiar de colegio cada semana",
+                                      "No se establecen nunca objetivos pedagógicos"
+                            ],
+                            "a": 0,
+                            "exp": "La propuesta debe ser realista, adaptada al entorno y abierta a modificaciones derivadas de la evaluación continua de la práctica docente."
+                  },
+                  {
+                            "q": "El «seguimiento y evaluación» de la Propuesta Pedagógica en la escuela infantil se efectúa mediante:",
+                            "options": [
+                                      "Reuniones periódicas del equipo educativo a lo largo del curso y la elaboración de la Memoria Anual al cierre del año escolar",
+                                      "Una inspección policial mensual",
+                                      "La venta de las instalaciones escolares",
+                                      "Un juicio contencioso-administrativo anual"
+                            ],
+                            "a": 0,
+                            "exp": "El seguimiento continuo en reuniones de ciclo y claustro permite contrastar la adecuación de la propuesta y plasmar las propuestas de mejora en la Memoria Anual."
+                  },
+                  {
+                            "q": "En el diseño de las «actividades de aprendizaje» para el aula de 1 a 2 años, es esencial considerar:",
+                            "options": [
+                                      "La corta capacidad de atención, la necesidad de movimiento, la exploración multisensorial y el respeto por los ritmos individuales de cansancio y juego",
+                                      "Que los niños permanezcan sentados en silencio durante dos horas",
+                                      "La realización de exámenes por escrito",
+                                      "El trabajo competitivo individual"
+                            ],
+                            "a": 0,
+                            "exp": "En 1 a 2 años las actividades deben ser breves, dinámicas, variadas, basadas en la manipulación sensorial y el movimiento libre."
+                  },
+                  {
+                            "q": "Los «talleres» en Educación Infantil como estrategia metodológica consisten en:",
+                            "options": [
+                                      "Espacios de aprendizaje donde los niños realizan actividades prácticas y manipulativas (pintura, cocina, modelado, sensorial) en grupos reducidos con ayuda del educador y las familias",
+                                      "Aulas de castigo para alumnos indisciplinados",
+                                      "Fábricas de ensamblaje industrial de piezas",
+                                      "Zonas de examen eliminatorio"
+                            ],
+                            "a": 0,
+                            "exp": "Los talleres son propuestas cooperativas centradas en la técnica, la creatividad y la experimentación táctil que fomentan la socialización y la participación familiar."
+                  },
+                  {
+                            "q": "El «cesto de los tesoros» es una propuesta metodológica diseñada para:",
+                            "options": [
+                                      "Bebés que se mantienen sentados (aprox. 6 a 12 meses), ofreciéndoles un cesto con objetos cotidianos y naturales seguros para explorar texturas, formas, pesos y sonidos",
+                                      "Niños de 10 años que leen novelas de aventuras",
+                                      "Alumnos de primaria en la clase de geografía",
+                                      "Guardar dinero y joyas en la dirección del centro"
+                            ],
+                            "a": 0,
+                            "exp": "El cesto de los tesoros (Elinor Goldschmied) estimula la curiosidad y los cinco sentidos del bebé mediante la exploración autónoma de materiales no comerciales."
+                  },
+                  {
+                            "q": "La «evaluación de la programación de aula» en 0 a 3 años debe centrarse en analizar:",
+                            "options": [
+                                      "Si los objetivos y actividades fueron adecuados al nivel madurativo, si los recursos y tiempos funcionaron correctamente y qué mejoras deben introducirse",
+                                      "El color de los uniformes de los niños",
+                                      "El beneficio económico obtenido por el centro",
+                                      "La marca de los ordenadores de administración"
+                            ],
+                            "a": 0,
+                            "exp": "Evaluar la programación permite ajustar la práctica pedagógica, verificar la idoneidad de las situaciones de aprendizaje y mejorar la respuesta educativa del grupo."
+                  },
+                  {
+                            "q": "La relación entre el Proyecto Educativo de Centro (PEC) y la Propuesta Pedagógica es que:",
+                            "options": [
+                                      "La Propuesta Pedagógica forma parte integrante del PEC, concretando el carácter educativo y la ordenación curricular de la etapa de Educación Infantil",
+                                      "Son dos documentos contradictorios e incompatibles",
+                                      "La Propuesta Pedagógica anula y deroga el PEC",
+                                      "El PEC solo se aplica en universidades"
+                            ],
+                            "a": 0,
+                            "exp": "Art. 14 Decreto 36/2022 CAM: La propuesta pedagógica se integra en el Proyecto Educativo de Centro, dotándolo de concreción pedagógica para la etapa infantil."
+                  },
+                  {
+                            "q": "El papel del Técnico Superior en Educación Infantil (TSEI) en la elaboración y desarrollo de la programación de aula comprende:",
+                            "options": [
+                                      "Participar activamente en el diseño, desarrollo y evaluación de las situaciones de aprendizaje, rutinas y actividades pedagógicas en coordinación con los maestros del ciclo",
+                                      "Limitarse exclusivamente a vigilar la puerta del centro",
+                                      "Firmar contratos mercantiles con empresas de limpieza",
+                                      "Redactar en solitario los decretos de la Comunidad de Madrid"
+                            ],
+                            "a": 0,
+                            "exp": "El TSEI colabora activamente en la planificación, intervención directa con los alumnos y evaluación continua del proceso de enseñanza-aprendizaje en el primer ciclo."
+                  },
+                  {
+                            "q": "En las «Orientaciones de la Dirección General de Educación Infantil de la CAM» para programar en 0 a 3 años, se indica que las UPD:",
+                            "options": [
+                                      "Se identificarán con una denominación genérica y no necesitan incluir el diseño minucioso de cada tarea individual, aunque el educador debe tenerlas planificadas",
+                                      "Deben contener más de 500 páginas de texto por cada día de clase",
+                                      "Son obligatoriamente iguales en todos los colegios de España",
+                                      "Se prohíbe modificarlas durante todo el curso escolar"
+                            ],
+                            "a": 0,
+                            "exp": "Las orientaciones de la CAM promueven una planificación ágil, funcional y flexible que identifique competencias, saberes y actividades sin burocracia excesiva."
+                  },
+                  {
+                            "q": "La organización de los «rincones de juego» en una programación de aula de 2 a 3 años persigue:",
+                            "options": [
+                                      "Favorecer la autonomía, la iniciativa, el juego simbólico, el lenguaje y la toma de decisiones del niño en pequeños grupos de actividad simultánea",
+                                      "Castigar a los alumnos en esquinas aisladas",
+                                      "Separar a los niños por orden alfabético",
+                                      "Evitar que los niños jueguen entre sí"
+                            ],
+                            "a": 0,
+                            "exp": "Los rincones (simbólico, construcciones, plástica, lectura) diversifican el aula, permitiendo el trabajo autónomo, el respeto a ritmos y la cooperación."
+                  },
+                  {
+                            "q": "En la programación de rutinas diarias, el momento de «cambio de pañal e higiene» debe ser aprovechado pedagógicamente para:",
+                            "options": [
+                                      "El contacto visual y afectivo individualizado, la estimulación del lenguaje oral, el conocimiento corporal y el fomento de la colaboración del niño",
+                                      "Hacer el cambio de forma mecánica y rápida sin hablar con el bebé",
+                                      "Poner notas de examen de higiene",
+                                      "Aislar al niño del resto de educadores"
+                            ],
+                            "a": 0,
+                            "exp": "Los cuidados corporales son momentos privilegiados de relación 'uno a uno' donde se construye el apego seguro, la comunicación y la conciencia corporal."
+                  },
+                  {
+                            "q": "La «atención a las diferencias individuales» en la programación del primer ciclo exige:",
+                            "options": [
+                                      "Diseñar actividades multinivel y adaptaciones flexibles que respondan a los diferentes ritmos madurativos, estilos de aprendizaje y necesidades de apoyo educativo",
+                                      "Exigir el mismo nivel de rendimiento a todos los niños sin excepciones",
+                                      "Expulsar del aula a los niños que no caminen al año",
+                                      "Hacer pruebas eliminatorias a principio de curso"
+                            ],
+                            "a": 0,
+                            "exp": "La individualización de la enseñanza reconoce la diversidad de ritmos de desarrollo, adaptando las propuestas para que todos los niños participen y progresen."
+                  },
+                  {
+                            "q": "En la programación de actividades en 0 a 3 años, los «materiales no estructurados» (cajas, tubos de cartón, telas, corchos, maderas):",
+                            "options": [
+                                      "Potencian el juego simbólico, la imaginación, la creatividad y el pensamiento divergente al no imponer una función de juego predeterminada",
+                                      "Son peligrosos y deben eliminarse del centro escolar",
+                                      "Solo pueden ser utilizados por los maestros y no por los niños",
+                                      "Están prohibidos en las escuelas infantiles públicas"
+                            ],
+                            "a": 0,
+                            "exp": "Los materiales polivalentes o desestructurados ofrecen infinitas posibilidades de transformación y exploración, enriqueciendo el juego libre y la cognición."
+                  },
+                  {
+                            "q": "El «periodo de acogida o adaptación» en la programación anual del centro debe planificarse con:",
+                            "options": [
+                                      "Criterios de flexibilidad, horarios progresivos, presencia inicial de las familias y grupos reducidos para favorecer el apego seguro y la confianza",
+                                      "Un horario estricto de 8 horas el primer día sin padres",
+                                      "Exámenes médicos eliminatorios en la puerta",
+                                      "Prohibición de consolar a los niños que lloren"
+                            ],
+                            "a": 0,
+                            "exp": "La adaptación es una unidad de programación prioritaria al inicio de curso que cuida la transición emocional del hogar a la escuela de forma paulatina y respetuosa."
+                  },
+                  {
+                            "q": "La coordinación entre la Escuela Infantil y la familia a través de la «agenda o diario escolar» permite:",
+                            "options": [
+                                      "Un intercambio bidireccional diario sobre aspectos relevantes de alimentación, sueño, deposiciones, estado de ánimo y vivencias del niño",
+                                      "Sancionar económicamente a los padres",
+                                      "Publicar los datos personales en internet",
+                                      "Sustituir las reuniones de tutoría presenciales"
+                            ],
+                            "a": 0,
+                            "exp": "La agenda de comunicación diaria garantiza la continuidad del cuidado y la tranquilidad familiar, informando de los acontecimientos básicos del día."
+                  },
+                  {
+                            "q": "En la programación de aula de Educación Infantil, el concepto de «andamiaje» (scaffolding) se traduce en:",
+                            "options": [
+                                      "La ayuda ajustada y temporal que el educador presta al niño para superar un reto o aprendizaje, retirándola progresivamente conforme el menor gana autonomía",
+                                      "La construcción física de andamios de obra en el patio",
+                                      "Hacer todo el trabajo por el alumno para que no se canse",
+                                      "Dejar al niño solo sin ninguna orientación del adulto"
+                            ],
+                            "a": 0,
+                            "exp": "El andamiaje educativo guía la acción en la Zona de Desarrollo Próximo, graduando los apoyos hasta que el niño domina la habilidad por sí mismo."
+                  },
+                  {
+                            "q": "La «evaluación de la propia práctica docente» en la programación de primer ciclo se realiza para:",
+                            "options": [
+                                      "Reflexionar sobre la eficacia de las estrategias empleadas, la idoneidad del ambiente y materiales, y el ajuste de la intervención a las necesidades del grupo",
+                                      "Ponerse una nota de sobresaliente obligatoria",
+                                      "Pedir el traslado de centro de forma inmediata",
+                                      "Culpar a las familias de los problemas escolares"
+                            ],
+                            "a": 0,
+                            "exp": "La autoevaluación continua de la enseñanza permite mejorar la calidad educativa, identificar desajustes en las UPD y enriquecer la práctica docente."
+                  },
+                  {
+                            "q": "El diseño de «situaciones de aprendizaje globalizadas» en la programación de Educación Infantil implica:",
+                            "options": [
+                                      "Articular retos o centros de interés donde se movilicen simultáneamente contenidos de las tres áreas del currículo de forma integrada y con sentido",
+                                      "Impartir asignaturas aisladas de física y química en bebés",
+                                      "Dividir la jornada en clases de 10 minutos de materias separadas",
+                                      "Obligar a memorizar enciclopedias infantiles"
+                            ],
+                            "a": 0,
+                            "exp": "Las situaciones de aprendizaje conectan la motricidad, el lenguaje, la expresión artística y el conocimiento del entorno en torno a experiencias significativas para el niño."
+                  },
+                  {
+                            "q": "En el marco del Decreto 36/2022 de la CAM, la «propuesta metodológica» del primer ciclo debe promover:",
+                            "options": [
+                                      "El aprendizaje activo, el descubrimiento sensorial, la experimentación lúdica, la afectividad y la creación de un clima cálido y seguro",
+                                      "El aprendizaje memorístico pasivo y la inmovilidad",
+                                      "La disciplina autoritaria basada en castigos",
+                                      "El uso exclusivo de libros de texto comerciales"
+                            ],
+                            "a": 0,
+                            "exp": "El decreto autonómico establece que los métodos de trabajo se basarán en las experiencias, las actividades y el juego en un ambiente de afecto y confianza."
+                  },
+                  {
+                            "q": "La «asamblea de aula» como momento programado en la rutina diaria favorece:",
+                            "options": [
+                                      "El saludo y acogida, la expresión de emociones, la comunicación oral, el conocimiento de los compañeros y la anticipación de las actividades del día",
+                                      "La realización de exámenes eliminatorios",
+                                      "El castigo público de los alumnos desobedientes",
+                                      "El silencio absoluto durante una hora"
+                            ],
+                            "a": 0,
+                            "exp": "La asamblea matinal estructura el día, fomenta la socialización, la adquisición del lenguaje y el sentimiento de pertenencia al grupo clase."
+                  },
+                  {
+                            "q": "Los «objetivos didácticos» en una Unidad de Programación Didáctica (UPD) de primer ciclo deben redactarse en términos de:",
+                            "options": [
+                                      "Capacidades que el niño debe desarrollar y manifestar progresivamente en su conducta y actividad autónoma",
+                                      "Notas numéricas exactas que debe obtener en un test",
+                                      "Conocimientos abstractos de nivel universitario",
+                                      "Leyes que el alumno debe recitar de memoria"
+                            ],
+                            "a": 0,
+                            "exp": "En infantil los objetivos expresan capacidades integrales (afectivas, motrices, comunicativas, de relación) adaptadas a la maduración del niño."
+                  },
+                  {
+                            "q": "La colaboración de las familias en los «talleres o fiestas escolares» programados en la escuela infantil:",
+                            "options": [
+                                      "Enriquece la experiencia educativa de los niños, refuerza el sentido de comunidad y permite a los padres compartir momentos de juego y aprendizaje en el centro",
+                                      "Está prohibida por la normativa vigente",
+                                      "Exige el pago de una entrada de cine",
+                                      "Solo se permite a familias con titulación docente"
+                            ],
+                            "a": 0,
+                            "exp": "La apertura de la escuela a las familias en talleres, proyectos y celebraciones estrecha los lazos comunitarios y refuerza la seguridad afectiva del alumnado."
+                  },
+                  {
+                            "q": "El «ambiente preparado» en la programación de aula (concepto montessoriano) consiste en:",
+                            "options": [
+                                      "Un espacio ordenado, estético, accesible y seguro donde los materiales están organizados por áreas para que los niños puedan elegirlos y utilizarlos con autonomía",
+                                      "Una sala vacía sin ningún tipo de material",
+                                      "Un almacén cerrado bajo llave donde solo entra el profesor",
+                                      "Un aula con muebles pesados de oficina de adultos"
+                            ],
+                            "a": 0,
+                            "exp": "El ambiente preparado ofrece estructura y libertad dentro de unos límites: facilita la concentración, la autonomía y el desarrollo armónico del niño."
+                  },
+                  {
+                            "q": "En la evaluación de una Unidad de Programación Didáctica (UPD) en 0 a 3 años, los instrumentos de registro más adecuados son:",
+                            "options": [
+                                      "Listas de cotejo sencillas, escalas de observación, registros anecdóticos y muestras de producciones o fotografías de la actividad",
+                                      "Exámenes escritos tipo test con plantilla de corrección",
+                                      "Juicios de faltas judiciales",
+                                      "Cuestionarios numéricos eliminatorios"
+                            ],
+                            "a": 0,
+                            "exp": "Los registros observacionales cualitativos y la documentación visual son los medios idóneos para valorar la eficacia de la UPD y el progreso infantil."
+                  },
+                  {
+                            "q": "La «Memoria Anual» del centro docente valora al finalizar el curso escolar:",
+                            "options": [
+                                      "La adecuación y cumplimiento de la Propuesta Pedagógica y de la Programación General Anual (PGA), proponiendo mejoras para el curso siguiente",
+                                      "El cobro de impuestos autonómicos",
+                                      "La contratación de personal diplomático",
+                                      "La supresión definitiva del centro escolar"
+                            ],
+                            "a": 0,
+                            "exp": "La Memoria Anual cierra el ciclo evaluativo anual, recogiendo las conclusiones del claustro y consejo escolar para retroalimentar la planificación futura."
+                  },
+                  {
+                            "q": "El principio de «coherencia educativa» entre el equipo de ciclo garantiza que:",
+                            "options": [
+                                      "Todos los educadores apliquen criterios pedagógicos, normas de convivencia, pautas de higiene y rutinas compartidas y consensuadas en beneficio del alumnado",
+                                      "Cada educador haga lo contrario que su compañero de aula",
+                                      "No se hable nunca de educación en las reuniones",
+                                      "Se cambie de método de enseñanza cada dos días"
+                            ],
+                            "a": 0,
+                            "exp": "La coherencia de equipo transmite estabilidad y seguridad a los niños y ofrece un marco formativo claro y unificado a toda la comunidad escolar."
+                  },
+                  {
+                            "q": "El «juego heurístico» en la programación del segundo año de vida (12 a 24 meses):",
+                            "options": [
+                                      "Se planifica en sesiones estructuradas donde los niños exploran libremente combinaciones de objetos cotidianos organizados por bolsas y recipientes",
+                                      "Requiere el uso de ordenadores portátiles individuales",
+                                      "Es una prueba eliminatoria de psicomotricidad",
+                                      "Se realiza en silencio absoluto durante tres horas"
+                            ],
+                            "a": 0,
+                            "exp": "El juego heurístico (Goldschmied) estructura la sesión en dos partes: fase de exploración libre con materiales cotidianos y fase de recogida y clasificación."
+                  },
+                  {
+                            "q": "La secuenciación de los saberes básicos en las UPD del primer ciclo debe respetar:",
+                            "options": [
+                                      "El orden evolutivo del desarrollo infantil, yendo de lo simple a lo complejo, de lo vivencial a lo abstracto y de lo conocido a lo nuevo",
+                                      "El orden alfabético del diccionario exclusivamente",
+                                      "El número de página del libro de texto",
+                                      "El orden de llegada de los alumnos al aula"
+                            ],
+                            "a": 0,
+                            "exp": "La secuenciación didáctica respeta el calendario madurativo infantil, partiendo de experiencias sensoriales y corporales directas hacia habilidades más complejas."
+                  },
+                  {
+                            "q": "En el diseño de una situación de aprendizaje, la «motivación inicial o reto» sirve para:",
+                            "options": [
+                                      "Despertar el interés y la curiosidad de los niños a través de una sorpresa, un cuento, un objeto misterioso o un problema cotidiano",
+                                      "Amenazar con castigos si no prestan atención",
+                                      "Poner un examen previo eliminatorio",
+                                      "Obligar a los niños a memorizar un texto"
+                            ],
+                            "a": 0,
+                            "exp": "El reto o elemento motivador inicial engancha la atención infantil y conecta la actividad con sus intereses y emociones."
+                  },
+                  {
+                            "q": "La atención temprana y la inclusión en la programación de aula de 0 a 3 años exigen:",
+                            "options": [
+                                      "La detección precoz de barreras de aprendizaje y la coordinación estrecha con los Equipos de Atención Temprana (EAT) para adaptar las actividades",
+                                      "La segregación de los alumnos en aulas separadas",
+                                      "Ignorar las dificultades de los niños",
+                                      "Esperar a la Educación Primaria para intervenir"
+                            ],
+                            "a": 0,
+                            "exp": "La intervención temprana es decisiva en los primeros años: detectar dificultades a tiempo y coordinarse con los EAT optimiza el desarrollo del menor."
+                  },
+                  {
+                            "q": "Las «transiciones cotidianas» en la jornada escolar (ej: del juego al patio, del patio al aseo, del aseo a la comida) deben programarse con:",
+                            "options": [
+                                      "Canciones, avisos anticipados, ritmos pausados y tranquilidad para evitar el estrés y favorecer la autorregulación infantil",
+                                      "Gritos y prisas descontroladas",
+                                      "Sirenas de alarma estridentes",
+                                      "Castigos a quienes tarden más de un segundo"
+                            ],
+                            "a": 0,
+                            "exp": "Las transiciones son momentos sensibles: anticipar los cambios mediante canciones y pautas tranquilas ayuda a los niños a cambiar de actividad con serenidad."
+                  },
+                  {
+                            "q": "La «Propuesta Pedagógica» debe ser un documento accesible a toda la comunidad educativa, lo que implica que:",
+                            "options": [
+                                      "Debe estar a disposición de las familias y de la administración educativa para favorecer la transparencia y la participación",
+                                      "Debe guardarse en una caja fuerte secreta",
+                                      "Solo puede ser leída por inspectores de policía",
+                                      "Está prohibido mostrarla a los padres"
+                            ],
+                            "a": 0,
+                            "exp": "La propuesta pedagógica es un documento público institucional que orienta a los educadores y permite a las familias conocer el proyecto formativo del centro."
+                  },
+                  {
+                            "q": "El papel del educador en la mediación del conflicto entre iguales en 0 a 3 años consiste en:",
+                            "options": [
+                                      "Intervenir con serenidad, poner palabras a las emociones de los niños ('entiendo que estás enfadado'), modelar pautas pacíficas y ayudarles a buscar soluciones",
+                                      "Gritar y castigar físicamente a ambos niños",
+                                      "Ignorar la pelea por completo",
+                                      "Expulsar a los alumnos de la escuela"
+                            ],
+                            "a": 0,
+                            "exp": "El conflicto en infantil es una oportunidad de aprendizaje socioemocional: el educador ayuda a nombrar emociones, empatizar y aprender a compartir o esperar turnos."
+                  },
+                  {
+                            "q": "La programación en la Escuela Infantil contribuye a la «compensación de desigualdades» (art. 12.5 LOMLOE) porque:",
+                            "options": [
+                                      "Ofrece a todos los niños un entorno enriquecido, estimulante, seguro y equitativo con independencia del origen social o cultural de sus familias",
+                                      "Da mejores materiales a las familias de mayores ingresos",
+                                      "Separa a los niños según el idioma de sus padres",
+                                      "Cobra tarifas más altas a los alumnos con dificultades"
+                            ],
+                            "a": 0,
+                            "exp": "La Educación Infantil de calidad es una herramienta de equidad social: compensa diferencias de origen y proporciona experiencias educativas tempranas y universales."
+                  }
+        ]
       }
     };
 
     // Test mixto
     TESTS.mixto = {
       title: "Test Mixto — Todos los temas",
-      questions: shuffle([...TESTS.tema1.questions, ...TESTS.tema2.questions, ...TESTS.tema3.questions, ...TESTS.tema4.questions, ...TESTS.tema5.questions, ...TESTS.tema6.questions, ...TESTS.tema7.questions, ...TESTS.tema8.questions, ...TESTS.tema9.questions, ...TESTS['tema1-esp'].questions, ...TESTS['tema2-esp'].questions, ...TESTS['tema3-esp'].questions, ...TESTS['tema4-esp'].questions, ...TESTS['tema5-esp'].questions]).slice(0, 20)
+      questions: shuffle([...TESTS.tema1.questions, ...TESTS.tema2.questions, ...TESTS.tema3.questions, ...TESTS.tema4.questions, ...TESTS.tema5.questions, ...TESTS.tema6.questions, ...TESTS.tema7.questions, ...TESTS.tema8.questions, ...TESTS.tema9.questions, ...TESTS['tema1-esp'].questions, ...TESTS['tema2-esp'].questions, ...TESTS['tema3-esp'].questions, ...TESTS['tema4-esp'].questions, ...TESTS['tema5-esp'].questions, ...TESTS['tema6-esp'].questions, ...TESTS['tema8-esp'].questions, ...TESTS['tema9-esp'].questions]).slice(0, 20)
     };
 
     /* ─────────────────────────────────────────
@@ -10012,7 +11374,7 @@
         questions = resumedState.questions;
         currentMode = resumedState.mode || 'estudio';
       } else if (key === 'mixto') {
-        questions = shuffle([...TESTS.tema1.questions, ...TESTS.tema2.questions, ...TESTS.tema3.questions, ...TESTS.tema4.questions, ...TESTS.tema5.questions, ...TESTS.tema6.questions, ...TESTS.tema7.questions, ...TESTS.tema8.questions, ...TESTS.tema9.questions, ...TESTS['tema1-esp'].questions, ...TESTS['tema2-esp'].questions, ...TESTS['tema3-esp'].questions, ...TESTS['tema4-esp'].questions, ...TESTS['tema5-esp'].questions]).slice(0, 20);
+        questions = shuffle([...TESTS.tema1.questions, ...TESTS.tema2.questions, ...TESTS.tema3.questions, ...TESTS.tema4.questions, ...TESTS.tema5.questions, ...TESTS.tema6.questions, ...TESTS.tema7.questions, ...TESTS.tema8.questions, ...TESTS.tema9.questions, ...TESTS['tema1-esp'].questions, ...TESTS['tema2-esp'].questions, ...TESTS['tema3-esp'].questions, ...TESTS['tema4-esp'].questions, ...TESTS['tema5-esp'].questions, ...TESTS['tema6-esp'].questions, ...TESTS['tema8-esp'].questions, ...TESTS['tema9-esp'].questions]).slice(0, 20);
       } else if (key === 'falladas') {
         const wrong = (typeof CAM_Wrong !== 'undefined') ? CAM_Wrong.getAll() : {};
         const pool = [];
@@ -10029,7 +11391,7 @@
           return;
         }
         questions = shuffle(pool).slice(0, Math.min(20, pool.length));
-      } else if (key === 'tema1' || key === 'tema2' || key === 'tema3' || key === 'tema4' || key === 'tema5' || key === 'tema6' || key === 'tema7' || key === 'tema8' || key === 'tema9' || key === 'tema1-esp' || key === 'tema2-esp' || key === 'tema3-esp' || key === 'tema4-esp' || key === 'tema5-esp') {
+      } else if (key === 'tema1' || key === 'tema2' || key === 'tema3' || key === 'tema4' || key === 'tema5' || key === 'tema6' || key === 'tema7' || key === 'tema8' || key === 'tema9' || key === 'tema1-esp' || key === 'tema2-esp' || key === 'tema3-esp' || key === 'tema4-esp' || key === 'tema5-esp' || key === 'tema6-esp' || key === 'tema8-esp' || key === 'tema9-esp') {
         questions = shuffle([...test.questions]).slice(0, 15);
       } else {
         questions = shuffle([...test.questions]);
@@ -10699,5 +12061,5 @@
     </button>
   </nav>
 
-<script>(function(){function c(){var b=a.contentDocument||(a.contentWindow&&a.contentWindow.document);if(b){var d=b.createElement('script');d.innerHTML="window.__CF$cv$params={r:'a3be1e68feb9f771',t:'MTc4OTU0MzMzMw=='};var a=document.createElement('script');a.src='/cdn-cgi/challenge-platform/scripts/jsd/main.js';document.getElementsByTagName('head')[0].appendChild(a);";b.getElementsByTagName('head')[0].appendChild(d)}}if(document.body){var a=document.createElement('iframe');a.height=1;a.width=1;a.style.position='absolute';a.style.top=0;a.style.left=0;a.style.border='none';a.style.visibility='hidden';document.body.appendChild(a);if('loading'!==document.readyState)c();else if(window.addEventListener)document.addEventListener('DOMContentLoaded',c);else{var e=document.onreadystatechange||function(){};document.onreadystatechange=function(b){e(b);'loading'!==document.readyState&&(document.onreadystatechange=e,c())}}}})();</script></body>
+<script>(function(){function c(){var b=a.contentDocument||(a.contentWindow&&a.contentWindow.document);if(b){var d=b.createElement('script');d.innerHTML="window.__CF$cv$params={r:'a3c69eede8effd05',t:'MTc4OTYzMjQ4Mw=='};var a=document.createElement('script');a.src='/cdn-cgi/challenge-platform/scripts/jsd/main.js';document.getElementsByTagName('head')[0].appendChild(a);";b.getElementsByTagName('head')[0].appendChild(d)}}if(document.body){var a=document.createElement('iframe');a.height=1;a.width=1;a.style.position='absolute';a.style.top=0;a.style.left=0;a.style.border='none';a.style.visibility='hidden';document.body.appendChild(a);if('loading'!==document.readyState)c();else if(window.addEventListener)document.addEventListener('DOMContentLoaded',c);else{var e=document.onreadystatechange||function(){};document.onreadystatechange=function(b){e(b);'loading'!==document.readyState&&(document.onreadystatechange=e,c())}}}})();</script></body>
 </html>
