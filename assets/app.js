@@ -570,6 +570,7 @@
     { id: 'tema7', num: '07', name: 'El Personal al Servicio de las AAPP', desc: 'TREBEP (RDL 5/2015). Clases y situaciones', href: 'tema7.html', bloque: 'comun', cat: 'Bloque Común' },
     { id: 'tema8', num: '08', name: 'Derechos, Deberes e Incompatibilidades', desc: 'TREBEP (código conducta, disciplinario) y Ley 53/1984', href: 'tema8.html', bloque: 'comun', cat: 'Bloque Común' },
     { id: 'tema9', num: '09', name: 'Convenio Colectivo Único CAM', desc: 'Convenio Único para el Personal Laboral (2025-2028)', href: 'tema9.html', bloque: 'comun', cat: 'Bloque Común' },
+    { id: 'tema10', num: '10', name: 'Igualdad, Violencia de Género y LGTBIfobia', desc: 'LO 3/2007, LO 1/2004, Ley 5/2005 CAM, Ley 2/2016 y Ley 3/2016 CAM', href: 'tema10.html', bloque: 'comun', cat: 'Bloque Común' },
     // BLOQUE ESPECÍFICO (EDUCADOR INFANTIL)
     { id: 'tema1-esp', num: 'E01', name: 'Tema 1 Esp. — Modalidades y Pedagogía', desc: 'Atención a la infancia en España y UE. Tendencias pedagógicas y psicológicas', href: 'tema1-esp.html', bloque: 'especifico', cat: 'Educador Infantil' },
     { id: 'tema2-esp', num: 'E02', name: 'Tema 2 Esp. — Escuela Infantil y Protección', desc: 'LOMLOE, Decreto 36/2022, LO 1/1996, Ley 4/2023 CAM y medidas de protección', href: 'tema2-esp.html', bloque: 'especifico', cat: 'Educador Infantil' },
@@ -662,7 +663,7 @@
             <button class="cam-bloque-tab ${!isCurrentEsp ? 'active' : ''}" id="sheetTabComun" data-bloque="comun">
               <span class="tab-badge">🌸 Bloque Común</span>
               <span class="tab-title">Temas Comunes</span>
-              <span class="tab-count">9 temas (Todas las opos CAM)</span>
+              <span class="tab-count">10 temas (Todas las opos CAM)</span>
             </button>
             <button class="cam-bloque-tab ${isCurrentEsp ? 'active' : ''}" id="sheetTabEsp" data-bloque="especifico">
               <span class="tab-badge" style="color:#1a5f7a;">⚡ Bloque Específico</span>
