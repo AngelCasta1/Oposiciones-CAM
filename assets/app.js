@@ -579,7 +579,8 @@
     { id: 'tema5-esp', num: 'E05', name: 'Tema 5 Esp. — Organización de Escuelas Infantiles', desc: 'Espacios, tiempos, materiales, órganos de gobierno, equipo educativo y familias', href: 'tema5-esp.html', bloque: 'especifico', cat: 'Educador Infantil' },
     { id: 'tema6-esp', num: 'E06', name: 'Tema 6 Esp. — La Evaluación en la Escuela Infantil', desc: 'Fines, funciones, tipos, técnicas de observación, instrumentos e informes a familias', href: 'tema6-esp.html', bloque: 'especifico', cat: 'Educador Infantil' },
     { id: 'tema8-esp', num: 'E08', name: 'Tema 8 Esp. — Teoría Curricular y DUA', desc: 'Funciones del currículo, competencias, saberes básicos, fuentes, niveles y DUA', href: 'tema8-esp.html', bloque: 'especifico', cat: 'Educador Infantil' },
-    { id: 'tema9-esp', num: 'E09', name: 'Tema 9 Esp. — Propuesta Pedagógica y Programación', desc: 'Propuesta pedagógica (Dec. 36/2022), UPD, metodología y situaciones de aprendizaje en 0–3 años', href: 'tema9-esp.html', bloque: 'especifico', cat: 'Educador Infantil' }
+    { id: 'tema9-esp', num: 'E09', name: 'Tema 9 Esp. — Propuesta Pedagógica y Programación', desc: 'Propuesta pedagógica (Dec. 36/2022), UPD, metodología y situaciones de aprendizaje en 0–3 años', href: 'tema9-esp.html', bloque: 'especifico', cat: 'Educador Infantil' },
+    { id: 'tema10-esp', num: 'E10', name: 'Tema 10 Esp. — Principios, Espacios, Tiempos y Recursos', desc: 'Principios de intervención, globalización, constructivismo, observación, contexto, espacios, tiempos y recursos', href: 'tema10-esp.html', bloque: 'especifico', cat: 'Educador Infantil' }
   ];
 
   function setupMobileNav() {
