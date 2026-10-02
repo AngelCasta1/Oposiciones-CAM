@@ -581,7 +581,8 @@
     { id: 'tema8-esp', num: 'E08', name: 'Tema 8 Esp. — Teoría Curricular y DUA', desc: 'Funciones del currículo, competencias, saberes básicos, fuentes, niveles y DUA', href: 'tema8-esp.html', bloque: 'especifico', cat: 'Educador Infantil' },
     { id: 'tema9-esp', num: 'E09', name: 'Tema 9 Esp. — Propuesta Pedagógica y Programación', desc: 'Propuesta pedagógica (Dec. 36/2022), UPD, metodología y situaciones de aprendizaje en 0–3 años', href: 'tema9-esp.html', bloque: 'especifico', cat: 'Educador Infantil' },
     { id: 'tema10-esp', num: 'E10', name: 'Tema 10 Esp. — Principios, Espacios, Tiempos y Recursos', desc: 'Principios de intervención, globalización, constructivismo, observación, contexto, espacios, tiempos y recursos', href: 'tema10-esp.html', bloque: 'especifico', cat: 'Educador Infantil' },
-    { id: 'tema11-esp', num: 'E11', name: 'Tema 11 Esp. — Atención a la Diversidad y NEE', desc: 'Factores de diversidad, ACNEAE/ACNEE, Decreto 23/2023 CAM, DUA, EOEP y Atención Temprana', href: 'tema11-esp.html', bloque: 'especifico', cat: 'Educador Infantil' }
+    { id: 'tema11-esp', num: 'E11', name: 'Tema 11 Esp. — Atención a la Diversidad y NEE', desc: 'Factores de diversidad, ACNEAE/ACNEE, Decreto 23/2023 CAM, DUA, EOEP y Atención Temprana', href: 'tema11-esp.html', bloque: 'especifico', cat: 'Educador Infantil' },
+    { id: 'tema14-esp', num: 'E14', name: 'Tema 14 Esp. — El Juego en el Desarrollo del Niño', desc: 'Teorías del juego, evolución y tipos (Piaget, Parten, ESAR), metodología lúdica y juguetes', href: 'tema14-esp.html', bloque: 'especifico', cat: 'Educador Infantil' }
   ];
 
   function setupMobileNav() {
