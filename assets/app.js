@@ -580,7 +580,11 @@
     { id: 'tema6-esp', num: 'E06', name: 'Tema 6 Esp. — La Evaluación en la Escuela Infantil', desc: 'Fines, funciones, tipos, técnicas de observación, instrumentos e informes a familias', href: 'tema6-esp.html', bloque: 'especifico', cat: 'Educador Infantil' },
     { id: 'tema8-esp', num: 'E08', name: 'Tema 8 Esp. — Teoría Curricular y DUA', desc: 'Funciones del currículo, competencias, saberes básicos, fuentes, niveles y DUA', href: 'tema8-esp.html', bloque: 'especifico', cat: 'Educador Infantil' },
     { id: 'tema9-esp', num: 'E09', name: 'Tema 9 Esp. — Propuesta Pedagógica y Programación', desc: 'Propuesta pedagógica (Dec. 36/2022), UPD, metodología y situaciones de aprendizaje en 0–3 años', href: 'tema9-esp.html', bloque: 'especifico', cat: 'Educador Infantil' },
-    { id: 'tema10-esp', num: 'E10', name: 'Tema 10 Esp. — Principios, Espacios, Tiempos y Recursos', desc: 'Principios de intervención, globalización, constructivismo, observación, contexto, espacios, tiempos y recursos', href: 'tema10-esp.html', bloque: 'especifico', cat: 'Educador Infantil' }
+    { id: 'tema10-esp', num: 'E10', name: 'Tema 10 Esp. — Principios, Espacios, Tiempos y Recursos', desc: 'Principios de intervención, globalización, constructivismo, observación, contexto, espacios, tiempos y recursos', href: 'tema10-esp.html', bloque: 'especifico', cat: 'Educador Infantil' },
+    { id: 'tema11-esp', num: 'E11', name: 'Tema 11 Esp. — Atención a la Diversidad y NEE', desc: 'Factores de diversidad, ACNEAE/ACNEE, Decreto 23/2023 CAM, DUA, EOEP y Atención Temprana', href: 'tema11-esp.html', bloque: 'especifico', cat: 'Educador Infantil' },
+    { id: 'tema14-esp', num: 'E14', name: 'Tema 14 Esp. — El Juego en el Desarrollo del Niño', desc: 'Teorías del juego, evolución y tipos (Piaget, Parten, ESAR), metodología lúdica y juguetes', href: 'tema14-esp.html', bloque: 'especifico', cat: 'Educador Infantil' },
+    { id: 'tema15-esp', num: 'E15', name: 'Tema 15 Esp. — La Familia y Relación Familia-Escuela', desc: 'Socialización, Bronfenbrenner, apego, diversidad familiar, AMPAs, Consejo Escolar y comunicación', href: 'tema15-esp.html', bloque: 'especifico', cat: 'Educador Infantil' },
+    { id: 'tema16-esp', num: 'E16', name: 'Tema 16 Esp. — Desarrollo de 0 a 6 Años', desc: 'Desarrollo motor, lenguaje, afectivo, Piaget (sensoriomotor y preoperacional) y alteraciones', href: 'tema16-esp.html', bloque: 'especifico', cat: 'Educador Infantil' }
   ];
 
   function setupMobileNav() {
@@ -664,12 +668,12 @@
             <button class="cam-bloque-tab ${!isCurrentEsp ? 'active' : ''}" id="sheetTabComun" data-bloque="comun">
               <span class="tab-badge">🌸 Bloque Común</span>
               <span class="tab-title">Temas Comunes</span>
-              <span class="tab-count">10 temas (Todas las opos CAM)</span>
+              <span class="tab-count">${TEMAS_LIST.filter(t => t.bloque === "comun").length} temas (Todas las opos CAM)</span>
             </button>
             <button class="cam-bloque-tab ${isCurrentEsp ? 'active' : ''}" id="sheetTabEsp" data-bloque="especifico">
               <span class="tab-badge" style="color:#1a5f7a;">⚡ Bloque Específico</span>
               <span class="tab-title">Educador Infantil</span>
-              <span class="tab-count">8 temas Específicos disponibles</span>
+              <span class="tab-count">${TEMAS_LIST.filter(t => t.bloque === "especifico").length} temas Específicos disponibles</span>
             </button>
           </div>
 
