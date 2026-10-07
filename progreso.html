@@ -354,6 +354,8 @@
     <a class="nav-tab" href="tema10-esp.html"><span class="dot" style="background:#e05a80;"></span>Tema 10 (Esp)</a>
     <a class="nav-tab" href="tema11-esp.html"><span class="dot" style="background:#e05a80;"></span>Tema 11 (Esp)</a>
     <a class="nav-tab" href="tema14-esp.html"><span class="dot" style="background:#e05a80;"></span>Tema 14 (Esp)</a>
+    <a class="nav-tab" href="tema15-esp.html"><span class="dot" style="background:#e05a80;"></span>Tema 15 (Esp)</a>
+    <a class="nav-tab" href="tema16-esp.html"><span class="dot" style="background:#e05a80;"></span>Tema 16 (Esp)</a>
     <a class="nav-tab" href="tests.html" style="color:rgba(255,255,255,.85);"><span class="dot" style="background:#e05a80;"></span>Tests</a>
     <a class="nav-tab active" href="progreso.html"><span class="dot"></span>Mi Progreso</a>
       <button id="themeToggle" class="theme-toggle" aria-label="Cambiar tema" title="Cambiar tema" style="margin-left:auto;">
@@ -438,13 +440,15 @@
       'tema9-esp': { name: 'Tema 9 Esp. — Propuesta Pedagógica y Programación (Educador Infantil)', total: 8, href: 'tema9-esp.html' },
             'tema10-esp': { name: 'Tema 10 Esp. — Principios, Espacios, Tiempos y Recursos (Educador Infantil)', total: 17, href: 'tema10-esp.html' },
             'tema11-esp': { name: 'Tema 11 Esp. — Atención a la Diversidad en Centros Infantiles (Educador Infantil)', total: 12, href: 'tema11-esp.html' },
-      'tema14-esp': { name: 'Tema 14 Esp. — El Juego en el Desarrollo Infantil (Educador Infantil)', total: 12, href: 'tema14-esp.html' },
+            'tema14-esp': { name: 'Tema 14 Esp. — El Juego en el Desarrollo Infantil (Educador Infantil)', total: 12, href: 'tema14-esp.html' },
+            'tema15-esp': { name: 'Tema 15 Esp. — La Familia y Relación Familia-Escuela (Educador Infantil)', total: 11, href: 'tema15-esp.html' },
+      'tema16-esp': { name: 'Tema 16 Esp. — Desarrollo Infantil de 0 a 6 Años (Educador Infantil)', total: 12, href: 'tema16-esp.html' },
       mixto: { name: 'Test Mixto', total: 0, href: 'tests.html' }
     };
 
     /* Cargar totales reales de los temas en segundo plano (no bloqueante) */
     async function loadRealTotals() {
-      const keys = ['tema1', 'tema2', 'tema3', 'tema4', 'tema5', 'tema6', 'tema7', 'tema8', 'tema9', 'tema10', 'tema1-esp', 'tema2-esp', 'tema3-esp', 'tema4-esp', 'tema5-esp', 'tema6-esp', 'tema8-esp', 'tema9-esp', 'tema10-esp', 'tema11-esp', 'tema14-esp'];
+      const keys = ['tema1', 'tema2', 'tema3', 'tema4', 'tema5', 'tema6', 'tema7', 'tema8', 'tema9', 'tema10', 'tema1-esp', 'tema2-esp', 'tema3-esp', 'tema4-esp', 'tema5-esp', 'tema6-esp', 'tema8-esp', 'tema9-esp', 'tema10-esp', 'tema11-esp', 'tema14-esp', 'tema15-esp', 'tema16-esp'];
       let changed = false;
       for (const k of keys) {
         try {
@@ -583,7 +587,7 @@
       let html = '';
       html += `<b>📚 Artículos visitados por tema:</b><br>`;
       let totalVis = 0;
-      ['tema1','tema2','tema3','tema4','tema5','tema6','tema7','tema8','tema9','tema10','tema1-esp','tema2-esp','tema3-esp','tema4-esp','tema5-esp','tema6-esp','tema8-esp','tema9-esp','tema10-esp','tema11-esp','tema14-esp'].forEach(k => {
+      ['tema1','tema2','tema3','tema4','tema5','tema6','tema7','tema8','tema9','tema10','tema1-esp','tema2-esp','tema3-esp','tema4-esp','tema5-esp','tema6-esp','tema8-esp','tema9-esp','tema10-esp','tema11-esp','tema14-esp','tema15-esp','tema16-esp'].forEach(k => {
         const cnt = visited[k] ? Object.keys(visited[k]).length : 0;
         totalVis += cnt;
         html += `&nbsp;&nbsp;${k}: <b style="color:${cnt>0?'var(--green)':'var(--muted)'}">${cnt}</b> artículos<br>`;
@@ -861,5 +865,5 @@
     </button>
   </nav>
 
-<script>(function(){function c(){var b=a.contentDocument||(a.contentWindow&&a.contentWindow.document);if(b){var d=b.createElement('script');d.innerHTML="window.__CF$cv$params={r:'a441c40afac3104b',t:'MTc5MDkyMzc1Mg=='};var a=document.createElement('script');a.src='/cdn-cgi/challenge-platform/scripts/jsd/main.js';document.getElementsByTagName('head')[0].appendChild(a);";b.getElementsByTagName('head')[0].appendChild(d)}}if(document.body){var a=document.createElement('iframe');a.height=1;a.width=1;a.style.position='absolute';a.style.top=0;a.style.left=0;a.style.border='none';a.style.visibility='hidden';document.body.appendChild(a);if('loading'!==document.readyState)c();else if(window.addEventListener)document.addEventListener('DOMContentLoaded',c);else{var e=document.onreadystatechange||function(){};document.onreadystatechange=function(b){e(b);'loading'!==document.readyState&&(document.onreadystatechange=e,c())}}}})();</script></body>
+<script>(function(){function c(){var b=a.contentDocument||(a.contentWindow&&a.contentWindow.document);if(b){var d=b.createElement('script');d.innerHTML="window.__CF$cv$params={r:'a46b1ab898069aa8',t:'MTc5MTM1NzIxOA=='};var a=document.createElement('script');a.src='/cdn-cgi/challenge-platform/scripts/jsd/main.js';document.getElementsByTagName('head')[0].appendChild(a);";b.getElementsByTagName('head')[0].appendChild(d)}}if(document.body){var a=document.createElement('iframe');a.height=1;a.width=1;a.style.position='absolute';a.style.top=0;a.style.left=0;a.style.border='none';a.style.visibility='hidden';document.body.appendChild(a);if('loading'!==document.readyState)c();else if(window.addEventListener)document.addEventListener('DOMContentLoaded',c);else{var e=document.onreadystatechange||function(){};document.onreadystatechange=function(b){e(b);'loading'!==document.readyState&&(document.onreadystatechange=e,c())}}}})();</script></body>
 </html>
